@@ -16,5 +16,15 @@ namespace RabtBilMusteriKayit
         {
             InitializeComponent();
         }
+
+        private void FrmKayitlariGoster_Load(object sender, EventArgs e)
+        {
+            TimerTarihSaat.Enabled = true;
+        }
+
+        private void TimerTarihSaat_Tick(object sender, EventArgs e)
+        {
+            TlStripTarihSaat.Text = System.DateTime.Now.ToString();
+        }
     }
 }

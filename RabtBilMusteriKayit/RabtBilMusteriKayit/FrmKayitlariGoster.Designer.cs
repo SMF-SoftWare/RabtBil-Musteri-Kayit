@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.TlStrpMenuItemAraclar = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAraclarYeniKayit = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +51,8 @@
             this.TlStripTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.DtGridViewKayitlariGoster = new System.Windows.Forms.DataGridView();
             this.BttnSil = new System.Windows.Forms.Button();
+            this.BttnYazdir = new System.Windows.Forms.Button();
+            this.TimerTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.MenuStrip.SuspendLayout();
             this.TlStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridViewKayitlariGoster)).BeginInit();
@@ -185,6 +188,7 @@
             // TlStrip
             // 
             this.TlStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TlStrip.Font = new System.Drawing.Font("Consolas", 11.25F);
             this.TlStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.TlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripAcıklama,
@@ -198,14 +202,14 @@
             // TlStripAcıklama
             // 
             this.TlStripAcıklama.Name = "TlStripAcıklama";
-            this.TlStripAcıklama.Size = new System.Drawing.Size(56, 22);
+            this.TlStripAcıklama.Size = new System.Drawing.Size(72, 22);
             this.TlStripAcıklama.Text = "Açıklama";
             // 
             // TlStripTarihSaat
             // 
             this.TlStripTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.TlStripTarihSaat.Name = "TlStripTarihSaat";
-            this.TlStripTarihSaat.Size = new System.Drawing.Size(73, 22);
+            this.TlStripTarihSaat.Size = new System.Drawing.Size(112, 22);
             this.TlStripTarihSaat.Text = "Tarih ve Saat";
             // 
             // DtGridViewKayitlariGoster
@@ -218,18 +222,32 @@
             // 
             // BttnSil
             // 
-            this.BttnSil.Location = new System.Drawing.Point(389, 403);
+            this.BttnSil.Location = new System.Drawing.Point(324, 403);
             this.BttnSil.Name = "BttnSil";
             this.BttnSil.Size = new System.Drawing.Size(128, 45);
             this.BttnSil.TabIndex = 27;
             this.BttnSil.Text = "Sil";
             this.BttnSil.UseVisualStyleBackColor = true;
             // 
+            // BttnYazdir
+            // 
+            this.BttnYazdir.Location = new System.Drawing.Point(458, 403);
+            this.BttnYazdir.Name = "BttnYazdir";
+            this.BttnYazdir.Size = new System.Drawing.Size(128, 45);
+            this.BttnYazdir.TabIndex = 28;
+            this.BttnYazdir.Text = "Yazdır";
+            this.BttnYazdir.UseVisualStyleBackColor = true;
+            // 
+            // TimerTarihSaat
+            // 
+            this.TimerTarihSaat.Tick += new System.EventHandler(this.TimerTarihSaat_Tick);
+            // 
             // FrmKayitlariGoster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 476);
+            this.Controls.Add(this.BttnYazdir);
             this.Controls.Add(this.BttnSil);
             this.Controls.Add(this.DtGridViewKayitlariGoster);
             this.Controls.Add(this.TlStrip);
@@ -239,7 +257,9 @@
             this.MaximumSize = new System.Drawing.Size(940, 515);
             this.MinimumSize = new System.Drawing.Size(940, 515);
             this.Name = "FrmKayitlariGoster";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RabtBil Kayıt -> Kayıtları Göster";
+            this.Load += new System.EventHandler(this.FrmKayitlariGoster_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             this.TlStrip.ResumeLayout(false);
@@ -274,5 +294,7 @@
         private System.Windows.Forms.ToolStripLabel TlStripTarihSaat;
         private System.Windows.Forms.DataGridView DtGridViewKayitlariGoster;
         private System.Windows.Forms.Button BttnSil;
+        private System.Windows.Forms.Button BttnYazdir;
+        private System.Windows.Forms.Timer TimerTarihSaat;
     }
 }

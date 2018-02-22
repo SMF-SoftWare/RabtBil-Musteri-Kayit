@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LblMusteriAdi = new System.Windows.Forms.Label();
             this.TxtMusteriAdi = new System.Windows.Forms.TextBox();
             this.GrpBoxMusteriBilgileri = new System.Windows.Forms.GroupBox();
@@ -81,6 +82,7 @@
             this.TlStrip = new System.Windows.Forms.ToolStrip();
             this.TlStripAcıklama = new System.Windows.Forms.ToolStripLabel();
             this.TlStripTarihSaat = new System.Windows.Forms.ToolStripLabel();
+            this.TimerTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.GrpBoxMusteriBilgileri.SuspendLayout();
             this.GrpBoxAksesuarlar.SuspendLayout();
             this.GrpBoxEkBilgiler.SuspendLayout();
@@ -326,6 +328,7 @@
             // 
             // CmbBoxUrunKodlari
             // 
+            this.CmbBoxUrunKodlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbBoxUrunKodlari.FormattingEnabled = true;
             this.CmbBoxUrunKodlari.Items.AddRange(new object[] {
             "",
@@ -398,6 +401,7 @@
             this.BttnKayitlariGoster.TabIndex = 32;
             this.BttnKayitlariGoster.Text = "Kayıtları Göster";
             this.BttnKayitlariGoster.UseVisualStyleBackColor = true;
+            this.BttnKayitlariGoster.Click += new System.EventHandler(this.BttnKayitlariGoster_Click);
             // 
             // BttnGuncelle
             // 
@@ -546,6 +550,7 @@
             // TlStrip
             // 
             this.TlStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TlStrip.Font = new System.Drawing.Font("Consolas", 11.25F);
             this.TlStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.TlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripAcıklama,
@@ -559,15 +564,19 @@
             // TlStripAcıklama
             // 
             this.TlStripAcıklama.Name = "TlStripAcıklama";
-            this.TlStripAcıklama.Size = new System.Drawing.Size(56, 22);
+            this.TlStripAcıklama.Size = new System.Drawing.Size(72, 22);
             this.TlStripAcıklama.Text = "Açıklama";
             // 
             // TlStripTarihSaat
             // 
             this.TlStripTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.TlStripTarihSaat.Name = "TlStripTarihSaat";
-            this.TlStripTarihSaat.Size = new System.Drawing.Size(73, 22);
+            this.TlStripTarihSaat.Size = new System.Drawing.Size(112, 22);
             this.TlStripTarihSaat.Text = "Tarih ve Saat";
+            // 
+            // TimerTarihSaat
+            // 
+            this.TimerTarihSaat.Tick += new System.EventHandler(this.TimerTarihSaat_Tick);
             // 
             // FrmTeknikServisFormu
             // 
@@ -593,7 +602,9 @@
             this.MaximumSize = new System.Drawing.Size(940, 515);
             this.MinimumSize = new System.Drawing.Size(940, 515);
             this.Name = "FrmTeknikServisFormu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RabtBil Kayıt -> Teknik Servis Formu";
+            this.Load += new System.EventHandler(this.FrmTeknikServisFormu_Load);
             this.GrpBoxMusteriBilgileri.ResumeLayout(false);
             this.GrpBoxMusteriBilgileri.PerformLayout();
             this.GrpBoxAksesuarlar.ResumeLayout(false);
@@ -666,6 +677,24 @@
         private System.Windows.Forms.ToolStrip TlStrip;
         private System.Windows.Forms.ToolStripLabel TlStripAcıklama;
         private System.Windows.Forms.ToolStripLabel TlStripTarihSaat;
+        private System.Windows.Forms.Timer TimerTarihSaat;
         private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarSil;
+
+        private void BttnKayitlariGoster_Click(object sender, System.EventArgs e)
+        {
+            FrmKayitlariGoster FrmKayitlariGoster = new FrmKayitlariGoster();
+            FrmKayitlariGoster.Show();
+            base.Hide();
+        }
+
+        private void FrmTeknikServisFormu_Load(object sender, System.EventArgs e)
+        {
+            TimerTarihSaat.Enabled = true;
+        }
+
+        private void TimerTarihSaat_Tick(object sender, System.EventArgs e)
+        {
+            TlStripTarihSaat.Text = System.DateTime.Now.ToString();
+        }
     }
 }
