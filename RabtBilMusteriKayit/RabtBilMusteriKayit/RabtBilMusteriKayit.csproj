@@ -51,6 +51,12 @@
     <Compile Include="FrmGirisYap.Designer.cs">
       <DependentUpon>FrmGirisYap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKayitlariGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKayitlariGoster.Designer.cs">
+      <DependentUpon>FrmKayitlariGoster.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTeknikServisFormu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmGirisYap.resx">
       <DependentUpon>FrmGirisYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKayitlariGoster.resx">
+      <DependentUpon>FrmKayitlariGoster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTeknikServisFormu.resx">
       <DependentUpon>FrmTeknikServisFormu.cs</DependentUpon>
