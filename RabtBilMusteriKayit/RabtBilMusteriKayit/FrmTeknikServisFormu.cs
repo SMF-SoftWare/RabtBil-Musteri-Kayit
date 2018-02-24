@@ -6,7 +6,7 @@ namespace RabtBilMusteriKayit
 {
     public partial class FrmTeknikServisFormu : Form
     {
-        MySqlConnection Baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
+        MySqlConnection _baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
         public FrmTeknikServisFormu()
         {
             InitializeComponent();
@@ -14,8 +14,8 @@ namespace RabtBilMusteriKayit
 
         private void BttnKayitlariGoster_Click(object sender, System.EventArgs e)
         {
-            FrmKayitlariGoster FrmKayitlariGoster = new FrmKayitlariGoster();
-            FrmKayitlariGoster.Show();
+            FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
+            frmKayitlariGoster.Show();
             base.Hide();
         }
 
