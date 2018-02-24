@@ -37,6 +37,7 @@
             this.LblFormNo = new System.Windows.Forms.Label();
             this.TxtKayitNo = new System.Windows.Forms.TextBox();
             this.GrpBoxAksesuarlar = new System.Windows.Forms.GroupBox();
+            this.TxtAksesuarlar = new System.Windows.Forms.TextBox();
             this.GrpBoxEkBilgiler = new System.Windows.Forms.GroupBox();
             this.TxtEkBilgiler = new System.Windows.Forms.TextBox();
             this.GrpBoxUrunBilgileri = new System.Windows.Forms.GroupBox();
@@ -50,6 +51,7 @@
             this.LblUrunDurumu = new System.Windows.Forms.Label();
             this.TxtUrunDurumu = new System.Windows.Forms.TextBox();
             this.LblArizaTanimi = new System.Windows.Forms.Label();
+            this.TxtArizaTanimi = new System.Windows.Forms.TextBox();
             this.CmbBoxUrunKodlari = new System.Windows.Forms.ComboBox();
             this.TxtUrunKodlari = new System.Windows.Forms.TextBox();
             this.LblUrunModeli = new System.Windows.Forms.Label();
@@ -81,8 +83,6 @@
             this.TlStripAcıklama = new System.Windows.Forms.ToolStripLabel();
             this.TlStripTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.TimerTarihSaat = new System.Windows.Forms.Timer(this.components);
-            this.TxtAksesuarlar = new System.Windows.Forms.TextBox();
-            this.TxtArizaTanimi = new System.Windows.Forms.TextBox();
             this.GrpBoxMusteriBilgileri.SuspendLayout();
             this.GrpBoxAksesuarlar.SuspendLayout();
             this.GrpBoxEkBilgiler.SuspendLayout();
@@ -172,6 +172,15 @@
             this.GrpBoxAksesuarlar.TabStop = false;
             this.GrpBoxAksesuarlar.Text = "Aksesuarlar";
             // 
+            // TxtAksesuarlar
+            // 
+            this.TxtAksesuarlar.Location = new System.Drawing.Point(6, 21);
+            this.TxtAksesuarlar.MaxLength = 210;
+            this.TxtAksesuarlar.Multiline = true;
+            this.TxtAksesuarlar.Name = "TxtAksesuarlar";
+            this.TxtAksesuarlar.Size = new System.Drawing.Size(350, 110);
+            this.TxtAksesuarlar.TabIndex = 20;
+            // 
             // GrpBoxEkBilgiler
             // 
             this.GrpBoxEkBilgiler.Controls.Add(this.TxtEkBilgiler);
@@ -223,6 +232,7 @@
             this.BttnQrKoduOlustur.TabIndex = 18;
             this.BttnQrKoduOlustur.Text = "Qr Kodunu Oluştur";
             this.BttnQrKoduOlustur.UseVisualStyleBackColor = true;
+            this.BttnQrKoduOlustur.Click += new System.EventHandler(this.BttnQrKoduOlustur_Click);
             // 
             // LblUcret
             // 
@@ -308,6 +318,15 @@
             this.LblArizaTanimi.TabIndex = 9;
             this.LblArizaTanimi.Text = "Arıza Tanımı:";
             // 
+            // TxtArizaTanimi
+            // 
+            this.TxtArizaTanimi.Location = new System.Drawing.Point(139, 89);
+            this.TxtArizaTanimi.MaxLength = 145;
+            this.TxtArizaTanimi.Multiline = true;
+            this.TxtArizaTanimi.Name = "TxtArizaTanimi";
+            this.TxtArizaTanimi.Size = new System.Drawing.Size(252, 110);
+            this.TxtArizaTanimi.TabIndex = 12;
+            // 
             // CmbBoxUrunKodlari
             // 
             this.CmbBoxUrunKodlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -356,6 +375,7 @@
             this.BttnYeniKayit.TabIndex = 26;
             this.BttnYeniKayit.Text = "Yeni Kayıt";
             this.BttnYeniKayit.UseVisualStyleBackColor = true;
+            this.BttnYeniKayit.Click += new System.EventHandler(this.BttnYeniKayit_Click);
             // 
             // BttnKaydet
             // 
@@ -560,24 +580,6 @@
             // 
             this.TimerTarihSaat.Tick += new System.EventHandler(this.TimerTarihSaat_Tick);
             // 
-            // TxtAksesuarlar
-            // 
-            this.TxtAksesuarlar.Location = new System.Drawing.Point(6, 21);
-            this.TxtAksesuarlar.MaxLength = 210;
-            this.TxtAksesuarlar.Multiline = true;
-            this.TxtAksesuarlar.Name = "TxtAksesuarlar";
-            this.TxtAksesuarlar.Size = new System.Drawing.Size(350, 110);
-            this.TxtAksesuarlar.TabIndex = 20;
-            // 
-            // TxtArizaTanimi
-            // 
-            this.TxtArizaTanimi.Location = new System.Drawing.Point(139, 89);
-            this.TxtArizaTanimi.MaxLength = 145;
-            this.TxtArizaTanimi.Multiline = true;
-            this.TxtArizaTanimi.Name = "TxtArizaTanimi";
-            this.TxtArizaTanimi.Size = new System.Drawing.Size(252, 110);
-            this.TxtArizaTanimi.TabIndex = 12;
-            // 
             // FrmTeknikServisFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -678,22 +680,6 @@
         private System.Windows.Forms.Timer TimerTarihSaat;
         private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarSil;
 
-        private void BttnKayitlariGoster_Click(object sender, System.EventArgs e)
-        {
-            FrmKayitlariGoster FrmKayitlariGoster = new FrmKayitlariGoster();
-            FrmKayitlariGoster.Show();
-            base.Hide();
-        }
-
-        private void FrmTeknikServisFormu_Load(object sender, System.EventArgs e)
-        {
-            TimerTarihSaat.Enabled = true;
-        }
-
-        private void TimerTarihSaat_Tick(object sender, System.EventArgs e)
-        {
-            TlStripTarihSaat.Text = System.DateTime.Now.ToString();
-        }
 
         private System.Windows.Forms.TextBox TxtAksesuarlar;
         private System.Windows.Forms.TextBox TxtArizaTanimi;
