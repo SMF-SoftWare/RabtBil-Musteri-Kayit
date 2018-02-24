@@ -10,10 +10,6 @@ namespace RabtBilMusteriKayit
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
         private void BttnKayitlariGoster_Click(object sender, System.EventArgs e)
         {
             FrmKayitlariGoster FrmKayitlariGoster = new FrmKayitlariGoster();

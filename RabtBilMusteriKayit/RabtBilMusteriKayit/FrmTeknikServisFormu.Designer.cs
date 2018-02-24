@@ -679,8 +679,6 @@
         private System.Windows.Forms.ToolStripLabel TlStripTarihSaat;
         private System.Windows.Forms.Timer TimerTarihSaat;
         private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarSil;
-
-
         private System.Windows.Forms.TextBox TxtAksesuarlar;
         private System.Windows.Forms.TextBox TxtArizaTanimi;
     }
