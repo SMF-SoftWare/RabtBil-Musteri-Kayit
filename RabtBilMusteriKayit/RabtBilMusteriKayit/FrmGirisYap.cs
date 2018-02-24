@@ -57,7 +57,7 @@ namespace RabtBilMusteriKayit
                     {
                         FrmTeknikServisFormu frm = new FrmTeknikServisFormu();
                         frm.Show();
-                        this.Hide();
+                        Hide();
                     }
                     else
                     {
