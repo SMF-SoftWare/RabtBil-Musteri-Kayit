@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace RabtBilMusteriKayit
 {
     public partial class FrmTeknikServisFormu : Form
     {
+        MySqlConnection Baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
         public FrmTeknikServisFormu()
         {
             InitializeComponent();
