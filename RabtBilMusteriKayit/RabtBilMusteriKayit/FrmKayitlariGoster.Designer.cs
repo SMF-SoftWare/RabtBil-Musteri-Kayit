@@ -53,9 +53,15 @@
             this.BttnSil = new System.Windows.Forms.Button();
             this.BttnYazdir = new System.Windows.Forms.Button();
             this.TimerTarihSaat = new System.Windows.Forms.Timer(this.components);
+            this.GrpBoxArama = new System.Windows.Forms.GroupBox();
+            this.RadioBttnNoyaGoreAra = new System.Windows.Forms.RadioButton();
+            this.RadioBttnMusteriIsmineGoreAra = new System.Windows.Forms.RadioButton();
+            this.TxtArama = new System.Windows.Forms.TextBox();
+            this.BttnBul = new System.Windows.Forms.Button();
             this.MenuStrip.SuspendLayout();
             this.TlStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridViewKayitlariGoster)).BeginInit();
+            this.GrpBoxArama.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuStrip
@@ -217,12 +223,12 @@
             this.DtGridViewKayitlariGoster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGridViewKayitlariGoster.Location = new System.Drawing.Point(12, 29);
             this.DtGridViewKayitlariGoster.Name = "DtGridViewKayitlariGoster";
-            this.DtGridViewKayitlariGoster.Size = new System.Drawing.Size(900, 368);
+            this.DtGridViewKayitlariGoster.Size = new System.Drawing.Size(900, 349);
             this.DtGridViewKayitlariGoster.TabIndex = 18;
             // 
             // BttnSil
             // 
-            this.BttnSil.Location = new System.Drawing.Point(324, 403);
+            this.BttnSil.Location = new System.Drawing.Point(12, 398);
             this.BttnSil.Name = "BttnSil";
             this.BttnSil.Size = new System.Drawing.Size(128, 45);
             this.BttnSil.TabIndex = 27;
@@ -231,7 +237,7 @@
             // 
             // BttnYazdir
             // 
-            this.BttnYazdir.Location = new System.Drawing.Point(458, 403);
+            this.BttnYazdir.Location = new System.Drawing.Point(147, 398);
             this.BttnYazdir.Name = "BttnYazdir";
             this.BttnYazdir.Size = new System.Drawing.Size(128, 45);
             this.BttnYazdir.TabIndex = 28;
@@ -242,18 +248,72 @@
             // 
             this.TimerTarihSaat.Tick += new System.EventHandler(this.TimerTarihSaat_Tick);
             // 
+            // GrpBoxArama
+            // 
+            this.GrpBoxArama.Controls.Add(this.BttnBul);
+            this.GrpBoxArama.Controls.Add(this.TxtArama);
+            this.GrpBoxArama.Controls.Add(this.RadioBttnMusteriIsmineGoreAra);
+            this.GrpBoxArama.Controls.Add(this.RadioBttnNoyaGoreAra);
+            this.GrpBoxArama.Location = new System.Drawing.Point(281, 384);
+            this.GrpBoxArama.Name = "GrpBoxArama";
+            this.GrpBoxArama.Size = new System.Drawing.Size(631, 62);
+            this.GrpBoxArama.TabIndex = 29;
+            this.GrpBoxArama.TabStop = false;
+            this.GrpBoxArama.Text = "Arama";
+            // 
+            // RadioBttnNoyaGoreAra
+            // 
+            this.RadioBttnNoyaGoreAra.AutoSize = true;
+            this.RadioBttnNoyaGoreAra.Location = new System.Drawing.Point(4, 16);
+            this.RadioBttnNoyaGoreAra.Name = "RadioBttnNoyaGoreAra";
+            this.RadioBttnNoyaGoreAra.Size = new System.Drawing.Size(162, 22);
+            this.RadioBttnNoyaGoreAra.TabIndex = 0;
+            this.RadioBttnNoyaGoreAra.TabStop = true;
+            this.RadioBttnNoyaGoreAra.Text = "Form no\'suna göre";
+            this.RadioBttnNoyaGoreAra.UseVisualStyleBackColor = true;
+            // 
+            // RadioBttnMusteriIsmineGoreAra
+            // 
+            this.RadioBttnMusteriIsmineGoreAra.AutoSize = true;
+            this.RadioBttnMusteriIsmineGoreAra.Location = new System.Drawing.Point(4, 36);
+            this.RadioBttnMusteriIsmineGoreAra.Name = "RadioBttnMusteriIsmineGoreAra";
+            this.RadioBttnMusteriIsmineGoreAra.Size = new System.Drawing.Size(186, 22);
+            this.RadioBttnMusteriIsmineGoreAra.TabIndex = 1;
+            this.RadioBttnMusteriIsmineGoreAra.TabStop = true;
+            this.RadioBttnMusteriIsmineGoreAra.Text = "Müşteri isimine göre";
+            this.RadioBttnMusteriIsmineGoreAra.UseVisualStyleBackColor = true;
+            // 
+            // TxtArama
+            // 
+            this.TxtArama.Location = new System.Drawing.Point(196, 24);
+            this.TxtArama.MaxLength = 30;
+            this.TxtArama.Name = "TxtArama";
+            this.TxtArama.ReadOnly = true;
+            this.TxtArama.Size = new System.Drawing.Size(281, 25);
+            this.TxtArama.TabIndex = 16;
+            // 
+            // BttnBul
+            // 
+            this.BttnBul.Location = new System.Drawing.Point(497, 16);
+            this.BttnBul.Name = "BttnBul";
+            this.BttnBul.Size = new System.Drawing.Size(128, 35);
+            this.BttnBul.TabIndex = 29;
+            this.BttnBul.Text = "Bul";
+            this.BttnBul.UseVisualStyleBackColor = true;
+            // 
             // FrmKayitlariGoster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 476);
+            this.Controls.Add(this.GrpBoxArama);
             this.Controls.Add(this.BttnYazdir);
             this.Controls.Add(this.BttnSil);
             this.Controls.Add(this.DtGridViewKayitlariGoster);
             this.Controls.Add(this.TlStrip);
             this.Controls.Add(this.MenuStrip);
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(940, 515);
             this.MinimumSize = new System.Drawing.Size(940, 515);
             this.Name = "FrmKayitlariGoster";
@@ -265,6 +325,8 @@
             this.TlStrip.ResumeLayout(false);
             this.TlStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridViewKayitlariGoster)).EndInit();
+            this.GrpBoxArama.ResumeLayout(false);
+            this.GrpBoxArama.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +358,10 @@
         private System.Windows.Forms.Button BttnSil;
         private System.Windows.Forms.Button BttnYazdir;
         private System.Windows.Forms.Timer TimerTarihSaat;
+        private System.Windows.Forms.GroupBox GrpBoxArama;
+        private System.Windows.Forms.RadioButton RadioBttnMusteriIsmineGoreAra;
+        private System.Windows.Forms.RadioButton RadioBttnNoyaGoreAra;
+        private System.Windows.Forms.Button BttnBul;
+        private System.Windows.Forms.TextBox TxtArama;
     }
 }
