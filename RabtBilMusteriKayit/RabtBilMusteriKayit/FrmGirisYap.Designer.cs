@@ -30,7 +30,7 @@
         {
             this.BttnGirisYap = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.TlStrpMenuItemAyarlar = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlarDil = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,8 +41,8 @@
             this.TlStrpMenuItemYardım = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardimLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardimHakkinda = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TxtSifre = new System.Windows.Forms.TextBox();
+            this.LblSifre = new System.Windows.Forms.Label();
             this.güçlüBirŞifreOluşturunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LinkLblSifremiUnuttum = new System.Windows.Forms.LinkLabel();
             this.LinkLblSistemeKayitOl = new System.Windows.Forms.LinkLabel();
@@ -59,7 +59,7 @@
             this.BttnGirisYap.TabIndex = 0;
             this.BttnGirisYap.Text = "Giriş Yap";
             this.BttnGirisYap.UseVisualStyleBackColor = true;
-            this.BttnGirisYap.Click += new System.EventHandler(this.button1_Click);
+            this.BttnGirisYap.Click += new System.EventHandler(this.BttnGirisYap_Click);
             // 
             // label1
             // 
@@ -71,14 +71,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Kullanıcı Adı:";
             // 
-            // textBox1
+            // TxtKullaniciAdi
             // 
-            this.textBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(23, 71);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 26);
-            this.textBox1.TabIndex = 2;
+            this.TxtKullaniciAdi.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtKullaniciAdi.Location = new System.Drawing.Point(23, 71);
+            this.TxtKullaniciAdi.MaxLength = 30;
+            this.TxtKullaniciAdi.Name = "TxtKullaniciAdi";
+            this.TxtKullaniciAdi.Size = new System.Drawing.Size(288, 26);
+            this.TxtKullaniciAdi.TabIndex = 2;
             // 
             // MenuStrip
             // 
@@ -89,7 +89,7 @@
             this.TlStrpMenuItemYardım});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(349, 26);
+            this.MenuStrip.Size = new System.Drawing.Size(339, 26);
             this.MenuStrip.TabIndex = 17;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -158,24 +158,24 @@
             this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(196, 22);
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
             // 
-            // textBox2
+            // TxtSifre
             // 
-            this.textBox2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(23, 149);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(288, 26);
-            this.textBox2.TabIndex = 19;
+            this.TxtSifre.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtSifre.Location = new System.Drawing.Point(23, 149);
+            this.TxtSifre.MaxLength = 30;
+            this.TxtSifre.Name = "TxtSifre";
+            this.TxtSifre.Size = new System.Drawing.Size(288, 26);
+            this.TxtSifre.TabIndex = 19;
             // 
-            // label2
+            // LblSifre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.label2.Location = new System.Drawing.Point(20, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 15);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Şifre:";
+            this.LblSifre.AutoSize = true;
+            this.LblSifre.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.LblSifre.Location = new System.Drawing.Point(20, 131);
+            this.LblSifre.Name = "LblSifre";
+            this.LblSifre.Size = new System.Drawing.Size(49, 15);
+            this.LblSifre.TabIndex = 18;
+            this.LblSifre.Text = "Şifre:";
             // 
             // güçlüBirŞifreOluşturunToolStripMenuItem
             // 
@@ -186,17 +186,17 @@
             // LinkLblSifremiUnuttum
             // 
             this.LinkLblSifremiUnuttum.AutoSize = true;
-            this.LinkLblSifremiUnuttum.Location = new System.Drawing.Point(89, 220);
+            this.LinkLblSifremiUnuttum.Location = new System.Drawing.Point(20, 220);
             this.LinkLblSifremiUnuttum.Name = "LinkLblSifremiUnuttum";
-            this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(144, 18);
+            this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(136, 18);
             this.LinkLblSifremiUnuttum.TabIndex = 20;
             this.LinkLblSifremiUnuttum.TabStop = true;
-            this.LinkLblSifremiUnuttum.Text = "Şifremi Unuttum ?";
+            this.LinkLblSifremiUnuttum.Text = "Şifremi Unuttum?";
             // 
             // LinkLblSistemeKayitOl
             // 
             this.LinkLblSistemeKayitOl.AutoSize = true;
-            this.LinkLblSistemeKayitOl.Location = new System.Drawing.Point(89, 253);
+            this.LinkLblSistemeKayitOl.Location = new System.Drawing.Point(175, 220);
             this.LinkLblSistemeKayitOl.Name = "LinkLblSistemeKayitOl";
             this.LinkLblSistemeKayitOl.Size = new System.Drawing.Size(136, 18);
             this.LinkLblSistemeKayitOl.TabIndex = 21;
@@ -207,7 +207,7 @@
             // TxtYeniKullaniciOluştur
             // 
             this.TxtYeniKullaniciOluştur.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtYeniKullaniciOluştur.Location = new System.Drawing.Point(23, 291);
+            this.TxtYeniKullaniciOluştur.Location = new System.Drawing.Point(23, 256);
             this.TxtYeniKullaniciOluştur.MaxLength = 30;
             this.TxtYeniKullaniciOluştur.Name = "TxtYeniKullaniciOluştur";
             this.TxtYeniKullaniciOluştur.Size = new System.Drawing.Size(288, 26);
@@ -215,7 +215,7 @@
             // 
             // BttnYeniKullaniciOluştur
             // 
-            this.BttnYeniKullaniciOluştur.Location = new System.Drawing.Point(23, 323);
+            this.BttnYeniKullaniciOluştur.Location = new System.Drawing.Point(23, 288);
             this.BttnYeniKullaniciOluştur.Name = "BttnYeniKullaniciOluştur";
             this.BttnYeniKullaniciOluştur.Size = new System.Drawing.Size(288, 36);
             this.BttnYeniKullaniciOluştur.TabIndex = 23;
@@ -226,15 +226,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 366);
+            this.ClientSize = new System.Drawing.Size(339, 331);
             this.Controls.Add(this.BttnYeniKullaniciOluştur);
             this.Controls.Add(this.TxtYeniKullaniciOluştur);
             this.Controls.Add(this.LinkLblSistemeKayitOl);
             this.Controls.Add(this.LinkLblSifremiUnuttum);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TxtSifre);
+            this.Controls.Add(this.LblSifre);
             this.Controls.Add(this.MenuStrip);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtKullaniciAdi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BttnGirisYap);
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
@@ -252,7 +252,7 @@
 
         private System.Windows.Forms.Button BttnGirisYap;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtKullaniciAdi;
         private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlar;
         private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarDil;
@@ -264,8 +264,8 @@
         private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardimLisansAnahtari;
         private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardimHakkinda;
         private System.Windows.Forms.ToolStripMenuItem güçlüBirŞifreOluşturunToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtSifre;
+        private System.Windows.Forms.Label LblSifre;
         private System.Windows.Forms.LinkLabel LinkLblSifremiUnuttum;
         private System.Windows.Forms.LinkLabel LinkLblSistemeKayitOl;
         private System.Windows.Forms.TextBox TxtYeniKullaniciOluştur;
