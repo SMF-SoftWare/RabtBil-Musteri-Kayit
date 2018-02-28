@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 24 Şub 2018, 13:21:18
+-- Üretim Zamanı: 28 Şub 2018, 16:20:28
 -- Sunucu sürümü: 10.1.28-MariaDB
 -- PHP Sürümü: 7.1.11
 
@@ -38,6 +38,13 @@ CREATE TABLE `kullanicilar` (
   `Fotograf` text COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
+--
+-- Tablo döküm verisi `kullanicilar`
+--
+
+INSERT INTO `kullanicilar` (`Id`, `KullaniciAdi`, `Sifre`, `Adi`, `Soyadi`, `EPosta`, `Fotograf`) VALUES
+(3, '1', '2', '', '', 'marfermustafa@gmail.com', '');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +57,7 @@ CREATE TABLE `musteribilgileri` (
   `FormNo` varchar(30) COLLATE utf8_turkish_ci NOT NULL,
   `Telefon` varchar(16) COLLATE utf8_turkish_ci NOT NULL,
   `UrunModeli` varchar(30) COLLATE utf8_turkish_ci NOT NULL,
+  `UrunSeriveImeiKodlari` varchar(10) COLLATE utf8_turkish_ci NOT NULL,
   `UrunKodlari` varchar(30) COLLATE utf8_turkish_ci NOT NULL,
   `ArizaTanimi` varchar(145) COLLATE utf8_turkish_ci NOT NULL,
   `UrunDurumu` varchar(30) COLLATE utf8_turkish_ci NOT NULL,
@@ -57,8 +65,16 @@ CREATE TABLE `musteribilgileri` (
   `URLKodu` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
   `Ucret` int(11) NOT NULL,
   `Aksesuarlar` varchar(210) COLLATE utf8_turkish_ci NOT NULL,
-  `EkBilgiler` varchar(210) COLLATE utf8_turkish_ci NOT NULL
+  `EkBilgiler` varchar(210) COLLATE utf8_turkish_ci NOT NULL,
+  `Tarih` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Tablo döküm verisi `musteribilgileri`
+--
+
+INSERT INTO `musteribilgileri` (`Id`, `MusteriAdi`, `FormNo`, `Telefon`, `UrunModeli`, `UrunSeriveImeiKodlari`, `UrunKodlari`, `ArizaTanimi`, `UrunDurumu`, `UrunTakipNo`, `URLKodu`, `Ucret`, `Aksesuarlar`, `EkBilgiler`, `Tarih`) VALUES
+(7, 'a', '1', '1213', 'a', 'Seri No', '223213', 'adsda', 'asdasd', 123214, '', 32, 'a', 'a', '2018-02-28 17:55:08');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -84,13 +100,13 @@ ALTER TABLE `musteribilgileri`
 -- Tablo için AUTO_INCREMENT değeri `kullanicilar`
 --
 ALTER TABLE `kullanicilar`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `musteribilgileri`
 --
 ALTER TABLE `musteribilgileri`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
