@@ -1,2 +1,2 @@
-# RabtBil-Musteri-Kayit
+# RabtBil Musteri Kayit
 RabtBil Müşteri Kayıt Programı
