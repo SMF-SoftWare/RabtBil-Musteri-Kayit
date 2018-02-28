@@ -1,16 +1,15 @@
-﻿using System;
-using System.Data;
-using System.Globalization;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace RabtBilMusteriKayit
 {
     public partial class FrmTeknikServisFormu : Form
     {
         private readonly MySqlConnection _baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
-        Random Rnd = new Random();
+        private Random Rnd = new Random();
         private int takipNo;
+
         public FrmTeknikServisFormu()
         {
             InitializeComponent();
@@ -18,9 +17,9 @@ namespace RabtBilMusteriKayit
 
         private void BttnKayitlariGoster_Click(object sender, System.EventArgs e)
         {
+            Hide();
             FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
-            frmKayitlariGoster.Show();
-          //  base.Hide();
+            frmKayitlariGoster.ShowDialog();
         }
 
         private void FrmTeknikServisFormu_Load(object sender, System.EventArgs e)
@@ -63,7 +62,7 @@ namespace RabtBilMusteriKayit
                 kaydet.Parameters.AddWithValue("@Ucret", Convert.ToInt32(TxtUcret.Text));
                 kaydet.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
                 kaydet.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
-                kaydet.Parameters.AddWithValue("@Tarih",Convert.ToDateTime(System.DateTime.Now.ToString()));
+                kaydet.Parameters.AddWithValue("@Tarih", Convert.ToDateTime(System.DateTime.Now.ToString()));
                 _baglanti.Open();
                 kaydet.ExecuteNonQuery();
                 MessageBox.Show("Oluşturduğunuz Kayıt Kaydedilmiştir.");
@@ -75,6 +74,7 @@ namespace RabtBilMusteriKayit
                 MessageBox.Show(exception.Message);
             }
         }
+
         public void _temizle()
         {
             takipNo = Rnd.Next(10000, 99999);
@@ -94,7 +94,7 @@ namespace RabtBilMusteriKayit
 
         private void CmbBoxUrunKodlari_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CmbBoxUrunKodlari.Text=="Seri No")
+            if (CmbBoxUrunKodlari.Text == "Seri No")
             {
                 TxtUrunKodlari.ReadOnly = false;
             }

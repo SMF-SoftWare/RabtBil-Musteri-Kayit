@@ -1,37 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using MySql.Data.MySqlClient;
 
 namespace RabtBilMusteriKayit
 {
     public partial class FrmKayitlariGoster : Form
     {
         private readonly MySqlConnection _baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
+
         public FrmKayitlariGoster()
         {
             InitializeComponent();
         }
+
         public void _verilerigetir()
         {
             _baglanti.Open();
             MySqlDataAdapter verilerigetir = new MySqlDataAdapter("Select * From musteribilgileri", _baglanti);
-            DataSet dataSet = new DataSet();
-            verilerigetir.Fill(dataSet, "musteribilgileri");
-            DtGridViewKayitlariGoster.DataSource = dataSet.Tables["musteribilgileri"];
+            DataTable dt = new DataTable();
+            verilerigetir.Fill(dt);
+            DtGridViewKayitlariGoster.DataSource = dt;
             _baglanti.Close();
         }
+
         private void FrmKayitlariGoster_Load(object sender, EventArgs e)
         {
-           _verilerigetir();
+            _verilerigetir();
             TimerTarihSaat.Enabled = true;
         }
 
@@ -43,11 +38,6 @@ namespace RabtBilMusteriKayit
         private void DtGridViewKayitlariGoster_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FrmTeknikServisFormu frmTeknikServisFormu = new FrmTeknikServisFormu();
-            //    if (DtGridViewKayitlariGoster.CellDoubleClick=true)
-            //    {
-
-            //    }
-
             frmTeknikServisFormu.LblMusteriNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString();
             frmTeknikServisFormu.TxtMusteriAdi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[1].Value.ToString();
             frmTeknikServisFormu.TxtFormNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[2].Value.ToString();
@@ -62,6 +52,8 @@ namespace RabtBilMusteriKayit
             frmTeknikServisFormu.TxtUcret.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[10].Value.ToString();
             frmTeknikServisFormu.TxtAksesuarlar.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[11].Value.ToString();
             frmTeknikServisFormu.TxtEkBilgiler.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[12].Value.ToString();
+            frmTeknikServisFormu.Show();
+            Hide();
         }
 
         private void BttnSil_Click(object sender, EventArgs e)
