@@ -289,6 +289,7 @@
             this.TxtUrunTakipNo.Location = new System.Drawing.Point(139, 236);
             this.TxtUrunTakipNo.MaxLength = 30;
             this.TxtUrunTakipNo.Name = "TxtUrunTakipNo";
+            this.TxtUrunTakipNo.ReadOnly = true;
             this.TxtUrunTakipNo.Size = new System.Drawing.Size(252, 25);
             this.TxtUrunTakipNo.TabIndex = 16;
             // 

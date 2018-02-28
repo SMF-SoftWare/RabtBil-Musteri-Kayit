@@ -9,7 +9,8 @@ namespace RabtBilMusteriKayit
     public partial class FrmTeknikServisFormu : Form
     {
         private readonly MySqlConnection _baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
-        
+        Random Rnd = new Random();
+        private int takipNo;
         public FrmTeknikServisFormu()
         {
             InitializeComponent();
@@ -25,6 +26,8 @@ namespace RabtBilMusteriKayit
         private void FrmTeknikServisFormu_Load(object sender, System.EventArgs e)
         {
             TimerTarihSaat.Enabled = true;
+            takipNo = Rnd.Next(10000, 99999);
+            TxtUrunTakipNo.Text = takipNo.ToString();
         }
 
         private void TimerTarihSaat_Tick(object sender, System.EventArgs e)
@@ -55,7 +58,7 @@ namespace RabtBilMusteriKayit
                 kaydet.Parameters.AddWithValue("@UrunKodlari", TxtUrunKodlari.Text);
                 kaydet.Parameters.AddWithValue("@ArizaTanimi", TxtArizaTanimi.Text);
                 kaydet.Parameters.AddWithValue("@UrunDurumu", TxtUrunDurumu.Text);
-                kaydet.Parameters.AddWithValue("@UrunTakipNo", Convert.ToInt32(TxtUrunTakipNo.Text));
+                kaydet.Parameters.AddWithValue("@UrunTakipNo", Convert.ToInt32(takipNo = Rnd.Next(10000, 99999)));
                 //kaydet.Parameters.AddWithValue("@URLKodu", TxtUrunTakipNo.Text);
                 kaydet.Parameters.AddWithValue("@Ucret", Convert.ToInt32(TxtUcret.Text));
                 kaydet.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
@@ -74,6 +77,7 @@ namespace RabtBilMusteriKayit
         }
         public void _temizle()
         {
+            takipNo = Rnd.Next(10000, 99999);
             TxtMusteriAdi.Text = "";
             TxtFormNo.Text = "";
             TxtTelefon.Text = "";
@@ -82,7 +86,7 @@ namespace RabtBilMusteriKayit
             TxtUrunKodlari.Text = "";
             TxtArizaTanimi.Text = "";
             TxtUrunDurumu.Text = "";
-            TxtUrunTakipNo.Text = "";
+            TxtUrunTakipNo.Text = takipNo.ToString();
             TxtUcret.Text = "";
             TxtAksesuarlar.Text = "";
             TxtEkBilgiler.Text = "";
