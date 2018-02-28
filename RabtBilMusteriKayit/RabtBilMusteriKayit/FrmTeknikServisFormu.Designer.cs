@@ -399,6 +399,7 @@
             this.BttnTemizle.TabIndex = 30;
             this.BttnTemizle.Text = "Temizle";
             this.BttnTemizle.UseVisualStyleBackColor = true;
+            this.BttnTemizle.Click += new System.EventHandler(this.BttnTemizle_Click);
             // 
             // BttnKayitlariGoster
             // 

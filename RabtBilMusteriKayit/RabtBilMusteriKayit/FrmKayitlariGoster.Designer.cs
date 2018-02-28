@@ -236,6 +236,7 @@
             this.BttnSil.TabIndex = 27;
             this.BttnSil.Text = "Sil";
             this.BttnSil.UseVisualStyleBackColor = true;
+            this.BttnSil.Click += new System.EventHandler(this.BttnSil_Click);
             // 
             // BttnYazdir
             // 

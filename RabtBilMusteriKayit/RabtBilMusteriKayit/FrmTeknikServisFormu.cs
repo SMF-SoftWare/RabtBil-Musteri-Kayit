@@ -38,7 +38,7 @@ namespace RabtBilMusteriKayit
 
         private void BttnYeniKayit_Click(object sender, EventArgs e)
         {
-
+            _temizle();
         }
 
         private void BttnKaydet_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace RabtBilMusteriKayit
                 kaydet.Parameters.AddWithValue("@Ucret", Convert.ToInt32(TxtUcret.Text));
                 kaydet.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
                 kaydet.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
-                kaydet.Parameters.AddWithValue("@Tarih",DateTime.Parse(System.DateTime.Now.ToString()));
+                kaydet.Parameters.AddWithValue("@Tarih",Convert.ToDateTime(System.DateTime.Now.ToString()));
                 _baglanti.Open();
                 kaydet.ExecuteNonQuery();
                 MessageBox.Show("Oluşturduğunuz Kayıt Kaydedilmiştir.");
@@ -122,13 +122,12 @@ namespace RabtBilMusteriKayit
                 guncelle.Parameters.AddWithValue("@ArizaTanimi", TxtArizaTanimi.Text);
                 guncelle.Parameters.AddWithValue("@UrunDurumu", TxtUrunDurumu.Text);
                 guncelle.Parameters.AddWithValue("@UrunTakipNo", Convert.ToInt32(TxtUrunTakipNo.Text));
-                //kaydet.Parameters.AddWithValue("@URLKodu", TxtUrunTakipNo.Text);
+                //guncelle.Parameters.AddWithValue("@URLKodu", TxtUrunTakipNo.Text);
                 guncelle.Parameters.AddWithValue("@Ucret", Convert.ToInt32(TxtUcret.Text));
                 guncelle.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
                 guncelle.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
-                guncelle.Parameters.AddWithValue("@Tarih", TlStripTarihSaat.Text);
-                guncelle.Parameters.AddWithValue("@Id", 7);
-                //guncelle.Parameters.AddWithValue("@Id", Convert.ToInt32(LblMusteriNo.Text));
+                guncelle.Parameters.AddWithValue("@Tarih", Convert.ToDateTime(TlStripTarihSaat.Text));
+                guncelle.Parameters.AddWithValue("@Id", Convert.ToInt32(LblMusteriNo.Text));
                 _baglanti.Open();
                 guncelle.ExecuteNonQuery();
                 MessageBox.Show("Kaydınız Güncellenmiştir.");
@@ -139,6 +138,11 @@ namespace RabtBilMusteriKayit
             {
                 MessageBox.Show(exception.Message);
             }
+        }
+
+        private void BttnTemizle_Click(object sender, EventArgs e)
+        {
+            _temizle();
         }
     }
 }
