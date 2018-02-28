@@ -23,11 +23,11 @@ namespace RabtBilMusteriKayit
         {
             KullaniciOlusturGizle();
         }
-
+        //355; 
         private void BttnGirisYap_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(TxtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(TxtSifre.Text))
-            {
+            { 
                 MessageBox.Show("Kullanıcı Adı Veya Şifre Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -74,10 +74,10 @@ namespace RabtBilMusteriKayit
 
         private void BttnYeniKullaniciOluştur_Click(object sender, EventArgs e)
         {
-            string kullaniciEposta = TxtYeniKullaniciOluştur.Text.ToLower();
+            string kullaniciEposta = TxtEposta.Text.ToLower();
             string kullaniciSifre = SifreOlustur(12);
 
-            if (String.IsNullOrWhiteSpace(TxtYeniKullaniciOluştur.Text))
+            if (String.IsNullOrWhiteSpace(TxtEposta.Text))
             {
                 MessageBox.Show("E-posta Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -150,15 +150,15 @@ namespace RabtBilMusteriKayit
         {
             Width = 355;
             Height = 370;
-            TxtYeniKullaniciOluştur.Show();
+            TxtEposta.Show();
             BttnYeniKullaniciOluştur.Show();
         }
 
         public void KullaniciOlusturGizle()
         {
             Width = 355;
-            Height = 290;
-            TxtYeniKullaniciOluştur.Hide();
+            Height = 265;
+            TxtEposta.Hide();
             BttnYeniKullaniciOluştur.Hide();
         }
     }

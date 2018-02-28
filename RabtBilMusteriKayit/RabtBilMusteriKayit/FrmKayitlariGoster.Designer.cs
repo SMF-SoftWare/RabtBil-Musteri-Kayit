@@ -54,10 +54,10 @@
             this.BttnYazdir = new System.Windows.Forms.Button();
             this.TimerTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.GrpBoxArama = new System.Windows.Forms.GroupBox();
-            this.RadioBttnNoyaGoreAra = new System.Windows.Forms.RadioButton();
-            this.RadioBttnMusteriIsmineGoreAra = new System.Windows.Forms.RadioButton();
-            this.TxtArama = new System.Windows.Forms.TextBox();
             this.BttnBul = new System.Windows.Forms.Button();
+            this.TxtArama = new System.Windows.Forms.TextBox();
+            this.RadioBttnMusteriIsmineGoreAra = new System.Windows.Forms.RadioButton();
+            this.RadioBttnNoyaGoreAra = new System.Windows.Forms.RadioButton();
             this.MenuStrip.SuspendLayout();
             this.TlStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridViewKayitlariGoster)).BeginInit();
@@ -225,6 +225,8 @@
             this.DtGridViewKayitlariGoster.Name = "DtGridViewKayitlariGoster";
             this.DtGridViewKayitlariGoster.Size = new System.Drawing.Size(900, 349);
             this.DtGridViewKayitlariGoster.TabIndex = 18;
+            this.DtGridViewKayitlariGoster.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridViewKayitlariGoster_CellDoubleClick);
+            this.DtGridViewKayitlariGoster.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridViewKayitlariGoster_CellDoubleClick);
             // 
             // BttnSil
             // 
@@ -261,16 +263,23 @@
             this.GrpBoxArama.TabStop = false;
             this.GrpBoxArama.Text = "Arama";
             // 
-            // RadioBttnNoyaGoreAra
+            // BttnBul
             // 
-            this.RadioBttnNoyaGoreAra.AutoSize = true;
-            this.RadioBttnNoyaGoreAra.Location = new System.Drawing.Point(4, 16);
-            this.RadioBttnNoyaGoreAra.Name = "RadioBttnNoyaGoreAra";
-            this.RadioBttnNoyaGoreAra.Size = new System.Drawing.Size(162, 22);
-            this.RadioBttnNoyaGoreAra.TabIndex = 0;
-            this.RadioBttnNoyaGoreAra.TabStop = true;
-            this.RadioBttnNoyaGoreAra.Text = "Form no\'suna göre";
-            this.RadioBttnNoyaGoreAra.UseVisualStyleBackColor = true;
+            this.BttnBul.Location = new System.Drawing.Point(497, 16);
+            this.BttnBul.Name = "BttnBul";
+            this.BttnBul.Size = new System.Drawing.Size(128, 35);
+            this.BttnBul.TabIndex = 29;
+            this.BttnBul.Text = "Bul";
+            this.BttnBul.UseVisualStyleBackColor = true;
+            // 
+            // TxtArama
+            // 
+            this.TxtArama.Location = new System.Drawing.Point(196, 24);
+            this.TxtArama.MaxLength = 30;
+            this.TxtArama.Name = "TxtArama";
+            this.TxtArama.ReadOnly = true;
+            this.TxtArama.Size = new System.Drawing.Size(281, 25);
+            this.TxtArama.TabIndex = 16;
             // 
             // RadioBttnMusteriIsmineGoreAra
             // 
@@ -283,23 +292,16 @@
             this.RadioBttnMusteriIsmineGoreAra.Text = "Müşteri isimine göre";
             this.RadioBttnMusteriIsmineGoreAra.UseVisualStyleBackColor = true;
             // 
-            // TxtArama
+            // RadioBttnNoyaGoreAra
             // 
-            this.TxtArama.Location = new System.Drawing.Point(196, 24);
-            this.TxtArama.MaxLength = 30;
-            this.TxtArama.Name = "TxtArama";
-            this.TxtArama.ReadOnly = true;
-            this.TxtArama.Size = new System.Drawing.Size(281, 25);
-            this.TxtArama.TabIndex = 16;
-            // 
-            // BttnBul
-            // 
-            this.BttnBul.Location = new System.Drawing.Point(497, 16);
-            this.BttnBul.Name = "BttnBul";
-            this.BttnBul.Size = new System.Drawing.Size(128, 35);
-            this.BttnBul.TabIndex = 29;
-            this.BttnBul.Text = "Bul";
-            this.BttnBul.UseVisualStyleBackColor = true;
+            this.RadioBttnNoyaGoreAra.AutoSize = true;
+            this.RadioBttnNoyaGoreAra.Location = new System.Drawing.Point(4, 16);
+            this.RadioBttnNoyaGoreAra.Name = "RadioBttnNoyaGoreAra";
+            this.RadioBttnNoyaGoreAra.Size = new System.Drawing.Size(162, 22);
+            this.RadioBttnNoyaGoreAra.TabIndex = 0;
+            this.RadioBttnNoyaGoreAra.TabStop = true;
+            this.RadioBttnNoyaGoreAra.Text = "Form no\'suna göre";
+            this.RadioBttnNoyaGoreAra.UseVisualStyleBackColor = true;
             // 
             // FrmKayitlariGoster
             // 

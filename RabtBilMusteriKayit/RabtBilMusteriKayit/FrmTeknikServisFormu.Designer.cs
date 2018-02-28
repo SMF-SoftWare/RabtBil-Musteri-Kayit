@@ -35,7 +35,7 @@
             this.LblTelefon = new System.Windows.Forms.Label();
             this.TxtTelefon = new System.Windows.Forms.TextBox();
             this.LblFormNo = new System.Windows.Forms.Label();
-            this.TxtKayitNo = new System.Windows.Forms.TextBox();
+            this.TxtFormNo = new System.Windows.Forms.TextBox();
             this.GrpBoxAksesuarlar = new System.Windows.Forms.GroupBox();
             this.TxtAksesuarlar = new System.Windows.Forms.TextBox();
             this.GrpBoxEkBilgiler = new System.Windows.Forms.GroupBox();
@@ -83,6 +83,7 @@
             this.TlStripAcıklama = new System.Windows.Forms.ToolStripLabel();
             this.TlStripTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.TimerTarihSaat = new System.Windows.Forms.Timer(this.components);
+            this.LblMusteriNo = new System.Windows.Forms.Label();
             this.GrpBoxMusteriBilgileri.SuspendLayout();
             this.GrpBoxAksesuarlar.SuspendLayout();
             this.GrpBoxEkBilgiler.SuspendLayout();
@@ -116,7 +117,7 @@
             this.GrpBoxMusteriBilgileri.Controls.Add(this.LblTelefon);
             this.GrpBoxMusteriBilgileri.Controls.Add(this.TxtTelefon);
             this.GrpBoxMusteriBilgileri.Controls.Add(this.LblFormNo);
-            this.GrpBoxMusteriBilgileri.Controls.Add(this.TxtKayitNo);
+            this.GrpBoxMusteriBilgileri.Controls.Add(this.TxtFormNo);
             this.GrpBoxMusteriBilgileri.Controls.Add(this.LblMusteriAdi);
             this.GrpBoxMusteriBilgileri.Controls.Add(this.TxtMusteriAdi);
             this.GrpBoxMusteriBilgileri.Location = new System.Drawing.Point(12, 29);
@@ -154,13 +155,13 @@
             this.LblFormNo.TabIndex = 3;
             this.LblFormNo.Text = "Form No:";
             // 
-            // TxtKayitNo
+            // TxtFormNo
             // 
-            this.TxtKayitNo.Location = new System.Drawing.Point(96, 58);
-            this.TxtKayitNo.MaxLength = 30;
-            this.TxtKayitNo.Name = "TxtKayitNo";
-            this.TxtKayitNo.Size = new System.Drawing.Size(252, 25);
-            this.TxtKayitNo.TabIndex = 2;
+            this.TxtFormNo.Location = new System.Drawing.Point(96, 58);
+            this.TxtFormNo.MaxLength = 30;
+            this.TxtFormNo.Name = "TxtFormNo";
+            this.TxtFormNo.Size = new System.Drawing.Size(252, 25);
+            this.TxtFormNo.TabIndex = 2;
             // 
             // GrpBoxAksesuarlar
             // 
@@ -202,6 +203,7 @@
             // 
             // GrpBoxUrunBilgileri
             // 
+            this.GrpBoxUrunBilgileri.Controls.Add(this.LblMusteriNo);
             this.GrpBoxUrunBilgileri.Controls.Add(this.BttnQrKoduOlustur);
             this.GrpBoxUrunBilgileri.Controls.Add(this.LblUcret);
             this.GrpBoxUrunBilgileri.Controls.Add(this.TxtUcret);
@@ -340,12 +342,14 @@
             this.CmbBoxUrunKodlari.Name = "CmbBoxUrunKodlari";
             this.CmbBoxUrunKodlari.Size = new System.Drawing.Size(121, 26);
             this.CmbBoxUrunKodlari.TabIndex = 8;
+            this.CmbBoxUrunKodlari.SelectedIndexChanged += new System.EventHandler(this.CmbBoxUrunKodlari_SelectedIndexChanged);
             // 
             // TxtUrunKodlari
             // 
             this.TxtUrunKodlari.Location = new System.Drawing.Point(139, 58);
             this.TxtUrunKodlari.MaxLength = 30;
             this.TxtUrunKodlari.Name = "TxtUrunKodlari";
+            this.TxtUrunKodlari.ReadOnly = true;
             this.TxtUrunKodlari.Size = new System.Drawing.Size(252, 25);
             this.TxtUrunKodlari.TabIndex = 10;
             // 
@@ -385,6 +389,7 @@
             this.BttnKaydet.TabIndex = 28;
             this.BttnKaydet.Text = "Kaydet";
             this.BttnKaydet.UseVisualStyleBackColor = true;
+            this.BttnKaydet.Click += new System.EventHandler(this.BttnKaydet_Click);
             // 
             // BttnTemizle
             // 
@@ -413,6 +418,7 @@
             this.BttnGuncelle.TabIndex = 34;
             this.BttnGuncelle.Text = "Güncelle";
             this.BttnGuncelle.UseVisualStyleBackColor = true;
+            this.BttnGuncelle.Click += new System.EventHandler(this.BttnGuncelle_Click);
             // 
             // PcTrBoxProfiliDuzenle
             // 
@@ -580,6 +586,17 @@
             // 
             this.TimerTarihSaat.Tick += new System.EventHandler(this.TimerTarihSaat_Tick);
             // 
+            // LblMusteriNo
+            // 
+            this.LblMusteriNo.AutoSize = true;
+            this.LblMusteriNo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblMusteriNo.Location = new System.Drawing.Point(224, 396);
+            this.LblMusteriNo.Name = "LblMusteriNo";
+            this.LblMusteriNo.Size = new System.Drawing.Size(70, 15);
+            this.LblMusteriNo.TabIndex = 25;
+            this.LblMusteriNo.Text = "MüşteriNo";
+            this.LblMusteriNo.Visible = false;
+            // 
             // FrmTeknikServisFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -627,59 +644,61 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox TxtMusteriAdi;
-        private System.Windows.Forms.GroupBox GrpBoxMusteriBilgileri;
-        private System.Windows.Forms.Label LblTelefon;
-        private System.Windows.Forms.TextBox TxtTelefon;
-        private System.Windows.Forms.Label LblFormNo;
-        private System.Windows.Forms.TextBox TxtKayitNo;
-        private System.Windows.Forms.GroupBox GrpBoxAksesuarlar;
-        private System.Windows.Forms.GroupBox GrpBoxEkBilgiler;
-        private System.Windows.Forms.TextBox TxtEkBilgiler;
-        private System.Windows.Forms.GroupBox GrpBoxUrunBilgileri;
-        private System.Windows.Forms.Label LblUcret;
-        private System.Windows.Forms.TextBox TxtUcret;
-        private System.Windows.Forms.PictureBox PcTrBoxMusteriQrKodu;
-        private System.Windows.Forms.Label LblMusteriQrKodu;
-        private System.Windows.Forms.Label LblUrunTakipNo;
-        private System.Windows.Forms.TextBox TxtUrunTakipNo;
-        private System.Windows.Forms.Label LblUrunDurumu;
-        private System.Windows.Forms.TextBox TxtUrunDurumu;
-        private System.Windows.Forms.Label LblArizaTanimi;
-        private System.Windows.Forms.ComboBox CmbBoxUrunKodlari;
-        private System.Windows.Forms.TextBox TxtUrunKodlari;
-        private System.Windows.Forms.Label LblUrunModeli;
-        private System.Windows.Forms.TextBox TxtUrunModeli;
-        private System.Windows.Forms.Button BttnYeniKayit;
-        private System.Windows.Forms.Button BttnKaydet;
-        private System.Windows.Forms.Button BttnTemizle;
-        private System.Windows.Forms.Button BttnKayitlariGoster;
-        private System.Windows.Forms.Button BttnGuncelle;
-        private System.Windows.Forms.PictureBox PcTrBoxProfiliDuzenle;
-        private System.Windows.Forms.MenuStrip MenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclar;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarYeniKayit;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarKaydet;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarTemizle;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarKayitlariGoster;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarGuncelle;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlar;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarDil;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemDilTurkce;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemDilIngilizce;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarGuncellemeleriDenetle;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarTema;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardım;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardimLisansAnahtari;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardimHakkinda;
-        private System.Windows.Forms.Label LblMusteriAdi;
-        private System.Windows.Forms.Button BttnQrKoduOlustur;
-        private System.Windows.Forms.ToolStrip TlStrip;
-        private System.Windows.Forms.ToolStripLabel TlStripAcıklama;
-        private System.Windows.Forms.ToolStripLabel TlStripTarihSaat;
-        private System.Windows.Forms.Timer TimerTarihSaat;
-        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarSil;
-        private System.Windows.Forms.TextBox TxtAksesuarlar;
-        private System.Windows.Forms.TextBox TxtArizaTanimi;
+
+        public System.Windows.Forms.TextBox TxtMusteriAdi;
+        public System.Windows.Forms.GroupBox GrpBoxMusteriBilgileri;
+        public System.Windows.Forms.Label LblTelefon;
+        public System.Windows.Forms.TextBox TxtTelefon;
+        public System.Windows.Forms.Label LblFormNo;
+        public System.Windows.Forms.TextBox TxtFormNo;
+        public System.Windows.Forms.GroupBox GrpBoxAksesuarlar;
+        public System.Windows.Forms.GroupBox GrpBoxEkBilgiler;
+        public System.Windows.Forms.TextBox TxtEkBilgiler;
+        public System.Windows.Forms.GroupBox GrpBoxUrunBilgileri;
+        public System.Windows.Forms.Label LblUcret;
+        public System.Windows.Forms.TextBox TxtUcret;
+        public System.Windows.Forms.PictureBox PcTrBoxMusteriQrKodu;
+        public System.Windows.Forms.Label LblMusteriQrKodu;
+        public System.Windows.Forms.Label LblUrunTakipNo;
+        public System.Windows.Forms.TextBox TxtUrunTakipNo;
+        public System.Windows.Forms.Label LblUrunDurumu;
+        public System.Windows.Forms.TextBox TxtUrunDurumu;
+        public System.Windows.Forms.Label LblArizaTanimi;
+        public System.Windows.Forms.ComboBox CmbBoxUrunKodlari;
+        public System.Windows.Forms.TextBox TxtUrunKodlari;
+        public System.Windows.Forms.Label LblUrunModeli;
+        public System.Windows.Forms.TextBox TxtUrunModeli;
+        public System.Windows.Forms.Button BttnYeniKayit;
+        public System.Windows.Forms.Button BttnKaydet;
+        public System.Windows.Forms.Button BttnTemizle;
+        public System.Windows.Forms.Button BttnKayitlariGoster;
+        public System.Windows.Forms.Button BttnGuncelle;
+        public System.Windows.Forms.PictureBox PcTrBoxProfiliDuzenle;
+        public System.Windows.Forms.MenuStrip MenuStrip;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclar;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarYeniKayit;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarKaydet;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarTemizle;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarKayitlariGoster;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarGuncelle;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlar;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarDil;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemDilTurkce;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemDilIngilizce;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarGuncellemeleriDenetle;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarTema;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardım;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardimLisansAnahtari;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardimHakkinda;
+        public System.Windows.Forms.Label LblMusteriAdi;
+        public System.Windows.Forms.Button BttnQrKoduOlustur;
+        public System.Windows.Forms.ToolStrip TlStrip;
+        public System.Windows.Forms.ToolStripLabel TlStripAcıklama;
+        public System.Windows.Forms.ToolStripLabel TlStripTarihSaat;
+        public System.Windows.Forms.Timer TimerTarihSaat;
+        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarSil;
+        public System.Windows.Forms.TextBox TxtAksesuarlar;
+        public System.Windows.Forms.TextBox TxtArizaTanimi;
+        public System.Windows.Forms.Label LblMusteriNo;
     }
 }
