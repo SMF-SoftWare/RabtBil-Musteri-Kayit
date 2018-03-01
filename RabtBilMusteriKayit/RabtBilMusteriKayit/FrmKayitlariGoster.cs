@@ -35,7 +35,25 @@ namespace RabtBilMusteriKayit
             TlStripTarihSaat.Text = System.DateTime.Now.ToString();
         }
 
-        private void DtGridViewKayitlariGoster_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void BttnSil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlCommand sil = new MySqlCommand("DELETE FROM musteribilgileri WHERE Id=@Id", _baglanti);
+                sil.Parameters.AddWithValue("@Id", Convert.ToInt32(DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString()));
+                _baglanti.Open();
+                sil.ExecuteNonQuery();
+                MessageBox.Show("Kaydınız Silinmiştir.");
+                _baglanti.Close();
+                _verilerigetir();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void DtGridViewKayitlariGoster_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FrmTeknikServisFormu frmTeknikServisFormu = new FrmTeknikServisFormu();
             frmTeknikServisFormu.LblMusteriNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString();
@@ -54,24 +72,6 @@ namespace RabtBilMusteriKayit
             frmTeknikServisFormu.TxtEkBilgiler.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[12].Value.ToString();
             frmTeknikServisFormu.Show();
             Hide();
-        }
-
-        private void BttnSil_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                MySqlCommand sil = new MySqlCommand("DELETE FROM musteribilgileri WHERE Id=@Id", _baglanti);
-                sil.Parameters.AddWithValue("@Id", Convert.ToInt32(DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString()));
-                _baglanti.Open();
-                sil.ExecuteNonQuery();
-                MessageBox.Show("Kaydınız Silinmiştir.");
-                _baglanti.Close();
-                _verilerigetir();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
         }
     }
 }

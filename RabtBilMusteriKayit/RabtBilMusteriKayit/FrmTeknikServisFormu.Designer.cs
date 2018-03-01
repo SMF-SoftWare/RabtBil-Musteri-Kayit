@@ -41,6 +41,7 @@
             this.GrpBoxEkBilgiler = new System.Windows.Forms.GroupBox();
             this.TxtEkBilgiler = new System.Windows.Forms.TextBox();
             this.GrpBoxUrunBilgileri = new System.Windows.Forms.GroupBox();
+            this.LblMusteriNo = new System.Windows.Forms.Label();
             this.BttnQrKoduOlustur = new System.Windows.Forms.Button();
             this.LblUcret = new System.Windows.Forms.Label();
             this.TxtUcret = new System.Windows.Forms.TextBox();
@@ -83,7 +84,6 @@
             this.TlStripAcıklama = new System.Windows.Forms.ToolStripLabel();
             this.TlStripTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.TimerTarihSaat = new System.Windows.Forms.Timer(this.components);
-            this.LblMusteriNo = new System.Windows.Forms.Label();
             this.GrpBoxMusteriBilgileri.SuspendLayout();
             this.GrpBoxAksesuarlar.SuspendLayout();
             this.GrpBoxEkBilgiler.SuspendLayout();
@@ -225,6 +225,17 @@
             this.GrpBoxUrunBilgileri.TabIndex = 8;
             this.GrpBoxUrunBilgileri.TabStop = false;
             this.GrpBoxUrunBilgileri.Text = "Ürün Bilgileri";
+            // 
+            // LblMusteriNo
+            // 
+            this.LblMusteriNo.AutoSize = true;
+            this.LblMusteriNo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblMusteriNo.Location = new System.Drawing.Point(224, 396);
+            this.LblMusteriNo.Name = "LblMusteriNo";
+            this.LblMusteriNo.Size = new System.Drawing.Size(70, 15);
+            this.LblMusteriNo.TabIndex = 25;
+            this.LblMusteriNo.Text = "MüşteriNo";
+            this.LblMusteriNo.Visible = false;
             // 
             // BttnQrKoduOlustur
             // 
@@ -462,36 +473,42 @@
             this.TlStrpMenuItemAraclarYeniKayit.Name = "TlStrpMenuItemAraclarYeniKayit";
             this.TlStrpMenuItemAraclarYeniKayit.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarYeniKayit.Text = "Yeni Kayıt";
+            this.TlStrpMenuItemAraclarYeniKayit.Click += new System.EventHandler(this.BttnYeniKayit_Click);
             // 
             // TlStrpMenuItemAraclarKaydet
             // 
             this.TlStrpMenuItemAraclarKaydet.Name = "TlStrpMenuItemAraclarKaydet";
             this.TlStrpMenuItemAraclarKaydet.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarKaydet.Text = "Kaydet";
+            this.TlStrpMenuItemAraclarKaydet.Click += new System.EventHandler(this.BttnKaydet_Click);
             // 
             // TlStrpMenuItemAraclarTemizle
             // 
             this.TlStrpMenuItemAraclarTemizle.Name = "TlStrpMenuItemAraclarTemizle";
             this.TlStrpMenuItemAraclarTemizle.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarTemizle.Text = "Temizle";
+            this.TlStrpMenuItemAraclarTemizle.Click += new System.EventHandler(this.BttnTemizle_Click);
             // 
             // TlStrpMenuItemAraclarKayitlariGoster
             // 
             this.TlStrpMenuItemAraclarKayitlariGoster.Name = "TlStrpMenuItemAraclarKayitlariGoster";
             this.TlStrpMenuItemAraclarKayitlariGoster.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarKayitlariGoster.Text = "Kayıtları Göster";
+            this.TlStrpMenuItemAraclarKayitlariGoster.Click += new System.EventHandler(this.BttnKayitlariGoster_Click);
             // 
             // TlStrpMenuItemAraclarGuncelle
             // 
             this.TlStrpMenuItemAraclarGuncelle.Name = "TlStrpMenuItemAraclarGuncelle";
             this.TlStrpMenuItemAraclarGuncelle.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarGuncelle.Text = "Güncelle";
+            this.TlStrpMenuItemAraclarGuncelle.Click += new System.EventHandler(this.BttnGuncelle_Click);
             // 
             // TlStrpMenuItemAraclarSil
             // 
             this.TlStrpMenuItemAraclarSil.Name = "TlStrpMenuItemAraclarSil";
             this.TlStrpMenuItemAraclarSil.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarSil.Text = "Sil";
+            this.TlStrpMenuItemAraclarSil.Click += new System.EventHandler(this.TlStrpMenuItemAraclarSil_Click);
             // 
             // TlStrpMenuItemAyarlar
             // 
@@ -587,17 +604,6 @@
             // TimerTarihSaat
             // 
             this.TimerTarihSaat.Tick += new System.EventHandler(this.TimerTarihSaat_Tick);
-            // 
-            // LblMusteriNo
-            // 
-            this.LblMusteriNo.AutoSize = true;
-            this.LblMusteriNo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblMusteriNo.Location = new System.Drawing.Point(224, 396);
-            this.LblMusteriNo.Name = "LblMusteriNo";
-            this.LblMusteriNo.Size = new System.Drawing.Size(70, 15);
-            this.LblMusteriNo.TabIndex = 25;
-            this.LblMusteriNo.Text = "MüşteriNo";
-            this.LblMusteriNo.Visible = false;
             // 
             // FrmTeknikServisFormu
             // 

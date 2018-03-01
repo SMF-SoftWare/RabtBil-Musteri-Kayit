@@ -220,13 +220,15 @@
             // 
             // DtGridViewKayitlariGoster
             // 
-            this.DtGridViewKayitlariGoster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtGridViewKayitlariGoster.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.DtGridViewKayitlariGoster.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DtGridViewKayitlariGoster.Location = new System.Drawing.Point(12, 29);
             this.DtGridViewKayitlariGoster.Name = "DtGridViewKayitlariGoster";
+            this.DtGridViewKayitlariGoster.ReadOnly = true;
+            this.DtGridViewKayitlariGoster.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGridViewKayitlariGoster.Size = new System.Drawing.Size(900, 349);
             this.DtGridViewKayitlariGoster.TabIndex = 18;
-            this.DtGridViewKayitlariGoster.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridViewKayitlariGoster_CellDoubleClick);
-            this.DtGridViewKayitlariGoster.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridViewKayitlariGoster_CellDoubleClick);
+            this.DtGridViewKayitlariGoster.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridViewKayitlariGoster_CellContentDoubleClick);
             // 
             // BttnSil
             // 

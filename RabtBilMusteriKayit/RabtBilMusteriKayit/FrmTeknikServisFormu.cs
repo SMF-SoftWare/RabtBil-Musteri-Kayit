@@ -148,5 +148,13 @@ namespace RabtBilMusteriKayit
         {
             _temizle();
         }
+
+        private void TlStrpMenuItemAraclarSil_Click(object sender, EventArgs e)
+        {
+            FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
+            frmKayitlariGoster.Show();
+            Hide();
+            MessageBox.Show("Lütfen Müşteri Seçiniz");
+        }
     }
 }
