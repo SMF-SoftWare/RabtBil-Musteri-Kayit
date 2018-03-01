@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtMusteriAdi = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.LblKullaniciAdiniz = new System.Windows.Forms.Label();
+            this.LblSifreniz = new System.Windows.Forms.Label();
+            this.LblSifreniziOnaylayın = new System.Windows.Forms.Label();
+            this.LblAdiniz = new System.Windows.Forms.Label();
+            this.LblSoyadiniz = new System.Windows.Forms.Label();
+            this.LblEpostaniz = new System.Windows.Forms.Label();
+            this.TxtKullaniciAdiniz = new System.Windows.Forms.TextBox();
+            this.TxtSifreniz = new System.Windows.Forms.TextBox();
+            this.TxtSifreniziOnaylayın = new System.Windows.Forms.TextBox();
+            this.TxtAdiniz = new System.Windows.Forms.TextBox();
+            this.TxtSoyadiniz = new System.Windows.Forms.TextBox();
+            this.TxtEpostaniz = new System.Windows.Forms.TextBox();
+            this.ChckBoxSozlesme = new System.Windows.Forms.CheckBox();
+            this.BttnKaydet = new System.Windows.Forms.Button();
+            this.BttnTemizle = new System.Windows.Forms.Button();
+            this.BttnAnaSayfa = new System.Windows.Forms.Button();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.TlStrpMenuItemAraclar = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlar = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,144 +61,151 @@
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfiliDuzenle)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // LblKullaniciAdiniz
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kullanıcı adınızı seçin:";
+            this.LblKullaniciAdiniz.AutoSize = true;
+            this.LblKullaniciAdiniz.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.LblKullaniciAdiniz.Location = new System.Drawing.Point(9, 35);
+            this.LblKullaniciAdiniz.Name = "LblKullaniciAdiniz";
+            this.LblKullaniciAdiniz.Size = new System.Drawing.Size(175, 15);
+            this.LblKullaniciAdiniz.TabIndex = 0;
+            this.LblKullaniciAdiniz.Text = "Kullanıcı adınızı seçin:";
             // 
-            // label2
+            // LblSifreniz
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Şifrenizi oluşturun:";
+            this.LblSifreniz.AutoSize = true;
+            this.LblSifreniz.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.LblSifreniz.Location = new System.Drawing.Point(12, 84);
+            this.LblSifreniz.Name = "LblSifreniz";
+            this.LblSifreniz.Size = new System.Drawing.Size(147, 15);
+            this.LblSifreniz.TabIndex = 2;
+            this.LblSifreniz.Text = "Şifrenizi oluşturun:";
             // 
-            // label3
+            // LblSifreniziOnaylayın
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Şifrenizi onaylayın:";
+            this.LblSifreniziOnaylayın.AutoSize = true;
+            this.LblSifreniziOnaylayın.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.LblSifreniziOnaylayın.Location = new System.Drawing.Point(9, 133);
+            this.LblSifreniziOnaylayın.Name = "LblSifreniziOnaylayın";
+            this.LblSifreniziOnaylayın.Size = new System.Drawing.Size(147, 15);
+            this.LblSifreniziOnaylayın.TabIndex = 4;
+            this.LblSifreniziOnaylayın.Text = "Şifrenizi onaylayın:";
             // 
-            // label4
+            // LblAdiniz
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Adınız:";
+            this.LblAdiniz.AutoSize = true;
+            this.LblAdiniz.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.LblAdiniz.Location = new System.Drawing.Point(12, 182);
+            this.LblAdiniz.Name = "LblAdiniz";
+            this.LblAdiniz.Size = new System.Drawing.Size(56, 15);
+            this.LblAdiniz.TabIndex = 6;
+            this.LblAdiniz.Text = "Adınız:";
             // 
-            // label5
+            // LblSoyadiniz
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 228);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Soyadınız:";
+            this.LblSoyadiniz.AutoSize = true;
+            this.LblSoyadiniz.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.LblSoyadiniz.Location = new System.Drawing.Point(12, 231);
+            this.LblSoyadiniz.Name = "LblSoyadiniz";
+            this.LblSoyadiniz.Size = new System.Drawing.Size(77, 15);
+            this.LblSoyadiniz.TabIndex = 8;
+            this.LblSoyadiniz.Text = "Soyadınız:";
             // 
-            // label6
+            // LblEpostaniz
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 277);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "E-postanız:";
+            this.LblEpostaniz.AutoSize = true;
+            this.LblEpostaniz.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.LblEpostaniz.Location = new System.Drawing.Point(12, 280);
+            this.LblEpostaniz.Name = "LblEpostaniz";
+            this.LblEpostaniz.Size = new System.Drawing.Size(84, 15);
+            this.LblEpostaniz.TabIndex = 10;
+            this.LblEpostaniz.Text = "E-postanız:";
             // 
-            // TxtMusteriAdi
+            // TxtKullaniciAdiniz
             // 
-            this.TxtMusteriAdi.Location = new System.Drawing.Point(12, 53);
-            this.TxtMusteriAdi.MaxLength = 30;
-            this.TxtMusteriAdi.Name = "TxtMusteriAdi";
-            this.TxtMusteriAdi.Size = new System.Drawing.Size(252, 25);
-            this.TxtMusteriAdi.TabIndex = 12;
+            this.TxtKullaniciAdiniz.Location = new System.Drawing.Point(12, 53);
+            this.TxtKullaniciAdiniz.MaxLength = 30;
+            this.TxtKullaniciAdiniz.Name = "TxtKullaniciAdiniz";
+            this.TxtKullaniciAdiniz.Size = new System.Drawing.Size(252, 25);
+            this.TxtKullaniciAdiniz.TabIndex = 12;
             // 
-            // textBox1
+            // TxtSifreniz
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 102);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 25);
-            this.textBox1.TabIndex = 13;
+            this.TxtSifreniz.Location = new System.Drawing.Point(15, 102);
+            this.TxtSifreniz.MaxLength = 30;
+            this.TxtSifreniz.Name = "TxtSifreniz";
+            this.TxtSifreniz.Size = new System.Drawing.Size(252, 25);
+            this.TxtSifreniz.TabIndex = 13;
             // 
-            // textBox2
+            // TxtSifreniziOnaylayın
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 151);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 25);
-            this.textBox2.TabIndex = 14;
+            this.TxtSifreniziOnaylayın.Location = new System.Drawing.Point(12, 151);
+            this.TxtSifreniziOnaylayın.MaxLength = 30;
+            this.TxtSifreniziOnaylayın.Name = "TxtSifreniziOnaylayın";
+            this.TxtSifreniziOnaylayın.Size = new System.Drawing.Size(252, 25);
+            this.TxtSifreniziOnaylayın.TabIndex = 14;
             // 
-            // textBox3
+            // TxtAdiniz
             // 
-            this.textBox3.Location = new System.Drawing.Point(15, 200);
-            this.textBox3.MaxLength = 30;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(252, 25);
-            this.textBox3.TabIndex = 15;
+            this.TxtAdiniz.Location = new System.Drawing.Point(15, 200);
+            this.TxtAdiniz.MaxLength = 30;
+            this.TxtAdiniz.Name = "TxtAdiniz";
+            this.TxtAdiniz.Size = new System.Drawing.Size(252, 25);
+            this.TxtAdiniz.TabIndex = 15;
             // 
-            // textBox4
+            // TxtSoyadiniz
             // 
-            this.textBox4.Location = new System.Drawing.Point(15, 249);
-            this.textBox4.MaxLength = 30;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(252, 25);
-            this.textBox4.TabIndex = 16;
+            this.TxtSoyadiniz.Location = new System.Drawing.Point(15, 249);
+            this.TxtSoyadiniz.MaxLength = 30;
+            this.TxtSoyadiniz.Name = "TxtSoyadiniz";
+            this.TxtSoyadiniz.Size = new System.Drawing.Size(252, 25);
+            this.TxtSoyadiniz.TabIndex = 16;
             // 
-            // textBox5
+            // TxtEpostaniz
             // 
-            this.textBox5.Location = new System.Drawing.Point(15, 298);
-            this.textBox5.MaxLength = 30;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(252, 25);
-            this.textBox5.TabIndex = 17;
+            this.TxtEpostaniz.Location = new System.Drawing.Point(15, 298);
+            this.TxtEpostaniz.MaxLength = 30;
+            this.TxtEpostaniz.Name = "TxtEpostaniz";
+            this.TxtEpostaniz.Size = new System.Drawing.Size(252, 25);
+            this.TxtEpostaniz.TabIndex = 17;
             // 
-            // checkBox1
+            // ChckBoxSozlesme
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(15, 329);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(283, 22);
-            this.checkBox1.TabIndex = 18;
-            this.checkBox1.Text = "Sözleşmeyi Okudum Kabul Ediyorum";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ChckBoxSozlesme.AutoSize = true;
+            this.ChckBoxSozlesme.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.ChckBoxSozlesme.Location = new System.Drawing.Point(15, 329);
+            this.ChckBoxSozlesme.Name = "ChckBoxSozlesme";
+            this.ChckBoxSozlesme.Size = new System.Drawing.Size(250, 19);
+            this.ChckBoxSozlesme.TabIndex = 18;
+            this.ChckBoxSozlesme.Text = "Sözleşmeyi Okudum Kabul Ediyorum";
+            this.ChckBoxSozlesme.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BttnKaydet
             // 
-            this.button1.Location = new System.Drawing.Point(283, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 38);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BttnKaydet.Location = new System.Drawing.Point(283, 138);
+            this.BttnKaydet.Name = "BttnKaydet";
+            this.BttnKaydet.Size = new System.Drawing.Size(91, 38);
+            this.BttnKaydet.TabIndex = 19;
+            this.BttnKaydet.Text = "Kaydet";
+            this.BttnKaydet.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BttnTemizle
             // 
-            this.button2.Location = new System.Drawing.Point(283, 182);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 38);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Temizle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BttnTemizle.Location = new System.Drawing.Point(283, 182);
+            this.BttnTemizle.Name = "BttnTemizle";
+            this.BttnTemizle.Size = new System.Drawing.Size(91, 38);
+            this.BttnTemizle.TabIndex = 20;
+            this.BttnTemizle.Text = "Temizle";
+            this.BttnTemizle.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BttnAnaSayfa
             // 
-            this.button3.Location = new System.Drawing.Point(283, 226);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 38);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Ana Sayfa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BttnAnaSayfa.Location = new System.Drawing.Point(283, 226);
+            this.BttnAnaSayfa.Name = "BttnAnaSayfa";
+            this.BttnAnaSayfa.Size = new System.Drawing.Size(91, 38);
+            this.BttnAnaSayfa.TabIndex = 21;
+            this.BttnAnaSayfa.Text = "Ana Sayfa";
+            this.BttnAnaSayfa.UseVisualStyleBackColor = true;
             // 
             // MenuStrip
             // 
@@ -307,22 +314,22 @@
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.PcTrBoxProfiliDuzenle);
             this.Controls.Add(this.MenuStrip);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.TxtMusteriAdi);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BttnAnaSayfa);
+            this.Controls.Add(this.BttnTemizle);
+            this.Controls.Add(this.BttnKaydet);
+            this.Controls.Add(this.ChckBoxSozlesme);
+            this.Controls.Add(this.TxtEpostaniz);
+            this.Controls.Add(this.TxtSoyadiniz);
+            this.Controls.Add(this.TxtAdiniz);
+            this.Controls.Add(this.TxtSifreniziOnaylayın);
+            this.Controls.Add(this.TxtSifreniz);
+            this.Controls.Add(this.TxtKullaniciAdiniz);
+            this.Controls.Add(this.LblEpostaniz);
+            this.Controls.Add(this.LblSoyadiniz);
+            this.Controls.Add(this.LblAdiniz);
+            this.Controls.Add(this.LblSifreniziOnaylayın);
+            this.Controls.Add(this.LblSifreniz);
+            this.Controls.Add(this.LblKullaniciAdiniz);
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
@@ -340,22 +347,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox TxtMusteriAdi;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label LblKullaniciAdiniz;
+        private System.Windows.Forms.Label LblSifreniz;
+        private System.Windows.Forms.Label LblSifreniziOnaylayın;
+        private System.Windows.Forms.Label LblAdiniz;
+        private System.Windows.Forms.Label LblSoyadiniz;
+        private System.Windows.Forms.Label LblEpostaniz;
+        public System.Windows.Forms.TextBox TxtKullaniciAdiniz;
+        public System.Windows.Forms.TextBox TxtSifreniz;
+        public System.Windows.Forms.TextBox TxtSifreniziOnaylayın;
+        public System.Windows.Forms.TextBox TxtAdiniz;
+        public System.Windows.Forms.TextBox TxtSoyadiniz;
+        public System.Windows.Forms.TextBox TxtEpostaniz;
+        private System.Windows.Forms.CheckBox ChckBoxSozlesme;
+        private System.Windows.Forms.Button BttnKaydet;
+        private System.Windows.Forms.Button BttnTemizle;
+        private System.Windows.Forms.Button BttnAnaSayfa;
         public System.Windows.Forms.MenuStrip MenuStrip;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclar;
         private System.Windows.Forms.ToolStripMenuItem güçlüŞifreOluşturToolStripMenuItem;
