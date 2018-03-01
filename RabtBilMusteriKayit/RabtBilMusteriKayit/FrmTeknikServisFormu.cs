@@ -9,26 +9,22 @@ namespace RabtBilMusteriKayit
         private readonly MySqlConnection _baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
         private Random Rnd = new Random();
         private int takipNo;
-
         public FrmTeknikServisFormu()
         {
             InitializeComponent();
         }
-
         private void BttnKayitlariGoster_Click(object sender, System.EventArgs e)
         {
             Hide();
             FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
             frmKayitlariGoster.ShowDialog();
         }
-
         private void FrmTeknikServisFormu_Load(object sender, System.EventArgs e)
         {
             TimerTarihSaat.Enabled = true;
             takipNo = Rnd.Next(10000, 99999);
             TxtUrunTakipNo.Text = takipNo.ToString();
         }
-
         private void TimerTarihSaat_Tick(object sender, System.EventArgs e)
         {
             TlStripTarihSaat.Text = System.DateTime.Now.ToString();
@@ -37,12 +33,10 @@ namespace RabtBilMusteriKayit
         private void BttnQrKoduOlustur_Click(object sender, EventArgs e)
         {
         }
-
         private void BttnYeniKayit_Click(object sender, EventArgs e)
         {
             _temizle();
         }
-
         private void BttnKaydet_Click(object sender, EventArgs e)
         {
             //@URLKodu, şimdilik böyle olsun
@@ -74,7 +68,6 @@ namespace RabtBilMusteriKayit
                 MessageBox.Show(exception.Message);
             }
         }
-
         public void _temizle()
         {
             takipNo = Rnd.Next(10000, 99999);
@@ -91,7 +84,6 @@ namespace RabtBilMusteriKayit
             TxtAksesuarlar.Text = "";
             TxtEkBilgiler.Text = "";
         }
-
         private void CmbBoxUrunKodlari_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CmbBoxUrunKodlari.Text == "Seri No")
@@ -111,7 +103,6 @@ namespace RabtBilMusteriKayit
                 TxtUrunKodlari.ReadOnly = true;
             }
         }
-
         private void BttnGuncelle_Click(object sender, EventArgs e)
         {
             try
@@ -143,12 +134,10 @@ namespace RabtBilMusteriKayit
                 MessageBox.Show(exception.Message);
             }
         }
-
         private void BttnTemizle_Click(object sender, EventArgs e)
         {
             _temizle();
         }
-
         private void TlStrpMenuItemAraclarSil_Click(object sender, EventArgs e)
         {
             FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();

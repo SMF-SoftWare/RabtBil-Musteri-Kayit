@@ -323,7 +323,7 @@
             this.MinimumSize = new System.Drawing.Size(940, 515);
             this.Name = "FrmKayitlariGoster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RabtBil Kayıt -> Kayıtları Göster";
+            this.Text = "RabtBil Müşteri Kayit -> Kayıtları Göster";
             this.Load += new System.EventHandler(this.FrmKayitlariGoster_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();

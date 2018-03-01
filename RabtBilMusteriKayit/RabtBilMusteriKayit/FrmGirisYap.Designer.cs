@@ -223,7 +223,7 @@
             this.Controls.Add(this.BttnGirisYap);
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
             this.Name = "FrmGirisYap";
-            this.Text = "RabtBil -> Oturum Aç";
+            this.Text = "RabtBil Müşteri Kayit -> Oturum Aç";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();

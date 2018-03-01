@@ -630,7 +630,7 @@
             this.MinimumSize = new System.Drawing.Size(940, 515);
             this.Name = "FrmTeknikServisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RabtBil Kayıt -> Teknik Servis Formu";
+            this.Text = "RabtBil Müşteri Kayit -> Teknik Servis Formu";
             this.Load += new System.EventHandler(this.FrmTeknikServisFormu_Load);
             this.GrpBoxMusteriBilgileri.ResumeLayout(false);
             this.GrpBoxMusteriBilgileri.PerformLayout();
