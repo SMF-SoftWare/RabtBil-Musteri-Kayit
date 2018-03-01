@@ -64,7 +64,7 @@
             // 
             this.LblKullaniciAdiniz.AutoSize = true;
             this.LblKullaniciAdiniz.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.LblKullaniciAdiniz.Location = new System.Drawing.Point(9, 35);
+            this.LblKullaniciAdiniz.Location = new System.Drawing.Point(12, 35);
             this.LblKullaniciAdiniz.Name = "LblKullaniciAdiniz";
             this.LblKullaniciAdiniz.Size = new System.Drawing.Size(175, 15);
             this.LblKullaniciAdiniz.TabIndex = 0;
@@ -84,7 +84,7 @@
             // 
             this.LblSifreniziOnaylayın.AutoSize = true;
             this.LblSifreniziOnaylayın.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.LblSifreniziOnaylayın.Location = new System.Drawing.Point(9, 133);
+            this.LblSifreniziOnaylayın.Location = new System.Drawing.Point(12, 130);
             this.LblSifreniziOnaylayın.Name = "LblSifreniziOnaylayın";
             this.LblSifreniziOnaylayın.Size = new System.Drawing.Size(147, 15);
             this.LblSifreniziOnaylayın.TabIndex = 4;
@@ -122,7 +122,7 @@
             // 
             // TxtKullaniciAdiniz
             // 
-            this.TxtKullaniciAdiniz.Location = new System.Drawing.Point(12, 53);
+            this.TxtKullaniciAdiniz.Location = new System.Drawing.Point(15, 53);
             this.TxtKullaniciAdiniz.MaxLength = 30;
             this.TxtKullaniciAdiniz.Name = "TxtKullaniciAdiniz";
             this.TxtKullaniciAdiniz.Size = new System.Drawing.Size(252, 25);
