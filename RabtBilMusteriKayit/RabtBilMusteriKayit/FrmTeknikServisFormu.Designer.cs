@@ -435,6 +435,7 @@
             // 
             // PcTrBoxProfiliDuzenle
             // 
+            this.PcTrBoxProfiliDuzenle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PcTrBoxProfiliDuzenle.Location = new System.Drawing.Point(804, 39);
             this.PcTrBoxProfiliDuzenle.Name = "PcTrBoxProfiliDuzenle";
             this.PcTrBoxProfiliDuzenle.Size = new System.Drawing.Size(80, 80);

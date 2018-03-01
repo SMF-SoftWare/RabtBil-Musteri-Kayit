@@ -54,10 +54,9 @@
             this.BttnYazdir = new System.Windows.Forms.Button();
             this.TimerTarihSaat = new System.Windows.Forms.Timer(this.components);
             this.GrpBoxArama = new System.Windows.Forms.GroupBox();
-            this.BttnBul = new System.Windows.Forms.Button();
             this.TxtArama = new System.Windows.Forms.TextBox();
             this.RadioBttnMusteriIsmineGoreAra = new System.Windows.Forms.RadioButton();
-            this.RadioBttnNoyaGoreAra = new System.Windows.Forms.RadioButton();
+            this.RadioBttnFormNoyaGoreAra = new System.Windows.Forms.RadioButton();
             this.MenuStrip.SuspendLayout();
             this.TlStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridViewKayitlariGoster)).BeginInit();
@@ -96,18 +95,21 @@
             this.TlStrpMenuItemAraclarYeniKayit.Name = "TlStrpMenuItemAraclarYeniKayit";
             this.TlStrpMenuItemAraclarYeniKayit.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarYeniKayit.Text = "Yeni Kayıt";
+            this.TlStrpMenuItemAraclarYeniKayit.Click += new System.EventHandler(this.TlStrpMenuItemAraclarYeniKayit_Click);
             // 
             // TlStrpMenuItemAraclarKaydet
             // 
             this.TlStrpMenuItemAraclarKaydet.Name = "TlStrpMenuItemAraclarKaydet";
             this.TlStrpMenuItemAraclarKaydet.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarKaydet.Text = "Kaydet";
+            this.TlStrpMenuItemAraclarKaydet.Click += new System.EventHandler(this.TlStrpMenuItemAraclarYeniKayit_Click);
             // 
             // TlStrpMenuItemAraclarTemizle
             // 
             this.TlStrpMenuItemAraclarTemizle.Name = "TlStrpMenuItemAraclarTemizle";
             this.TlStrpMenuItemAraclarTemizle.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarTemizle.Text = "Temizle";
+            this.TlStrpMenuItemAraclarTemizle.Click += new System.EventHandler(this.TlStrpMenuItemAraclarYeniKayit_Click);
             // 
             // TlStrpMenuItemAraclarKayitlariGoster
             // 
@@ -120,12 +122,14 @@
             this.TlStrpMenuItemAraclarGuncelle.Name = "TlStrpMenuItemAraclarGuncelle";
             this.TlStrpMenuItemAraclarGuncelle.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarGuncelle.Text = "Güncelle";
+            this.TlStrpMenuItemAraclarGuncelle.Click += new System.EventHandler(this.TlStrpMenuItemAraclarGuncelle_Click);
             // 
             // TlStrpMenuItemAraclarSil
             // 
             this.TlStrpMenuItemAraclarSil.Name = "TlStrpMenuItemAraclarSil";
             this.TlStrpMenuItemAraclarSil.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarSil.Text = "Sil";
+            this.TlStrpMenuItemAraclarSil.Click += new System.EventHandler(this.BttnSil_Click);
             // 
             // TlStrpMenuItemAyarlar
             // 
@@ -255,10 +259,9 @@
             // 
             // GrpBoxArama
             // 
-            this.GrpBoxArama.Controls.Add(this.BttnBul);
             this.GrpBoxArama.Controls.Add(this.TxtArama);
             this.GrpBoxArama.Controls.Add(this.RadioBttnMusteriIsmineGoreAra);
-            this.GrpBoxArama.Controls.Add(this.RadioBttnNoyaGoreAra);
+            this.GrpBoxArama.Controls.Add(this.RadioBttnFormNoyaGoreAra);
             this.GrpBoxArama.Location = new System.Drawing.Point(281, 384);
             this.GrpBoxArama.Name = "GrpBoxArama";
             this.GrpBoxArama.Size = new System.Drawing.Size(631, 62);
@@ -266,23 +269,15 @@
             this.GrpBoxArama.TabStop = false;
             this.GrpBoxArama.Text = "Arama";
             // 
-            // BttnBul
-            // 
-            this.BttnBul.Location = new System.Drawing.Point(497, 16);
-            this.BttnBul.Name = "BttnBul";
-            this.BttnBul.Size = new System.Drawing.Size(128, 35);
-            this.BttnBul.TabIndex = 29;
-            this.BttnBul.Text = "Bul";
-            this.BttnBul.UseVisualStyleBackColor = true;
-            // 
             // TxtArama
             // 
-            this.TxtArama.Location = new System.Drawing.Point(196, 24);
+            this.TxtArama.Location = new System.Drawing.Point(239, 24);
             this.TxtArama.MaxLength = 30;
             this.TxtArama.Name = "TxtArama";
             this.TxtArama.ReadOnly = true;
-            this.TxtArama.Size = new System.Drawing.Size(281, 25);
+            this.TxtArama.Size = new System.Drawing.Size(352, 25);
             this.TxtArama.TabIndex = 16;
+            this.TxtArama.TextChanged += new System.EventHandler(this.TxtArama_TextChanged);
             // 
             // RadioBttnMusteriIsmineGoreAra
             // 
@@ -294,17 +289,19 @@
             this.RadioBttnMusteriIsmineGoreAra.TabStop = true;
             this.RadioBttnMusteriIsmineGoreAra.Text = "Müşteri isimine göre";
             this.RadioBttnMusteriIsmineGoreAra.UseVisualStyleBackColor = true;
+            this.RadioBttnMusteriIsmineGoreAra.CheckedChanged += new System.EventHandler(this.RadioBttnFormNoyaGoreAra_CheckedChanged);
             // 
-            // RadioBttnNoyaGoreAra
+            // RadioBttnFormNoyaGoreAra
             // 
-            this.RadioBttnNoyaGoreAra.AutoSize = true;
-            this.RadioBttnNoyaGoreAra.Location = new System.Drawing.Point(4, 16);
-            this.RadioBttnNoyaGoreAra.Name = "RadioBttnNoyaGoreAra";
-            this.RadioBttnNoyaGoreAra.Size = new System.Drawing.Size(162, 22);
-            this.RadioBttnNoyaGoreAra.TabIndex = 0;
-            this.RadioBttnNoyaGoreAra.TabStop = true;
-            this.RadioBttnNoyaGoreAra.Text = "Form no\'suna göre";
-            this.RadioBttnNoyaGoreAra.UseVisualStyleBackColor = true;
+            this.RadioBttnFormNoyaGoreAra.AutoSize = true;
+            this.RadioBttnFormNoyaGoreAra.Location = new System.Drawing.Point(4, 16);
+            this.RadioBttnFormNoyaGoreAra.Name = "RadioBttnFormNoyaGoreAra";
+            this.RadioBttnFormNoyaGoreAra.Size = new System.Drawing.Size(162, 22);
+            this.RadioBttnFormNoyaGoreAra.TabIndex = 0;
+            this.RadioBttnFormNoyaGoreAra.TabStop = true;
+            this.RadioBttnFormNoyaGoreAra.Text = "Form no\'suna göre";
+            this.RadioBttnFormNoyaGoreAra.UseVisualStyleBackColor = true;
+            this.RadioBttnFormNoyaGoreAra.CheckedChanged += new System.EventHandler(this.RadioBttnFormNoyaGoreAra_CheckedChanged);
             // 
             // FrmKayitlariGoster
             // 
@@ -365,8 +362,7 @@
         public System.Windows.Forms.Timer TimerTarihSaat;
         public System.Windows.Forms.GroupBox GrpBoxArama;
         public System.Windows.Forms.RadioButton RadioBttnMusteriIsmineGoreAra;
-        public System.Windows.Forms.RadioButton RadioBttnNoyaGoreAra;
-        public System.Windows.Forms.Button BttnBul;
+        public System.Windows.Forms.RadioButton RadioBttnFormNoyaGoreAra;
         public System.Windows.Forms.TextBox TxtArama;
     }
 }

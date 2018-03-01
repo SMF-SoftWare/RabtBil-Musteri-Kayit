@@ -45,6 +45,7 @@
             this.BttnAnaSayfa = new System.Windows.Forms.Button();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.TlStrpMenuItemAraclar = new System.Windows.Forms.ToolStripMenuItem();
+            this.güçlüŞifreOluşturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlar = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlarDil = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemDilTurkce = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,6 @@
             this.TlStrpMenuItemYardım = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardimLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardimHakkinda = new System.Windows.Forms.ToolStripMenuItem();
-            this.güçlüŞifreOluşturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PcTrBoxProfiliDuzenle = new System.Windows.Forms.PictureBox();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxProfiliDuzenle)).BeginInit();
@@ -217,6 +217,12 @@
             this.TlStrpMenuItemAraclar.Size = new System.Drawing.Size(76, 22);
             this.TlStrpMenuItemAraclar.Text = "Araçlar";
             // 
+            // güçlüŞifreOluşturToolStripMenuItem
+            // 
+            this.güçlüŞifreOluşturToolStripMenuItem.Name = "güçlüŞifreOluşturToolStripMenuItem";
+            this.güçlüŞifreOluşturToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.güçlüŞifreOluşturToolStripMenuItem.Text = "Güçlü Şifre Oluştur";
+            // 
             // TlStrpMenuItemAyarlar
             // 
             this.TlStrpMenuItemAyarlar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -281,14 +287,9 @@
             this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(196, 22);
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
             // 
-            // güçlüŞifreOluşturToolStripMenuItem
-            // 
-            this.güçlüŞifreOluşturToolStripMenuItem.Name = "güçlüŞifreOluşturToolStripMenuItem";
-            this.güçlüŞifreOluşturToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.güçlüŞifreOluşturToolStripMenuItem.Text = "Güçlü Şifre Oluştur";
-            // 
             // PcTrBoxProfiliDuzenle
             // 
+            this.PcTrBoxProfiliDuzenle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PcTrBoxProfiliDuzenle.Location = new System.Drawing.Point(283, 53);
             this.PcTrBoxProfiliDuzenle.Name = "PcTrBoxProfiliDuzenle";
             this.PcTrBoxProfiliDuzenle.Size = new System.Drawing.Size(80, 80);
@@ -318,7 +319,7 @@
             this.Controls.Add(this.LblSifreniz);
             this.Controls.Add(this.LblKullaniciAdiniz);
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(400, 375);
             this.MinimumSize = new System.Drawing.Size(400, 375);
