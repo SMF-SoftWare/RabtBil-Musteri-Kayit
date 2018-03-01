@@ -8,6 +8,7 @@ namespace RabtBilMusteriKayit
     public partial class FrmKayitlariGoster : Form
     {
         private readonly MySqlConnection _baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
+        FrmTeknikServisFormu frmTeknikServisFormu = new FrmTeknikServisFormu();
 
         public FrmKayitlariGoster()
         {
@@ -55,7 +56,10 @@ namespace RabtBilMusteriKayit
 
         private void DtGridViewKayitlariGoster_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            FrmTeknikServisFormu frmTeknikServisFormu = new FrmTeknikServisFormu();
+            
+            MessageBox.Show("Seçtiniz Kayıdı Düzenleniyorsunuz");
+            this.frmTeknikServisFormu.BttnKaydet.Enabled = false;
+            this.frmTeknikServisFormu.TlStrpMenuItemAraclarKaydet.Enabled = false;
             frmTeknikServisFormu.LblMusteriNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString();
             frmTeknikServisFormu.TxtMusteriAdi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[1].Value.ToString();
             frmTeknikServisFormu.TxtFormNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[2].Value.ToString();
