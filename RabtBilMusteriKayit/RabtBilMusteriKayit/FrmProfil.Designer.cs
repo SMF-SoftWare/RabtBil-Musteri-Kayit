@@ -40,7 +40,6 @@
             this.TxtAdiniz = new System.Windows.Forms.TextBox();
             this.TxtSoyadiniz = new System.Windows.Forms.TextBox();
             this.TxtEpostaniz = new System.Windows.Forms.TextBox();
-            this.ChckBoxSozlesme = new System.Windows.Forms.CheckBox();
             this.BttnKaydet = new System.Windows.Forms.Button();
             this.BttnTemizle = new System.Windows.Forms.Button();
             this.BttnAnaSayfa = new System.Windows.Forms.Button();
@@ -168,17 +167,6 @@
             this.TxtEpostaniz.Name = "TxtEpostaniz";
             this.TxtEpostaniz.Size = new System.Drawing.Size(252, 25);
             this.TxtEpostaniz.TabIndex = 17;
-            // 
-            // ChckBoxSozlesme
-            // 
-            this.ChckBoxSozlesme.AutoSize = true;
-            this.ChckBoxSozlesme.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.ChckBoxSozlesme.Location = new System.Drawing.Point(15, 329);
-            this.ChckBoxSozlesme.Name = "ChckBoxSozlesme";
-            this.ChckBoxSozlesme.Size = new System.Drawing.Size(250, 19);
-            this.ChckBoxSozlesme.TabIndex = 18;
-            this.ChckBoxSozlesme.Text = "Sözleşmeyi Okudum Kabul Ediyorum";
-            this.ChckBoxSozlesme.UseVisualStyleBackColor = true;
             // 
             // BttnKaydet
             // 
@@ -311,13 +299,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.ClientSize = new System.Drawing.Size(384, 336);
             this.Controls.Add(this.PcTrBoxProfiliDuzenle);
             this.Controls.Add(this.MenuStrip);
             this.Controls.Add(this.BttnAnaSayfa);
             this.Controls.Add(this.BttnTemizle);
             this.Controls.Add(this.BttnKaydet);
-            this.Controls.Add(this.ChckBoxSozlesme);
             this.Controls.Add(this.TxtEpostaniz);
             this.Controls.Add(this.TxtSoyadiniz);
             this.Controls.Add(this.TxtAdiniz);
@@ -333,8 +320,8 @@
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(400, 400);
-            this.MinimumSize = new System.Drawing.Size(400, 400);
+            this.MaximumSize = new System.Drawing.Size(400, 375);
+            this.MinimumSize = new System.Drawing.Size(400, 375);
             this.Name = "FrmProfil";
             this.Text = "RabtBil Müşteri Kayit -> Profil";
             this.MenuStrip.ResumeLayout(false);
@@ -359,7 +346,6 @@
         public System.Windows.Forms.TextBox TxtAdiniz;
         public System.Windows.Forms.TextBox TxtSoyadiniz;
         public System.Windows.Forms.TextBox TxtEpostaniz;
-        private System.Windows.Forms.CheckBox ChckBoxSozlesme;
         private System.Windows.Forms.Button BttnKaydet;
         private System.Windows.Forms.Button BttnTemizle;
         private System.Windows.Forms.Button BttnAnaSayfa;
