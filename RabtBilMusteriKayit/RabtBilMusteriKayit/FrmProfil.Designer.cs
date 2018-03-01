@@ -138,7 +138,7 @@
             // 
             // TxtSifreniziOnaylayın
             // 
-            this.TxtSifreniziOnaylayın.Location = new System.Drawing.Point(12, 151);
+            this.TxtSifreniziOnaylayın.Location = new System.Drawing.Point(15, 151);
             this.TxtSifreniziOnaylayın.MaxLength = 30;
             this.TxtSifreniziOnaylayın.Name = "TxtSifreniziOnaylayın";
             this.TxtSifreniziOnaylayın.Size = new System.Drawing.Size(252, 25);
