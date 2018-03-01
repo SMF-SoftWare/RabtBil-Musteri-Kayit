@@ -45,7 +45,7 @@
             this.BttnAnaSayfa = new System.Windows.Forms.Button();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.TlStrpMenuItemAraclar = new System.Windows.Forms.ToolStripMenuItem();
-            this.güçlüŞifreOluşturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TlStrpMenuItemAraclarGucluSifreOlustur = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlar = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlarDil = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemDilTurkce = new System.Windows.Forms.ToolStripMenuItem();
@@ -212,16 +212,16 @@
             // TlStrpMenuItemAraclar
             // 
             this.TlStrpMenuItemAraclar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.güçlüŞifreOluşturToolStripMenuItem});
+            this.TlStrpMenuItemAraclarGucluSifreOlustur});
             this.TlStrpMenuItemAraclar.Name = "TlStrpMenuItemAraclar";
             this.TlStrpMenuItemAraclar.Size = new System.Drawing.Size(76, 22);
             this.TlStrpMenuItemAraclar.Text = "Araçlar";
             // 
-            // güçlüŞifreOluşturToolStripMenuItem
+            // TlStrpMenuItemAraclarGucluSifreOlustur
             // 
-            this.güçlüŞifreOluşturToolStripMenuItem.Name = "güçlüŞifreOluşturToolStripMenuItem";
-            this.güçlüŞifreOluşturToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.güçlüŞifreOluşturToolStripMenuItem.Text = "Güçlü Şifre Oluştur";
+            this.TlStrpMenuItemAraclarGucluSifreOlustur.Name = "TlStrpMenuItemAraclarGucluSifreOlustur";
+            this.TlStrpMenuItemAraclarGucluSifreOlustur.Size = new System.Drawing.Size(228, 22);
+            this.TlStrpMenuItemAraclarGucluSifreOlustur.Text = "Güçlü Şifre Oluştur";
             // 
             // TlStrpMenuItemAyarlar
             // 
@@ -245,13 +245,13 @@
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(148, 22);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(152, 22);
             this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(148, 22);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(152, 22);
             this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
             // 
             // TlStrpMenuItemAyarlarGuncellemeleriDenetle
@@ -352,7 +352,7 @@
         private System.Windows.Forms.Button BttnAnaSayfa;
         public System.Windows.Forms.MenuStrip MenuStrip;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclar;
-        private System.Windows.Forms.ToolStripMenuItem güçlüŞifreOluşturToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarGucluSifreOlustur;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlar;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarDil;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemDilTurkce;
