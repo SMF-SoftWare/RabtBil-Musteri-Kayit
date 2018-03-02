@@ -68,5 +68,15 @@ namespace RabtBilMusteriKayit.Properties {
                 return ResourceManager.GetString("UygulamaAdi", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap varsayilanProfilResmi {
+            get {
+                object obj = ResourceManager.GetObject("varsayilanProfilResmi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

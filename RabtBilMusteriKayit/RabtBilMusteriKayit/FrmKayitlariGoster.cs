@@ -7,8 +7,8 @@ namespace RabtBilMusteriKayit
 {
     public partial class FrmKayitlariGoster : Form
     {
-        private readonly MySqlConnection _baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
-        FrmTeknikServisFormu frmTeknikServisFormu = new FrmTeknikServisFormu();
+        private SMF SMF = new SMF();
+        private FrmTeknikServisFormu FrmTeknikServisFormu = new FrmTeknikServisFormu();
 
         public FrmKayitlariGoster()
         {
@@ -17,12 +17,12 @@ namespace RabtBilMusteriKayit
 
         public void _verilerigetir()
         {
-            _baglanti.Open();
-            MySqlDataAdapter verilerigetir = new MySqlDataAdapter("Select * From musteribilgileri", _baglanti);
+            SMF.Baglanti.Open();
+            MySqlDataAdapter verilerigetir = new MySqlDataAdapter("Select * From musteribilgileri", SMF.Baglanti);
             DataTable dt = new DataTable();
             verilerigetir.Fill(dt);
             DtGridViewKayitlariGoster.DataSource = dt;
-            _baglanti.Close();
+            SMF.Baglanti.Close();
         }
 
         private void FrmKayitlariGoster_Load(object sender, EventArgs e)
@@ -40,49 +40,50 @@ namespace RabtBilMusteriKayit
         {
             try
             {
-                MySqlCommand sil = new MySqlCommand("DELETE FROM musteribilgileri WHERE Id=@Id", _baglanti);
+                MySqlCommand sil = new MySqlCommand("DELETE FROM musteribilgileri WHERE Id=@Id", SMF.Baglanti);
                 sil.Parameters.AddWithValue("@Id", Convert.ToInt32(DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString()));
-                _baglanti.Open();
+                SMF.Baglanti.Open();
                 sil.ExecuteNonQuery();
                 MessageBox.Show("Kaydınız Silinmiştir.");
-                _baglanti.Close();
+                SMF.Baglanti.Close();
                 _verilerigetir();
             }
-            catch (Exception exception)
+            catch (Exception ex)
             {
-                MessageBox.Show(exception.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DtGridViewKayitlariGoster_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show("Seçtiniz Kayıdı Düzenleniyorsunuz");
-            this.frmTeknikServisFormu.BttnKaydet.Enabled = false;
-            this.frmTeknikServisFormu.TlStrpMenuItemAraclarKaydet.Enabled = false;
-            frmTeknikServisFormu.LblMusteriNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString();
-            frmTeknikServisFormu.TxtMusteriAdi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[1].Value.ToString();
-            frmTeknikServisFormu.TxtFormNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[2].Value.ToString();
-            frmTeknikServisFormu.TxtTelefon.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[3].Value.ToString();
-            frmTeknikServisFormu.TxtUrunModeli.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[4].Value.ToString();
-            frmTeknikServisFormu.CmbBoxUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[5].Value.ToString();
-            frmTeknikServisFormu.TxtUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[6].Value.ToString();
-            frmTeknikServisFormu.TxtArizaTanimi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[7].Value.ToString();
-            frmTeknikServisFormu.TxtUrunDurumu.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[8].Value.ToString();
-            frmTeknikServisFormu.TxtUrunTakipNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[9].Value.ToString();
-            //frmTeknikServisFormu.URLKODU.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[9].Value.ToString();
-            frmTeknikServisFormu.TxtUcret.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[10].Value.ToString();
-            frmTeknikServisFormu.TxtAksesuarlar.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[11].Value.ToString();
-            frmTeknikServisFormu.TxtEkBilgiler.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[12].Value.ToString();
-            frmTeknikServisFormu.Show();
+            FrmTeknikServisFormu.BttnKaydet.Enabled = false;
+            FrmTeknikServisFormu.TlStrpMenuItemAraclarKaydet.Enabled = false;
+            FrmTeknikServisFormu.LblMusteriNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString();
+            FrmTeknikServisFormu.TxtMusteriAdi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[1].Value.ToString();
+            FrmTeknikServisFormu.TxtFormNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[2].Value.ToString();
+            FrmTeknikServisFormu.TxtTelefon.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[3].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunModeli.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[4].Value.ToString();
+            FrmTeknikServisFormu.CmbBoxUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[5].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[6].Value.ToString();
+            FrmTeknikServisFormu.TxtArizaTanimi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[7].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunDurumu.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[8].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunTakipNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[9].Value.ToString();
+            //FrmTeknikServisFormu.URLKODU.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[10].Value.ToString();
+            FrmTeknikServisFormu.TxtUcret.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[11].Value.ToString();
+            FrmTeknikServisFormu.TxtAksesuarlar.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[12].Value.ToString();
+            FrmTeknikServisFormu.TxtEkBilgiler.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[13].Value.ToString();
+            FrmTeknikServisFormu.Show();
             Hide();
         }
+
         private void RadioBttnFormNoyaGoreAra_CheckedChanged(object sender, EventArgs e)
         {
-            if (RadioBttnFormNoyaGoreAra.Checked == true)
+            if (RadioBttnFormNoyaGoreAra.Checked)
             {
                 TxtArama.ReadOnly = false;
             }
-            else if (RadioBttnMusteriIsmineGoreAra.Checked == true)
+            else if (RadioBttnMusteriIsmineGoreAra.Checked)
             {
                 TxtArama.ReadOnly = false;
             }
@@ -94,27 +95,27 @@ namespace RabtBilMusteriKayit
 
         private void TxtArama_TextChanged(object sender, EventArgs e)
         {
-            if (RadioBttnFormNoyaGoreAra.Checked == true)
+            if (RadioBttnFormNoyaGoreAra.Checked)
             {
                 TxtArama.ReadOnly = false;
-                MySqlDataAdapter arama = new MySqlDataAdapter("SELECT * FROM musteribilgileri WHERE FormNo LIKE @Ara", _baglanti);
+                MySqlDataAdapter arama = new MySqlDataAdapter("SELECT * FROM musteribilgileri WHERE FormNo LIKE @Ara", SMF.Baglanti);
                 arama.SelectCommand.Parameters.AddWithValue("@Ara", "%" + TxtArama.Text + "%");
                 DataSet dataset = new DataSet();
-                _baglanti.Open();
+                SMF.Baglanti.Open();
                 arama.Fill(dataset, "musteribilgileri");
                 DtGridViewKayitlariGoster.DataSource = dataset.Tables["musteribilgileri"];
-                _baglanti.Close();
+                SMF.Baglanti.Close();
             }
-            else if (RadioBttnMusteriIsmineGoreAra.Checked == true)
+            else if (RadioBttnMusteriIsmineGoreAra.Checked)
             {
                 TxtArama.ReadOnly = false;
-                MySqlDataAdapter arama = new MySqlDataAdapter("SELECT * FROM musteribilgileri WHERE MusteriAdi LIKE @Ara", _baglanti);
+                MySqlDataAdapter arama = new MySqlDataAdapter("SELECT * FROM musteribilgileri WHERE MusteriAdi LIKE @Ara", SMF.Baglanti);
                 arama.SelectCommand.Parameters.AddWithValue("@Ara", "%" + TxtArama.Text + "%");
                 DataSet dataset = new DataSet();
-                _baglanti.Open();
+                SMF.Baglanti.Open();
                 arama.Fill(dataset, "musteribilgileri");
                 DtGridViewKayitlariGoster.DataSource = dataset.Tables["musteribilgileri"];
-                _baglanti.Close();
+                SMF.Baglanti.Close();
             }
             else
             {
@@ -124,30 +125,39 @@ namespace RabtBilMusteriKayit
 
         private void TlStrpMenuItemAraclarYeniKayit_Click(object sender, EventArgs e)
         {
-            frmTeknikServisFormu.Show();
+            FrmTeknikServisFormu.Show();
+            Hide();
+
         }
 
         private void TlStrpMenuItemAraclarGuncelle_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Seçtiniz Kayıdı Düzenleniyorsunuz");
-            this.frmTeknikServisFormu.BttnKaydet.Enabled = false;
-            this.frmTeknikServisFormu.TlStrpMenuItemAraclarKaydet.Enabled = false;
-            frmTeknikServisFormu.LblMusteriNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString();
-            frmTeknikServisFormu.TxtMusteriAdi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[1].Value.ToString();
-            frmTeknikServisFormu.TxtFormNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[2].Value.ToString();
-            frmTeknikServisFormu.TxtTelefon.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[3].Value.ToString();
-            frmTeknikServisFormu.TxtUrunModeli.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[4].Value.ToString();
-            frmTeknikServisFormu.CmbBoxUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[5].Value.ToString();
-            frmTeknikServisFormu.TxtUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[6].Value.ToString();
-            frmTeknikServisFormu.TxtArizaTanimi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[7].Value.ToString();
-            frmTeknikServisFormu.TxtUrunDurumu.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[8].Value.ToString();
-            frmTeknikServisFormu.TxtUrunTakipNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[9].Value.ToString();
-            //frmTeknikServisFormu.URLKODU.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[9].Value.ToString();
-            frmTeknikServisFormu.TxtUcret.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[10].Value.ToString();
-            frmTeknikServisFormu.TxtAksesuarlar.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[11].Value.ToString();
-            frmTeknikServisFormu.TxtEkBilgiler.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[12].Value.ToString();
-            frmTeknikServisFormu.Show();
+            FrmTeknikServisFormu.BttnKaydet.Enabled = false;
+            FrmTeknikServisFormu.TlStrpMenuItemAraclarKaydet.Enabled = false;
+            FrmTeknikServisFormu.LblMusteriNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString();
+            FrmTeknikServisFormu.TxtMusteriAdi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[1].Value.ToString();
+            FrmTeknikServisFormu.TxtFormNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[2].Value.ToString();
+            FrmTeknikServisFormu.TxtTelefon.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[3].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunModeli.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[4].Value.ToString();
+            FrmTeknikServisFormu.CmbBoxUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[5].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[6].Value.ToString();
+            FrmTeknikServisFormu.TxtArizaTanimi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[7].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunDurumu.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[8].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunTakipNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[9].Value.ToString();
+            //FrmTeknikServisFormu.URLKODU.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[10].Value.ToString();
+            FrmTeknikServisFormu.TxtUcret.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[11].Value.ToString();
+            FrmTeknikServisFormu.TxtAksesuarlar.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[12].Value.ToString();
+            FrmTeknikServisFormu.TxtEkBilgiler.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[13].Value.ToString();
+            FrmTeknikServisFormu.Show();
             Hide();
+        }
+
+        private void FrmKayitlariGoster_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FrmTeknikServisFormu.Show();
+            Hide();
+            //Application.Exit();
         }
     }
 }

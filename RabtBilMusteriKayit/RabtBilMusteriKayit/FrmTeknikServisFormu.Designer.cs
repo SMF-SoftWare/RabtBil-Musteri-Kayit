@@ -100,7 +100,7 @@
             this.LblMusteriAdi.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblMusteriAdi.Location = new System.Drawing.Point(4, 34);
             this.LblMusteriAdi.Name = "LblMusteriAdi";
-            this.LblMusteriAdi.Size = new System.Drawing.Size(91, 15);
+            this.LblMusteriAdi.Size = new System.Drawing.Size(117, 20);
             this.LblMusteriAdi.TabIndex = 1;
             this.LblMusteriAdi.Text = "Müşteri Adı:";
             // 
@@ -109,7 +109,7 @@
             this.TxtMusteriAdi.Location = new System.Drawing.Point(96, 27);
             this.TxtMusteriAdi.MaxLength = 30;
             this.TxtMusteriAdi.Name = "TxtMusteriAdi";
-            this.TxtMusteriAdi.Size = new System.Drawing.Size(252, 25);
+            this.TxtMusteriAdi.Size = new System.Drawing.Size(252, 29);
             this.TxtMusteriAdi.TabIndex = 0;
             // 
             // GrpBoxMusteriBilgileri
@@ -133,7 +133,7 @@
             this.LblTelefon.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblTelefon.Location = new System.Drawing.Point(30, 96);
             this.LblTelefon.Name = "LblTelefon";
-            this.LblTelefon.Size = new System.Drawing.Size(63, 15);
+            this.LblTelefon.Size = new System.Drawing.Size(81, 20);
             this.LblTelefon.TabIndex = 5;
             this.LblTelefon.Text = "Telefon:";
             // 
@@ -142,7 +142,7 @@
             this.TxtTelefon.Location = new System.Drawing.Point(96, 89);
             this.TxtTelefon.MaxLength = 16;
             this.TxtTelefon.Name = "TxtTelefon";
-            this.TxtTelefon.Size = new System.Drawing.Size(252, 25);
+            this.TxtTelefon.Size = new System.Drawing.Size(252, 29);
             this.TxtTelefon.TabIndex = 4;
             // 
             // LblFormNo
@@ -151,7 +151,7 @@
             this.LblFormNo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblFormNo.Location = new System.Drawing.Point(23, 65);
             this.LblFormNo.Name = "LblFormNo";
-            this.LblFormNo.Size = new System.Drawing.Size(63, 15);
+            this.LblFormNo.Size = new System.Drawing.Size(81, 20);
             this.LblFormNo.TabIndex = 3;
             this.LblFormNo.Text = "Form No:";
             // 
@@ -160,7 +160,7 @@
             this.TxtFormNo.Location = new System.Drawing.Point(96, 58);
             this.TxtFormNo.MaxLength = 30;
             this.TxtFormNo.Name = "TxtFormNo";
-            this.TxtFormNo.Size = new System.Drawing.Size(252, 25);
+            this.TxtFormNo.Size = new System.Drawing.Size(252, 29);
             this.TxtFormNo.TabIndex = 2;
             // 
             // GrpBoxAksesuarlar
@@ -232,7 +232,7 @@
             this.LblMusteriNo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblMusteriNo.Location = new System.Drawing.Point(224, 396);
             this.LblMusteriNo.Name = "LblMusteriNo";
-            this.LblMusteriNo.Size = new System.Drawing.Size(70, 15);
+            this.LblMusteriNo.Size = new System.Drawing.Size(90, 20);
             this.LblMusteriNo.TabIndex = 25;
             this.LblMusteriNo.Text = "MüşteriNo";
             this.LblMusteriNo.Visible = false;
@@ -253,7 +253,7 @@
             this.LblUcret.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblUcret.Location = new System.Drawing.Point(87, 370);
             this.LblUcret.Name = "LblUcret";
-            this.LblUcret.Size = new System.Drawing.Size(49, 15);
+            this.LblUcret.Size = new System.Drawing.Size(63, 20);
             this.LblUcret.TabIndex = 17;
             this.LblUcret.Text = "Ücret:";
             // 
@@ -262,7 +262,7 @@
             this.TxtUcret.Location = new System.Drawing.Point(139, 363);
             this.TxtUcret.MaxLength = 30;
             this.TxtUcret.Name = "TxtUcret";
-            this.TxtUcret.Size = new System.Drawing.Size(146, 25);
+            this.TxtUcret.Size = new System.Drawing.Size(146, 29);
             this.TxtUcret.TabIndex = 24;
             // 
             // PcTrBoxMusteriQrKodu
@@ -281,7 +281,7 @@
             this.LblMusteriQrKodu.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblMusteriQrKodu.Location = new System.Drawing.Point(17, 270);
             this.LblMusteriQrKodu.Name = "LblMusteriQrKodu";
-            this.LblMusteriQrKodu.Size = new System.Drawing.Size(119, 15);
+            this.LblMusteriQrKodu.Size = new System.Drawing.Size(153, 20);
             this.LblMusteriQrKodu.TabIndex = 15;
             this.LblMusteriQrKodu.Text = "Müşteri Qr Kodu:";
             // 
@@ -291,7 +291,7 @@
             this.LblUrunTakipNo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblUrunTakipNo.Location = new System.Drawing.Point(31, 243);
             this.LblUrunTakipNo.Name = "LblUrunTakipNo";
-            this.LblUrunTakipNo.Size = new System.Drawing.Size(105, 15);
+            this.LblUrunTakipNo.Size = new System.Drawing.Size(135, 20);
             this.LblUrunTakipNo.TabIndex = 13;
             this.LblUrunTakipNo.Text = "Ürün Takip No:";
             // 
@@ -301,7 +301,7 @@
             this.TxtUrunTakipNo.MaxLength = 30;
             this.TxtUrunTakipNo.Name = "TxtUrunTakipNo";
             this.TxtUrunTakipNo.ReadOnly = true;
-            this.TxtUrunTakipNo.Size = new System.Drawing.Size(252, 25);
+            this.TxtUrunTakipNo.Size = new System.Drawing.Size(252, 29);
             this.TxtUrunTakipNo.TabIndex = 16;
             // 
             // LblUrunDurumu
@@ -310,7 +310,7 @@
             this.LblUrunDurumu.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblUrunDurumu.Location = new System.Drawing.Point(45, 208);
             this.LblUrunDurumu.Name = "LblUrunDurumu";
-            this.LblUrunDurumu.Size = new System.Drawing.Size(91, 15);
+            this.LblUrunDurumu.Size = new System.Drawing.Size(117, 20);
             this.LblUrunDurumu.TabIndex = 11;
             this.LblUrunDurumu.Text = "Ürün Durumu:";
             // 
@@ -319,7 +319,7 @@
             this.TxtUrunDurumu.Location = new System.Drawing.Point(139, 205);
             this.TxtUrunDurumu.MaxLength = 30;
             this.TxtUrunDurumu.Name = "TxtUrunDurumu";
-            this.TxtUrunDurumu.Size = new System.Drawing.Size(252, 25);
+            this.TxtUrunDurumu.Size = new System.Drawing.Size(252, 29);
             this.TxtUrunDurumu.TabIndex = 14;
             // 
             // LblArizaTanimi
@@ -328,7 +328,7 @@
             this.LblArizaTanimi.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblArizaTanimi.Location = new System.Drawing.Point(38, 92);
             this.LblArizaTanimi.Name = "LblArizaTanimi";
-            this.LblArizaTanimi.Size = new System.Drawing.Size(98, 15);
+            this.LblArizaTanimi.Size = new System.Drawing.Size(126, 20);
             this.LblArizaTanimi.TabIndex = 9;
             this.LblArizaTanimi.Text = "Arıza Tanımı:";
             // 
@@ -352,7 +352,7 @@
             "Diğer"});
             this.CmbBoxUrunKodlari.Location = new System.Drawing.Point(12, 58);
             this.CmbBoxUrunKodlari.Name = "CmbBoxUrunKodlari";
-            this.CmbBoxUrunKodlari.Size = new System.Drawing.Size(121, 26);
+            this.CmbBoxUrunKodlari.Size = new System.Drawing.Size(121, 30);
             this.CmbBoxUrunKodlari.TabIndex = 8;
             this.CmbBoxUrunKodlari.SelectedIndexChanged += new System.EventHandler(this.CmbBoxUrunKodlari_SelectedIndexChanged);
             // 
@@ -362,7 +362,7 @@
             this.TxtUrunKodlari.MaxLength = 30;
             this.TxtUrunKodlari.Name = "TxtUrunKodlari";
             this.TxtUrunKodlari.ReadOnly = true;
-            this.TxtUrunKodlari.Size = new System.Drawing.Size(252, 25);
+            this.TxtUrunKodlari.Size = new System.Drawing.Size(252, 29);
             this.TxtUrunKodlari.TabIndex = 10;
             // 
             // LblUrunModeli
@@ -371,7 +371,7 @@
             this.LblUrunModeli.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblUrunModeli.Location = new System.Drawing.Point(45, 34);
             this.LblUrunModeli.Name = "LblUrunModeli";
-            this.LblUrunModeli.Size = new System.Drawing.Size(91, 15);
+            this.LblUrunModeli.Size = new System.Drawing.Size(117, 20);
             this.LblUrunModeli.TabIndex = 7;
             this.LblUrunModeli.Text = "Ürün Modeli:";
             // 
@@ -380,7 +380,7 @@
             this.TxtUrunModeli.Location = new System.Drawing.Point(139, 27);
             this.TxtUrunModeli.MaxLength = 30;
             this.TxtUrunModeli.Name = "TxtUrunModeli";
-            this.TxtUrunModeli.Size = new System.Drawing.Size(252, 25);
+            this.TxtUrunModeli.Size = new System.Drawing.Size(252, 29);
             this.TxtUrunModeli.TabIndex = 6;
             // 
             // BttnYeniKayit
@@ -439,8 +439,10 @@
             this.PcTrBoxProfiliDuzenle.Location = new System.Drawing.Point(804, 39);
             this.PcTrBoxProfiliDuzenle.Name = "PcTrBoxProfiliDuzenle";
             this.PcTrBoxProfiliDuzenle.Size = new System.Drawing.Size(80, 80);
+            this.PcTrBoxProfiliDuzenle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PcTrBoxProfiliDuzenle.TabIndex = 14;
             this.PcTrBoxProfiliDuzenle.TabStop = false;
+            this.PcTrBoxProfiliDuzenle.Click += new System.EventHandler(this.PcTrBoxProfiliDuzenle_Click);
             // 
             // MenuStrip
             // 
@@ -452,7 +454,7 @@
             this.TlStrpMenuItemYardım});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(924, 26);
+            this.MenuStrip.Size = new System.Drawing.Size(922, 30);
             this.MenuStrip.TabIndex = 15;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -466,48 +468,48 @@
             this.TlStrpMenuItemAraclarGuncelle,
             this.TlStrpMenuItemAraclarSil});
             this.TlStrpMenuItemAraclar.Name = "TlStrpMenuItemAraclar";
-            this.TlStrpMenuItemAraclar.Size = new System.Drawing.Size(76, 22);
+            this.TlStrpMenuItemAraclar.Size = new System.Drawing.Size(92, 26);
             this.TlStrpMenuItemAraclar.Text = "Araçlar";
             // 
             // TlStrpMenuItemAraclarYeniKayit
             // 
             this.TlStrpMenuItemAraclarYeniKayit.Name = "TlStrpMenuItemAraclarYeniKayit";
-            this.TlStrpMenuItemAraclarYeniKayit.Size = new System.Drawing.Size(204, 22);
+            this.TlStrpMenuItemAraclarYeniKayit.Size = new System.Drawing.Size(246, 26);
             this.TlStrpMenuItemAraclarYeniKayit.Text = "Yeni Kayıt";
             this.TlStrpMenuItemAraclarYeniKayit.Click += new System.EventHandler(this.BttnYeniKayit_Click);
             // 
             // TlStrpMenuItemAraclarKaydet
             // 
             this.TlStrpMenuItemAraclarKaydet.Name = "TlStrpMenuItemAraclarKaydet";
-            this.TlStrpMenuItemAraclarKaydet.Size = new System.Drawing.Size(204, 22);
+            this.TlStrpMenuItemAraclarKaydet.Size = new System.Drawing.Size(246, 26);
             this.TlStrpMenuItemAraclarKaydet.Text = "Kaydet";
             this.TlStrpMenuItemAraclarKaydet.Click += new System.EventHandler(this.BttnKaydet_Click);
             // 
             // TlStrpMenuItemAraclarTemizle
             // 
             this.TlStrpMenuItemAraclarTemizle.Name = "TlStrpMenuItemAraclarTemizle";
-            this.TlStrpMenuItemAraclarTemizle.Size = new System.Drawing.Size(204, 22);
+            this.TlStrpMenuItemAraclarTemizle.Size = new System.Drawing.Size(246, 26);
             this.TlStrpMenuItemAraclarTemizle.Text = "Temizle";
             this.TlStrpMenuItemAraclarTemizle.Click += new System.EventHandler(this.BttnTemizle_Click);
             // 
             // TlStrpMenuItemAraclarKayitlariGoster
             // 
             this.TlStrpMenuItemAraclarKayitlariGoster.Name = "TlStrpMenuItemAraclarKayitlariGoster";
-            this.TlStrpMenuItemAraclarKayitlariGoster.Size = new System.Drawing.Size(204, 22);
+            this.TlStrpMenuItemAraclarKayitlariGoster.Size = new System.Drawing.Size(246, 26);
             this.TlStrpMenuItemAraclarKayitlariGoster.Text = "Kayıtları Göster";
             this.TlStrpMenuItemAraclarKayitlariGoster.Click += new System.EventHandler(this.BttnKayitlariGoster_Click);
             // 
             // TlStrpMenuItemAraclarGuncelle
             // 
             this.TlStrpMenuItemAraclarGuncelle.Name = "TlStrpMenuItemAraclarGuncelle";
-            this.TlStrpMenuItemAraclarGuncelle.Size = new System.Drawing.Size(204, 22);
+            this.TlStrpMenuItemAraclarGuncelle.Size = new System.Drawing.Size(246, 26);
             this.TlStrpMenuItemAraclarGuncelle.Text = "Güncelle";
             this.TlStrpMenuItemAraclarGuncelle.Click += new System.EventHandler(this.BttnGuncelle_Click);
             // 
             // TlStrpMenuItemAraclarSil
             // 
             this.TlStrpMenuItemAraclarSil.Name = "TlStrpMenuItemAraclarSil";
-            this.TlStrpMenuItemAraclarSil.Size = new System.Drawing.Size(204, 22);
+            this.TlStrpMenuItemAraclarSil.Size = new System.Drawing.Size(246, 26);
             this.TlStrpMenuItemAraclarSil.Text = "Sil";
             this.TlStrpMenuItemAraclarSil.Click += new System.EventHandler(this.TlStrpMenuItemAraclarSil_Click);
             // 
@@ -518,7 +520,7 @@
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle,
             this.TlStrpMenuItemAyarlarTema});
             this.TlStrpMenuItemAyarlar.Name = "TlStrpMenuItemAyarlar";
-            this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(76, 22);
+            this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(92, 26);
             this.TlStrpMenuItemAyarlar.Text = "Ayarlar";
             // 
             // TlStrpMenuItemAyarlarDil
@@ -527,31 +529,31 @@
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
-            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(252, 22);
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(306, 26);
             this.TlStrpMenuItemAyarlarDil.Text = "Dil";
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(148, 22);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(176, 26);
             this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(148, 22);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(176, 26);
             this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
             // 
             // TlStrpMenuItemAyarlarGuncellemeleriDenetle
             // 
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Name = "TlStrpMenuItemAyarlarGuncellemeleriDenetle";
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Size = new System.Drawing.Size(252, 22);
+            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Size = new System.Drawing.Size(306, 26);
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Text = "Güncellemeleri Denetle";
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
-            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(252, 22);
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(306, 26);
             this.TlStrpMenuItemAyarlarTema.Text = "Tema";
             // 
             // TlStrpMenuItemYardım
@@ -560,19 +562,19 @@
             this.TlStrpMenuItemYardimLisansAnahtari,
             this.TlStrpMenuItemYardimHakkinda});
             this.TlStrpMenuItemYardım.Name = "TlStrpMenuItemYardım";
-            this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(68, 22);
+            this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(82, 26);
             this.TlStrpMenuItemYardım.Text = "Yardım";
             // 
             // TlStrpMenuItemYardimLisansAnahtari
             // 
             this.TlStrpMenuItemYardimLisansAnahtari.Name = "TlStrpMenuItemYardimLisansAnahtari";
-            this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(196, 22);
+            this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(236, 26);
             this.TlStrpMenuItemYardimLisansAnahtari.Text = "Lisans Anahtarı";
             // 
             // TlStrpMenuItemYardimHakkinda
             // 
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
-            this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(196, 22);
+            this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(236, 26);
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
             // 
             // TlStrip
@@ -583,23 +585,23 @@
             this.TlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripAcıklama,
             this.TlStripTarihSaat});
-            this.TlStrip.Location = new System.Drawing.Point(0, 451);
+            this.TlStrip.Location = new System.Drawing.Point(0, 443);
             this.TlStrip.Name = "TlStrip";
-            this.TlStrip.Size = new System.Drawing.Size(924, 25);
+            this.TlStrip.Size = new System.Drawing.Size(922, 25);
             this.TlStrip.TabIndex = 16;
             this.TlStrip.Text = "toolStrip1";
             // 
             // TlStripAcıklama
             // 
             this.TlStripAcıklama.Name = "TlStripAcıklama";
-            this.TlStripAcıklama.Size = new System.Drawing.Size(72, 22);
+            this.TlStripAcıklama.Size = new System.Drawing.Size(90, 22);
             this.TlStripAcıklama.Text = "Açıklama";
             // 
             // TlStripTarihSaat
             // 
             this.TlStripTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.TlStripTarihSaat.Name = "TlStripTarihSaat";
-            this.TlStripTarihSaat.Size = new System.Drawing.Size(112, 22);
+            this.TlStripTarihSaat.Size = new System.Drawing.Size(140, 22);
             this.TlStripTarihSaat.Text = "Tarih ve Saat";
             // 
             // TimerTarihSaat
@@ -608,9 +610,9 @@
             // 
             // FrmTeknikServisFormu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 476);
+            this.ClientSize = new System.Drawing.Size(922, 468);
             this.Controls.Add(this.TlStrip);
             this.Controls.Add(this.PcTrBoxProfiliDuzenle);
             this.Controls.Add(this.BttnGuncelle);
@@ -632,6 +634,7 @@
             this.Name = "FrmTeknikServisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RabtBil Müşteri Kayit -> Teknik Servis Formu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmTeknikServisFormu_FormClosing);
             this.Load += new System.EventHandler(this.FrmTeknikServisFormu_Load);
             this.GrpBoxMusteriBilgileri.ResumeLayout(false);
             this.GrpBoxMusteriBilgileri.PerformLayout();

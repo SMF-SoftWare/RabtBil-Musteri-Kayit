@@ -1,18 +1,18 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using RabtBilMusteriKayit.Properties;
+using System;
 using System.Data;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using RabtBilMusteriKayit.Properties;
 
 namespace RabtBilMusteriKayit
 {
     public partial class FrmGirisYap : Form
     {
-        private readonly MySqlConnection _baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
+        SMF SMF = new SMF();
 
         public FrmGirisYap()
         {
@@ -23,18 +23,18 @@ namespace RabtBilMusteriKayit
         {
             KullaniciOlusturGizle();
         }
-        //355; 
+
         private void BttnGirisYap_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(TxtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(TxtSifre.Text))
-            { 
+            {
                 MessageBox.Show("Kullanıcı Adı Veya Şifre Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
             {
-                _baglanti.Open();
-                MySqlCommand komutKullaniciVarMi = new MySqlCommand("SELECT * FROM kullanicilar", _baglanti);
+                SMF.Baglanti.Open();
+                MySqlCommand komutKullaniciVarMi = new MySqlCommand("SELECT * FROM kullanicilar", SMF.Baglanti);
                 DataTable dataTable1 = new DataTable();
                 MySqlDataAdapter dataAdapter1 = new MySqlDataAdapter(komutKullaniciVarMi);
                 dataAdapter1.Fill(dataTable1);
@@ -46,7 +46,7 @@ namespace RabtBilMusteriKayit
                 }
                 else
                 {
-                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", _baglanti);
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", SMF.Baglanti);
                     cmd.Parameters.AddWithValue("@KullaniciAdi", TxtKullaniciAdi.Text);
                     cmd.Parameters.AddWithValue("@Sifre", TxtSifre.Text);
                     DataTable dataTable2 = new DataTable();
@@ -64,7 +64,7 @@ namespace RabtBilMusteriKayit
                         MessageBox.Show("Kullanıcı Adı Veya Şifre Yanlış!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-                _baglanti.Close();
+                SMF.Baglanti.Close();
             }
             catch (Exception ex)
             {
@@ -87,8 +87,8 @@ namespace RabtBilMusteriKayit
             {
                 try
                 {
-                    _baglanti.Open();
-                    MySqlCommand komutKullaniciVarMi = new MySqlCommand("SELECT * FROM kullanicilar", _baglanti);
+                    SMF.Baglanti.Open();
+                    MySqlCommand komutKullaniciVarMi = new MySqlCommand("SELECT * FROM kullanicilar", SMF.Baglanti);
                     DataTable dataTable1 = new DataTable();
                     MySqlDataAdapter dataAdapter1 = new MySqlDataAdapter(komutKullaniciVarMi);
                     dataAdapter1.Fill(dataTable1);
@@ -99,13 +99,13 @@ namespace RabtBilMusteriKayit
                         return;
                     }
 
-                    MySqlCommand komutKullaniciKayit = new MySqlCommand("INSERT INTO kullanicilar (KullaniciAdi,Sifre,EPosta) VALUES (@KullaniciAdi,@Sifre,@EPosta)", _baglanti); komutKullaniciKayit.Parameters.AddWithValue("@KullaniciAdi", TxtKullaniciAdi.Text);
+                    MySqlCommand komutKullaniciKayit = new MySqlCommand("INSERT INTO kullanicilar (KullaniciAdi,Sifre,EPosta) VALUES (@KullaniciAdi,@Sifre,@EPosta)", SMF.Baglanti); komutKullaniciKayit.Parameters.AddWithValue("@KullaniciAdi", TxtKullaniciAdi.Text);
                     komutKullaniciKayit.Parameters.Clear();
                     komutKullaniciKayit.Parameters.AddWithValue("@KullaniciAdi", kullaniciEposta);
                     komutKullaniciKayit.Parameters.AddWithValue("@Sifre", kullaniciSifre);
                     komutKullaniciKayit.Parameters.AddWithValue("@EPosta", kullaniciEposta);
                     komutKullaniciKayit.ExecuteNonQuery();
-                    _baglanti.Close();
+                    SMF.Baglanti.Close();
 
                     var eposta = new SmtpClient("smtp.gmail.com", 587)
                     {
@@ -160,6 +160,11 @@ namespace RabtBilMusteriKayit
             Height = 265;
             TxtEposta.Hide();
             BttnYeniKullaniciOluştur.Hide();
+        }
+
+        private void FrmGirisYap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           Application.Exit();
         }
     }
 }
