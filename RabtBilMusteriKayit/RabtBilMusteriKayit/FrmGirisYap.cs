@@ -12,7 +12,7 @@ namespace RabtBilMusteriKayit
 {
     public partial class FrmGirisYap : Form
     {
-        SMF SMF = new SMF();
+        private SMF SMF = new SMF();
 
         public FrmGirisYap()
         {
@@ -42,6 +42,7 @@ namespace RabtBilMusteriKayit
                 if (dataTable1.Rows.Count == 0)
                 {
                     MessageBox.Show("Kayıtlı Kullanıcı Yok Lütfen Yeni Bir Kullanıcı Oluşturun!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    BttnYeniKullaniciOluştur.Text = "Yeni Kullanıcı Oluştur";
                     KullaniciOlusturGoster();
                 }
                 else
@@ -77,55 +78,116 @@ namespace RabtBilMusteriKayit
             string kullaniciEposta = TxtEposta.Text.ToLower();
             string kullaniciSifre = SifreOlustur(12);
 
-            if (String.IsNullOrWhiteSpace(TxtEposta.Text))
+            if (BttnYeniKullaniciOluştur.Text == "Yeni Kullanıcı Oluştur")
             {
-                MessageBox.Show("E-posta Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                if (String.IsNullOrWhiteSpace(TxtEposta.Text))
+                {
+                    MessageBox.Show("E-posta Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            if (EpostaDogruMu(kullaniciEposta))
+                if (EpostaDogruMu(kullaniciEposta))
+                {
+                    try
+                    {
+                        SMF.Baglanti.Open();
+                        MySqlCommand komutKullaniciVarMi = new MySqlCommand("SELECT * FROM kullanicilar", SMF.Baglanti);
+                        DataTable dataTable1 = new DataTable();
+                        MySqlDataAdapter dataAdapter1 = new MySqlDataAdapter(komutKullaniciVarMi);
+                        dataAdapter1.Fill(dataTable1);
+                        if (dataTable1.Rows.Count > 0)
+                        {
+                            MessageBox.Show("Kayıtlı Bir Kullanıcı Zaten Var!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            KullaniciOlusturGizle();
+                            SMF.Baglanti.Close();
+                            return;
+                        }
+
+                        SMF.Baglanti.Close();
+                        SMF.Baglanti.Open();
+                        MySqlCommand komutKullaniciKayit = new MySqlCommand("INSERT INTO kullanicilar (KullaniciAdi,Sifre,EPosta) VALUES (@KullaniciAdi,@Sifre,@EPosta)", SMF.Baglanti);
+                        komutKullaniciKayit.Parameters.Clear();
+                        komutKullaniciKayit.Parameters.AddWithValue("@KullaniciAdi", kullaniciEposta);
+                        komutKullaniciKayit.Parameters.AddWithValue("@Sifre", kullaniciSifre);
+                        komutKullaniciKayit.Parameters.AddWithValue("@EPosta", kullaniciEposta);
+                        komutKullaniciKayit.ExecuteNonQuery();
+                        SMF.Baglanti.Close();
+
+                        var eposta = new SmtpClient("smtp.gmail.com", 587)
+                        {
+                            Credentials = new NetworkCredential("rabtbilmail@gmail.com", "SMF-SoftWare"),
+                            EnableSsl = true
+                        };
+                        eposta.Send("rabtbilmail@gmail.com", kullaniciEposta, "Rabt Bil. Müşteri Kayıt - Yeni Kullanıcı Kaydı", "Geçici Kullanıcı Adınız: " + kullaniciEposta + "\nGeçici Şifreniz: " + kullaniciSifre);
+
+                        MessageBox.Show("Kullanıcı Adı Ve Şifre E-posta Adresinize Gönderilmiştir!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        KullaniciOlusturGizle();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Hata");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Doğru Bir E-posta Adresi Girin!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            if (BttnYeniKullaniciOluştur.Text == "Yeni Şifre Gönder")
             {
+                if (String.IsNullOrWhiteSpace(TxtEposta.Text))
+                {
+                    MessageBox.Show("E-posta Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 try
                 {
-                    SMF.Baglanti.Open();
-                    MySqlCommand komutKullaniciVarMi = new MySqlCommand("SELECT * FROM kullanicilar", SMF.Baglanti);
-                    DataTable dataTable1 = new DataTable();
-                    MySqlDataAdapter dataAdapter1 = new MySqlDataAdapter(komutKullaniciVarMi);
-                    dataAdapter1.Fill(dataTable1);
-                    if (dataTable1.Rows.Count > 0)
+                    if (EpostaDogruMu(kullaniciEposta))
                     {
-                        MessageBox.Show("Kayıtlı Bir Kullanıcı Zaten Var!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SMF.Baglanti.Open();
+                        MySqlCommand komutEpostaVarMi = new MySqlCommand("SELECT * FROM kullanicilar WHERE EPosta=@EPosta AND ID=1", SMF.Baglanti);
+                        komutEpostaVarMi.Parameters.AddWithValue("@EPosta", kullaniciEposta);
+                        DataTable dataTable3 = new DataTable();
+                        MySqlDataAdapter dataAdapter3 = new MySqlDataAdapter(komutEpostaVarMi);
+                        dataAdapter3.Fill(dataTable3);
+                        if (dataTable3.Rows.Count != 1)
+                        {
+                            MessageBox.Show("Böyle bir E-posta kayıtlı değil!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            KullaniciOlusturGizle();
+                            SMF.Baglanti.Close();
+                            return;
+                        }
+
+                        SMF.Baglanti.Close();
+                        SMF.Baglanti.Open();
+                        MySqlCommand komutKullaniciKayit = new MySqlCommand("UPDATE kullanicilar SET Sifre=@Sifre", SMF.Baglanti);
+                        komutKullaniciKayit.Parameters.Clear();
+                        komutKullaniciKayit.Parameters.AddWithValue("@Sifre", kullaniciSifre);
+                        komutKullaniciKayit.ExecuteNonQuery();
+                        SMF.Baglanti.Close();
+
+                        var eposta = new SmtpClient("smtp.gmail.com", 587)
+                        {
+                            Credentials = new NetworkCredential("rabtbilmail@gmail.com", "SMF-SoftWare"),
+                            EnableSsl = true
+                        };
+                        eposta.Send("rabtbilmail@gmail.com", kullaniciEposta, "Rabt Bil. Müşteri Kayıt - Şifremi Unuttum", "Geçici Şifreniz: " + kullaniciSifre);
+
+                        MessageBox.Show("Geçici Şifreniz E-posta Adresinize Gönderilmiştir!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         KullaniciOlusturGizle();
-                        return;
                     }
-
-                    MySqlCommand komutKullaniciKayit = new MySqlCommand("INSERT INTO kullanicilar (KullaniciAdi,Sifre,EPosta) VALUES (@KullaniciAdi,@Sifre,@EPosta)", SMF.Baglanti); komutKullaniciKayit.Parameters.AddWithValue("@KullaniciAdi", TxtKullaniciAdi.Text);
-                    komutKullaniciKayit.Parameters.Clear();
-                    komutKullaniciKayit.Parameters.AddWithValue("@KullaniciAdi", kullaniciEposta);
-                    komutKullaniciKayit.Parameters.AddWithValue("@Sifre", kullaniciSifre);
-                    komutKullaniciKayit.Parameters.AddWithValue("@EPosta", kullaniciEposta);
-                    komutKullaniciKayit.ExecuteNonQuery();
-                    SMF.Baglanti.Close();
-
-                    var eposta = new SmtpClient("smtp.gmail.com", 587)
+                    else
                     {
-                        Credentials = new NetworkCredential("rabtbilmail@gmail.com", "SMF-SoftWare"),
-                        EnableSsl = true
-                    };
-                    eposta.Send("rabtbilmail@gmail.com", kullaniciEposta, "Rabt Bil. Müşteri Kayıt - Yeni Kullanıcı Kaydı", "Geçici Kullanıcı Adınız: " + kullaniciEposta + "\nGeçici Şifreniz: " + kullaniciSifre);
-
-                    MessageBox.Show("Kullanıcı Adı Ve Şifre E-posta Adresinize Gönderilmiştir!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    KullaniciOlusturGizle();
+                        MessageBox.Show("Doğru Bir E-posta Adresi Girin!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Hata");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Doğru Bir E-posta Adresi Girin!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
         }
 
@@ -164,7 +226,13 @@ namespace RabtBilMusteriKayit
 
         private void FrmGirisYap_FormClosing(object sender, FormClosingEventArgs e)
         {
-           Application.Exit();
+            Application.Exit();
+        }
+
+        private void LinkLblSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            BttnYeniKullaniciOluştur.Text = "Yeni Şifre Gönder";
+            KullaniciOlusturGoster();
         }
     }
 }

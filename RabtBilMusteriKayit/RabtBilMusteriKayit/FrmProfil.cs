@@ -84,6 +84,7 @@ namespace RabtBilMusteriKayit
 
         private void PcTrBoxProfiliDuzenle_Click(object sender, EventArgs e)
         {
+          
             OpenFileDialog resimSec = new OpenFileDialog();
             resimSec.Title = "Profil resmini seçin";
             resimSec.Filter = "Resim Dosyaları(*.bmp;*.png;*.jpg)|*.bmp;*.png;*.jpg|SMF Format(*.smf)|*.smf";
@@ -95,6 +96,8 @@ namespace RabtBilMusteriKayit
                     Directory.CreateDirectory(SMF.ProfilKlasoru);
                 }
                 PcTrBoxProfiliDuzenle.Image?.Dispose();
+                FrmTeknikServisFormu frm = new FrmTeknikServisFormu();
+                frm.PcTrBoxProfiliDuzenle.Image?.Dispose();
                 File.Copy(kaynakResimYolu, SMF.ProfilResmiYolu, true);
                 PcTrBoxProfiliDuzenle.Image = Image.FromFile(kaynakResimYolu);
             }
@@ -108,7 +111,7 @@ namespace RabtBilMusteriKayit
         private void TlStrpMenuItemAraclarGucluSifreOlustur_Click(object sender, EventArgs e)
         {
             FrmGucluSifreOlustur frm = new FrmGucluSifreOlustur();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void BttnTemizle_Click(object sender, EventArgs e)

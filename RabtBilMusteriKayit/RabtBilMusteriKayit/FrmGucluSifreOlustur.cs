@@ -15,8 +15,8 @@ namespace RabtBilMusteriKayit
 
         private void button1_Click(object sender, EventArgs e)
         {
-            sifre = GucluSifreOlustur(Convert.ToInt32(CmbBoxSifreKarakter.Text));
-            TxtGucluSifreniz.Text = sifre;
+            //sifre = GucluSifreOlustur(Convert.ToInt32(CmbBoxSifreKarakter.Text));
+            //TxtGucluSifreniz.Text = sifre;
         }
 
         public string GucluSifreOlustur(int uzunluk)
@@ -56,10 +56,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmGucluSifreOlustur_Load(object sender, EventArgs e)
         {
-            for (int i = 3; i < 20; i++)
-            {
-                CmbBoxSifreKarakter.Items.Add(i + 1);
-            }
+            ChckBoxKucukHarfler.Checked=true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -74,6 +71,20 @@ namespace RabtBilMusteriKayit
         private void FrmGucluSifreOlustur_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            try
+            {
+                sifre = GucluSifreOlustur(trackBar1.Value);
+                TxtGucluSifreniz.Text = sifre;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata");
+            }
+           
         }
     }
 }

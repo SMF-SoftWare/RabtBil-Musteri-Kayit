@@ -38,6 +38,8 @@
             this.BttnKopyala = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // ChckBoxKucukHarfler
@@ -45,7 +47,7 @@
             this.ChckBoxKucukHarfler.AutoSize = true;
             this.ChckBoxKucukHarfler.Location = new System.Drawing.Point(298, 68);
             this.ChckBoxKucukHarfler.Name = "ChckBoxKucukHarfler";
-            this.ChckBoxKucukHarfler.Size = new System.Drawing.Size(131, 22);
+            this.ChckBoxKucukHarfler.Size = new System.Drawing.Size(162, 26);
             this.ChckBoxKucukHarfler.TabIndex = 0;
             this.ChckBoxKucukHarfler.Text = "Küçük Harfler";
             this.ChckBoxKucukHarfler.UseVisualStyleBackColor = true;
@@ -55,7 +57,7 @@
             this.ChckBoxBuyukHarfler.AutoSize = true;
             this.ChckBoxBuyukHarfler.Location = new System.Drawing.Point(298, 97);
             this.ChckBoxBuyukHarfler.Name = "ChckBoxBuyukHarfler";
-            this.ChckBoxBuyukHarfler.Size = new System.Drawing.Size(131, 22);
+            this.ChckBoxBuyukHarfler.Size = new System.Drawing.Size(162, 26);
             this.ChckBoxBuyukHarfler.TabIndex = 1;
             this.ChckBoxBuyukHarfler.Text = "Büyük Harfler";
             this.ChckBoxBuyukHarfler.UseVisualStyleBackColor = true;
@@ -65,7 +67,7 @@
             this.ChckBoxSayılar.AutoSize = true;
             this.ChckBoxSayılar.Location = new System.Drawing.Point(298, 127);
             this.ChckBoxSayılar.Name = "ChckBoxSayılar";
-            this.ChckBoxSayılar.Size = new System.Drawing.Size(83, 22);
+            this.ChckBoxSayılar.Size = new System.Drawing.Size(102, 26);
             this.ChckBoxSayılar.TabIndex = 2;
             this.ChckBoxSayılar.Text = "Sayılar";
             this.ChckBoxSayılar.UseVisualStyleBackColor = true;
@@ -75,7 +77,7 @@
             this.ChckSemboller.AutoSize = true;
             this.ChckSemboller.Location = new System.Drawing.Point(298, 158);
             this.ChckSemboller.Name = "ChckSemboller";
-            this.ChckSemboller.Size = new System.Drawing.Size(99, 22);
+            this.ChckSemboller.Size = new System.Drawing.Size(122, 26);
             this.ChckSemboller.TabIndex = 3;
             this.ChckSemboller.Text = "Semboller";
             this.ChckSemboller.UseVisualStyleBackColor = true;
@@ -96,7 +98,7 @@
             this.TxtGucluSifreniz.MaxLength = 20;
             this.TxtGucluSifreniz.Name = "TxtGucluSifreniz";
             this.TxtGucluSifreniz.ReadOnly = true;
-            this.TxtGucluSifreniz.Size = new System.Drawing.Size(174, 25);
+            this.TxtGucluSifreniz.Size = new System.Drawing.Size(174, 29);
             this.TxtGucluSifreniz.TabIndex = 5;
             // 
             // CmbBoxSifreKarakter
@@ -105,7 +107,7 @@
             this.CmbBoxSifreKarakter.FormattingEnabled = true;
             this.CmbBoxSifreKarakter.Location = new System.Drawing.Point(12, 27);
             this.CmbBoxSifreKarakter.Name = "CmbBoxSifreKarakter";
-            this.CmbBoxSifreKarakter.Size = new System.Drawing.Size(69, 26);
+            this.CmbBoxSifreKarakter.Size = new System.Drawing.Size(69, 30);
             this.CmbBoxSifreKarakter.TabIndex = 6;
             // 
             // BttnKopyala
@@ -124,7 +126,7 @@
             this.label1.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 15);
+            this.label1.Size = new System.Drawing.Size(261, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Şifreniz Kaç Karakter Olsun:";
             // 
@@ -134,15 +136,27 @@
             this.label2.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.label2.Location = new System.Drawing.Point(12, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 15);
+            this.label2.Size = new System.Drawing.Size(153, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Güçlü Parolanız:";
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(16, 128);
+            this.trackBar1.Maximum = 20;
+            this.trackBar1.Minimum = 4;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(257, 56);
+            this.trackBar1.TabIndex = 10;
+            this.trackBar1.Value = 4;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
             // FrmGucluSifreOlustur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 201);
+            this.ClientSize = new System.Drawing.Size(452, 193);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BttnKopyala);
@@ -160,6 +174,7 @@
             this.Text = "RabtBil Müşteri Kayit -> Güçlü Şifre Oluştur";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGucluSifreOlustur_FormClosing);
             this.Load += new System.EventHandler(this.FrmGucluSifreOlustur_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +192,6 @@
         private System.Windows.Forms.Button BttnKopyala;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
