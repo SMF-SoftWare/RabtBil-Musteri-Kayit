@@ -108,6 +108,7 @@ namespace RabtBilMusteriKayit
             TxtUcret.Text = "";
             TxtAksesuarlar.Text = "";
             TxtEkBilgiler.Text = "";
+            LblMusteriNo.Text = "";
         }
 
         private void CmbBoxUrunKodlari_SelectedIndexChanged(object sender, EventArgs e)

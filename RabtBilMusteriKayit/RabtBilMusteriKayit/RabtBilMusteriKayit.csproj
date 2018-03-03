@@ -64,6 +64,12 @@
     <Compile Include="FrmKayitlariGoster.Designer.cs">
       <DependentUpon>FrmKayitlariGoster.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLisans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLisans.Designer.cs">
+      <DependentUpon>FrmLisans.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKayitlariGoster.resx">
       <DependentUpon>FrmKayitlariGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLisans.resx">
+      <DependentUpon>FrmLisans.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProfil.resx">
       <DependentUpon>FrmProfil.cs</DependentUpon>
