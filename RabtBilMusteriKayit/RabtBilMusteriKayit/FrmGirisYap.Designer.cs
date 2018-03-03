@@ -65,7 +65,7 @@
             this.label1.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.label1.Location = new System.Drawing.Point(20, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.Size = new System.Drawing.Size(105, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Kullanıcı Adı:";
             // 
@@ -75,19 +75,19 @@
             this.TxtKullaniciAdi.Location = new System.Drawing.Point(23, 71);
             this.TxtKullaniciAdi.MaxLength = 30;
             this.TxtKullaniciAdi.Name = "TxtKullaniciAdi";
-            this.TxtKullaniciAdi.Size = new System.Drawing.Size(288, 31);
+            this.TxtKullaniciAdi.Size = new System.Drawing.Size(288, 26);
             this.TxtKullaniciAdi.TabIndex = 2;
             // 
             // MenuStrip
             // 
-            this.MenuStrip.Font = new System.Drawing.Font("Consolas", 11.25F);
+            this.MenuStrip.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.MenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStrpMenuItemAyarlar,
             this.TlStrpMenuItemYardım});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(339, 30);
+            this.MenuStrip.Size = new System.Drawing.Size(339, 24);
             this.MenuStrip.TabIndex = 17;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -97,7 +97,7 @@
             this.TlStrpMenuItemAyarlarDil,
             this.TlStrpMenuItemAyarlarTema});
             this.TlStrpMenuItemAyarlar.Name = "TlStrpMenuItemAyarlar";
-            this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(92, 26);
+            this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(68, 20);
             this.TlStrpMenuItemAyarlar.Text = "Ayarlar";
             // 
             // TlStrpMenuItemAyarlarDil
@@ -106,25 +106,25 @@
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
-            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(126, 26);
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(102, 22);
             this.TlStrpMenuItemAyarlarDil.Text = "Dil";
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(176, 26);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(137, 22);
             this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(176, 26);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(137, 22);
             this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
-            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(126, 26);
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(102, 22);
             this.TlStrpMenuItemAyarlarTema.Text = "Tema";
             // 
             // TlStrpMenuItemYardım
@@ -133,19 +133,19 @@
             this.TlStrpMenuItemYardimLisansAnahtari,
             this.TlStrpMenuItemYardimHakkinda});
             this.TlStrpMenuItemYardım.Name = "TlStrpMenuItemYardım";
-            this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(82, 26);
+            this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(61, 20);
             this.TlStrpMenuItemYardım.Text = "Yardım";
             // 
             // TlStrpMenuItemYardimLisansAnahtari
             // 
             this.TlStrpMenuItemYardimLisansAnahtari.Name = "TlStrpMenuItemYardimLisansAnahtari";
-            this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(236, 26);
+            this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(179, 22);
             this.TlStrpMenuItemYardimLisansAnahtari.Text = "Lisans Anahtarı";
             // 
             // TlStrpMenuItemYardimHakkinda
             // 
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
-            this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(236, 26);
+            this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(179, 22);
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
             // 
             // TxtSifre
@@ -154,7 +154,7 @@
             this.TxtSifre.Location = new System.Drawing.Point(23, 130);
             this.TxtSifre.MaxLength = 30;
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(288, 31);
+            this.TxtSifre.Size = new System.Drawing.Size(288, 26);
             this.TxtSifre.TabIndex = 19;
             this.TxtSifre.UseSystemPasswordChar = true;
             // 
@@ -164,7 +164,7 @@
             this.LblSifre.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblSifre.Location = new System.Drawing.Point(20, 112);
             this.LblSifre.Name = "LblSifre";
-            this.LblSifre.Size = new System.Drawing.Size(63, 20);
+            this.LblSifre.Size = new System.Drawing.Size(49, 15);
             this.LblSifre.TabIndex = 18;
             this.LblSifre.Text = "Şifre:";
             // 
@@ -173,7 +173,7 @@
             this.LinkLblSifremiUnuttum.AutoSize = true;
             this.LinkLblSifremiUnuttum.Location = new System.Drawing.Point(171, 201);
             this.LinkLblSifremiUnuttum.Name = "LinkLblSifremiUnuttum";
-            this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(170, 22);
+            this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(136, 18);
             this.LinkLblSifremiUnuttum.TabIndex = 20;
             this.LinkLblSifremiUnuttum.TabStop = true;
             this.LinkLblSifremiUnuttum.Text = "Şifremi Unuttum?";
@@ -184,7 +184,7 @@
             this.TxtEposta.Location = new System.Drawing.Point(23, 252);
             this.TxtEposta.MaxLength = 30;
             this.TxtEposta.Name = "TxtEposta";
-            this.TxtEposta.Size = new System.Drawing.Size(288, 31);
+            this.TxtEposta.Size = new System.Drawing.Size(288, 26);
             this.TxtEposta.TabIndex = 22;
             // 
             // BttnYeniKullaniciOluştur
@@ -203,13 +203,13 @@
             this.LblEposta.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblEposta.Location = new System.Drawing.Point(20, 234);
             this.LblEposta.Name = "LblEposta";
-            this.LblEposta.Size = new System.Drawing.Size(81, 20);
+            this.LblEposta.Size = new System.Drawing.Size(63, 15);
             this.LblEposta.TabIndex = 24;
             this.LblEposta.Text = "E-posta:";
             // 
             // FrmGirisYap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 331);
             this.Controls.Add(this.LblEposta);

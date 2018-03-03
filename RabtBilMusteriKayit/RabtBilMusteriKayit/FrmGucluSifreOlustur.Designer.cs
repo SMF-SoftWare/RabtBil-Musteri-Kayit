@@ -28,106 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ChckBoxKucukSayilar = new System.Windows.Forms.CheckBox();
+            this.ChckBoxBuyukSayilar = new System.Windows.Forms.CheckBox();
+            this.ChckBoxSayılar = new System.Windows.Forms.CheckBox();
+            this.ChckSemboller = new System.Windows.Forms.CheckBox();
+            this.BttnOlustur = new System.Windows.Forms.Button();
+            this.TxtGucluSifreniz = new System.Windows.Forms.TextBox();
+            this.CmbBoxSifreKarakter = new System.Windows.Forms.ComboBox();
+            this.BttnKopyala = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // ChckBoxKucukSayilar
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(120, 56);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(98, 21);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ChckBoxKucukSayilar.AutoSize = true;
+            this.ChckBoxKucukSayilar.Location = new System.Drawing.Point(298, 68);
+            this.ChckBoxKucukSayilar.Name = "ChckBoxKucukSayilar";
+            this.ChckBoxKucukSayilar.Size = new System.Drawing.Size(131, 22);
+            this.ChckBoxKucukSayilar.TabIndex = 0;
+            this.ChckBoxKucukSayilar.Text = "Küçük sayılar";
+            this.ChckBoxKucukSayilar.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // ChckBoxBuyukSayilar
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(120, 83);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(98, 21);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ChckBoxBuyukSayilar.AutoSize = true;
+            this.ChckBoxBuyukSayilar.Location = new System.Drawing.Point(298, 97);
+            this.ChckBoxBuyukSayilar.Name = "ChckBoxBuyukSayilar";
+            this.ChckBoxBuyukSayilar.Size = new System.Drawing.Size(131, 22);
+            this.ChckBoxBuyukSayilar.TabIndex = 1;
+            this.ChckBoxBuyukSayilar.Text = "Büyük sayılar";
+            this.ChckBoxBuyukSayilar.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // ChckBoxSayılar
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(120, 110);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(98, 21);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.ChckBoxSayılar.AutoSize = true;
+            this.ChckBoxSayılar.Location = new System.Drawing.Point(298, 127);
+            this.ChckBoxSayılar.Name = "ChckBoxSayılar";
+            this.ChckBoxSayılar.Size = new System.Drawing.Size(83, 22);
+            this.ChckBoxSayılar.TabIndex = 2;
+            this.ChckBoxSayılar.Text = "Sayılar";
+            this.ChckBoxSayılar.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // ChckSemboller
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(120, 137);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(98, 21);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.ChckSemboller.AutoSize = true;
+            this.ChckSemboller.Location = new System.Drawing.Point(298, 158);
+            this.ChckSemboller.Name = "ChckSemboller";
+            this.ChckSemboller.Size = new System.Drawing.Size(99, 22);
+            this.ChckSemboller.TabIndex = 3;
+            this.ChckSemboller.Text = "Semboller";
+            this.ChckSemboller.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BttnOlustur
             // 
-            this.button1.Location = new System.Drawing.Point(235, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BttnOlustur.Location = new System.Drawing.Point(286, 15);
+            this.BttnOlustur.Name = "BttnOlustur";
+            this.BttnOlustur.Size = new System.Drawing.Size(75, 26);
+            this.BttnOlustur.TabIndex = 4;
+            this.BttnOlustur.Text = "Oluştur";
+            this.BttnOlustur.UseVisualStyleBackColor = true;
+            this.BttnOlustur.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // TxtGucluSifreniz
             // 
-            this.textBox1.Location = new System.Drawing.Point(87, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 22);
-            this.textBox1.TabIndex = 5;
+            this.TxtGucluSifreniz.Location = new System.Drawing.Point(12, 90);
+            this.TxtGucluSifreniz.MaxLength = 20;
+            this.TxtGucluSifreniz.Name = "TxtGucluSifreniz";
+            this.TxtGucluSifreniz.ReadOnly = true;
+            this.TxtGucluSifreniz.Size = new System.Drawing.Size(174, 25);
+            this.TxtGucluSifreniz.TabIndex = 5;
             // 
-            // comboBox1
+            // CmbBoxSifreKarakter
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(69, 24);
-            this.comboBox1.TabIndex = 6;
+            this.CmbBoxSifreKarakter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbBoxSifreKarakter.FormattingEnabled = true;
+            this.CmbBoxSifreKarakter.Location = new System.Drawing.Point(12, 27);
+            this.CmbBoxSifreKarakter.Name = "CmbBoxSifreKarakter";
+            this.CmbBoxSifreKarakter.Size = new System.Drawing.Size(69, 26);
+            this.CmbBoxSifreKarakter.TabIndex = 6;
             // 
-            // button2
+            // BttnKopyala
             // 
-            this.button2.Location = new System.Drawing.Point(316, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BttnKopyala.Location = new System.Drawing.Point(367, 15);
+            this.BttnKopyala.Name = "BttnKopyala";
+            this.BttnKopyala.Size = new System.Drawing.Size(75, 26);
+            this.BttnKopyala.TabIndex = 7;
+            this.BttnKopyala.Text = "Kopyala";
+            this.BttnKopyala.UseVisualStyleBackColor = true;
+            this.BttnKopyala.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 15);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Şifreniz Kaç Karakter Olsun:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.label2.Location = new System.Drawing.Point(12, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Güçlü Parolanız:";
             // 
             // FrmGucluSifreOlustur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 177);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(454, 201);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BttnKopyala);
+            this.Controls.Add(this.CmbBoxSifreKarakter);
+            this.Controls.Add(this.TxtGucluSifreniz);
+            this.Controls.Add(this.BttnOlustur);
+            this.Controls.Add(this.ChckSemboller);
+            this.Controls.Add(this.ChckBoxSayılar);
+            this.Controls.Add(this.ChckBoxBuyukSayilar);
+            this.Controls.Add(this.ChckBoxKucukSayilar);
+            this.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MaximumSize = new System.Drawing.Size(470, 240);
+            this.MinimumSize = new System.Drawing.Size(470, 240);
             this.Name = "FrmGucluSifreOlustur";
-            this.Text = "FrmGucluSifreOlustur";
+            this.Text = "RabtBil Müşteri Kayit -> Güçlü Şifre Oluştur";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGucluSifreOlustur_FormClosing);
             this.Load += new System.EventHandler(this.FrmGucluSifreOlustur_Load);
             this.ResumeLayout(false);
@@ -137,13 +167,15 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox ChckBoxKucukSayilar;
+        private System.Windows.Forms.CheckBox ChckBoxBuyukSayilar;
+        private System.Windows.Forms.CheckBox ChckBoxSayılar;
+        private System.Windows.Forms.CheckBox ChckSemboller;
+        private System.Windows.Forms.Button BttnOlustur;
+        private System.Windows.Forms.TextBox TxtGucluSifreniz;
+        private System.Windows.Forms.ComboBox CmbBoxSifreKarakter;
+        private System.Windows.Forms.Button BttnKopyala;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

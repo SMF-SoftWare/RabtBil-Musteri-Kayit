@@ -15,8 +15,8 @@ namespace RabtBilMusteriKayit
 
         private void button1_Click(object sender, EventArgs e)
         {
-            sifre = GucluSifreOlustur(Convert.ToInt32(comboBox1.Text));
-            textBox1.Text = sifre;
+            sifre = GucluSifreOlustur(Convert.ToInt32(CmbBoxSifreKarakter.Text));
+            TxtGucluSifreniz.Text = sifre;
         }
 
         public string GucluSifreOlustur(int uzunluk)
@@ -26,22 +26,22 @@ namespace RabtBilMusteriKayit
             const string sayilar = "1234567890";
             const string semboller = "@#$&*-+!?%^._:'\\/{}[]=()<>";
             string sifre = "";
-            if (checkBox1.Checked)
+            if (ChckBoxKucukSayilar.Checked)
             {
                 sifre += kucukHarfler;
             }
 
-            if (checkBox2.Checked)
+            if (ChckBoxBuyukSayilar.Checked)
             {
                 sifre += buyukHarfler;
             }
 
-            if (checkBox3.Checked)
+            if (ChckBoxSayılar.Checked)
             {
                 sifre += sayilar;
             }
 
-            if (checkBox4.Checked)
+            if (ChckSemboller.Checked)
             {
                 sifre += semboller;
             }
@@ -58,7 +58,7 @@ namespace RabtBilMusteriKayit
         {
             for (int i = 0; i < 20; i++)
             {
-                comboBox1.Items.Add(i + 1);
+                CmbBoxSifreKarakter.Items.Add(i + 1);
             }
         }
 

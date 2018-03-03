@@ -33,7 +33,6 @@
             this.TxtMusteriAdi = new System.Windows.Forms.TextBox();
             this.GrpBoxMusteriBilgileri = new System.Windows.Forms.GroupBox();
             this.LblTelefon = new System.Windows.Forms.Label();
-            this.TxtTelefon = new System.Windows.Forms.TextBox();
             this.LblFormNo = new System.Windows.Forms.Label();
             this.TxtFormNo = new System.Windows.Forms.TextBox();
             this.GrpBoxAksesuarlar = new System.Windows.Forms.GroupBox();
@@ -84,6 +83,7 @@
             this.TlStripAcıklama = new System.Windows.Forms.ToolStripLabel();
             this.TlStripTarihSaat = new System.Windows.Forms.ToolStripLabel();
             this.TimerTarihSaat = new System.Windows.Forms.Timer(this.components);
+            this.MsKdTxtTelefon = new System.Windows.Forms.MaskedTextBox();
             this.GrpBoxMusteriBilgileri.SuspendLayout();
             this.GrpBoxAksesuarlar.SuspendLayout();
             this.GrpBoxEkBilgiler.SuspendLayout();
@@ -114,8 +114,8 @@
             // 
             // GrpBoxMusteriBilgileri
             // 
+            this.GrpBoxMusteriBilgileri.Controls.Add(this.MsKdTxtTelefon);
             this.GrpBoxMusteriBilgileri.Controls.Add(this.LblTelefon);
-            this.GrpBoxMusteriBilgileri.Controls.Add(this.TxtTelefon);
             this.GrpBoxMusteriBilgileri.Controls.Add(this.LblFormNo);
             this.GrpBoxMusteriBilgileri.Controls.Add(this.TxtFormNo);
             this.GrpBoxMusteriBilgileri.Controls.Add(this.LblMusteriAdi);
@@ -137,19 +137,11 @@
             this.LblTelefon.TabIndex = 5;
             this.LblTelefon.Text = "Telefon:";
             // 
-            // TxtTelefon
-            // 
-            this.TxtTelefon.Location = new System.Drawing.Point(96, 89);
-            this.TxtTelefon.MaxLength = 16;
-            this.TxtTelefon.Name = "TxtTelefon";
-            this.TxtTelefon.Size = new System.Drawing.Size(252, 25);
-            this.TxtTelefon.TabIndex = 4;
-            // 
             // LblFormNo
             // 
             this.LblFormNo.AutoSize = true;
             this.LblFormNo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblFormNo.Location = new System.Drawing.Point(23, 65);
+            this.LblFormNo.Location = new System.Drawing.Point(30, 65);
             this.LblFormNo.Name = "LblFormNo";
             this.LblFormNo.Size = new System.Drawing.Size(63, 15);
             this.LblFormNo.TabIndex = 3;
@@ -458,7 +450,7 @@
             // 
             // MenuStrip
             // 
-            this.MenuStrip.Font = new System.Drawing.Font("Consolas", 11.25F);
+            this.MenuStrip.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.MenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStrpMenuItemAraclar,
@@ -466,7 +458,7 @@
             this.TlStrpMenuItemYardım});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(924, 26);
+            this.MenuStrip.Size = new System.Drawing.Size(924, 24);
             this.MenuStrip.TabIndex = 15;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -489,6 +481,8 @@
             this.TlStrpMenuItemAraclarYeniKayit.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarYeniKayit.Text = "Yeni Kayıt";
             this.TlStrpMenuItemAraclarYeniKayit.Click += new System.EventHandler(this.BttnYeniKayit_Click);
+            this.TlStrpMenuItemAraclarYeniKayit.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
+            this.TlStrpMenuItemAraclarYeniKayit.MouseHover += new System.EventHandler(this.BttnYeniKayit_MouseHover);
             // 
             // TlStrpMenuItemAraclarKaydet
             // 
@@ -496,6 +490,8 @@
             this.TlStrpMenuItemAraclarKaydet.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarKaydet.Text = "Kaydet";
             this.TlStrpMenuItemAraclarKaydet.Click += new System.EventHandler(this.BttnKaydet_Click);
+            this.TlStrpMenuItemAraclarKaydet.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
+            this.TlStrpMenuItemAraclarKaydet.MouseHover += new System.EventHandler(this.BttnKaydet_MouseHover);
             // 
             // TlStrpMenuItemAraclarTemizle
             // 
@@ -503,6 +499,8 @@
             this.TlStrpMenuItemAraclarTemizle.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarTemizle.Text = "Temizle";
             this.TlStrpMenuItemAraclarTemizle.Click += new System.EventHandler(this.BttnTemizle_Click);
+            this.TlStrpMenuItemAraclarTemizle.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
+            this.TlStrpMenuItemAraclarTemizle.MouseHover += new System.EventHandler(this.BttnTemizle_MouseHover);
             // 
             // TlStrpMenuItemAraclarKayitlariGoster
             // 
@@ -510,6 +508,8 @@
             this.TlStrpMenuItemAraclarKayitlariGoster.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarKayitlariGoster.Text = "Kayıtları Göster";
             this.TlStrpMenuItemAraclarKayitlariGoster.Click += new System.EventHandler(this.BttnKayitlariGoster_Click);
+            this.TlStrpMenuItemAraclarKayitlariGoster.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
+            this.TlStrpMenuItemAraclarKayitlariGoster.MouseHover += new System.EventHandler(this.BttnKayitlariGoster_MouseHover);
             // 
             // TlStrpMenuItemAraclarGuncelle
             // 
@@ -517,6 +517,8 @@
             this.TlStrpMenuItemAraclarGuncelle.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarGuncelle.Text = "Güncelle";
             this.TlStrpMenuItemAraclarGuncelle.Click += new System.EventHandler(this.BttnGuncelle_Click);
+            this.TlStrpMenuItemAraclarGuncelle.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
+            this.TlStrpMenuItemAraclarGuncelle.MouseHover += new System.EventHandler(this.BttnGuncelle_MouseHover);
             // 
             // TlStrpMenuItemAraclarSil
             // 
@@ -524,6 +526,8 @@
             this.TlStrpMenuItemAraclarSil.Size = new System.Drawing.Size(204, 22);
             this.TlStrpMenuItemAraclarSil.Text = "Sil";
             this.TlStrpMenuItemAraclarSil.Click += new System.EventHandler(this.TlStrpMenuItemAraclarSil_Click);
+            this.TlStrpMenuItemAraclarSil.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
+            this.TlStrpMenuItemAraclarSil.MouseHover += new System.EventHandler(this.TlStrpMenuItemAraclarSil_MouseHover);
             // 
             // TlStrpMenuItemAyarlar
             // 
@@ -592,7 +596,7 @@
             // TlStrip
             // 
             this.TlStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TlStrip.Font = new System.Drawing.Font("Consolas", 11.25F);
+            this.TlStrip.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.TlStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.TlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripAcıklama,
@@ -619,6 +623,14 @@
             // TimerTarihSaat
             // 
             this.TimerTarihSaat.Tick += new System.EventHandler(this.TimerTarihSaat_Tick);
+            // 
+            // MsKdTxtTelefon
+            // 
+            this.MsKdTxtTelefon.Location = new System.Drawing.Point(96, 89);
+            this.MsKdTxtTelefon.Mask = "(999) 000-0000";
+            this.MsKdTxtTelefon.Name = "MsKdTxtTelefon";
+            this.MsKdTxtTelefon.Size = new System.Drawing.Size(252, 25);
+            this.MsKdTxtTelefon.TabIndex = 4;
             // 
             // FrmTeknikServisFormu
             // 
@@ -672,7 +684,6 @@
         public System.Windows.Forms.TextBox TxtMusteriAdi;
         public System.Windows.Forms.GroupBox GrpBoxMusteriBilgileri;
         public System.Windows.Forms.Label LblTelefon;
-        public System.Windows.Forms.TextBox TxtTelefon;
         public System.Windows.Forms.Label LblFormNo;
         public System.Windows.Forms.TextBox TxtFormNo;
         public System.Windows.Forms.GroupBox GrpBoxAksesuarlar;
@@ -724,5 +735,6 @@
         public System.Windows.Forms.TextBox TxtAksesuarlar;
         public System.Windows.Forms.TextBox TxtArizaTanimi;
         public System.Windows.Forms.Label LblMusteriNo;
+        public System.Windows.Forms.MaskedTextBox MsKdTxtTelefon;
     }
 }

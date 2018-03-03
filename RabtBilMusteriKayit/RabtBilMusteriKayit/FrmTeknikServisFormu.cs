@@ -63,7 +63,7 @@ namespace RabtBilMusteriKayit
                 MySqlCommand kaydet = new MySqlCommand("INSERT INTO musteribilgileri (MusteriAdi,FormNo,Telefon,UrunModeli,UrunSeriveImeiKodlari,UrunKodlari,ArizaTanimi,UrunDurumu,UrunTakipNo,Ucret,Aksesuarlar,EkBilgiler,Tarih) VALUES(@MusteriAdi,@FormNo,@Telefon,@UrunModeli,@UrunSeriveImeiKodlari,@UrunKodlari,@ArizaTanimi,@UrunDurumu,@UrunTakipNo,@Ucret,@Aksesuarlar,@EkBilgiler,@Tarih)", SMF.Baglanti);
                 kaydet.Parameters.AddWithValue("@MusteriAdi", TxtMusteriAdi.Text);
                 kaydet.Parameters.AddWithValue("@FormNo", TxtFormNo.Text);
-                kaydet.Parameters.AddWithValue("@Telefon", TxtTelefon.Text);
+                kaydet.Parameters.AddWithValue("@Telefon", MsKdTxtTelefon.Text);
                 kaydet.Parameters.AddWithValue("@UrunModeli", TxtUrunModeli.Text);
                 kaydet.Parameters.AddWithValue("@UrunSeriveImeiKodlari", CmbBoxUrunKodlari.Text);
                 kaydet.Parameters.AddWithValue("@UrunKodlari", TxtUrunKodlari.Text);
@@ -92,7 +92,7 @@ namespace RabtBilMusteriKayit
             _takipNo = _rnd.Next(10000, 99999);
             TxtMusteriAdi.Text = "";
             TxtFormNo.Text = "";
-            TxtTelefon.Text = "";
+            MsKdTxtTelefon.Text = "";
             TxtUrunModeli.Text = "";
             CmbBoxUrunKodlari.Text = "";
             TxtUrunKodlari.Text = "";
@@ -131,7 +131,7 @@ namespace RabtBilMusteriKayit
                 MySqlCommand guncelle = new MySqlCommand("UPDATE musteribilgileri SET MusteriAdi=@MusteriAdi,FormNo=@FormNo,Telefon=@Telefon,UrunModeli=@UrunModeli,UrunSeriveImeiKodlari=@UrunSeriveImeiKodlari,UrunKodlari=@UrunKodlari,ArizaTanimi=@ArizaTanimi,UrunDurumu=@UrunDurumu,UrunTakipNo=@UrunTakipNo,Ucret=@Ucret,Aksesuarlar=@Aksesuarlar,EkBilgiler=@EkBilgiler,Tarih=@Tarih WHERE Id=@Id", SMF.Baglanti);
                 guncelle.Parameters.AddWithValue("@MusteriAdi", TxtMusteriAdi.Text);
                 guncelle.Parameters.AddWithValue("@FormNo", TxtFormNo.Text);
-                guncelle.Parameters.AddWithValue("@Telefon", TxtTelefon.Text);
+                guncelle.Parameters.AddWithValue("@Telefon", MsKdTxtTelefon.Text);
                 guncelle.Parameters.AddWithValue("@UrunModeli", TxtUrunModeli.Text);
                 guncelle.Parameters.AddWithValue("@UrunSeriveImeiKodlari", CmbBoxUrunKodlari.Text);
                 guncelle.Parameters.AddWithValue("@UrunKodlari", TxtUrunKodlari.Text);
@@ -214,6 +214,11 @@ namespace RabtBilMusteriKayit
         private void PcTrBoxProfiliDuzenle_MouseHover(object sender, EventArgs e)
         {
             TlStripAcıklama.Text = "Profil Resminiz";
+        }
+
+        private void TlStrpMenuItemAraclarSil_MouseHover(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Seçili olan kayıdı siler.";
         }
     }
 }
