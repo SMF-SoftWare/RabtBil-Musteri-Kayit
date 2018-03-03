@@ -159,5 +159,20 @@ namespace RabtBilMusteriKayit
             Hide();
             //Application.Exit();
         }
+
+        private void BttnYazdir_MouseLeave(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Açıklama";
+        }
+
+        private void BttnYazdir_MouseHover(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Seçili olan kayıdı yazdırır.";
+        }
+
+        private void BttnSil_MouseHover(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Seçili olan kayıdı siler.";
+        }
     }
 }

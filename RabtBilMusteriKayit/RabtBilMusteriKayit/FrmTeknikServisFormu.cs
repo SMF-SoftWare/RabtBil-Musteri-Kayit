@@ -180,5 +180,40 @@ namespace RabtBilMusteriKayit
         {
             Application.Exit();
         }
+
+        private void BttnYeniKayit_MouseHover(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Yeni bir kayıt oluşturur.";
+        }
+
+        private void BttnYeniKayit_MouseLeave(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Açıklama";
+        }
+
+        private void BttnKaydet_MouseHover(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Müşterileri veritabanımıza kaydeder.";
+        }
+
+        private void BttnTemizle_MouseHover(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Metin kutularını temizler.";
+        }
+
+        private void BttnKayitlariGoster_MouseHover(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Kayıtlı olan müşterileri gösterir";
+        }
+
+        private void BttnGuncelle_MouseHover(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "kayıt edilen müşterilerin bilgilerini düzenler.";
+        }
+
+        private void PcTrBoxProfiliDuzenle_MouseHover(object sender, EventArgs e)
+        {
+            TlStripAcıklama.Text = "Profil Resminiz";
+        }
     }
 }
