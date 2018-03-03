@@ -26,12 +26,12 @@ namespace RabtBilMusteriKayit
             const string sayilar = "1234567890";
             const string semboller = "@#$&*-+!?%^._:'\\/{}[]=()<>";
             string sifre = "";
-            if (ChckBoxKucukSayilar.Checked)
+            if (ChckBoxKucukHarfler.Checked)
             {
                 sifre += kucukHarfler;
             }
 
-            if (ChckBoxBuyukSayilar.Checked)
+            if (ChckBoxBuyukHarfler.Checked)
             {
                 sifre += buyukHarfler;
             }
@@ -56,7 +56,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmGucluSifreOlustur_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 20; i++)
+            for (int i = 3; i < 20; i++)
             {
                 CmbBoxSifreKarakter.Items.Add(i + 1);
             }

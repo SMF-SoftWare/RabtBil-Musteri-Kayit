@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ChckBoxKucukSayilar = new System.Windows.Forms.CheckBox();
-            this.ChckBoxBuyukSayilar = new System.Windows.Forms.CheckBox();
+            this.ChckBoxKucukHarfler = new System.Windows.Forms.CheckBox();
+            this.ChckBoxBuyukHarfler = new System.Windows.Forms.CheckBox();
             this.ChckBoxSayılar = new System.Windows.Forms.CheckBox();
             this.ChckSemboller = new System.Windows.Forms.CheckBox();
             this.BttnOlustur = new System.Windows.Forms.Button();
@@ -40,25 +40,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // ChckBoxKucukSayilar
+            // ChckBoxKucukHarfler
             // 
-            this.ChckBoxKucukSayilar.AutoSize = true;
-            this.ChckBoxKucukSayilar.Location = new System.Drawing.Point(298, 68);
-            this.ChckBoxKucukSayilar.Name = "ChckBoxKucukSayilar";
-            this.ChckBoxKucukSayilar.Size = new System.Drawing.Size(131, 22);
-            this.ChckBoxKucukSayilar.TabIndex = 0;
-            this.ChckBoxKucukSayilar.Text = "Küçük sayılar";
-            this.ChckBoxKucukSayilar.UseVisualStyleBackColor = true;
+            this.ChckBoxKucukHarfler.AutoSize = true;
+            this.ChckBoxKucukHarfler.Location = new System.Drawing.Point(298, 68);
+            this.ChckBoxKucukHarfler.Name = "ChckBoxKucukHarfler";
+            this.ChckBoxKucukHarfler.Size = new System.Drawing.Size(131, 22);
+            this.ChckBoxKucukHarfler.TabIndex = 0;
+            this.ChckBoxKucukHarfler.Text = "Küçük Harfler";
+            this.ChckBoxKucukHarfler.UseVisualStyleBackColor = true;
             // 
-            // ChckBoxBuyukSayilar
+            // ChckBoxBuyukHarfler
             // 
-            this.ChckBoxBuyukSayilar.AutoSize = true;
-            this.ChckBoxBuyukSayilar.Location = new System.Drawing.Point(298, 97);
-            this.ChckBoxBuyukSayilar.Name = "ChckBoxBuyukSayilar";
-            this.ChckBoxBuyukSayilar.Size = new System.Drawing.Size(131, 22);
-            this.ChckBoxBuyukSayilar.TabIndex = 1;
-            this.ChckBoxBuyukSayilar.Text = "Büyük sayılar";
-            this.ChckBoxBuyukSayilar.UseVisualStyleBackColor = true;
+            this.ChckBoxBuyukHarfler.AutoSize = true;
+            this.ChckBoxBuyukHarfler.Location = new System.Drawing.Point(298, 97);
+            this.ChckBoxBuyukHarfler.Name = "ChckBoxBuyukHarfler";
+            this.ChckBoxBuyukHarfler.Size = new System.Drawing.Size(131, 22);
+            this.ChckBoxBuyukHarfler.TabIndex = 1;
+            this.ChckBoxBuyukHarfler.Text = "Büyük Harfler";
+            this.ChckBoxBuyukHarfler.UseVisualStyleBackColor = true;
             // 
             // ChckBoxSayılar
             // 
@@ -151,8 +151,8 @@
             this.Controls.Add(this.BttnOlustur);
             this.Controls.Add(this.ChckSemboller);
             this.Controls.Add(this.ChckBoxSayılar);
-            this.Controls.Add(this.ChckBoxBuyukSayilar);
-            this.Controls.Add(this.ChckBoxKucukSayilar);
+            this.Controls.Add(this.ChckBoxBuyukHarfler);
+            this.Controls.Add(this.ChckBoxKucukHarfler);
             this.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.MaximumSize = new System.Drawing.Size(470, 240);
             this.MinimumSize = new System.Drawing.Size(470, 240);
@@ -167,8 +167,8 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox ChckBoxKucukSayilar;
-        private System.Windows.Forms.CheckBox ChckBoxBuyukSayilar;
+        private System.Windows.Forms.CheckBox ChckBoxKucukHarfler;
+        private System.Windows.Forms.CheckBox ChckBoxBuyukHarfler;
         private System.Windows.Forms.CheckBox ChckBoxSayılar;
         private System.Windows.Forms.CheckBox ChckSemboller;
         private System.Windows.Forms.Button BttnOlustur;

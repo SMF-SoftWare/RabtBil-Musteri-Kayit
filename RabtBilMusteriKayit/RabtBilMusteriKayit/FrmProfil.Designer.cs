@@ -66,7 +66,7 @@
             this.LblKullaniciAdiniz.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblKullaniciAdiniz.Location = new System.Drawing.Point(12, 35);
             this.LblKullaniciAdiniz.Name = "LblKullaniciAdiniz";
-            this.LblKullaniciAdiniz.Size = new System.Drawing.Size(225, 20);
+            this.LblKullaniciAdiniz.Size = new System.Drawing.Size(175, 15);
             this.LblKullaniciAdiniz.TabIndex = 0;
             this.LblKullaniciAdiniz.Text = "Kullanıcı adınızı seçin:";
             // 
@@ -76,7 +76,7 @@
             this.LblSifreniz.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblSifreniz.Location = new System.Drawing.Point(12, 84);
             this.LblSifreniz.Name = "LblSifreniz";
-            this.LblSifreniz.Size = new System.Drawing.Size(189, 20);
+            this.LblSifreniz.Size = new System.Drawing.Size(147, 15);
             this.LblSifreniz.TabIndex = 2;
             this.LblSifreniz.Text = "Şifrenizi oluşturun:";
             // 
@@ -86,7 +86,7 @@
             this.LblSifreniziOnaylayın.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblSifreniziOnaylayın.Location = new System.Drawing.Point(12, 130);
             this.LblSifreniziOnaylayın.Name = "LblSifreniziOnaylayın";
-            this.LblSifreniziOnaylayın.Size = new System.Drawing.Size(189, 20);
+            this.LblSifreniziOnaylayın.Size = new System.Drawing.Size(147, 15);
             this.LblSifreniziOnaylayın.TabIndex = 4;
             this.LblSifreniziOnaylayın.Text = "Şifrenizi onaylayın:";
             // 
@@ -96,7 +96,7 @@
             this.LblAdiniz.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblAdiniz.Location = new System.Drawing.Point(12, 182);
             this.LblAdiniz.Name = "LblAdiniz";
-            this.LblAdiniz.Size = new System.Drawing.Size(72, 20);
+            this.LblAdiniz.Size = new System.Drawing.Size(56, 15);
             this.LblAdiniz.TabIndex = 6;
             this.LblAdiniz.Text = "Adınız:";
             // 
@@ -106,7 +106,7 @@
             this.LblSoyadiniz.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblSoyadiniz.Location = new System.Drawing.Point(12, 231);
             this.LblSoyadiniz.Name = "LblSoyadiniz";
-            this.LblSoyadiniz.Size = new System.Drawing.Size(99, 20);
+            this.LblSoyadiniz.Size = new System.Drawing.Size(77, 15);
             this.LblSoyadiniz.TabIndex = 8;
             this.LblSoyadiniz.Text = "Soyadınız:";
             // 
@@ -116,7 +116,7 @@
             this.LblEpostaniz.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblEpostaniz.Location = new System.Drawing.Point(12, 280);
             this.LblEpostaniz.Name = "LblEpostaniz";
-            this.LblEpostaniz.Size = new System.Drawing.Size(108, 20);
+            this.LblEpostaniz.Size = new System.Drawing.Size(84, 15);
             this.LblEpostaniz.TabIndex = 10;
             this.LblEpostaniz.Text = "E-postanız:";
             // 
@@ -125,7 +125,7 @@
             this.TxtKullaniciAdiniz.Location = new System.Drawing.Point(15, 53);
             this.TxtKullaniciAdiniz.MaxLength = 30;
             this.TxtKullaniciAdiniz.Name = "TxtKullaniciAdiniz";
-            this.TxtKullaniciAdiniz.Size = new System.Drawing.Size(252, 29);
+            this.TxtKullaniciAdiniz.Size = new System.Drawing.Size(252, 25);
             this.TxtKullaniciAdiniz.TabIndex = 12;
             // 
             // TxtSifreniz
@@ -133,7 +133,7 @@
             this.TxtSifreniz.Location = new System.Drawing.Point(15, 102);
             this.TxtSifreniz.MaxLength = 30;
             this.TxtSifreniz.Name = "TxtSifreniz";
-            this.TxtSifreniz.Size = new System.Drawing.Size(252, 29);
+            this.TxtSifreniz.Size = new System.Drawing.Size(252, 25);
             this.TxtSifreniz.TabIndex = 13;
             // 
             // TxtSifreniziOnaylayın
@@ -141,7 +141,7 @@
             this.TxtSifreniziOnaylayın.Location = new System.Drawing.Point(15, 151);
             this.TxtSifreniziOnaylayın.MaxLength = 30;
             this.TxtSifreniziOnaylayın.Name = "TxtSifreniziOnaylayın";
-            this.TxtSifreniziOnaylayın.Size = new System.Drawing.Size(252, 29);
+            this.TxtSifreniziOnaylayın.Size = new System.Drawing.Size(252, 25);
             this.TxtSifreniziOnaylayın.TabIndex = 14;
             // 
             // TxtAdiniz
@@ -149,7 +149,7 @@
             this.TxtAdiniz.Location = new System.Drawing.Point(15, 200);
             this.TxtAdiniz.MaxLength = 30;
             this.TxtAdiniz.Name = "TxtAdiniz";
-            this.TxtAdiniz.Size = new System.Drawing.Size(252, 29);
+            this.TxtAdiniz.Size = new System.Drawing.Size(252, 25);
             this.TxtAdiniz.TabIndex = 15;
             // 
             // TxtSoyadiniz
@@ -157,7 +157,7 @@
             this.TxtSoyadiniz.Location = new System.Drawing.Point(15, 249);
             this.TxtSoyadiniz.MaxLength = 30;
             this.TxtSoyadiniz.Name = "TxtSoyadiniz";
-            this.TxtSoyadiniz.Size = new System.Drawing.Size(252, 29);
+            this.TxtSoyadiniz.Size = new System.Drawing.Size(252, 25);
             this.TxtSoyadiniz.TabIndex = 16;
             // 
             // TxtEpostaniz
@@ -165,7 +165,7 @@
             this.TxtEpostaniz.Location = new System.Drawing.Point(15, 298);
             this.TxtEpostaniz.MaxLength = 30;
             this.TxtEpostaniz.Name = "TxtEpostaniz";
-            this.TxtEpostaniz.Size = new System.Drawing.Size(252, 29);
+            this.TxtEpostaniz.Size = new System.Drawing.Size(252, 25);
             this.TxtEpostaniz.TabIndex = 17;
             // 
             // BttnKaydet
@@ -186,6 +186,7 @@
             this.BttnTemizle.TabIndex = 20;
             this.BttnTemizle.Text = "Temizle";
             this.BttnTemizle.UseVisualStyleBackColor = true;
+            this.BttnTemizle.Click += new System.EventHandler(this.BttnTemizle_Click);
             // 
             // BttnAnaSayfa
             // 
@@ -195,6 +196,7 @@
             this.BttnAnaSayfa.TabIndex = 21;
             this.BttnAnaSayfa.Text = "Ana Sayfa";
             this.BttnAnaSayfa.UseVisualStyleBackColor = true;
+            this.BttnAnaSayfa.Click += new System.EventHandler(this.BttnAnaSayfa_Click);
             // 
             // MenuStrip
             // 
@@ -206,7 +208,7 @@
             this.TlStrpMenuItemYardım});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(382, 30);
+            this.MenuStrip.Size = new System.Drawing.Size(384, 26);
             this.MenuStrip.TabIndex = 22;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -215,13 +217,13 @@
             this.TlStrpMenuItemAraclar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStrpMenuItemAraclarGucluSifreOlustur});
             this.TlStrpMenuItemAraclar.Name = "TlStrpMenuItemAraclar";
-            this.TlStrpMenuItemAraclar.Size = new System.Drawing.Size(92, 26);
+            this.TlStrpMenuItemAraclar.Size = new System.Drawing.Size(76, 22);
             this.TlStrpMenuItemAraclar.Text = "Araçlar";
             // 
             // TlStrpMenuItemAraclarGucluSifreOlustur
             // 
             this.TlStrpMenuItemAraclarGucluSifreOlustur.Name = "TlStrpMenuItemAraclarGucluSifreOlustur";
-            this.TlStrpMenuItemAraclarGucluSifreOlustur.Size = new System.Drawing.Size(276, 26);
+            this.TlStrpMenuItemAraclarGucluSifreOlustur.Size = new System.Drawing.Size(228, 22);
             this.TlStrpMenuItemAraclarGucluSifreOlustur.Text = "Güçlü Şifre Oluştur";
             this.TlStrpMenuItemAraclarGucluSifreOlustur.Click += new System.EventHandler(this.TlStrpMenuItemAraclarGucluSifreOlustur_Click);
             // 
@@ -232,7 +234,7 @@
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle,
             this.TlStrpMenuItemAyarlarTema});
             this.TlStrpMenuItemAyarlar.Name = "TlStrpMenuItemAyarlar";
-            this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(92, 26);
+            this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(76, 22);
             this.TlStrpMenuItemAyarlar.Text = "Ayarlar";
             // 
             // TlStrpMenuItemAyarlarDil
@@ -241,31 +243,31 @@
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
-            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(306, 26);
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(252, 22);
             this.TlStrpMenuItemAyarlarDil.Text = "Dil";
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(176, 26);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(148, 22);
             this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(176, 26);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(148, 22);
             this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
             // 
             // TlStrpMenuItemAyarlarGuncellemeleriDenetle
             // 
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Name = "TlStrpMenuItemAyarlarGuncellemeleriDenetle";
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Size = new System.Drawing.Size(306, 26);
+            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Size = new System.Drawing.Size(252, 22);
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Text = "Güncellemeleri Denetle";
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
-            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(306, 26);
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(252, 22);
             this.TlStrpMenuItemAyarlarTema.Text = "Tema";
             // 
             // TlStrpMenuItemYardım
@@ -274,19 +276,19 @@
             this.TlStrpMenuItemYardimLisansAnahtari,
             this.TlStrpMenuItemYardimHakkinda});
             this.TlStrpMenuItemYardım.Name = "TlStrpMenuItemYardım";
-            this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(82, 26);
+            this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(68, 22);
             this.TlStrpMenuItemYardım.Text = "Yardım";
             // 
             // TlStrpMenuItemYardimLisansAnahtari
             // 
             this.TlStrpMenuItemYardimLisansAnahtari.Name = "TlStrpMenuItemYardimLisansAnahtari";
-            this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(236, 26);
+            this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(196, 22);
             this.TlStrpMenuItemYardimLisansAnahtari.Text = "Lisans Anahtarı";
             // 
             // TlStrpMenuItemYardimHakkinda
             // 
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
-            this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(236, 26);
+            this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(196, 22);
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
             // 
             // PcTrBoxProfiliDuzenle
@@ -302,9 +304,9 @@
             // 
             // FrmProfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 328);
+            this.ClientSize = new System.Drawing.Size(384, 336);
             this.Controls.Add(this.PcTrBoxProfiliDuzenle);
             this.Controls.Add(this.MenuStrip);
             this.Controls.Add(this.BttnAnaSayfa);

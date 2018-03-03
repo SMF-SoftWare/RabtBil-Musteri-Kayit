@@ -64,7 +64,7 @@ namespace RabtBilMusteriKayit
             {
                 try
                 {
-                    MySqlCommand guncelle = new MySqlCommand("UPDATE kullanicilar SET KullaniciAdi=@KullaniciAdi,Adi=@Adi,Soyadi=@Soyadi,EPosta=@EPosta,Sifre=@Sifre WHERE Id=1", SMF.Baglanti);
+                    MySqlCommand guncelle = new MySqlCommand("UPDATE kullanicilar SET KullaniciAdi=@KullaniciAdi,Adi=@Adi,Soyadi=@Soyadi,EPosta=@EPosta,Sifre=@Sifre WHERE Id=4", SMF.Baglanti);
                     guncelle.Parameters.AddWithValue("@KullaniciAdi", TxtKullaniciAdiniz.Text);
                     guncelle.Parameters.AddWithValue("@Adi", TxtAdiniz.Text);
                     guncelle.Parameters.AddWithValue("@Soyadi", TxtSoyadiniz.Text);
@@ -94,7 +94,6 @@ namespace RabtBilMusteriKayit
                 {
                     Directory.CreateDirectory(SMF.ProfilKlasoru);
                 }
-
                 PcTrBoxProfiliDuzenle.Image?.Dispose();
                 File.Copy(kaynakResimYolu, SMF.ProfilResmiYolu, true);
                 PcTrBoxProfiliDuzenle.Image = Image.FromFile(kaynakResimYolu);
@@ -110,6 +109,23 @@ namespace RabtBilMusteriKayit
         {
             FrmGucluSifreOlustur frm = new FrmGucluSifreOlustur();
             frm.Show();
+        }
+
+        private void BttnTemizle_Click(object sender, EventArgs e)
+        {
+            TxtKullaniciAdiniz.Text = "";
+            TxtSifreniz.Text = "";
+            TxtSifreniziOnaylayın.Text = "";
+            TxtAdiniz.Text = "";
+            TxtSoyadiniz.Text = "";
+            TxtEpostaniz.Text = "";
+        }
+
+        private void BttnAnaSayfa_Click(object sender, EventArgs e)
+        {
+            FrmGirisYap frmGirisYap = new FrmGirisYap();
+            frmGirisYap.Show();
+            Hide();
         }
     }
 }
