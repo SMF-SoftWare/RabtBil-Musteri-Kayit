@@ -64,7 +64,7 @@ namespace RabtBilMusteriKayit
             {
                 try
                 {
-                    MySqlCommand guncelle = new MySqlCommand("UPDATE kullanicilar SET KullaniciAdi=@KullaniciAdi,Adi=@Adi,Soyadi=@Soyadi,EPosta=@EPosta,Sifre=@Sifre WHERE Id=4", SMF.Baglanti);
+                    MySqlCommand guncelle = new MySqlCommand("UPDATE kullanicilar SET KullaniciAdi=@KullaniciAdi,Adi=@Adi,Soyadi=@Soyadi,EPosta=@EPosta,Sifre=@Sifre WHERE Id=1", SMF.Baglanti);
                     guncelle.Parameters.AddWithValue("@KullaniciAdi", TxtKullaniciAdiniz.Text);
                     guncelle.Parameters.AddWithValue("@Adi", TxtAdiniz.Text);
                     guncelle.Parameters.AddWithValue("@Soyadi", TxtSoyadiniz.Text);
@@ -98,7 +98,15 @@ namespace RabtBilMusteriKayit
                 PcTrBoxProfiliDuzenle.Image?.Dispose();
                 FrmTeknikServisFormu frm = new FrmTeknikServisFormu();
                 frm.PcTrBoxProfiliDuzenle.Image?.Dispose();
-                File.Copy(kaynakResimYolu, SMF.ProfilResmiYolu, true);
+                try
+                {
+                    PcTrBoxProfiliDuzenle.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
+                    File.Copy(kaynakResimYolu, SMF.ProfilResmiYolu, true);
+                }
+                catch (Exception)
+                {
+                    PcTrBoxProfiliDuzenle.Image = Resources.varsayilanProfilResmi;
+                }
                 PcTrBoxProfiliDuzenle.Image = Image.FromFile(kaynakResimYolu);
             }
         }

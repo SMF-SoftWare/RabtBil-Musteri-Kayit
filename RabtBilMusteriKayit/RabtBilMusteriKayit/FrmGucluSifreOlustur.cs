@@ -13,12 +13,6 @@ namespace RabtBilMusteriKayit
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //sifre = GucluSifreOlustur(Convert.ToInt32(CmbBoxSifreKarakter.Text));
-            //TxtGucluSifreniz.Text = sifre;
-        }
-
         public string GucluSifreOlustur(int uzunluk)
         {
             const string kucukHarfler = "abcdefghijklmnopqrstuvwxyz";
@@ -56,16 +50,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmGucluSifreOlustur_Load(object sender, EventArgs e)
         {
-            ChckBoxKucukHarfler.Checked=true;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FrmProfil frm = new FrmProfil();
-            frm.TxtSifreniz.Text = sifre;
-            frm.TxtSifreniziOnaylayın.Text = sifre;
-            if (sifre != null) Clipboard.SetText(sifre);  
-            Hide();
+            ChckBoxKucukHarfler.Checked = true;
         }
 
         private void FrmGucluSifreOlustur_FormClosing(object sender, FormClosingEventArgs e)
@@ -73,7 +58,16 @@ namespace RabtBilMusteriKayit
             Application.Exit();
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
+        private void BttnKopyala_Click(object sender, EventArgs e)
+        {
+            FrmProfil frm = new FrmProfil();
+            frm.TxtSifreniz.Text = sifre;
+            frm.TxtSifreniziOnaylayın.Text = sifre;
+            if (sifre != null) Clipboard.SetText(sifre);
+            Hide();
+        }
+
+        private void TrckBarSifreKarakter_Scroll(object sender, EventArgs e)
         {
             try
             {
@@ -84,7 +78,6 @@ namespace RabtBilMusteriKayit
             {
                 MessageBox.Show(ex.Message, "Hata");
             }
-           
         }
     }
 }
