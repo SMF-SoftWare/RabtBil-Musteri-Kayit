@@ -77,7 +77,7 @@ namespace RabtBilMusteriKayit
         {
             try
             {
-                sifre = GucluSifreOlustur(trackBar1.Value);
+                sifre = GucluSifreOlustur(TrckBarSifreKarakter.Value);
                 TxtGucluSifreniz.Text = sifre;
             }
             catch (Exception ex)
