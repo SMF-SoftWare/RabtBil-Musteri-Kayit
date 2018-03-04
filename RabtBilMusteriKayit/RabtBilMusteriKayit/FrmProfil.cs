@@ -60,12 +60,6 @@ namespace RabtBilMusteriKayit
                 return;
             }
 
-            if (String.IsNullOrWhiteSpace(TxtSifreniz.Text) || String.IsNullOrWhiteSpace(TxtSifreniziOnaylayın.Text))
-            {
-                MessageBox.Show("Şifre kısmı boş olmamalıdır!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             if (String.IsNullOrWhiteSpace(TxtEpostaniz.Text) || !SMF.EpostaDogruMu(TxtEpostaniz.Text))
             {
                 MessageBox.Show("Doğru bir e-posta adresi girin!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -77,6 +71,28 @@ namespace RabtBilMusteriKayit
                 MessageBox.Show("Şifreler aynı değil!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (String.IsNullOrWhiteSpace(TxtSifreniz.Text) || String.IsNullOrWhiteSpace(TxtSifreniziOnaylayın.Text))
+            {
+                try
+                {
+                    MySqlCommand guncelle = new MySqlCommand("UPDATE kullanicilar SET KullaniciAdi=@KullaniciAdi,Adi=@Adi,Soyadi=@Soyadi,EPosta=@EPosta WHERE Id=1", SMF.Baglanti);
+                    guncelle.Parameters.AddWithValue("@KullaniciAdi", TxtKullaniciAdiniz.Text);
+                    guncelle.Parameters.AddWithValue("@Adi", TxtAdiniz.Text);
+                    guncelle.Parameters.AddWithValue("@Soyadi", TxtSoyadiniz.Text);
+                    guncelle.Parameters.AddWithValue("@EPosta", TxtEpostaniz.Text);
+                    SMF.Baglanti.Open();
+                    guncelle.ExecuteNonQuery();
+                    MessageBox.Show("Kaydınız Güncellenmiştir.");
+                    SMF.Baglanti.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Hata");
+                }
+                return;
+            }
+
             if (TxtSifreniz.Text == TxtSifreniziOnaylayın.Text)
             {
                 try
