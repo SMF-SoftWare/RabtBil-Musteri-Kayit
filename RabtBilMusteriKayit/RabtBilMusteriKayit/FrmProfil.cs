@@ -18,6 +18,11 @@ namespace RabtBilMusteriKayit
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
+            if (Settings.Default.LisansliMi)
+            {
+                TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
+            }
+
             try
             {
                 MySqlCommand cmd = new MySqlCommand("SELECT * FROM kullanicilar where Id=1", SMF.Baglanti);
@@ -49,9 +54,21 @@ namespace RabtBilMusteriKayit
 
         private void BttnKaydet_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(TxtKullaniciAdiniz.Text))
+            {
+                MessageBox.Show("Kullanıcı adı kısmı boş olmamalıdır!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (String.IsNullOrWhiteSpace(TxtSifreniz.Text) || String.IsNullOrWhiteSpace(TxtSifreniziOnaylayın.Text))
             {
                 MessageBox.Show("Şifre kısmı boş olmamalıdır!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(TxtEpostaniz.Text) || !SMF.EpostaDogruMu(TxtEpostaniz.Text))
+            {
+                MessageBox.Show("Doğru bir e-posta adresi girin!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -84,7 +101,6 @@ namespace RabtBilMusteriKayit
 
         private void PcTrBoxProfiliDuzenle_Click(object sender, EventArgs e)
         {
-          
             OpenFileDialog resimSec = new OpenFileDialog();
             resimSec.Title = "Profil resmini seçin";
             resimSec.Filter = "Resim Dosyaları(*.bmp;*.png;*.jpg)|*.bmp;*.png;*.jpg|SMF Format(*.smf)|*.smf";
@@ -134,9 +150,15 @@ namespace RabtBilMusteriKayit
 
         private void BttnAnaSayfa_Click(object sender, EventArgs e)
         {
-            FrmGirisYap frmGirisYap = new FrmGirisYap();
-            frmGirisYap.Show();
+            FrmTeknikServisFormu frm = new FrmTeknikServisFormu();
+            frm.Show();
             Hide();
+        }
+
+        private void TlStrpMenuItemYardimLisansAnahtari_Click(object sender, EventArgs e)
+        {
+            FrmLisans frm = new FrmLisans();
+            frm.ShowDialog();
         }
     }
 }

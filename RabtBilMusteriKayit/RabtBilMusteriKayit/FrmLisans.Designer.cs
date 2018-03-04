@@ -42,24 +42,24 @@
             this.LblEposta.AutoSize = true;
             this.LblEposta.Location = new System.Drawing.Point(46, 24);
             this.LblEposta.Name = "LblEposta";
-            this.LblEposta.Size = new System.Drawing.Size(72, 18);
+            this.LblEposta.Size = new System.Drawing.Size(90, 22);
             this.LblEposta.TabIndex = 0;
             this.LblEposta.Text = "E-posta:";
             // 
             // TxtEposta
             // 
             this.TxtEposta.Location = new System.Drawing.Point(49, 45);
-            this.TxtEposta.MaxLength = 30;
+            this.TxtEposta.MaxLength = 50;
             this.TxtEposta.Name = "TxtEposta";
-            this.TxtEposta.Size = new System.Drawing.Size(252, 25);
+            this.TxtEposta.Size = new System.Drawing.Size(252, 29);
             this.TxtEposta.TabIndex = 1;
             // 
             // TxtLisansAnahtari
             // 
             this.TxtLisansAnahtari.Location = new System.Drawing.Point(49, 99);
-            this.TxtLisansAnahtari.MaxLength = 30;
+            this.TxtLisansAnahtari.MaxLength = 50;
             this.TxtLisansAnahtari.Name = "TxtLisansAnahtari";
-            this.TxtLisansAnahtari.Size = new System.Drawing.Size(252, 25);
+            this.TxtLisansAnahtari.Size = new System.Drawing.Size(252, 29);
             this.TxtLisansAnahtari.TabIndex = 2;
             // 
             // LblLisansAnahtari
@@ -67,7 +67,7 @@
             this.LblLisansAnahtari.AutoSize = true;
             this.LblLisansAnahtari.Location = new System.Drawing.Point(46, 78);
             this.LblLisansAnahtari.Name = "LblLisansAnahtari";
-            this.LblLisansAnahtari.Size = new System.Drawing.Size(160, 18);
+            this.LblLisansAnahtari.Size = new System.Drawing.Size(200, 22);
             this.LblLisansAnahtari.TabIndex = 3;
             this.LblLisansAnahtari.Text = "Lisans Anahtarınız:";
             // 
@@ -79,13 +79,14 @@
             this.BttnEtkinlestir.TabIndex = 5;
             this.BttnEtkinlestir.Text = "Etkinleştir";
             this.BttnEtkinlestir.UseVisualStyleBackColor = true;
+            this.BttnEtkinlestir.Click += new System.EventHandler(this.BttnEtkinlestir_Click);
             // 
             // LblLisansDurumu
             // 
             this.LblLisansDurumu.AutoSize = true;
             this.LblLisansDurumu.Location = new System.Drawing.Point(71, 190);
             this.LblLisansDurumu.Name = "LblLisansDurumu";
-            this.LblLisansDurumu.Size = new System.Drawing.Size(120, 18);
+            this.LblLisansDurumu.Size = new System.Drawing.Size(150, 22);
             this.LblLisansDurumu.TabIndex = 6;
             this.LblLisansDurumu.Text = "Lisans Durumu:";
             // 
@@ -94,13 +95,13 @@
             this.LblDurum.AutoSize = true;
             this.LblDurum.Location = new System.Drawing.Point(197, 190);
             this.LblDurum.Name = "LblDurum";
-            this.LblDurum.Size = new System.Drawing.Size(48, 18);
+            this.LblDurum.Size = new System.Drawing.Size(60, 22);
             this.LblDurum.TabIndex = 7;
             this.LblDurum.Text = "Durum";
             // 
             // FrmLisans
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 228);
             this.Controls.Add(this.LblDurum);
@@ -111,9 +112,11 @@
             this.Controls.Add(this.TxtEposta);
             this.Controls.Add(this.LblEposta);
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmLisans";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RabtBil Müşteri Kayit -> Lisans Anahtarı";
+            this.Load += new System.EventHandler(this.FrmLisans_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

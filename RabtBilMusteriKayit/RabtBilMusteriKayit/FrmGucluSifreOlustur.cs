@@ -53,18 +53,9 @@ namespace RabtBilMusteriKayit
             ChckBoxKucukHarfler.Checked = true;
         }
 
-        private void FrmGucluSifreOlustur_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void BttnKopyala_Click(object sender, EventArgs e)
         {
-            FrmProfil frm = new FrmProfil();
-            frm.TxtSifreniz.Text = sifre;
-            frm.TxtSifreniziOnaylayın.Text = sifre;
             if (sifre != null) Clipboard.SetText(sifre);
-            Hide();
         }
 
         private void TrckBarSifreKarakter_Scroll(object sender, EventArgs e)

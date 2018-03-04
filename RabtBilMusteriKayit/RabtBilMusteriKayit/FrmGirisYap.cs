@@ -5,7 +5,6 @@ using System.Data;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace RabtBilMusteriKayit
@@ -14,6 +13,8 @@ namespace RabtBilMusteriKayit
     {
         private SMF SMF = new SMF();
 
+        private bool sifremiUnuttumTiklandiMi = true;
+
         public FrmGirisYap()
         {
             InitializeComponent();
@@ -21,6 +22,15 @@ namespace RabtBilMusteriKayit
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (Settings.Default.LisansliMi)
+            {
+                TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Programın Deneme Sürümünü Kullanıyorsunuz!");
+            }
+
             KullaniciOlusturGizle();
         }
 
@@ -43,6 +53,7 @@ namespace RabtBilMusteriKayit
                 {
                     MessageBox.Show("Kayıtlı Kullanıcı Yok Lütfen Yeni Bir Kullanıcı Oluşturun!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     BttnYeniKullaniciOluştur.Text = "Yeni Kullanıcı Oluştur";
+                    sifremiUnuttumTiklandiMi = false;
                     KullaniciOlusturGoster();
                 }
                 else
@@ -86,7 +97,7 @@ namespace RabtBilMusteriKayit
                     return;
                 }
 
-                if (EpostaDogruMu(kullaniciEposta))
+                if (SMF.EpostaDogruMu(kullaniciEposta))
                 {
                     try
                     {
@@ -143,7 +154,7 @@ namespace RabtBilMusteriKayit
                 }
                 try
                 {
-                    if (EpostaDogruMu(kullaniciEposta))
+                    if (SMF.EpostaDogruMu(kullaniciEposta))
                     {
                         SMF.Baglanti.Open();
                         MySqlCommand komutEpostaVarMi = new MySqlCommand("SELECT * FROM kullanicilar WHERE EPosta=@EPosta AND ID=1", SMF.Baglanti);
@@ -187,8 +198,33 @@ namespace RabtBilMusteriKayit
                 {
                     MessageBox.Show(ex.Message, "Hata");
                 }
-
             }
+        }
+        private void LinkLblSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (sifremiUnuttumTiklandiMi)
+            {
+                BttnYeniKullaniciOluştur.Text = "Yeni Şifre Gönder";
+                KullaniciOlusturGoster();
+                sifremiUnuttumTiklandiMi = false;
+            }
+            else
+            {
+                BttnYeniKullaniciOluştur.Text = "Yeni Kullanıcı Oluştur";
+                KullaniciOlusturGizle();
+                sifremiUnuttumTiklandiMi = true;
+            }
+        }
+
+        private void TlStrpMenuItemYardimLisansAnahtari_Click(object sender, EventArgs e)
+        {
+            FrmLisans frm = new FrmLisans();
+            frm.ShowDialog();
+        }
+
+        private void FrmGirisYap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         public string SifreOlustur(int uzunluk)
@@ -201,11 +237,6 @@ namespace RabtBilMusteriKayit
                 sb.Append(karakterler[rnd.Next(karakterler.Length)]);
             }
             return sb.ToString();
-        }
-
-        private bool EpostaDogruMu(string eposta)
-        {
-            return Regex.IsMatch(eposta, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
         }
 
         public void KullaniciOlusturGoster()
@@ -222,17 +253,6 @@ namespace RabtBilMusteriKayit
             Height = 265;
             TxtEposta.Hide();
             BttnYeniKullaniciOluştur.Hide();
-        }
-
-        private void FrmGirisYap_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void LinkLblSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            BttnYeniKullaniciOluştur.Text = "Yeni Şifre Gönder";
-            KullaniciOlusturGoster();
         }
     }
 }

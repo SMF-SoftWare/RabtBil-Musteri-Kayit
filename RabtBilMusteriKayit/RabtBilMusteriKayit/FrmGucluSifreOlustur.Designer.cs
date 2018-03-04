@@ -148,8 +148,8 @@
             this.MaximumSize = new System.Drawing.Size(470, 200);
             this.MinimumSize = new System.Drawing.Size(470, 200);
             this.Name = "FrmGucluSifreOlustur";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RabtBil Müşteri Kayit -> Güçlü Şifre Oluştur";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGucluSifreOlustur_FormClosing);
             this.Load += new System.EventHandler(this.FrmGucluSifreOlustur_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TrckBarSifreKarakter)).EndInit();
             this.ResumeLayout(false);

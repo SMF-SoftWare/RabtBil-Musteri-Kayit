@@ -9,7 +9,6 @@ namespace RabtBilMusteriKayit
 {
     public partial class FrmTeknikServisFormu : Form
     {
-
         private SMF SMF = new SMF();
 
         private readonly Random _rnd = new Random();
@@ -20,29 +19,35 @@ namespace RabtBilMusteriKayit
             InitializeComponent();
         }
 
-        private void BttnKayitlariGoster_Click(object sender, System.EventArgs e)
+        private void BttnKayitlariGoster_Click(object sender, EventArgs e)
         {
             Hide();
             FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
             frmKayitlariGoster.ShowDialog();
         }
 
-        private void FrmTeknikServisFormu_Load(object sender, System.EventArgs e)
+        private void FrmTeknikServisFormu_Load(object sender, EventArgs e)
         {
+            if (Settings.Default.LisansliMi)
+            {
+                TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
+            }
+
             TimerTarihSaat.Enabled = true;
             _takipNo = _rnd.Next(10000, 99999);
             TxtUrunTakipNo.Text = _takipNo.ToString();
+
             try
             {
-                PcTrBoxProfiliDuzenle.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Properties.Resources.varsayilanProfilResmi;
+                PcTrBoxProfiliDuzenle.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
             }
             catch (Exception)
             {
-                PcTrBoxProfiliDuzenle.Image = Properties.Resources.varsayilanProfilResmi;
+                PcTrBoxProfiliDuzenle.Image = Resources.varsayilanProfilResmi;
             }
         }
 
-        private void TimerTarihSaat_Tick(object sender, System.EventArgs e)
+        private void TimerTarihSaat_Tick(object sender, EventArgs e)
         {
             TlStripTarihSaat.Text = DateTime.Now.ToString();
         }
@@ -77,7 +82,7 @@ namespace RabtBilMusteriKayit
                 kaydet.Parameters.AddWithValue("@UrunDurumu", TxtUrunDurumu.Text);
                 kaydet.Parameters.AddWithValue("@UrunTakipNo", _rnd.Next(10000, 99999));
                 kaydet.Parameters.AddWithValue("@URLKodu", TxtUrunTakipNo.Text);
-                kaydet.Parameters.AddWithValue("@Ucret",TxtUcret.Text);
+                kaydet.Parameters.AddWithValue("@Ucret", TxtUcret.Text);
                 kaydet.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
                 kaydet.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
                 kaydet.Parameters.AddWithValue("@Tarih", Convert.ToDateTime(DateTime.Now.ToString()));
@@ -151,11 +156,11 @@ namespace RabtBilMusteriKayit
                 guncelle.Parameters.AddWithValue("@UrunDurumu", TxtUrunDurumu.Text);
                 guncelle.Parameters.AddWithValue("@UrunTakipNo", TxtUrunTakipNo.Text);
                 guncelle.Parameters.AddWithValue("@URLKodu", TxtUrunTakipNo.Text);
-                guncelle.Parameters.AddWithValue("@Ucret",TxtUcret.Text);
+                guncelle.Parameters.AddWithValue("@Ucret", TxtUcret.Text);
                 guncelle.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
                 guncelle.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
                 guncelle.Parameters.AddWithValue("@Tarih", Convert.ToDateTime(TlStripTarihSaat.Text));
-                guncelle.Parameters.AddWithValue("@Id",LblMusteriNo.Text);
+                guncelle.Parameters.AddWithValue("@Id", LblMusteriNo.Text);
                 SMF.Baglanti.Open();
                 guncelle.ExecuteNonQuery();
                 MessageBox.Show("Kaydınız Güncellenmiştir.");
@@ -231,6 +236,12 @@ namespace RabtBilMusteriKayit
         private void TlStrpMenuItemAraclarSil_MouseHover(object sender, EventArgs e)
         {
             TlStripAcıklama.Text = "Seçili olan kayıdı siler.";
+        }
+
+        private void TlStrpMenuItemYardimLisansAnahtari_Click(object sender, EventArgs e)
+        {
+            FrmLisans frm = new FrmLisans();
+            frm.ShowDialog();
         }
     }
 }

@@ -141,6 +141,7 @@
             this.TlStrpMenuItemYardimLisansAnahtari.Name = "TlStrpMenuItemYardimLisansAnahtari";
             this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(236, 26);
             this.TlStrpMenuItemYardimLisansAnahtari.Text = "Lisans Anahtarı";
+            this.TlStrpMenuItemYardimLisansAnahtari.Click += new System.EventHandler(this.TlStrpMenuItemYardimLisansAnahtari_Click);
             // 
             // TlStrpMenuItemYardimHakkinda
             // 
@@ -225,6 +226,7 @@
             this.Controls.Add(this.BttnGirisYap);
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
             this.Name = "FrmGirisYap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RabtBil Müşteri Kayit -> Oturum Aç";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGirisYap_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
