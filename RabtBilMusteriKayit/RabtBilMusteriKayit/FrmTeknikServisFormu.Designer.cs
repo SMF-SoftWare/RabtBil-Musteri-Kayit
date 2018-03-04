@@ -132,7 +132,11 @@
             this.MsKdTxtTelefon.Location = new System.Drawing.Point(96, 89);
             this.MsKdTxtTelefon.Mask = "(999) 000-0000";
             this.MsKdTxtTelefon.Name = "MsKdTxtTelefon";
+<<<<<<< HEAD
             this.MsKdTxtTelefon.Size = new System.Drawing.Size(252, 29);
+=======
+            this.MsKdTxtTelefon.Size = new System.Drawing.Size(252, 25);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.MsKdTxtTelefon.TabIndex = 4;
             // 
             // LblTelefon
@@ -466,7 +470,11 @@
             this.TlStrpMenuItemYardım});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
+<<<<<<< HEAD
             this.MenuStrip.Size = new System.Drawing.Size(922, 28);
+=======
+            this.MenuStrip.Size = new System.Drawing.Size(920, 24);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.MenuStrip.TabIndex = 15;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -480,13 +488,21 @@
             this.TlStrpMenuItemAraclarGuncelle,
             this.TlStrpMenuItemAraclarSil});
             this.TlStrpMenuItemAraclar.Name = "TlStrpMenuItemAraclar";
+<<<<<<< HEAD
             this.TlStrpMenuItemAraclar.Size = new System.Drawing.Size(84, 24);
+=======
+            this.TlStrpMenuItemAraclar.Size = new System.Drawing.Size(68, 20);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAraclar.Text = "Araçlar";
             // 
             // TlStrpMenuItemAraclarYeniKayit
             // 
             this.TlStrpMenuItemAraclarYeniKayit.Name = "TlStrpMenuItemAraclarYeniKayit";
+<<<<<<< HEAD
             this.TlStrpMenuItemAraclarYeniKayit.Size = new System.Drawing.Size(228, 26);
+=======
+            this.TlStrpMenuItemAraclarYeniKayit.Size = new System.Drawing.Size(186, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAraclarYeniKayit.Text = "Yeni Kayıt";
             this.TlStrpMenuItemAraclarYeniKayit.Click += new System.EventHandler(this.BttnYeniKayit_Click);
             this.TlStrpMenuItemAraclarYeniKayit.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
@@ -495,7 +511,11 @@
             // TlStrpMenuItemAraclarKaydet
             // 
             this.TlStrpMenuItemAraclarKaydet.Name = "TlStrpMenuItemAraclarKaydet";
+<<<<<<< HEAD
             this.TlStrpMenuItemAraclarKaydet.Size = new System.Drawing.Size(228, 26);
+=======
+            this.TlStrpMenuItemAraclarKaydet.Size = new System.Drawing.Size(186, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAraclarKaydet.Text = "Kaydet";
             this.TlStrpMenuItemAraclarKaydet.Click += new System.EventHandler(this.BttnKaydet_Click);
             this.TlStrpMenuItemAraclarKaydet.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
@@ -504,7 +524,11 @@
             // TlStrpMenuItemAraclarTemizle
             // 
             this.TlStrpMenuItemAraclarTemizle.Name = "TlStrpMenuItemAraclarTemizle";
+<<<<<<< HEAD
             this.TlStrpMenuItemAraclarTemizle.Size = new System.Drawing.Size(228, 26);
+=======
+            this.TlStrpMenuItemAraclarTemizle.Size = new System.Drawing.Size(186, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAraclarTemizle.Text = "Temizle";
             this.TlStrpMenuItemAraclarTemizle.Click += new System.EventHandler(this.BttnTemizle_Click);
             this.TlStrpMenuItemAraclarTemizle.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
@@ -513,7 +537,11 @@
             // TlStrpMenuItemAraclarKayitlariGoster
             // 
             this.TlStrpMenuItemAraclarKayitlariGoster.Name = "TlStrpMenuItemAraclarKayitlariGoster";
+<<<<<<< HEAD
             this.TlStrpMenuItemAraclarKayitlariGoster.Size = new System.Drawing.Size(228, 26);
+=======
+            this.TlStrpMenuItemAraclarKayitlariGoster.Size = new System.Drawing.Size(186, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAraclarKayitlariGoster.Text = "Kayıtları Göster";
             this.TlStrpMenuItemAraclarKayitlariGoster.Click += new System.EventHandler(this.BttnKayitlariGoster_Click);
             this.TlStrpMenuItemAraclarKayitlariGoster.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
@@ -522,7 +550,11 @@
             // TlStrpMenuItemAraclarGuncelle
             // 
             this.TlStrpMenuItemAraclarGuncelle.Name = "TlStrpMenuItemAraclarGuncelle";
+<<<<<<< HEAD
             this.TlStrpMenuItemAraclarGuncelle.Size = new System.Drawing.Size(228, 26);
+=======
+            this.TlStrpMenuItemAraclarGuncelle.Size = new System.Drawing.Size(186, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAraclarGuncelle.Text = "Güncelle";
             this.TlStrpMenuItemAraclarGuncelle.Click += new System.EventHandler(this.BttnGuncelle_Click);
             this.TlStrpMenuItemAraclarGuncelle.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
@@ -531,7 +563,11 @@
             // TlStrpMenuItemAraclarSil
             // 
             this.TlStrpMenuItemAraclarSil.Name = "TlStrpMenuItemAraclarSil";
+<<<<<<< HEAD
             this.TlStrpMenuItemAraclarSil.Size = new System.Drawing.Size(228, 26);
+=======
+            this.TlStrpMenuItemAraclarSil.Size = new System.Drawing.Size(186, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAraclarSil.Text = "Sil";
             this.TlStrpMenuItemAraclarSil.Click += new System.EventHandler(this.TlStrpMenuItemAraclarSil_Click);
             this.TlStrpMenuItemAraclarSil.MouseLeave += new System.EventHandler(this.BttnYeniKayit_MouseLeave);
@@ -544,7 +580,11 @@
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle,
             this.TlStrpMenuItemAyarlarTema});
             this.TlStrpMenuItemAyarlar.Name = "TlStrpMenuItemAyarlar";
+<<<<<<< HEAD
             this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(84, 24);
+=======
+            this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(68, 20);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAyarlar.Text = "Ayarlar";
             // 
             // TlStrpMenuItemAyarlarDil
@@ -553,31 +593,51 @@
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
+<<<<<<< HEAD
             this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(282, 26);
+=======
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(228, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAyarlarDil.Text = "Dil";
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
+<<<<<<< HEAD
             this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(165, 26);
+=======
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(137, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
+<<<<<<< HEAD
             this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(165, 26);
+=======
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(137, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
             // 
             // TlStrpMenuItemAyarlarGuncellemeleriDenetle
             // 
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Name = "TlStrpMenuItemAyarlarGuncellemeleriDenetle";
+<<<<<<< HEAD
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Size = new System.Drawing.Size(282, 26);
+=======
+            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Size = new System.Drawing.Size(228, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Text = "Güncellemeleri Denetle";
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
+<<<<<<< HEAD
             this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(282, 26);
+=======
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(228, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemAyarlarTema.Text = "Tema";
             // 
             // TlStrpMenuItemYardım
@@ -586,20 +646,32 @@
             this.TlStrpMenuItemYardimLisansAnahtari,
             this.TlStrpMenuItemYardimHakkinda});
             this.TlStrpMenuItemYardım.Name = "TlStrpMenuItemYardım";
+<<<<<<< HEAD
             this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(75, 24);
+=======
+            this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(61, 20);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemYardım.Text = "Yardım";
             // 
             // TlStrpMenuItemYardimLisansAnahtari
             // 
             this.TlStrpMenuItemYardimLisansAnahtari.Name = "TlStrpMenuItemYardimLisansAnahtari";
+<<<<<<< HEAD
             this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(219, 26);
+=======
+            this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(179, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemYardimLisansAnahtari.Text = "Lisans Anahtarı";
             this.TlStrpMenuItemYardimLisansAnahtari.Click += new System.EventHandler(this.TlStrpMenuItemYardimLisansAnahtari_Click);
             // 
             // TlStrpMenuItemYardimHakkinda
             // 
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
+<<<<<<< HEAD
             this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(219, 26);
+=======
+            this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(179, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
             // 
             // TlStrip
@@ -610,23 +682,37 @@
             this.TlStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStripAcıklama,
             this.TlStripTarihSaat});
+<<<<<<< HEAD
             this.TlStrip.Location = new System.Drawing.Point(0, 443);
             this.TlStrip.Name = "TlStrip";
             this.TlStrip.Size = new System.Drawing.Size(922, 25);
+=======
+            this.TlStrip.Location = new System.Drawing.Point(0, 447);
+            this.TlStrip.Name = "TlStrip";
+            this.TlStrip.Size = new System.Drawing.Size(920, 25);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStrip.TabIndex = 16;
             this.TlStrip.Text = "toolStrip1";
             // 
             // TlStripAcıklama
             // 
             this.TlStripAcıklama.Name = "TlStripAcıklama";
+<<<<<<< HEAD
             this.TlStripAcıklama.Size = new System.Drawing.Size(81, 22);
+=======
+            this.TlStripAcıklama.Size = new System.Drawing.Size(63, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStripAcıklama.Text = "Açıklama";
             // 
             // TlStripTarihSaat
             // 
             this.TlStripTarihSaat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.TlStripTarihSaat.Name = "TlStripTarihSaat";
+<<<<<<< HEAD
             this.TlStripTarihSaat.Size = new System.Drawing.Size(126, 22);
+=======
+            this.TlStripTarihSaat.Size = new System.Drawing.Size(98, 22);
+>>>>>>> 7ad065dc52d25be162eb34f9334edea807f85b1d
             this.TlStripTarihSaat.Text = "Tarih ve Saat";
             // 
             // TimerTarihSaat
