@@ -2,10 +2,10 @@
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Anamakine: 127.0.0.1
--- Üretim Zamanı: 28 Şub 2018, 16:20:28
--- Sunucu sürümü: 10.1.28-MariaDB
--- PHP Sürümü: 7.1.11
+-- Host: 127.0.0.1
+-- Generation Time: Mar 04, 2018 at 10:41 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Veritabanı: `rabtbildb`
+-- Database: `rabtbildb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `kullanicilar`
+-- Table structure for table `kullanicilar`
 --
 
 CREATE TABLE `kullanicilar` (
@@ -34,21 +34,13 @@ CREATE TABLE `kullanicilar` (
   `Sifre` varchar(30) COLLATE utf8_turkish_ci NOT NULL,
   `Adi` varchar(30) COLLATE utf8_turkish_ci NOT NULL,
   `Soyadi` varchar(30) COLLATE utf8_turkish_ci NOT NULL,
-  `EPosta` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
-  `Fotograf` text COLLATE utf8_turkish_ci NOT NULL
+  `EPosta` varchar(255) COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
-
---
--- Tablo döküm verisi `kullanicilar`
---
-
-INSERT INTO `kullanicilar` (`Id`, `KullaniciAdi`, `Sifre`, `Adi`, `Soyadi`, `EPosta`, `Fotograf`) VALUES
-(3, '1', '2', '', '', 'marfermustafa@gmail.com', '');
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `musteribilgileri`
+-- Table structure for table `musteribilgileri`
 --
 
 CREATE TABLE `musteribilgileri` (
@@ -70,43 +62,36 @@ CREATE TABLE `musteribilgileri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Tablo döküm verisi `musteribilgileri`
---
-
-INSERT INTO `musteribilgileri` (`Id`, `MusteriAdi`, `FormNo`, `Telefon`, `UrunModeli`, `UrunSeriveImeiKodlari`, `UrunKodlari`, `ArizaTanimi`, `UrunDurumu`, `UrunTakipNo`, `URLKodu`, `Ucret`, `Aksesuarlar`, `EkBilgiler`, `Tarih`) VALUES
-(7, 'a', '1', '1213', 'a', 'Seri No', '223213', 'adsda', 'asdasd', 123214, '', 32, 'a', 'a', '2018-02-28 17:55:08');
-
---
--- Dökümü yapılmış tablolar için indeksler
+-- Indexes for dumped tables
 --
 
 --
--- Tablo için indeksler `kullanicilar`
+-- Indexes for table `kullanicilar`
 --
 ALTER TABLE `kullanicilar`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Tablo için indeksler `musteribilgileri`
+-- Indexes for table `musteribilgileri`
 --
 ALTER TABLE `musteribilgileri`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Tablo için AUTO_INCREMENT değeri `kullanicilar`
+-- AUTO_INCREMENT for table `kullanicilar`
 --
 ALTER TABLE `kullanicilar`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Tablo için AUTO_INCREMENT değeri `musteribilgileri`
+-- AUTO_INCREMENT for table `musteribilgileri`
 --
 ALTER TABLE `musteribilgileri`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
