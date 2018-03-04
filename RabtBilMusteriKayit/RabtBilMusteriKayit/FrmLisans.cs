@@ -29,19 +29,20 @@ namespace RabtBilMusteriKayit
         {
             if (SMF.KontrolEt(TxtEposta.Text, TxtLisansAnahtari.Text))
             {
-                MessageBox.Show("Programı Satın Aldığınız İçin Teşekkür Ederiz");
                 Default.LisansliMi = Convert.ToBoolean(1);
                 Default.Lisans = TxtLisansAnahtari.Text;
                 Default.Save();
                 LblDurum.Text = "Lisanslı";
+                MessageBox.Show("Programı Satın Aldığınız İçin Teşekkür Ederiz!");
+                Application.Restart();
             }
             else
             {
-                MessageBox.Show("Lisans Kodu Doğru Değil");
                 Default.LisansliMi = Convert.ToBoolean(0);
                 Default.Lisans = TxtLisansAnahtari.Text;
                 Default.Save();
                 LblDurum.Text = "Lisanssız";
+                MessageBox.Show("Lisans Kodu Doğru Değil!");
             }
         }
     }
