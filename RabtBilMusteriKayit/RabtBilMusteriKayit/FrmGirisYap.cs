@@ -200,6 +200,7 @@ namespace RabtBilMusteriKayit
                 }
             }
         }
+
         private void LinkLblSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (sifremiUnuttumTiklandiMi)
