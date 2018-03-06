@@ -54,7 +54,6 @@ CREATE TABLE `musteribilgileri` (
   `ArizaTanimi` varchar(145) COLLATE utf8_turkish_ci NOT NULL,
   `UrunDurumu` varchar(30) COLLATE utf8_turkish_ci NOT NULL,
   `UrunTakipNo` int(11) NOT NULL,
-  `URLKodu` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
   `Ucret` int(11) NOT NULL,
   `Aksesuarlar` varchar(210) COLLATE utf8_turkish_ci NOT NULL,
   `EkBilgiler` varchar(210) COLLATE utf8_turkish_ci NOT NULL,
