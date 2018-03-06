@@ -12,7 +12,7 @@ namespace RabtBilMusteriKayit
 {
     public class SMF
     {
-        public static MySqlConnection Baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
+        public static MySqlConnection Baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb;CharSet=utf8;");
         public static string ProfilResmiYolu = Application.StartupPath + @"\profil\kullanici.smf";
         public static string ProfilKlasoru = Application.StartupPath + @"\profil";
         public static string UygulamaSurum = "v1.0";

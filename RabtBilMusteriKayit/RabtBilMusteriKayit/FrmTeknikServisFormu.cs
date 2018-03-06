@@ -61,13 +61,11 @@ namespace RabtBilMusteriKayit
 
         private void BttnYeniKayit_Click(object sender, EventArgs e)
         {
-            _temizle();
+            Temizle();
         }
 
         private void BttnKaydet_Click(object sender, EventArgs e)
         {
-            //@URLKodu, şimdilik böyle olsun
-
             try
             {
                 if (String.IsNullOrWhiteSpace(TxtMusteriAdi.Text) || String.IsNullOrWhiteSpace(TxtFormNo.Text) || MsKdTxtTelefon.Text == "(   )    -" || String.IsNullOrWhiteSpace(TxtUrunModeli.Text) || String.IsNullOrWhiteSpace(CmbBoxUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtArizaTanimi.Text) || String.IsNullOrWhiteSpace(TxtUrunDurumu.Text) || String.IsNullOrWhiteSpace(TxtUcret.Text) || String.IsNullOrWhiteSpace(TxtAksesuarlar.Text) || String.IsNullOrWhiteSpace(TxtEkBilgiler.Text))
@@ -85,7 +83,6 @@ namespace RabtBilMusteriKayit
                 kaydet.Parameters.AddWithValue("@ArizaTanimi", TxtArizaTanimi.Text);
                 kaydet.Parameters.AddWithValue("@UrunDurumu", TxtUrunDurumu.Text);
                 kaydet.Parameters.AddWithValue("@UrunTakipNo", _rnd.Next(10000, 99999));
-                kaydet.Parameters.AddWithValue("@URLKodu", TxtUrunTakipNo.Text);
                 kaydet.Parameters.AddWithValue("@Ucret", TxtUcret.Text);
                 kaydet.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
                 kaydet.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
@@ -94,7 +91,7 @@ namespace RabtBilMusteriKayit
                 kaydet.ExecuteNonQuery();
                 MessageBox.Show("Oluşturduğunuz Kayıt Kaydedilmiştir.");
                 SMF.Baglanti.Close();
-                _temizle();
+                Temizle();
             }
             catch (Exception ex)
             {
@@ -102,21 +99,21 @@ namespace RabtBilMusteriKayit
             }
         }
 
-        public void _temizle()
+        public void Temizle()
         {
             takipNo = _rnd.Next(10000, 99999);
-            TxtMusteriAdi.Text = "";
-            TxtFormNo.Text = "";
-            MsKdTxtTelefon.Text = "";
-            TxtUrunModeli.Text = "";
+            TxtMusteriAdi.Clear();
+            TxtFormNo.Clear();
+            MsKdTxtTelefon.Clear();
+            TxtUrunModeli.Clear();
             CmbBoxUrunKodlari.Text = "";
-            TxtUrunKodlari.Text = "";
-            TxtArizaTanimi.Text = "";
-            TxtUrunDurumu.Text = "";
+            TxtUrunKodlari.Clear();
+            TxtArizaTanimi.Clear();
+            TxtUrunDurumu.Clear();
             TxtUrunTakipNo.Text = takipNo.ToString();
-            TxtUcret.Text = "";
-            TxtAksesuarlar.Text = "";
-            TxtEkBilgiler.Text = "";
+            TxtUcret.Clear();
+            TxtAksesuarlar.Clear();
+            TxtEkBilgiler.Clear();
             LblMusteriNo.Text = "";
         }
 
@@ -144,7 +141,7 @@ namespace RabtBilMusteriKayit
         {
             try
             {
-                if (String.IsNullOrWhiteSpace(TxtMusteriAdi.Text) || String.IsNullOrWhiteSpace(TxtFormNo.Text) || String.IsNullOrWhiteSpace(MsKdTxtTelefon.Text) || String.IsNullOrWhiteSpace(TxtUrunModeli.Text) || String.IsNullOrWhiteSpace(CmbBoxUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtArizaTanimi.Text) || String.IsNullOrWhiteSpace(TxtUrunDurumu.Text) || String.IsNullOrWhiteSpace(TxtUcret.Text) || String.IsNullOrWhiteSpace(TxtAksesuarlar.Text) || String.IsNullOrWhiteSpace(TxtEkBilgiler.Text))
+                if (String.IsNullOrWhiteSpace(TxtMusteriAdi.Text) || String.IsNullOrWhiteSpace(TxtFormNo.Text) || MsKdTxtTelefon.Text == "(   )    -" || String.IsNullOrWhiteSpace(TxtUrunModeli.Text) || String.IsNullOrWhiteSpace(CmbBoxUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtArizaTanimi.Text) || String.IsNullOrWhiteSpace(TxtUrunDurumu.Text) || String.IsNullOrWhiteSpace(TxtUcret.Text) || String.IsNullOrWhiteSpace(TxtAksesuarlar.Text) || String.IsNullOrWhiteSpace(TxtEkBilgiler.Text))
                 {
                     MessageBox.Show("Metin Kutuları Boş!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -159,7 +156,6 @@ namespace RabtBilMusteriKayit
                 guncelle.Parameters.AddWithValue("@ArizaTanimi", TxtArizaTanimi.Text);
                 guncelle.Parameters.AddWithValue("@UrunDurumu", TxtUrunDurumu.Text);
                 guncelle.Parameters.AddWithValue("@UrunTakipNo", TxtUrunTakipNo.Text);
-                guncelle.Parameters.AddWithValue("@URLKodu", TxtUrunTakipNo.Text);
                 guncelle.Parameters.AddWithValue("@Ucret", TxtUcret.Text);
                 guncelle.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
                 guncelle.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
@@ -169,7 +165,7 @@ namespace RabtBilMusteriKayit
                 guncelle.ExecuteNonQuery();
                 MessageBox.Show("Kaydınız Güncellenmiştir.");
                 SMF.Baglanti.Close();
-                _temizle();
+                Temizle();
             }
             catch (Exception ex)
             {
@@ -179,7 +175,7 @@ namespace RabtBilMusteriKayit
 
         private void BttnTemizle_Click(object sender, EventArgs e)
         {
-            _temizle();
+            Temizle();
         }
 
         private void TlStrpMenuItemAraclarSil_Click(object sender, EventArgs e)
