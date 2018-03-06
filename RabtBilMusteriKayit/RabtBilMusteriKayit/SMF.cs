@@ -1,5 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
+using RabtBilMusteriKayit.Properties;
 using System;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -10,13 +12,36 @@ namespace RabtBilMusteriKayit
 {
     public class SMF
     {
-        public MySqlConnection Baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
-        public string ProfilResmiYolu = Application.StartupPath + @"\profil\kullanici.smf";
-        public string ProfilKlasoru = Application.StartupPath + @"\profil";
+        public static MySqlConnection Baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb");
+        public static string ProfilResmiYolu = Application.StartupPath + @"\profil\kullanici.smf";
+        public static string ProfilKlasoru = Application.StartupPath + @"\profil";
+        public static string UygulamaSurum = "v1.0";
+        public static string UygulamaAdi = $"RabtBil Müşteri Kayıt {UygulamaSurum}";
 
         public static bool EpostaDogruMu(string eposta)
         {
             return Regex.IsMatch(eposta, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+        }
+
+        public void DilDegistir(string dil)
+        {
+            Resources.Culture = new CultureInfo(dil);
+            Settings.Default.Dil = dil;
+            Settings.Default.Save();
+        }
+
+        public void DilKontrolEt()
+        {
+            switch (Settings.Default.Dil)
+            {
+                case "en":
+                    Resources.Culture = new CultureInfo("en");
+                    break;
+
+                default:
+                    Resources.Culture = new CultureInfo("");
+                    break;
+            }
         }
 
         private static string GetMd5Hash(MD5 MD5, string metin)

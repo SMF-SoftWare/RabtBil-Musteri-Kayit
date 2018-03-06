@@ -11,9 +11,9 @@ namespace RabtBilMusteriKayit
 {
     public partial class FrmGirisYap : Form
     {
-        private SMF SMF = new SMF();
+        private readonly SMF SMF = new SMF();
 
-        private bool sifremiUnuttumTiklandiMi = true;
+        private bool _sifremiUnuttumTiklandiMi = true;
 
         public FrmGirisYap()
         {
@@ -28,9 +28,11 @@ namespace RabtBilMusteriKayit
             }
             else
             {
-                MessageBox.Show("Programın Deneme Sürümünü Kullanıyorsunuz!");
+                MessageBox.Show(Resources.denemeSurumu, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+            SMF.DilKontrolEt();
+            DilYenile();
             KullaniciOlusturGizle();
         }
 
@@ -38,7 +40,7 @@ namespace RabtBilMusteriKayit
         {
             if (String.IsNullOrWhiteSpace(TxtKullaniciAdi.Text) || String.IsNullOrWhiteSpace(TxtSifre.Text))
             {
-                MessageBox.Show("Kullanıcı Adı Veya Şifre Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Resources.kullaniciAdiveSifreBos, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
@@ -51,9 +53,9 @@ namespace RabtBilMusteriKayit
 
                 if (dataTable1.Rows.Count == 0)
                 {
-                    MessageBox.Show("Kayıtlı Kullanıcı Yok Lütfen Yeni Bir Kullanıcı Oluşturun!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    BttnYeniKullaniciOluştur.Text = "Yeni Kullanıcı Oluştur";
-                    sifremiUnuttumTiklandiMi = false;
+                    MessageBox.Show(Resources.kayitliKullaniciYok, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    BttnYeniKullaniciOluştur.Text = Resources.BttnYeniKullaniciOluştur;
+                    _sifremiUnuttumTiklandiMi = false;
                     KullaniciOlusturGoster();
                 }
                 else
@@ -73,14 +75,14 @@ namespace RabtBilMusteriKayit
                     }
                     else
                     {
-                        MessageBox.Show("Kullanıcı Adı Veya Şifre Yanlış!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(Resources.kullaniciAdiveSifreYanlis, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 SMF.Baglanti.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Hata");
+                MessageBox.Show(ex.Message, Resources.Hata);
             }
         }
 
@@ -89,11 +91,11 @@ namespace RabtBilMusteriKayit
             string kullaniciEposta = TxtEposta.Text.ToLower();
             string kullaniciSifre = SifreOlustur(12);
 
-            if (BttnYeniKullaniciOluştur.Text == "Yeni Kullanıcı Oluştur")
+            if (BttnYeniKullaniciOluştur.Text == Resources.BttnYeniKullaniciOluştur)
             {
                 if (String.IsNullOrWhiteSpace(TxtEposta.Text))
                 {
-                    MessageBox.Show("E-posta Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(Resources.epostaBos, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -108,7 +110,7 @@ namespace RabtBilMusteriKayit
                         dataAdapter1.Fill(dataTable1);
                         if (dataTable1.Rows.Count > 0)
                         {
-                            MessageBox.Show("Kayıtlı Bir Kullanıcı Zaten Var!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show(Resources.kayitliKullaniciVar, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             KullaniciOlusturGizle();
                             SMF.Baglanti.Close();
                             return;
@@ -129,27 +131,27 @@ namespace RabtBilMusteriKayit
                             Credentials = new NetworkCredential("rabtbilmail@gmail.com", "SMF-SoftWare"),
                             EnableSsl = true
                         };
-                        eposta.Send("rabtbilmail@gmail.com", kullaniciEposta, "Rabt Bil. Müşteri Kayıt - Yeni Kullanıcı Kaydı", "Geçici Kullanıcı Adınız: " + kullaniciEposta + "\nGeçici Şifreniz: " + kullaniciSifre);
+                        eposta.Send("rabtbilmail@gmail.com", kullaniciEposta, SMF.UygulamaAdi + " - " + Resources.epostaYeniKullaniciKaydi, Resources.epostaGeciciKullaniciAdi + " " + kullaniciEposta + "\n" + Resources.epostaGeciciSifre + " " + kullaniciSifre);
 
-                        MessageBox.Show("Kullanıcı Adı Ve Şifre E-posta Adresinize Gönderilmiştir!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(Resources.geciciKullaniciAdiSifreGonderildi, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         KullaniciOlusturGizle();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Hata");
+                        MessageBox.Show(ex.Message, Resources.Hata);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Doğru Bir E-posta Adresi Girin!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(Resources.dogruBirEpostaGirin, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            if (BttnYeniKullaniciOluştur.Text == "Yeni Şifre Gönder")
+            if (BttnYeniKullaniciOluştur.Text == Resources.BttnYeniKullaniciOluştur2)
             {
                 if (String.IsNullOrWhiteSpace(TxtEposta.Text))
                 {
-                    MessageBox.Show("E-posta Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(Resources.epostaBos, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 try
@@ -164,7 +166,7 @@ namespace RabtBilMusteriKayit
                         dataAdapter3.Fill(dataTable3);
                         if (dataTable3.Rows.Count != 1)
                         {
-                            MessageBox.Show("Böyle bir E-posta kayıtlı değil!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show(Resources.epostaKayitliDegil, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             KullaniciOlusturGizle();
                             SMF.Baglanti.Close();
                             return;
@@ -183,37 +185,37 @@ namespace RabtBilMusteriKayit
                             Credentials = new NetworkCredential("rabtbilmail@gmail.com", "SMF-SoftWare"),
                             EnableSsl = true
                         };
-                        eposta.Send("rabtbilmail@gmail.com", kullaniciEposta, "Rabt Bil. Müşteri Kayıt - Şifremi Unuttum", "Geçici Şifreniz: " + kullaniciSifre);
+                        eposta.Send("rabtbilmail@gmail.com", kullaniciEposta, SMF.UygulamaAdi + " - " + Resources.epostaSifremiUnuttum, Resources.epostaGeciciSifre + " " + kullaniciSifre);
 
-                        MessageBox.Show("Geçici Şifreniz E-posta Adresinize Gönderilmiştir!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(Resources.geciciSifreGonderildi, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         KullaniciOlusturGizle();
                     }
                     else
                     {
-                        MessageBox.Show("Doğru Bir E-posta Adresi Girin!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(Resources.dogruBirEpostaGirin, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Hata");
+                    MessageBox.Show(ex.Message, Resources.Hata);
                 }
             }
         }
 
         private void LinkLblSifremiUnuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (sifremiUnuttumTiklandiMi)
+            if (_sifremiUnuttumTiklandiMi)
             {
-                BttnYeniKullaniciOluştur.Text = "Yeni Şifre Gönder";
+                BttnYeniKullaniciOluştur.Text = Resources.BttnYeniKullaniciOluştur2;
                 KullaniciOlusturGoster();
-                sifremiUnuttumTiklandiMi = false;
+                _sifremiUnuttumTiklandiMi = false;
             }
             else
             {
-                BttnYeniKullaniciOluştur.Text = "Yeni Kullanıcı Oluştur";
+                BttnYeniKullaniciOluştur.Text = Resources.BttnYeniKullaniciOluştur;
                 KullaniciOlusturGizle();
-                sifremiUnuttumTiklandiMi = true;
+                _sifremiUnuttumTiklandiMi = true;
             }
         }
 
@@ -221,6 +223,18 @@ namespace RabtBilMusteriKayit
         {
             FrmLisans frm = new FrmLisans();
             frm.ShowDialog();
+        }
+
+        private void TlStrpMenuItemDilTurkce_Click(object sender, EventArgs e)
+        {
+            SMF.DilDegistir("tr");
+            DilYenile();
+        }
+
+        private void TlStrpMenuItemDilIngilizce_Click(object sender, EventArgs e)
+        {
+            SMF.DilDegistir("en");
+            DilYenile();
         }
 
         private void FrmGirisYap_FormClosing(object sender, FormClosingEventArgs e)
@@ -254,6 +268,25 @@ namespace RabtBilMusteriKayit
             Height = 265;
             TxtEposta.Hide();
             BttnYeniKullaniciOluştur.Hide();
+        }
+
+        public void DilYenile()
+        {
+            Text = Resources.FrmGirisYapBaslik;
+            BttnGirisYap.Text = Resources.BttnGirisYap;
+            lblKullaniciAdi.Text = Resources.lblKullaniciAdi;
+            TlStrpMenuItemAyarlar.Text = Resources.TlStrpMenuItemAyarlar;
+            TlStrpMenuItemAyarlarDil.Text = Resources.TlStrpMenuItemAyarlarDil;
+            TlStrpMenuItemDilTurkce.Text = Resources.TlStrpMenuItemDilTurkce;
+            TlStrpMenuItemDilIngilizce.Text = Resources.TlStrpMenuItemDilIngilizce;
+            TlStrpMenuItemAyarlarTema.Text = Resources.TlStrpMenuItemAyarlarTema;
+            TlStrpMenuItemYardım.Text = Resources.TlStrpMenuItemYardim;
+            TlStrpMenuItemYardimLisansAnahtari.Text = Resources.TlStrpMenuItemYardimLisansAnahtari;
+            TlStrpMenuItemYardimHakkinda.Text = Resources.TlStrpMenuItemYardimHakkinda;
+            LblSifre.Text = Resources.LblSifre;
+            LinkLblSifremiUnuttum.Text = Resources.LinkLblSifremiUnuttum;
+            BttnYeniKullaniciOluştur.Text = Resources.BttnYeniKullaniciOluştur;
+            LblEposta.Text = Resources.LblEposta;
         }
     }
 }

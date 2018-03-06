@@ -15,14 +15,10 @@ namespace RabtBilMusteriKayit
 
         private void FrmLisans_Load(object sender, EventArgs e)
         {
-            if (Default.LisansliMi)
-            {
-                LblDurum.Text = "Lisanslı";
-            }
-            else
-            {
-                LblDurum.Text = "Lisanssız";
-            }
+            SMF.DilKontrolEt();
+            //DilYenile();
+
+            LblDurum.Text = Default.LisansliMi ? "Lisanslı" : "Lisanssız";
         }
 
         private void BttnEtkinlestir_Click(object sender, EventArgs e)

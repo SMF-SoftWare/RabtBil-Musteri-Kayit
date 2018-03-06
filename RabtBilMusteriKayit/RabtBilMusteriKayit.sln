@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabtBilMusteriKayit", "RabtBilMusteriKayit\RabtBilMusteriKayit.csproj", "{E1410EF4-21C3-4593-A78A-A450C79F254F}"
 EndProject
@@ -20,6 +20,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_NeutralResourcesLanguage = tr-TR
 		SolutionGuid = {E44DAB08-83C8-4EDE-82C4-FC948943ECD0}
 	EndGlobalSection
 EndGlobal

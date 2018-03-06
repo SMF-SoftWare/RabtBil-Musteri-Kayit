@@ -12,7 +12,7 @@ namespace RabtBilMusteriKayit
         private SMF SMF = new SMF();
 
         private readonly Random _rnd = new Random();
-        private int _takipNo;
+        private int takipNo;
 
         public FrmTeknikServisFormu()
         {
@@ -28,14 +28,17 @@ namespace RabtBilMusteriKayit
 
         private void FrmTeknikServisFormu_Load(object sender, EventArgs e)
         {
+            SMF.DilKontrolEt();
+            //DilYenile();
+
+            TimerTarihSaat.Enabled = true;
+            takipNo = _rnd.Next(10000, 99999);
+            TxtUrunTakipNo.Text = takipNo.ToString();
+
             if (Settings.Default.LisansliMi)
             {
                 TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
             }
-
-            TimerTarihSaat.Enabled = true;
-            _takipNo = _rnd.Next(10000, 99999);
-            TxtUrunTakipNo.Text = _takipNo.ToString();
 
             try
             {
@@ -68,7 +71,7 @@ namespace RabtBilMusteriKayit
             {
                 if (String.IsNullOrWhiteSpace(TxtMusteriAdi.Text) || String.IsNullOrWhiteSpace(TxtFormNo.Text) || String.IsNullOrWhiteSpace(MsKdTxtTelefon.Text) || String.IsNullOrWhiteSpace(TxtUrunModeli.Text) || String.IsNullOrWhiteSpace(CmbBoxUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtArizaTanimi.Text) || String.IsNullOrWhiteSpace(TxtUrunDurumu.Text) || String.IsNullOrWhiteSpace(TxtUcret.Text) || String.IsNullOrWhiteSpace(TxtAksesuarlar.Text) || String.IsNullOrWhiteSpace(TxtEkBilgiler.Text))
                 {
-                    MessageBox.Show("Metin Kutuları Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Metin Kutuları Boş!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 MySqlCommand kaydet = new MySqlCommand("INSERT INTO musteribilgileri (MusteriAdi,FormNo,Telefon,UrunModeli,UrunSeriveImeiKodlari,UrunKodlari,ArizaTanimi,UrunDurumu,UrunTakipNo,Ucret,Aksesuarlar,EkBilgiler,Tarih) VALUES(@MusteriAdi,@FormNo,@Telefon,@UrunModeli,@UrunSeriveImeiKodlari,@UrunKodlari,@ArizaTanimi,@UrunDurumu,@UrunTakipNo,@Ucret,@Aksesuarlar,@EkBilgiler,@Tarih)", SMF.Baglanti);
@@ -100,7 +103,7 @@ namespace RabtBilMusteriKayit
 
         public void _temizle()
         {
-            _takipNo = _rnd.Next(10000, 99999);
+            takipNo = _rnd.Next(10000, 99999);
             TxtMusteriAdi.Text = "";
             TxtFormNo.Text = "";
             MsKdTxtTelefon.Text = "";
@@ -109,7 +112,7 @@ namespace RabtBilMusteriKayit
             TxtUrunKodlari.Text = "";
             TxtArizaTanimi.Text = "";
             TxtUrunDurumu.Text = "";
-            TxtUrunTakipNo.Text = _takipNo.ToString();
+            TxtUrunTakipNo.Text = takipNo.ToString();
             TxtUcret.Text = "";
             TxtAksesuarlar.Text = "";
             TxtEkBilgiler.Text = "";
@@ -142,7 +145,7 @@ namespace RabtBilMusteriKayit
             {
                 if (String.IsNullOrWhiteSpace(TxtMusteriAdi.Text) || String.IsNullOrWhiteSpace(TxtFormNo.Text) || String.IsNullOrWhiteSpace(MsKdTxtTelefon.Text) || String.IsNullOrWhiteSpace(TxtUrunModeli.Text) || String.IsNullOrWhiteSpace(CmbBoxUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtArizaTanimi.Text) || String.IsNullOrWhiteSpace(TxtUrunDurumu.Text) || String.IsNullOrWhiteSpace(TxtUcret.Text) || String.IsNullOrWhiteSpace(TxtAksesuarlar.Text) || String.IsNullOrWhiteSpace(TxtEkBilgiler.Text))
                 {
-                    MessageBox.Show("Metin Kutuları Boş!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Metin Kutuları Boş!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 MySqlCommand guncelle = new MySqlCommand("UPDATE musteribilgileri SET MusteriAdi=@MusteriAdi,FormNo=@FormNo,Telefon=@Telefon,UrunModeli=@UrunModeli,UrunSeriveImeiKodlari=@UrunSeriveImeiKodlari,UrunKodlari=@UrunKodlari,ArizaTanimi=@ArizaTanimi,UrunDurumu=@UrunDurumu,UrunTakipNo=@UrunTakipNo,Ucret=@Ucret,Aksesuarlar=@Aksesuarlar,EkBilgiler=@EkBilgiler,Tarih=@Tarih WHERE Id=@Id", SMF.Baglanti);
@@ -242,6 +245,18 @@ namespace RabtBilMusteriKayit
         {
             FrmLisans frm = new FrmLisans();
             frm.ShowDialog();
+        }
+
+        private void TlStrpMenuItemDilTurkce_Click(object sender, EventArgs e)
+        {
+            SMF.DilDegistir("tr");
+            //DilYenile();
+        }
+
+        private void TlStrpMenuItemDilIngilizce_Click(object sender, EventArgs e)
+        {
+            SMF.DilDegistir("en");
+            //DilYenile();
         }
     }
 }

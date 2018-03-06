@@ -28,13 +28,16 @@ namespace RabtBilMusteriKayit
 
         private void FrmKayitlariGoster_Load(object sender, EventArgs e)
         {
+            SMF.DilKontrolEt();
+            //DilYenile();
+
+            _verilerigetir();
+            TimerTarihSaat.Enabled = true;
+
             if (Settings.Default.LisansliMi)
             {
                 TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
             }
-
-            _verilerigetir();
-            TimerTarihSaat.Enabled = true;
         }
 
         private void TimerTarihSaat_Tick(object sender, EventArgs e)

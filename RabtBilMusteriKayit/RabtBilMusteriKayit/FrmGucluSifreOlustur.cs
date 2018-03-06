@@ -6,6 +6,7 @@ namespace RabtBilMusteriKayit
 {
     public partial class FrmGucluSifreOlustur : Form
     {
+        private SMF SMF = new SMF();
         private string sifre = "";
 
         public FrmGucluSifreOlustur()
@@ -50,7 +51,11 @@ namespace RabtBilMusteriKayit
 
         private void FrmGucluSifreOlustur_Load(object sender, EventArgs e)
         {
+            SMF.DilKontrolEt();
+            //DilYenile();
+
             ChckBoxKucukHarfler.Checked = true;
+            ChckBoxBuyukHarfler.Checked = true;
         }
 
         private void BttnKopyala_Click(object sender, EventArgs e)

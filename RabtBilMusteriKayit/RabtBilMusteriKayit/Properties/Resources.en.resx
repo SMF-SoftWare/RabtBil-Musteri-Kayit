@@ -117,101 +117,97 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Hata" xml:space="preserve">
-    <value>Hata</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="varsayilanProfilResmi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\varsayilanProfilResmi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="denemeSurumu" xml:space="preserve">
-    <value>Programın deneme sürümünü kullanıyorsunuz!</value>
+    <value>You are using the trial version of the program!</value>
+  </data>
+  <data name="Hata" xml:space="preserve">
+    <value>Error</value>
   </data>
   <data name="kullaniciAdiveSifreBos" xml:space="preserve">
-    <value>Kullanıcı adı veya şifreniz boş olamaz!</value>
+    <value>Your username or password can't be empty!</value>
   </data>
   <data name="kayitliKullaniciYok" xml:space="preserve">
-    <value>Kayıtlı kullanıcı yok lütfen yeni bir kullanıcı oluşturun!</value>
+    <value>No registered users please create a new one!</value>
   </data>
   <data name="kullaniciAdiveSifreYanlis" xml:space="preserve">
-    <value>Kullanıcı adı veya şifreniz yanlış!</value>
+    <value>Your username or password is incorrect!</value>
   </data>
   <data name="epostaBos" xml:space="preserve">
-    <value>E-posta adresiniz boş olamaz!</value>
+    <value>Your email address can't be empty!</value>
   </data>
   <data name="kayitliKullaniciVar" xml:space="preserve">
-    <value>Kayıtlı bir kullanıcı zaten var!</value>
+    <value>A registered user already exists!</value>
   </data>
   <data name="geciciKullaniciAdiSifreGonderildi" xml:space="preserve">
-    <value>Geçici kullanıcı adı ve şifreniz e-posta adresinize gönderilmiştir!</value>
+    <value>A temporary username and password sent to your email address!</value>
   </data>
   <data name="dogruBirEpostaGirin" xml:space="preserve">
-    <value>Lütfen doğru bir e-posta adresi girin!</value>
+    <value>Please enter a valid email address!</value>
   </data>
   <data name="epostaKayitliDegil" xml:space="preserve">
-    <value>Böyle bir e-posta adresi kayıtlı değil!</value>
+    <value>No such email address is registered!</value>
   </data>
   <data name="geciciSifreGonderildi" xml:space="preserve">
-    <value>Geçici şifreniz e-posta adresinize gönderilmiştir!</value>
+    <value>A temporary password sent to your email address!</value>
   </data>
   <data name="BttnGirisYap" xml:space="preserve">
-    <value>Giriş Yap</value>
+    <value>Login</value>
   </data>
   <data name="lblKullaniciAdi" xml:space="preserve">
-    <value>Kullanıcı Adı:</value>
+    <value>Username:</value>
   </data>
   <data name="TlStrpMenuItemAyarlar" xml:space="preserve">
-    <value>Ayarlar</value>
+    <value>Settings</value>
   </data>
   <data name="TlStrpMenuItemAyarlarDil" xml:space="preserve">
-    <value>Dil</value>
+    <value>Language</value>
   </data>
   <data name="TlStrpMenuItemDilTurkce" xml:space="preserve">
-    <value>Tükçe</value>
+    <value>Turkish</value>
   </data>
   <data name="TlStrpMenuItemDilIngilizce" xml:space="preserve">
-    <value>İngilizce</value>
+    <value>English</value>
   </data>
   <data name="TlStrpMenuItemAyarlarTema" xml:space="preserve">
-    <value>Tema</value>
+    <value>Theme</value>
   </data>
   <data name="TlStrpMenuItemYardim" xml:space="preserve">
-    <value>Yardım</value>
+    <value>Help</value>
   </data>
   <data name="TlStrpMenuItemYardimLisansAnahtari" xml:space="preserve">
-    <value>Lisans Anahtarı</value>
+    <value>License Key</value>
   </data>
   <data name="TlStrpMenuItemYardimHakkinda" xml:space="preserve">
-    <value>Hakkında</value>
+    <value>About</value>
   </data>
   <data name="LblSifre" xml:space="preserve">
-    <value>Şifre:</value>
+    <value>Password:</value>
   </data>
   <data name="LinkLblSifremiUnuttum" xml:space="preserve">
-    <value>Şifremi Unuttum?</value>
+    <value>Forgot Your Password?</value>
   </data>
   <data name="BttnYeniKullaniciOluştur" xml:space="preserve">
-    <value>Yeni Kullanıcı Oluştur</value>
+    <value>Create New User</value>
   </data>
   <data name="LblEposta" xml:space="preserve">
-    <value>E-posta:</value>
+    <value>E-mail:</value>
   </data>
   <data name="FrmGirisYapBaslik" xml:space="preserve">
-    <value>Giriş Yap</value>
+    <value>Login</value>
   </data>
   <data name="BttnYeniKullaniciOluştur2" xml:space="preserve">
-    <value>Yeni Şifre Gönder</value>
+    <value>Send New Password</value>
   </data>
   <data name="epostaYeniKullaniciKaydi" xml:space="preserve">
-    <value>Yeni Kullanıcı Kaydı</value>
+    <value>New User Registration</value>
   </data>
   <data name="epostaGeciciKullaniciAdi" xml:space="preserve">
-    <value>Geçici Kullanıcı Adınız:</value>
+    <value>Your Temporary Username:</value>
   </data>
   <data name="epostaGeciciSifre" xml:space="preserve">
-    <value>Geçici Şifreniz:</value>
+    <value>Your Temporary Password:</value>
   </data>
   <data name="epostaSifremiUnuttum" xml:space="preserve">
-    <value>Şifre Sıfırlama</value>
+    <value>Password Reset</value>
   </data>
 </root>

@@ -1,4 +1,7 @@
-﻿namespace RabtBilMusteriKayit
+﻿using RabtBilMusteriKayit.Properties;
+
+
+namespace RabtBilMusteriKayit
 {
     partial class FrmGirisYap
     {
@@ -29,7 +32,7 @@
         private void InitializeComponent()
         {
             this.BttnGirisYap = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblKullaniciAdi = new System.Windows.Forms.Label();
             this.TxtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.TlStrpMenuItemAyarlar = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,19 +58,19 @@
             this.BttnGirisYap.Name = "BttnGirisYap";
             this.BttnGirisYap.Size = new System.Drawing.Size(288, 36);
             this.BttnGirisYap.TabIndex = 0;
-            this.BttnGirisYap.Text = "Giriş Yap";
+            this.BttnGirisYap.Text = global::RabtBilMusteriKayit.Properties.Resources.BttnGirisYap;
             this.BttnGirisYap.UseVisualStyleBackColor = true;
             this.BttnGirisYap.Click += new System.EventHandler(this.BttnGirisYap_Click);
             // 
-            // label1
+            // lblKullaniciAdi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 9.75F);
-            this.label1.Location = new System.Drawing.Point(20, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Kullanıcı Adı:";
+            this.lblKullaniciAdi.AutoSize = true;
+            this.lblKullaniciAdi.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(20, 50);
+            this.lblKullaniciAdi.Name = "lblKullaniciAdi";
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(135, 20);
+            this.lblKullaniciAdi.TabIndex = 1;
+            this.lblKullaniciAdi.Text = "Kullanıcı Adı:";
             // 
             // TxtKullaniciAdi
             // 
@@ -98,7 +101,7 @@
             this.TlStrpMenuItemAyarlarTema});
             this.TlStrpMenuItemAyarlar.Name = "TlStrpMenuItemAyarlar";
             this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(92, 26);
-            this.TlStrpMenuItemAyarlar.Text = "Ayarlar";
+            this.TlStrpMenuItemAyarlar.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemAyarlar;
             // 
             // TlStrpMenuItemAyarlarDil
             // 
@@ -106,26 +109,28 @@
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
-            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(126, 26);
-            this.TlStrpMenuItemAyarlarDil.Text = "Dil";
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemAyarlarDil.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemAyarlarDil;
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(176, 26);
-            this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemDilTurkce.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemDilTurkce;
+            this.TlStrpMenuItemDilTurkce.Click += new System.EventHandler(this.TlStrpMenuItemDilTurkce_Click);
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(176, 26);
-            this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemDilIngilizce.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemDilIngilizce;
+            this.TlStrpMenuItemDilIngilizce.Click += new System.EventHandler(this.TlStrpMenuItemDilIngilizce_Click);
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
-            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(126, 26);
-            this.TlStrpMenuItemAyarlarTema.Text = "Tema";
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemAyarlarTema.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemAyarlarTema;
             // 
             // TlStrpMenuItemYardım
             // 
@@ -134,20 +139,20 @@
             this.TlStrpMenuItemYardimHakkinda});
             this.TlStrpMenuItemYardım.Name = "TlStrpMenuItemYardım";
             this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(82, 26);
-            this.TlStrpMenuItemYardım.Text = "Yardım";
+            this.TlStrpMenuItemYardım.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemYardim;
             // 
             // TlStrpMenuItemYardimLisansAnahtari
             // 
             this.TlStrpMenuItemYardimLisansAnahtari.Name = "TlStrpMenuItemYardimLisansAnahtari";
             this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(236, 26);
-            this.TlStrpMenuItemYardimLisansAnahtari.Text = "Lisans Anahtarı";
+            this.TlStrpMenuItemYardimLisansAnahtari.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemYardimLisansAnahtari;
             this.TlStrpMenuItemYardimLisansAnahtari.Click += new System.EventHandler(this.TlStrpMenuItemYardimLisansAnahtari_Click);
             // 
             // TlStrpMenuItemYardimHakkinda
             // 
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
             this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(236, 26);
-            this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
+            this.TlStrpMenuItemYardimHakkinda.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemYardimHakkinda;
             // 
             // TxtSifre
             // 
@@ -172,7 +177,7 @@
             // LinkLblSifremiUnuttum
             // 
             this.LinkLblSifremiUnuttum.AutoSize = true;
-            this.LinkLblSifremiUnuttum.Location = new System.Drawing.Point(171, 201);
+            this.LinkLblSifremiUnuttum.Location = new System.Drawing.Point(164, 201);
             this.LinkLblSifremiUnuttum.Name = "LinkLblSifremiUnuttum";
             this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(170, 22);
             this.LinkLblSifremiUnuttum.TabIndex = 20;
@@ -195,7 +200,7 @@
             this.BttnYeniKullaniciOluştur.Name = "BttnYeniKullaniciOluştur";
             this.BttnYeniKullaniciOluştur.Size = new System.Drawing.Size(288, 36);
             this.BttnYeniKullaniciOluştur.TabIndex = 23;
-            this.BttnYeniKullaniciOluştur.Text = "Yeni Kullanıcı Oluştur";
+            this.BttnYeniKullaniciOluştur.Text = global::RabtBilMusteriKayit.Properties.Resources.BttnYeniKullaniciOluştur;
             this.BttnYeniKullaniciOluştur.UseVisualStyleBackColor = true;
             this.BttnYeniKullaniciOluştur.Click += new System.EventHandler(this.BttnYeniKullaniciOluştur_Click);
             // 
@@ -222,12 +227,12 @@
             this.Controls.Add(this.LblSifre);
             this.Controls.Add(this.MenuStrip);
             this.Controls.Add(this.TxtKullaniciAdi);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblKullaniciAdi);
             this.Controls.Add(this.BttnGirisYap);
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
             this.Name = "FrmGirisYap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RabtBil Müşteri Kayit -> Oturum Aç";
+            this.Text = "Giriş Yap";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGirisYap_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MenuStrip.ResumeLayout(false);
@@ -240,7 +245,7 @@
         #endregion
 
         private System.Windows.Forms.Button BttnGirisYap;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblKullaniciAdi;
         private System.Windows.Forms.TextBox TxtKullaniciAdi;
         private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlar;

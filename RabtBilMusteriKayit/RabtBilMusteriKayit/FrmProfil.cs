@@ -18,6 +18,9 @@ namespace RabtBilMusteriKayit
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
+            SMF.DilKontrolEt();
+            //DilYenile();
+
             if (Settings.Default.LisansliMi)
             {
                 TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
@@ -56,19 +59,19 @@ namespace RabtBilMusteriKayit
         {
             if (String.IsNullOrWhiteSpace(TxtKullaniciAdiniz.Text))
             {
-                MessageBox.Show("Kullanıcı adı kısmı boş olmamalıdır!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Kullanıcı adı kısmı boş olmamalıdır!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(TxtEpostaniz.Text) || !SMF.EpostaDogruMu(TxtEpostaniz.Text))
             {
-                MessageBox.Show("Doğru bir e-posta adresi girin!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Doğru bir e-posta adresi girin!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (TxtSifreniz.Text != TxtSifreniziOnaylayın.Text)
             {
-                MessageBox.Show("Şifreler aynı değil!", Resources.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Şifreler aynı değil!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

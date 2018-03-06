@@ -61,11 +61,281 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RabtBil Müşteri Kayıt.
+        ///   Looks up a localized string similar to Giriş Yap.
         /// </summary>
-        internal static string UygulamaAdi {
+        internal static string BttnGirisYap {
             get {
-                return ResourceManager.GetString("UygulamaAdi", resourceCulture);
+                return ResourceManager.GetString("BttnGirisYap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yeni Kullanıcı Oluştur.
+        /// </summary>
+        internal static string BttnYeniKullaniciOluştur {
+            get {
+                return ResourceManager.GetString("BttnYeniKullaniciOluştur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yeni Şifre Gönder.
+        /// </summary>
+        internal static string BttnYeniKullaniciOluştur2 {
+            get {
+                return ResourceManager.GetString("BttnYeniKullaniciOluştur2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Programın deneme sürümünü kullanıyorsunuz!.
+        /// </summary>
+        internal static string denemeSurumu {
+            get {
+                return ResourceManager.GetString("denemeSurumu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lütfen doğru bir e-posta adresi girin!.
+        /// </summary>
+        internal static string dogruBirEpostaGirin {
+            get {
+                return ResourceManager.GetString("dogruBirEpostaGirin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-posta adresiniz boş olamaz!.
+        /// </summary>
+        internal static string epostaBos {
+            get {
+                return ResourceManager.GetString("epostaBos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Geçici Kullanıcı Adınız:.
+        /// </summary>
+        internal static string epostaGeciciKullaniciAdi {
+            get {
+                return ResourceManager.GetString("epostaGeciciKullaniciAdi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Geçici Şifreniz:.
+        /// </summary>
+        internal static string epostaGeciciSifre {
+            get {
+                return ResourceManager.GetString("epostaGeciciSifre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Böyle bir e-posta adresi kayıtlı değil!.
+        /// </summary>
+        internal static string epostaKayitliDegil {
+            get {
+                return ResourceManager.GetString("epostaKayitliDegil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Şifre Sıfırlama.
+        /// </summary>
+        internal static string epostaSifremiUnuttum {
+            get {
+                return ResourceManager.GetString("epostaSifremiUnuttum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yeni Kullanıcı Kaydı.
+        /// </summary>
+        internal static string epostaYeniKullaniciKaydi {
+            get {
+                return ResourceManager.GetString("epostaYeniKullaniciKaydi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Giriş Yap.
+        /// </summary>
+        internal static string FrmGirisYapBaslik {
+            get {
+                return ResourceManager.GetString("FrmGirisYapBaslik", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Geçici kullanıcı adı ve şifreniz e-posta adresinize gönderilmiştir!.
+        /// </summary>
+        internal static string geciciKullaniciAdiSifreGonderildi {
+            get {
+                return ResourceManager.GetString("geciciKullaniciAdiSifreGonderildi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Geçici şifreniz e-posta adresinize gönderilmiştir!.
+        /// </summary>
+        internal static string geciciSifreGonderildi {
+            get {
+                return ResourceManager.GetString("geciciSifreGonderildi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hata.
+        /// </summary>
+        internal static string Hata {
+            get {
+                return ResourceManager.GetString("Hata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kayıtlı bir kullanıcı zaten var!.
+        /// </summary>
+        internal static string kayitliKullaniciVar {
+            get {
+                return ResourceManager.GetString("kayitliKullaniciVar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kayıtlı kullanıcı yok lütfen yeni bir kullanıcı oluşturun!.
+        /// </summary>
+        internal static string kayitliKullaniciYok {
+            get {
+                return ResourceManager.GetString("kayitliKullaniciYok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kullanıcı adı veya şifreniz boş olamaz!.
+        /// </summary>
+        internal static string kullaniciAdiveSifreBos {
+            get {
+                return ResourceManager.GetString("kullaniciAdiveSifreBos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kullanıcı adı veya şifreniz yanlış!.
+        /// </summary>
+        internal static string kullaniciAdiveSifreYanlis {
+            get {
+                return ResourceManager.GetString("kullaniciAdiveSifreYanlis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-posta:.
+        /// </summary>
+        internal static string LblEposta {
+            get {
+                return ResourceManager.GetString("LblEposta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kullanıcı Adı:.
+        /// </summary>
+        internal static string lblKullaniciAdi {
+            get {
+                return ResourceManager.GetString("lblKullaniciAdi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Şifre:.
+        /// </summary>
+        internal static string LblSifre {
+            get {
+                return ResourceManager.GetString("LblSifre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Şifremi Unuttum?.
+        /// </summary>
+        internal static string LinkLblSifremiUnuttum {
+            get {
+                return ResourceManager.GetString("LinkLblSifremiUnuttum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ayarlar.
+        /// </summary>
+        internal static string TlStrpMenuItemAyarlar {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemAyarlar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dil.
+        /// </summary>
+        internal static string TlStrpMenuItemAyarlarDil {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemAyarlarDil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tema.
+        /// </summary>
+        internal static string TlStrpMenuItemAyarlarTema {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemAyarlarTema", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to İngilizce.
+        /// </summary>
+        internal static string TlStrpMenuItemDilIngilizce {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemDilIngilizce", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tükçe.
+        /// </summary>
+        internal static string TlStrpMenuItemDilTurkce {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemDilTurkce", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yardım.
+        /// </summary>
+        internal static string TlStrpMenuItemYardim {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemYardim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hakkında.
+        /// </summary>
+        internal static string TlStrpMenuItemYardimHakkinda {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemYardimHakkinda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lisans Anahtarı.
+        /// </summary>
+        internal static string TlStrpMenuItemYardimLisansAnahtari {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemYardimLisansAnahtari", resourceCulture);
             }
         }
         
