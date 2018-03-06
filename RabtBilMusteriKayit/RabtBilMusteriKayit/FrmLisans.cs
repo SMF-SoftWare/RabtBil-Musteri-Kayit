@@ -27,6 +27,7 @@ namespace RabtBilMusteriKayit
                 Default.Lisans = TxtLisansAnahtari.Text.ToUpper();
                 Default.Save();
                 MessageBox.Show("Programı Satın Aldığınız İçin Teşekkür Ederiz!");
+                Application.Restart();
             }
             else
             {
