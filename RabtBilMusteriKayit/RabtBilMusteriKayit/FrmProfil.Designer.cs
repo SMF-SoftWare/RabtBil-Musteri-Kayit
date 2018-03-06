@@ -249,14 +249,16 @@
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(165, 26);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(181, 26);
             this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
+            this.TlStrpMenuItemDilTurkce.Click += new System.EventHandler(this.TlStrpMenuItemDilTurkce_Click);
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(165, 26);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(181, 26);
             this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
+            this.TlStrpMenuItemDilIngilizce.Click += new System.EventHandler(this.TlStrpMenuItemDilIngilizce_Click);
             // 
             // TlStrpMenuItemAyarlarGuncellemeleriDenetle
             // 

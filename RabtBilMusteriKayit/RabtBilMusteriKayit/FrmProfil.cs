@@ -179,5 +179,17 @@ namespace RabtBilMusteriKayit
             FrmLisans frm = new FrmLisans();
             frm.ShowDialog();
         }
+
+        private void TlStrpMenuItemDilTurkce_Click(object sender, EventArgs e)
+        {
+            SMF.DilDegistir("tr");
+            //DilYenile();
+        }
+
+        private void TlStrpMenuItemDilIngilizce_Click(object sender, EventArgs e)
+        {
+            SMF.DilDegistir("en");
+            //DilYenile();
+        }
     }
 }

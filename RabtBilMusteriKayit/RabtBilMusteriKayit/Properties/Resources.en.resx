@@ -210,4 +210,91 @@
   <data name="epostaSifremiUnuttum" xml:space="preserve">
     <value>Password Reset</value>
   </data>
+  <data name="lblSifreUzunlugu" xml:space="preserve">
+    <value>Password Length:</value>
+  </data>
+  <data name="lblGucluSifreniz" xml:space="preserve">
+    <value>Your Strong Password:</value>
+  </data>
+  <data name="ChckBoxKucukHarfler" xml:space="preserve">
+    <value>Lowercase Letters</value>
+  </data>
+  <data name="ChckBoxBuyukHarfler" xml:space="preserve">
+    <value>Uppercase Letters</value>
+  </data>
+  <data name="ChckBoxSayilar" xml:space="preserve">
+    <value>Numbers</value>
+  </data>
+  <data name="ChckBoxSemboller" xml:space="preserve">
+    <value>Special Symbols</value>
+  </data>
+  <data name="BttnKopyala" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="FrmGucluSifreOlustur" xml:space="preserve">
+    <value>Strong Password Generator</value>
+  </data>
+  <data name="secilenKayitSilindi" xml:space="preserve">
+    <value>The selected record has been deleted!</value>
+  </data>
+  <data name="secilenKaydiDuzenliyorsun" xml:space="preserve">
+    <value>You are editing the selected record!</value>
+  </data>
+  <data name="FrmKayitlariGoster" xml:space="preserve">
+    <value>Show Records</value>
+  </data>
+  <data name="TlStrpMenuItemAraclar" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarGuncelle" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarSil" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BttnSil" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BttnYazdir" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="GrpBoxArama" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="RadioBttnFormNoyaGoreAra" xml:space="preserve">
+    <value>Search by Form Number</value>
+  </data>
+  <data name="RadioBttnMusteriIsmineGoreAra" xml:space="preserve">
+    <value>Search by Customer Name</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarYeniKayit" xml:space="preserve">
+    <value>New Record</value>
+  </data>
+  <data name="varsayilanAciklama" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="aciklamaYazdir" xml:space="preserve">
+    <value>Prints currently selected record.</value>
+  </data>
+  <data name="aciklamaSil" xml:space="preserve">
+    <value>Deletes currently selected record.</value>
+  </data>
+  <data name="aciklamaYeniKayit" xml:space="preserve">
+    <value>Adds a new record.</value>
+  </data>
+  <data name="aciklamaGuncelle" xml:space="preserve">
+    <value>Updates currently selected record.</value>
+  </data>
+  <data name="aciklamaDil" xml:space="preserve">
+    <value>Changes language of the program.</value>
+  </data>
+  <data name="aciklamaTema" xml:space="preserve">
+    <value>Changes theme of the program.</value>
+  </data>
+  <data name="aciklamaLisansAnahtari" xml:space="preserve">
+    <value>Activate your license key.</value>
+  </data>
+  <data name="aciklamaHakkinda" xml:space="preserve">
+    <value>Some informations about of this program.</value>
+  </data>
 </root>

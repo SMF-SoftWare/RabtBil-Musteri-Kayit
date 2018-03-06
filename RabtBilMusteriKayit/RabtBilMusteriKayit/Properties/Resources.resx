@@ -214,4 +214,91 @@
   <data name="epostaSifremiUnuttum" xml:space="preserve">
     <value>Şifre Sıfırlama</value>
   </data>
+  <data name="lblSifreUzunlugu" xml:space="preserve">
+    <value>Şifre Uzunluğu:</value>
+  </data>
+  <data name="lblGucluSifreniz" xml:space="preserve">
+    <value>Güçlü Şifreniz:</value>
+  </data>
+  <data name="ChckBoxKucukHarfler" xml:space="preserve">
+    <value>Küçük Harfler</value>
+  </data>
+  <data name="ChckBoxBuyukHarfler" xml:space="preserve">
+    <value>Büyük Harfler</value>
+  </data>
+  <data name="ChckBoxSayilar" xml:space="preserve">
+    <value>Sayılar</value>
+  </data>
+  <data name="ChckBoxSemboller" xml:space="preserve">
+    <value>Özel Semboller</value>
+  </data>
+  <data name="BttnKopyala" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="FrmGucluSifreOlustur" xml:space="preserve">
+    <value>Güçlü Şifre Oluşturucu</value>
+  </data>
+  <data name="secilenKayitSilindi" xml:space="preserve">
+    <value>Seçilen kayıt silindi!</value>
+  </data>
+  <data name="secilenKaydiDuzenliyorsun" xml:space="preserve">
+    <value>Seçilen kaydı düzenliyorsunuz!</value>
+  </data>
+  <data name="FrmKayitlariGoster" xml:space="preserve">
+    <value>Kayıtları Göster</value>
+  </data>
+  <data name="TlStrpMenuItemAraclar" xml:space="preserve">
+    <value>Araçlar</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarGuncelle" xml:space="preserve">
+    <value>Güncelle</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarSil" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="BttnSil" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="BttnYazdir" xml:space="preserve">
+    <value>Yazdır</value>
+  </data>
+  <data name="GrpBoxArama" xml:space="preserve">
+    <value>Arama Yap</value>
+  </data>
+  <data name="RadioBttnFormNoyaGoreAra" xml:space="preserve">
+    <value>Form No'suna Göre Ara</value>
+  </data>
+  <data name="RadioBttnMusteriIsmineGoreAra" xml:space="preserve">
+    <value>Müşteri Adına Göre Ara</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarYeniKayit" xml:space="preserve">
+    <value>Yeni Kayıt</value>
+  </data>
+  <data name="varsayilanAciklama" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
+  <data name="aciklamaYazdir" xml:space="preserve">
+    <value>Seçilen kaydı yazdırır.</value>
+  </data>
+  <data name="aciklamaSil" xml:space="preserve">
+    <value>Seçilen kaydı siler.</value>
+  </data>
+  <data name="aciklamaYeniKayit" xml:space="preserve">
+    <value>Yeni bir kayıt ekler.</value>
+  </data>
+  <data name="aciklamaGuncelle" xml:space="preserve">
+    <value>Seçilen kaydı günceller.</value>
+  </data>
+  <data name="aciklamaDil" xml:space="preserve">
+    <value>Programın dilini değiştirir.</value>
+  </data>
+  <data name="aciklamaTema" xml:space="preserve">
+    <value>Programın temasını değiştirir.</value>
+  </data>
+  <data name="aciklamaLisansAnahtari" xml:space="preserve">
+    <value>Lisans anahtarınızı etkinleştirin.</value>
+  </data>
+  <data name="aciklamaHakkinda" xml:space="preserve">
+    <value>Bu program hakkında bazı bilgiler.</value>
+  </data>
 </root>

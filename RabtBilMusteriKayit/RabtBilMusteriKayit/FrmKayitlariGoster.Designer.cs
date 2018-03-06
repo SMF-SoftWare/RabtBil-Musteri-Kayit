@@ -32,16 +32,12 @@
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.TlStrpMenuItemAraclar = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAraclarYeniKayit = new System.Windows.Forms.ToolStripMenuItem();
-            this.TlStrpMenuItemAraclarKaydet = new System.Windows.Forms.ToolStripMenuItem();
-            this.TlStrpMenuItemAraclarTemizle = new System.Windows.Forms.ToolStripMenuItem();
-            this.TlStrpMenuItemAraclarKayitlariGoster = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAraclarGuncelle = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAraclarSil = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlar = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlarDil = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemDilTurkce = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemDilIngilizce = new System.Windows.Forms.ToolStripMenuItem();
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlarTema = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardım = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardimLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,9 +77,6 @@
             // 
             this.TlStrpMenuItemAraclar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStrpMenuItemAraclarYeniKayit,
-            this.TlStrpMenuItemAraclarKaydet,
-            this.TlStrpMenuItemAraclarTemizle,
-            this.TlStrpMenuItemAraclarKayitlariGoster,
             this.TlStrpMenuItemAraclarGuncelle,
             this.TlStrpMenuItemAraclarSil});
             this.TlStrpMenuItemAraclar.Name = "TlStrpMenuItemAraclar";
@@ -93,49 +86,34 @@
             // TlStrpMenuItemAraclarYeniKayit
             // 
             this.TlStrpMenuItemAraclarYeniKayit.Name = "TlStrpMenuItemAraclarYeniKayit";
-            this.TlStrpMenuItemAraclarYeniKayit.Size = new System.Drawing.Size(228, 26);
+            this.TlStrpMenuItemAraclarYeniKayit.Size = new System.Drawing.Size(181, 26);
             this.TlStrpMenuItemAraclarYeniKayit.Text = "Yeni Kayıt";
             this.TlStrpMenuItemAraclarYeniKayit.Click += new System.EventHandler(this.TlStrpMenuItemAraclarYeniKayit_Click);
-            // 
-            // TlStrpMenuItemAraclarKaydet
-            // 
-            this.TlStrpMenuItemAraclarKaydet.Name = "TlStrpMenuItemAraclarKaydet";
-            this.TlStrpMenuItemAraclarKaydet.Size = new System.Drawing.Size(228, 26);
-            this.TlStrpMenuItemAraclarKaydet.Text = "Kaydet";
-            this.TlStrpMenuItemAraclarKaydet.Click += new System.EventHandler(this.TlStrpMenuItemAraclarYeniKayit_Click);
-            // 
-            // TlStrpMenuItemAraclarTemizle
-            // 
-            this.TlStrpMenuItemAraclarTemizle.Name = "TlStrpMenuItemAraclarTemizle";
-            this.TlStrpMenuItemAraclarTemizle.Size = new System.Drawing.Size(228, 26);
-            this.TlStrpMenuItemAraclarTemizle.Text = "Temizle";
-            this.TlStrpMenuItemAraclarTemizle.Click += new System.EventHandler(this.TlStrpMenuItemAraclarYeniKayit_Click);
-            // 
-            // TlStrpMenuItemAraclarKayitlariGoster
-            // 
-            this.TlStrpMenuItemAraclarKayitlariGoster.Name = "TlStrpMenuItemAraclarKayitlariGoster";
-            this.TlStrpMenuItemAraclarKayitlariGoster.Size = new System.Drawing.Size(228, 26);
-            this.TlStrpMenuItemAraclarKayitlariGoster.Text = "Kayıtları Göster";
+            this.TlStrpMenuItemAraclarYeniKayit.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
+            this.TlStrpMenuItemAraclarYeniKayit.MouseHover += new System.EventHandler(this.TlStrpMenuItemAraclarYeniKayit_MouseHover);
             // 
             // TlStrpMenuItemAraclarGuncelle
             // 
             this.TlStrpMenuItemAraclarGuncelle.Name = "TlStrpMenuItemAraclarGuncelle";
-            this.TlStrpMenuItemAraclarGuncelle.Size = new System.Drawing.Size(228, 26);
+            this.TlStrpMenuItemAraclarGuncelle.Size = new System.Drawing.Size(181, 26);
             this.TlStrpMenuItemAraclarGuncelle.Text = "Güncelle";
             this.TlStrpMenuItemAraclarGuncelle.Click += new System.EventHandler(this.TlStrpMenuItemAraclarGuncelle_Click);
+            this.TlStrpMenuItemAraclarGuncelle.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
+            this.TlStrpMenuItemAraclarGuncelle.MouseHover += new System.EventHandler(this.TlStrpMenuItemAraclarGuncelle_MouseHover);
             // 
             // TlStrpMenuItemAraclarSil
             // 
             this.TlStrpMenuItemAraclarSil.Name = "TlStrpMenuItemAraclarSil";
-            this.TlStrpMenuItemAraclarSil.Size = new System.Drawing.Size(228, 26);
+            this.TlStrpMenuItemAraclarSil.Size = new System.Drawing.Size(181, 26);
             this.TlStrpMenuItemAraclarSil.Text = "Sil";
             this.TlStrpMenuItemAraclarSil.Click += new System.EventHandler(this.BttnSil_Click);
+            this.TlStrpMenuItemAraclarSil.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
+            this.TlStrpMenuItemAraclarSil.MouseHover += new System.EventHandler(this.TlStrpMenuItemAraclarSil_MouseHover);
             // 
             // TlStrpMenuItemAyarlar
             // 
             this.TlStrpMenuItemAyarlar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStrpMenuItemAyarlarDil,
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle,
             this.TlStrpMenuItemAyarlarTema});
             this.TlStrpMenuItemAyarlar.Name = "TlStrpMenuItemAyarlar";
             this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(84, 24);
@@ -147,32 +125,32 @@
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
-            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(282, 26);
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(181, 26);
             this.TlStrpMenuItemAyarlarDil.Text = "Dil";
+            this.TlStrpMenuItemAyarlarDil.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
+            this.TlStrpMenuItemAyarlarDil.MouseHover += new System.EventHandler(this.TlStrpMenuItemAyarlarDil_MouseHover);
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(165, 26);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(181, 26);
             this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
+            this.TlStrpMenuItemDilTurkce.Click += new System.EventHandler(this.TlStrpMenuItemDilTurkce_Click);
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(165, 26);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(181, 26);
             this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
-            // 
-            // TlStrpMenuItemAyarlarGuncellemeleriDenetle
-            // 
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Name = "TlStrpMenuItemAyarlarGuncellemeleriDenetle";
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Size = new System.Drawing.Size(282, 26);
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Text = "Güncellemeleri Denetle";
+            this.TlStrpMenuItemDilIngilizce.Click += new System.EventHandler(this.TlStrpMenuItemDilIngilizce_Click);
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
-            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(282, 26);
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(181, 26);
             this.TlStrpMenuItemAyarlarTema.Text = "Tema";
+            this.TlStrpMenuItemAyarlarTema.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
+            this.TlStrpMenuItemAyarlarTema.MouseHover += new System.EventHandler(this.TlStrpMenuItemAyarlarTema_MouseHover);
             // 
             // TlStrpMenuItemYardım
             // 
@@ -189,12 +167,16 @@
             this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(219, 26);
             this.TlStrpMenuItemYardimLisansAnahtari.Text = "Lisans Anahtarı";
             this.TlStrpMenuItemYardimLisansAnahtari.Click += new System.EventHandler(this.TlStrpMenuItemYardimLisansAnahtari_Click);
+            this.TlStrpMenuItemYardimLisansAnahtari.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
+            this.TlStrpMenuItemYardimLisansAnahtari.MouseHover += new System.EventHandler(this.TlStrpMenuItemYardimLisansAnahtari_MouseHover);
             // 
             // TlStrpMenuItemYardimHakkinda
             // 
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
             this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(219, 26);
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
+            this.TlStrpMenuItemYardimHakkinda.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
+            this.TlStrpMenuItemYardimHakkinda.MouseHover += new System.EventHandler(this.TlStrpMenuItemYardimHakkinda_MouseHover);
             // 
             // TlStrip
             // 
@@ -244,7 +226,7 @@
             this.BttnSil.Text = "Sil";
             this.BttnSil.UseVisualStyleBackColor = true;
             this.BttnSil.Click += new System.EventHandler(this.BttnSil_Click);
-            this.BttnSil.MouseLeave += new System.EventHandler(this.BttnYazdir_MouseLeave);
+            this.BttnSil.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
             this.BttnSil.MouseHover += new System.EventHandler(this.BttnSil_MouseHover);
             // 
             // BttnYazdir
@@ -255,7 +237,7 @@
             this.BttnYazdir.TabIndex = 28;
             this.BttnYazdir.Text = "Yazdır";
             this.BttnYazdir.UseVisualStyleBackColor = true;
-            this.BttnYazdir.MouseLeave += new System.EventHandler(this.BttnYazdir_MouseLeave);
+            this.BttnYazdir.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
             this.BttnYazdir.MouseHover += new System.EventHandler(this.BttnYazdir_MouseHover);
             // 
             // TimerTarihSaat
@@ -296,6 +278,8 @@
             this.RadioBttnMusteriIsmineGoreAra.Text = "Müşteri isimine göre";
             this.RadioBttnMusteriIsmineGoreAra.UseVisualStyleBackColor = true;
             this.RadioBttnMusteriIsmineGoreAra.CheckedChanged += new System.EventHandler(this.RadioBttnFormNoyaGoreAra_CheckedChanged);
+            this.RadioBttnMusteriIsmineGoreAra.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
+            this.RadioBttnMusteriIsmineGoreAra.MouseHover += new System.EventHandler(this.RadioBttnMusteriIsmineGoreAra_MouseHover);
             // 
             // RadioBttnFormNoyaGoreAra
             // 
@@ -309,6 +293,8 @@
             this.RadioBttnFormNoyaGoreAra.Text = "Form no\'suna göre";
             this.RadioBttnFormNoyaGoreAra.UseVisualStyleBackColor = true;
             this.RadioBttnFormNoyaGoreAra.CheckedChanged += new System.EventHandler(this.RadioBttnFormNoyaGoreAra_CheckedChanged);
+            this.RadioBttnFormNoyaGoreAra.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
+            this.RadioBttnFormNoyaGoreAra.MouseHover += new System.EventHandler(this.RadioBttnFormNoyaGoreAra_MouseHover);
             // 
             // FrmKayitlariGoster
             // 
@@ -330,6 +316,7 @@
             this.Text = "RabtBil Müşteri Kayit -> Kayıtları Göster";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmKayitlariGoster_FormClosing);
             this.Load += new System.EventHandler(this.FrmKayitlariGoster_Load);
+            this.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             this.TlStrip.ResumeLayout(false);
@@ -347,16 +334,12 @@
         public System.Windows.Forms.MenuStrip MenuStrip;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclar;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarYeniKayit;
-        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarKaydet;
-        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarTemizle;
-        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarKayitlariGoster;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarGuncelle;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarSil;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlar;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarDil;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemDilTurkce;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemDilIngilizce;
-        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarGuncellemeleriDenetle;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarTema;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardım;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardimLisansAnahtari;
