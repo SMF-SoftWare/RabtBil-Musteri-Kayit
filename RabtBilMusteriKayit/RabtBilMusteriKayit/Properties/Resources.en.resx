@@ -351,4 +351,19 @@
   <data name="TlStrpMenuItemAraclarGucluSifreOlustur" xml:space="preserve">
     <value>Strong Password Generator</value>
   </data>
+  <data name="kullaniciAdiBosOlamaz" xml:space="preserve">
+    <value>Your username can't be empty!</value>
+  </data>
+  <data name="dogruEpostaGir" xml:space="preserve">
+    <value>Please enter a valid email address!</value>
+  </data>
+  <data name="sifreAyniDegil" xml:space="preserve">
+    <value>The entered passwords aren't the same!</value>
+  </data>
+  <data name="profilBasariylaGuncellendi" xml:space="preserve">
+    <value>Your profile has been successfully updated!</value>
+  </data>
+  <data name="resimSecTitle" xml:space="preserve">
+    <value>Select your profile picture</value>
+  </data>
 </root>

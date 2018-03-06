@@ -277,6 +277,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lütfen geçerli bir e-posta adresi girin!.
+        /// </summary>
+        internal static string dogruEpostaGir {
+            get {
+                return ResourceManager.GetString("dogruEpostaGir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-posta adresiniz boş olamaz!.
         /// </summary>
         internal static string epostaBos {
@@ -435,6 +444,15 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string kayitliKullaniciYok {
             get {
                 return ResourceManager.GetString("kayitliKullaniciYok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kullanıcı adınız boş olamaz!.
+        /// </summary>
+        internal static string kullaniciAdiBosOlamaz {
+            get {
+                return ResourceManager.GetString("kullaniciAdiBosOlamaz", resourceCulture);
             }
         }
         
@@ -601,6 +619,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Profiliniz başarıyla güncellendi!.
+        /// </summary>
+        internal static string profilBasariylaGuncellendi {
+            get {
+                return ResourceManager.GetString("profilBasariylaGuncellendi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Form No&apos;suna Göre Ara.
         /// </summary>
         internal static string RadioBttnFormNoyaGoreAra {
@@ -619,6 +646,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Profil resminizi seçin.
+        /// </summary>
+        internal static string resimSecTitle {
+            get {
+                return ResourceManager.GetString("resimSecTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Seçilen kaydı düzenliyorsunuz!.
         /// </summary>
         internal static string secilenKaydiDuzenliyorsun {
@@ -633,6 +669,15 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string secilenKayitSilindi {
             get {
                 return ResourceManager.GetString("secilenKayitSilindi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Girilen şifreler aynı değil!.
+        /// </summary>
+        internal static string sifreAyniDegil {
+            get {
+                return ResourceManager.GetString("sifreAyniDegil", resourceCulture);
             }
         }
         

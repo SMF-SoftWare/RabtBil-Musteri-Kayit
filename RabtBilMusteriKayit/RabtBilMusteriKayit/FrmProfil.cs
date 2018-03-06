@@ -59,19 +59,19 @@ namespace RabtBilMusteriKayit
         {
             if (String.IsNullOrWhiteSpace(TxtKullaniciAdiniz.Text))
             {
-                MessageBox.Show("Kullanıcı adı kısmı boş olmamalıdır!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Resources.kullaniciAdiBosOlamaz, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (String.IsNullOrWhiteSpace(TxtEpostaniz.Text) || !SMF.EpostaDogruMu(TxtEpostaniz.Text))
             {
-                MessageBox.Show("Doğru bir e-posta adresi girin!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Resources.dogruEpostaGir, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (TxtSifreniz.Text != TxtSifreniziOnaylayın.Text)
             {
-                MessageBox.Show("Şifreler aynı değil!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Resources.sifreAyniDegil, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -86,12 +86,12 @@ namespace RabtBilMusteriKayit
                     guncelle.Parameters.AddWithValue("@EPosta", TxtEpostaniz.Text);
                     SMF.Baglanti.Open();
                     guncelle.ExecuteNonQuery();
-                    MessageBox.Show("Kaydınız Güncellenmiştir.");
+                    MessageBox.Show(Resources.profilBasariylaGuncellendi, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SMF.Baglanti.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Hata");
+                    MessageBox.Show(ex.Message, Resources.Hata);
                 }
                 return;
             }
@@ -108,12 +108,12 @@ namespace RabtBilMusteriKayit
                     guncelle.Parameters.AddWithValue("@Sifre", TxtSifreniz.Text);
                     SMF.Baglanti.Open();
                     guncelle.ExecuteNonQuery();
-                    MessageBox.Show("Kaydınız Güncellenmiştir.");
+                    MessageBox.Show(Resources.profilBasariylaGuncellendi, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SMF.Baglanti.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Hata");
+                    MessageBox.Show(ex.Message, Resources.Hata);
                 }
             }
         }
@@ -121,7 +121,7 @@ namespace RabtBilMusteriKayit
         private void PcTrBoxProfiliDuzenle_Click(object sender, EventArgs e)
         {
             OpenFileDialog resimSec = new OpenFileDialog();
-            resimSec.Title = "Profil resmini seçin";
+            resimSec.Title = Resources.resimSecTitle;
             resimSec.Filter = "Resim Dosyaları(*.bmp;*.png;*.jpg)|*.bmp;*.png;*.jpg|SMF Format(*.smf)|*.smf";
             if (resimSec.ShowDialog() == DialogResult.OK)
             {
@@ -213,7 +213,9 @@ namespace RabtBilMusteriKayit
 
         private void FrmProfil_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            FrmTeknikServisFormu frm = new FrmTeknikServisFormu();
+            frm.Show();
+            Dispose();
         }
     }
 }

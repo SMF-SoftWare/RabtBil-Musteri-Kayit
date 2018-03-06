@@ -355,4 +355,19 @@
   <data name="TlStrpMenuItemAraclarGucluSifreOlustur" xml:space="preserve">
     <value>Güçlü Şifre Oluşturucu</value>
   </data>
+  <data name="kullaniciAdiBosOlamaz" xml:space="preserve">
+    <value>Kullanıcı adınız boş olamaz!</value>
+  </data>
+  <data name="dogruEpostaGir" xml:space="preserve">
+    <value>Lütfen geçerli bir e-posta adresi girin!</value>
+  </data>
+  <data name="sifreAyniDegil" xml:space="preserve">
+    <value>Girilen şifreler aynı değil!</value>
+  </data>
+  <data name="profilBasariylaGuncellendi" xml:space="preserve">
+    <value>Profiliniz başarıyla güncellendi!</value>
+  </data>
+  <data name="resimSecTitle" xml:space="preserve">
+    <value>Profil resminizi seçin</value>
+  </data>
 </root>
