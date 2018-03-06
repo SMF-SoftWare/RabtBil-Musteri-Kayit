@@ -297,4 +297,58 @@
   <data name="aciklamaHakkinda" xml:space="preserve">
     <value>Some informations about of this program.</value>
   </data>
+  <data name="FrmLisans" xml:space="preserve">
+    <value>Enter License Key</value>
+  </data>
+  <data name="LblLisansAnahtari" xml:space="preserve">
+    <value>Your License Key:</value>
+  </data>
+  <data name="LblLisansEposta" xml:space="preserve">
+    <value>Your Email Address:</value>
+  </data>
+  <data name="BttnEtkinlestir" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="lisansBasarili" xml:space="preserve">
+    <value>Thank you for purchasing this program!</value>
+  </data>
+  <data name="lisansTekrarDene" xml:space="preserve">
+    <value>The license key is incorrect please try again!</value>
+  </data>
+  <data name="epostaVeyaLisansAnahtariBos" xml:space="preserve">
+    <value>Your email or license key can't be empty!</value>
+  </data>
+  <data name="FrmProfil" xml:space="preserve">
+    <value>Edit Your Profile</value>
+  </data>
+  <data name="LblKullaniciAdiniz" xml:space="preserve">
+    <value>Your username:</value>
+  </data>
+  <data name="LblSifreniz" xml:space="preserve">
+    <value>Your password:</value>
+  </data>
+  <data name="LblSifreniziOnaylayın" xml:space="preserve">
+    <value>Confirm your password:</value>
+  </data>
+  <data name="LblAdiniz" xml:space="preserve">
+    <value>Your first name:</value>
+  </data>
+  <data name="LblSoyadiniz" xml:space="preserve">
+    <value>Your last name:</value>
+  </data>
+  <data name="LblEpostaniz" xml:space="preserve">
+    <value>Your email address:</value>
+  </data>
+  <data name="BttnKaydet" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="BttnTemizle" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="BttnAnaSayfa" xml:space="preserve">
+    <value>Main Page</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarGucluSifreOlustur" xml:space="preserve">
+    <value>Strong Password Generator</value>
+  </data>
 </root>

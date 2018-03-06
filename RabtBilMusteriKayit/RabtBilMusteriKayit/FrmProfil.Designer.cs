@@ -50,7 +50,6 @@
             this.TlStrpMenuItemAyarlarDil = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemDilTurkce = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemDilIngilizce = new System.Windows.Forms.ToolStripMenuItem();
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAyarlarTema = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardım = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardimLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,9 +65,9 @@
             this.LblKullaniciAdiniz.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblKullaniciAdiniz.Location = new System.Drawing.Point(12, 35);
             this.LblKullaniciAdiniz.Name = "LblKullaniciAdiniz";
-            this.LblKullaniciAdiniz.Size = new System.Drawing.Size(225, 20);
+            this.LblKullaniciAdiniz.Size = new System.Drawing.Size(162, 20);
             this.LblKullaniciAdiniz.TabIndex = 0;
-            this.LblKullaniciAdiniz.Text = "Kullanıcı adınızı seçin:";
+            this.LblKullaniciAdiniz.Text = "Kullanıcı adınız:";
             // 
             // LblSifreniz
             // 
@@ -76,9 +75,9 @@
             this.LblSifreniz.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblSifreniz.Location = new System.Drawing.Point(12, 84);
             this.LblSifreniz.Name = "LblSifreniz";
-            this.LblSifreniz.Size = new System.Drawing.Size(189, 20);
+            this.LblSifreniz.Size = new System.Drawing.Size(90, 20);
             this.LblSifreniz.TabIndex = 2;
-            this.LblSifreniz.Text = "Şifrenizi oluşturun:";
+            this.LblSifreniz.Text = "Şifreniz:";
             // 
             // LblSifreniziOnaylayın
             // 
@@ -116,9 +115,9 @@
             this.LblEpostaniz.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblEpostaniz.Location = new System.Drawing.Point(12, 280);
             this.LblEpostaniz.Name = "LblEpostaniz";
-            this.LblEpostaniz.Size = new System.Drawing.Size(108, 20);
+            this.LblEpostaniz.Size = new System.Drawing.Size(171, 20);
             this.LblEpostaniz.TabIndex = 10;
-            this.LblEpostaniz.Text = "E-postanız:";
+            this.LblEpostaniz.Text = "E-posta adresiniz:";
             // 
             // TxtKullaniciAdiniz
             // 
@@ -231,7 +230,6 @@
             // 
             this.TlStrpMenuItemAyarlar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TlStrpMenuItemAyarlarDil,
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle,
             this.TlStrpMenuItemAyarlarTema});
             this.TlStrpMenuItemAyarlar.Name = "TlStrpMenuItemAyarlar";
             this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(84, 24);
@@ -243,33 +241,27 @@
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
-            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(282, 26);
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(120, 26);
             this.TlStrpMenuItemAyarlarDil.Text = "Dil";
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(165, 26);
             this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
             this.TlStrpMenuItemDilTurkce.Click += new System.EventHandler(this.TlStrpMenuItemDilTurkce_Click);
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(165, 26);
             this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
             this.TlStrpMenuItemDilIngilizce.Click += new System.EventHandler(this.TlStrpMenuItemDilIngilizce_Click);
-            // 
-            // TlStrpMenuItemAyarlarGuncellemeleriDenetle
-            // 
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Name = "TlStrpMenuItemAyarlarGuncellemeleriDenetle";
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Size = new System.Drawing.Size(282, 26);
-            this.TlStrpMenuItemAyarlarGuncellemeleriDenetle.Text = "Güncellemeleri Denetle";
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
-            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(282, 26);
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(120, 26);
             this.TlStrpMenuItemAyarlarTema.Text = "Tema";
             // 
             // TlStrpMenuItemYardım
@@ -369,7 +361,6 @@
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarDil;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemDilTurkce;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemDilIngilizce;
-        public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarGuncellemeleriDenetle;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAyarlarTema;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardım;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemYardimLisansAnahtari;

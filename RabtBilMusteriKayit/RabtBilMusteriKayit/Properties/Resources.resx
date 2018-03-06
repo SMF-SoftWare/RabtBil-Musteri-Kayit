@@ -301,4 +301,58 @@
   <data name="aciklamaHakkinda" xml:space="preserve">
     <value>Bu program hakkında bazı bilgiler.</value>
   </data>
+  <data name="FrmLisans" xml:space="preserve">
+    <value>Lisans Anahtarı Gir</value>
+  </data>
+  <data name="LblLisansAnahtari" xml:space="preserve">
+    <value>Lisans Anahtarınız:</value>
+  </data>
+  <data name="LblLisansEposta" xml:space="preserve">
+    <value>E-posta Adresiniz:</value>
+  </data>
+  <data name="BttnEtkinlestir" xml:space="preserve">
+    <value>Etkinleştir</value>
+  </data>
+  <data name="lisansBasarili" xml:space="preserve">
+    <value>Bu programı satın aldığınız için teşekkür ederiz!</value>
+  </data>
+  <data name="lisansTekrarDene" xml:space="preserve">
+    <value>Lisans anahtarı doğru değil lütfen tekrar deneyin!</value>
+  </data>
+  <data name="epostaVeyaLisansAnahtariBos" xml:space="preserve">
+    <value>E-posta veya lisans anahtarınız boş olamaz!</value>
+  </data>
+  <data name="FrmProfil" xml:space="preserve">
+    <value>Profili Düzenle</value>
+  </data>
+  <data name="LblKullaniciAdiniz" xml:space="preserve">
+    <value>Kullanıcı adınız:</value>
+  </data>
+  <data name="LblSifreniz" xml:space="preserve">
+    <value>Şifreniz:</value>
+  </data>
+  <data name="LblSifreniziOnaylayın" xml:space="preserve">
+    <value>Şifrenizi onaylayın:</value>
+  </data>
+  <data name="LblAdiniz" xml:space="preserve">
+    <value>Adınız:</value>
+  </data>
+  <data name="LblSoyadiniz" xml:space="preserve">
+    <value>Soyadınız:</value>
+  </data>
+  <data name="LblEpostaniz" xml:space="preserve">
+    <value>E-posta adresiniz:</value>
+  </data>
+  <data name="BttnKaydet" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="BttnTemizle" xml:space="preserve">
+    <value>Temizle</value>
+  </data>
+  <data name="BttnAnaSayfa" xml:space="preserve">
+    <value>Ana Sayfa</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarGucluSifreOlustur" xml:space="preserve">
+    <value>Güçlü Şifre Oluşturucu</value>
+  </data>
 </root>

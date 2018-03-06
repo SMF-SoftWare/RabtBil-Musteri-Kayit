@@ -19,7 +19,7 @@ namespace RabtBilMusteriKayit
         private void FrmProfil_Load(object sender, EventArgs e)
         {
             SMF.DilKontrolEt();
-            //DilYenile();
+            DilYenile();
 
             if (Settings.Default.LisansliMi)
             {
@@ -41,7 +41,7 @@ namespace RabtBilMusteriKayit
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, Resources.Hata, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             try
@@ -146,11 +146,6 @@ namespace RabtBilMusteriKayit
             }
         }
 
-        private void FrmProfil_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void TlStrpMenuItemAraclarGucluSifreOlustur_Click(object sender, EventArgs e)
         {
             FrmGucluSifreOlustur frm = new FrmGucluSifreOlustur();
@@ -183,13 +178,42 @@ namespace RabtBilMusteriKayit
         private void TlStrpMenuItemDilTurkce_Click(object sender, EventArgs e)
         {
             SMF.DilDegistir("tr");
-            //DilYenile();
+            DilYenile();
         }
 
         private void TlStrpMenuItemDilIngilizce_Click(object sender, EventArgs e)
         {
             SMF.DilDegistir("en");
-            //DilYenile();
+            DilYenile();
+        }
+
+        private void DilYenile()
+        {
+            Text = Resources.FrmProfil;
+            LblKullaniciAdiniz.Text = Resources.LblKullaniciAdiniz;
+            LblSifreniz.Text = Resources.LblSifreniz;
+            LblSifreniziOnaylayın.Text = Resources.LblSifreniziOnaylayın;
+            LblAdiniz.Text = Resources.LblAdiniz;
+            LblSoyadiniz.Text = Resources.LblSoyadiniz;
+            LblEpostaniz.Text = Resources.LblEpostaniz;
+            BttnKaydet.Text = Resources.BttnKaydet;
+            BttnTemizle.Text = Resources.BttnTemizle;
+            BttnAnaSayfa.Text = Resources.BttnAnaSayfa;
+            TlStrpMenuItemAraclar.Text = Resources.TlStrpMenuItemAraclar;
+            TlStrpMenuItemAraclarGucluSifreOlustur.Text = Resources.TlStrpMenuItemAraclarGucluSifreOlustur;
+            TlStrpMenuItemAyarlar.Text = Resources.TlStrpMenuItemAyarlar;
+            TlStrpMenuItemAyarlarDil.Text = Resources.TlStrpMenuItemAyarlarDil;
+            TlStrpMenuItemDilTurkce.Text = Resources.TlStrpMenuItemDilTurkce;
+            TlStrpMenuItemDilIngilizce.Text = Resources.TlStrpMenuItemDilIngilizce;
+            TlStrpMenuItemAyarlarTema.Text = Resources.TlStrpMenuItemAyarlarTema;
+            TlStrpMenuItemYardım.Text = Resources.TlStrpMenuItemYardim;
+            TlStrpMenuItemYardimLisansAnahtari.Text = Resources.TlStrpMenuItemYardimLisansAnahtari;
+            TlStrpMenuItemYardimHakkinda.Text = Resources.TlStrpMenuItemYardimHakkinda;
+        }
+
+        private void FrmProfil_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -22,7 +22,9 @@ namespace RabtBilMusteriKayit
 
             ChckBoxKucukHarfler.Checked = true;
             ChckBoxBuyukHarfler.Checked = true;
+            lblSifreUzunluguDeger.Text = TrckBarSifreKarakter.Value.ToString();
         }
+
         private void BttnKopyala_Click(object sender, EventArgs e)
         {
             if (sifre != null) Clipboard.SetText(sifre);
@@ -34,6 +36,7 @@ namespace RabtBilMusteriKayit
             {
                 sifre = GucluSifreOlustur(TrckBarSifreKarakter.Value);
                 TxtGucluSifreniz.Text = sifre;
+                lblSifreUzunluguDeger.Text = TrckBarSifreKarakter.Value.ToString();
             }
             catch (Exception ex)
             {
@@ -90,7 +93,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmGucluSifreOlustur_FormClosing(object sender, FormClosingEventArgs e)
         {
-           Dispose();
+            Dispose();
         }
     }
 }

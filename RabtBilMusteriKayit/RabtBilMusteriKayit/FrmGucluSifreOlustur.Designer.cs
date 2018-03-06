@@ -37,6 +37,7 @@
             this.lblSifreUzunlugu = new System.Windows.Forms.Label();
             this.lblGucluSifreniz = new System.Windows.Forms.Label();
             this.TrckBarSifreKarakter = new System.Windows.Forms.TrackBar();
+            this.lblSifreUzunluguDeger = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TrckBarSifreKarakter)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,11 +131,22 @@
             this.TrckBarSifreKarakter.Value = 4;
             this.TrckBarSifreKarakter.Scroll += new System.EventHandler(this.TrckBarSifreKarakter_Scroll);
             // 
+            // lblSifreUzunluguDeger
+            // 
+            this.lblSifreUzunluguDeger.AutoSize = true;
+            this.lblSifreUzunluguDeger.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.lblSifreUzunluguDeger.Location = new System.Drawing.Point(129, 9);
+            this.lblSifreUzunluguDeger.Name = "lblSifreUzunluguDeger";
+            this.lblSifreUzunluguDeger.Size = new System.Drawing.Size(18, 20);
+            this.lblSifreUzunluguDeger.TabIndex = 11;
+            this.lblSifreUzunluguDeger.Text = "0";
+            // 
             // FrmGucluSifreOlustur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 153);
+            this.Controls.Add(this.lblSifreUzunluguDeger);
             this.Controls.Add(this.TrckBarSifreKarakter);
             this.Controls.Add(this.lblGucluSifreniz);
             this.Controls.Add(this.lblSifreUzunlugu);
@@ -169,5 +181,6 @@
         private System.Windows.Forms.Label lblSifreUzunlugu;
         private System.Windows.Forms.Label lblGucluSifreniz;
         private System.Windows.Forms.TrackBar TrckBarSifreKarakter;
+        private System.Windows.Forms.Label lblSifreUzunluguDeger;
     }
 }

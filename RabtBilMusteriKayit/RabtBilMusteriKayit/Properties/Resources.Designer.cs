@@ -133,11 +133,38 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ana Sayfa.
+        /// </summary>
+        internal static string BttnAnaSayfa {
+            get {
+                return ResourceManager.GetString("BttnAnaSayfa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Etkinleştir.
+        /// </summary>
+        internal static string BttnEtkinlestir {
+            get {
+                return ResourceManager.GetString("BttnEtkinlestir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Giriş Yap.
         /// </summary>
         internal static string BttnGirisYap {
             get {
                 return ResourceManager.GetString("BttnGirisYap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kaydet.
+        /// </summary>
+        internal static string BttnKaydet {
+            get {
+                return ResourceManager.GetString("BttnKaydet", resourceCulture);
             }
         }
         
@@ -156,6 +183,15 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string BttnSil {
             get {
                 return ResourceManager.GetString("BttnSil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temizle.
+        /// </summary>
+        internal static string BttnTemizle {
+            get {
+                return ResourceManager.GetString("BttnTemizle", resourceCulture);
             }
         }
         
@@ -286,6 +322,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E-posta veya lisans anahtarınız boş olamaz!.
+        /// </summary>
+        internal static string epostaVeyaLisansAnahtariBos {
+            get {
+                return ResourceManager.GetString("epostaVeyaLisansAnahtariBos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Yeni Kullanıcı Kaydı.
         /// </summary>
         internal static string epostaYeniKullaniciKaydi {
@@ -318,6 +363,24 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string FrmKayitlariGoster {
             get {
                 return ResourceManager.GetString("FrmKayitlariGoster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lisans Anahtarı Gir.
+        /// </summary>
+        internal static string FrmLisans {
+            get {
+                return ResourceManager.GetString("FrmLisans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profili Düzenle.
+        /// </summary>
+        internal static string FrmProfil {
+            get {
+                return ResourceManager.GetString("FrmProfil", resourceCulture);
             }
         }
         
@@ -394,11 +457,29 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adınız:.
+        /// </summary>
+        internal static string LblAdiniz {
+            get {
+                return ResourceManager.GetString("LblAdiniz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-posta:.
         /// </summary>
         internal static string LblEposta {
             get {
                 return ResourceManager.GetString("LblEposta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-posta adresiniz:.
+        /// </summary>
+        internal static string LblEpostaniz {
+            get {
+                return ResourceManager.GetString("LblEpostaniz", resourceCulture);
             }
         }
         
@@ -421,11 +502,56 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kullanıcı adınız:.
+        /// </summary>
+        internal static string LblKullaniciAdiniz {
+            get {
+                return ResourceManager.GetString("LblKullaniciAdiniz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lisans Anahtarınız:.
+        /// </summary>
+        internal static string LblLisansAnahtari {
+            get {
+                return ResourceManager.GetString("LblLisansAnahtari", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-posta Adresiniz:.
+        /// </summary>
+        internal static string LblLisansEposta {
+            get {
+                return ResourceManager.GetString("LblLisansEposta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Şifre:.
         /// </summary>
         internal static string LblSifre {
             get {
                 return ResourceManager.GetString("LblSifre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Şifreniz:.
+        /// </summary>
+        internal static string LblSifreniz {
+            get {
+                return ResourceManager.GetString("LblSifreniz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Şifrenizi onaylayın:.
+        /// </summary>
+        internal static string LblSifreniziOnaylayın {
+            get {
+                return ResourceManager.GetString("LblSifreniziOnaylayın", resourceCulture);
             }
         }
         
@@ -439,11 +565,38 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Soyadınız:.
+        /// </summary>
+        internal static string LblSoyadiniz {
+            get {
+                return ResourceManager.GetString("LblSoyadiniz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Şifremi Unuttum?.
         /// </summary>
         internal static string LinkLblSifremiUnuttum {
             get {
                 return ResourceManager.GetString("LinkLblSifremiUnuttum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bu programı satın aldığınız için teşekkür ederiz!.
+        /// </summary>
+        internal static string lisansBasarili {
+            get {
+                return ResourceManager.GetString("lisansBasarili", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lisans anahtarı doğru değil lütfen tekrar deneyin!.
+        /// </summary>
+        internal static string lisansTekrarDene {
+            get {
+                return ResourceManager.GetString("lisansTekrarDene", resourceCulture);
             }
         }
         
@@ -489,6 +642,15 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string TlStrpMenuItemAraclar {
             get {
                 return ResourceManager.GetString("TlStrpMenuItemAraclar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Güçlü Şifre Oluşturucu.
+        /// </summary>
+        internal static string TlStrpMenuItemAraclarGucluSifreOlustur {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemAraclarGucluSifreOlustur", resourceCulture);
             }
         }
         
