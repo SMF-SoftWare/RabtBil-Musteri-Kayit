@@ -22,6 +22,10 @@ namespace RabtBilMusteriKayit
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SMF.DilKontrolEt();
+            DilYenile();
+            KullaniciOlusturGizle();
+
             if (Settings.Default.LisansliMi)
             {
                 TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
@@ -30,10 +34,6 @@ namespace RabtBilMusteriKayit
             {
                 MessageBox.Show(Resources.denemeSurumu, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            SMF.DilKontrolEt();
-            DilYenile();
-            KullaniciOlusturGizle();
         }
 
         private void BttnGirisYap_Click(object sender, EventArgs e)
