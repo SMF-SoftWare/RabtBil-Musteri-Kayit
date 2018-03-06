@@ -17,8 +17,6 @@ namespace RabtBilMusteriKayit
         {
             SMF.DilKontrolEt();
             //DilYenile();
-
-            LblDurum.Text = Default.LisansliMi ? "Lisanslı" : "Lisanssız";
         }
 
         private void BttnEtkinlestir_Click(object sender, EventArgs e)
@@ -26,18 +24,15 @@ namespace RabtBilMusteriKayit
             if (SMF.KontrolEt(TxtEposta.Text, TxtLisansAnahtari.Text))
             {
                 Default.LisansliMi = Convert.ToBoolean(1);
-                Default.Lisans = TxtLisansAnahtari.Text;
+                Default.Lisans = TxtLisansAnahtari.Text.ToUpper();
                 Default.Save();
-                LblDurum.Text = "Lisanslı";
                 MessageBox.Show("Programı Satın Aldığınız İçin Teşekkür Ederiz!");
-                Application.Restart();
             }
             else
             {
                 Default.LisansliMi = Convert.ToBoolean(0);
-                Default.Lisans = TxtLisansAnahtari.Text;
+                Default.Lisans = null;
                 Default.Save();
-                LblDurum.Text = "Lisanssız";
                 MessageBox.Show("Lisans Kodu Doğru Değil!");
             }
         }

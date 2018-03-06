@@ -33,8 +33,6 @@
             this.TxtLisansAnahtari = new System.Windows.Forms.TextBox();
             this.LblLisansAnahtari = new System.Windows.Forms.Label();
             this.BttnEtkinlestir = new System.Windows.Forms.Button();
-            this.LblLisansDurumu = new System.Windows.Forms.Label();
-            this.LblDurum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblEposta
@@ -81,31 +79,11 @@
             this.BttnEtkinlestir.UseVisualStyleBackColor = true;
             this.BttnEtkinlestir.Click += new System.EventHandler(this.BttnEtkinlestir_Click);
             // 
-            // LblLisansDurumu
-            // 
-            this.LblLisansDurumu.AutoSize = true;
-            this.LblLisansDurumu.Location = new System.Drawing.Point(71, 190);
-            this.LblLisansDurumu.Name = "LblLisansDurumu";
-            this.LblLisansDurumu.Size = new System.Drawing.Size(150, 22);
-            this.LblLisansDurumu.TabIndex = 6;
-            this.LblLisansDurumu.Text = "Lisans Durumu:";
-            // 
-            // LblDurum
-            // 
-            this.LblDurum.AutoSize = true;
-            this.LblDurum.Location = new System.Drawing.Point(197, 190);
-            this.LblDurum.Name = "LblDurum";
-            this.LblDurum.Size = new System.Drawing.Size(60, 22);
-            this.LblDurum.TabIndex = 7;
-            this.LblDurum.Text = "Durum";
-            // 
             // FrmLisans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 228);
-            this.Controls.Add(this.LblDurum);
-            this.Controls.Add(this.LblLisansDurumu);
+            this.ClientSize = new System.Drawing.Size(342, 188);
             this.Controls.Add(this.BttnEtkinlestir);
             this.Controls.Add(this.LblLisansAnahtari);
             this.Controls.Add(this.TxtLisansAnahtari);
@@ -129,7 +107,5 @@
         public System.Windows.Forms.TextBox TxtLisansAnahtari;
         private System.Windows.Forms.Label LblLisansAnahtari;
         private System.Windows.Forms.Button BttnEtkinlestir;
-        private System.Windows.Forms.Label LblLisansDurumu;
-        private System.Windows.Forms.Label LblDurum;
     }
 }
