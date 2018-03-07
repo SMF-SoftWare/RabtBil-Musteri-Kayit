@@ -23,6 +23,7 @@ namespace RabtBilMusteriKayit
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            PcTrBoxEyeOff.Hide();
             SMF.DilKontrolEt();
             DilYenile();
             KullaniciOlusturGizle();
@@ -290,9 +291,19 @@ namespace RabtBilMusteriKayit
             LblEposta.Text = Resources.LblEposta;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PcTrBoxEyeOn_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = Resources.eye_off;
+          //  PcTrBoxEyeOn.Image = Resources.eye_off;
+            PcTrBoxEyeOff.Show();
+            PcTrBoxEyeOn.Hide();
+            TxtSifre.UseSystemPasswordChar = false;
+        }
+
+        private void PcTrBoxEyeOff_Click(object sender, EventArgs e)
+        {
+            PcTrBoxEyeOff.Hide();
+            PcTrBoxEyeOn.Show();
+            TxtSifre.UseSystemPasswordChar = true;
         }
     }
 }
