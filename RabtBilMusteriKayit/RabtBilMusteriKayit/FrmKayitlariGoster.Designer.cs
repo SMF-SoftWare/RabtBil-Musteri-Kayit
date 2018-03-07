@@ -215,7 +215,6 @@
             this.DtGridViewKayitlariGoster.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGridViewKayitlariGoster.Size = new System.Drawing.Size(900, 349);
             this.DtGridViewKayitlariGoster.TabIndex = 18;
-            this.DtGridViewKayitlariGoster.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridViewKayitlariGoster_CellContentClick);
             this.DtGridViewKayitlariGoster.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridViewKayitlariGoster_CellDoubleClick);
             // 
             // BttnSil
