@@ -201,7 +201,7 @@ namespace RabtBilMusteriKayit
             LblEpostaniz.Text = Resources.LblEpostaniz;
             BttnKaydet.Text = Resources.BttnKaydet;
             BttnTemizle.Text = Resources.BttnTemizle;
-            BttnAnaSayfa.Text = Resources.BttnAnaSayfa;
+            BttnAnaEkran.Text = Resources.BttnAnaSayfa;
             TlStrpMenuItemAraclar.Text = Resources.TlStrpMenuItemAraclar;
             TlStrpMenuItemAraclarGucluSifreOlustur.Text = Resources.TlStrpMenuItemAraclarGucluSifreOlustur;
             TlStrpMenuItemAyarlar.Text = Resources.TlStrpMenuItemAyarlar;

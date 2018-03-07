@@ -346,7 +346,7 @@
     <value>Clear</value>
   </data>
   <data name="BttnAnaSayfa" xml:space="preserve">
-    <value>Main Page</value>
+    <value>Main Window</value>
   </data>
   <data name="TlStrpMenuItemAraclarGucluSifreOlustur" xml:space="preserve">
     <value>Strong Password Generator</value>

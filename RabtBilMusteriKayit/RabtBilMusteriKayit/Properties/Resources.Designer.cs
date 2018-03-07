@@ -133,7 +133,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ana Sayfa.
+        ///   Looks up a localized string similar to Ana Ekran.
         /// </summary>
         internal static string BttnAnaSayfa {
             get {

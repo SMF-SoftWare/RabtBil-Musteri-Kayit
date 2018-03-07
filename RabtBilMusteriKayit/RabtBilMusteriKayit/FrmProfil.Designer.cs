@@ -42,7 +42,7 @@
             this.TxtEpostaniz = new System.Windows.Forms.TextBox();
             this.BttnKaydet = new System.Windows.Forms.Button();
             this.BttnTemizle = new System.Windows.Forms.Button();
-            this.BttnAnaSayfa = new System.Windows.Forms.Button();
+            this.BttnAnaEkran = new System.Windows.Forms.Button();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.TlStrpMenuItemAraclar = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemAraclarGucluSifreOlustur = new System.Windows.Forms.ToolStripMenuItem();
@@ -182,7 +182,7 @@
             this.BttnKaydet.Font = new System.Drawing.Font("Consolas", 12F);
             this.BttnKaydet.Location = new System.Drawing.Point(283, 138);
             this.BttnKaydet.Name = "BttnKaydet";
-            this.BttnKaydet.Size = new System.Drawing.Size(91, 38);
+            this.BttnKaydet.Size = new System.Drawing.Size(119, 38);
             this.BttnKaydet.TabIndex = 19;
             this.BttnKaydet.Text = "Kaydet";
             this.BttnKaydet.UseVisualStyleBackColor = true;
@@ -193,22 +193,22 @@
             this.BttnTemizle.Font = new System.Drawing.Font("Consolas", 12F);
             this.BttnTemizle.Location = new System.Drawing.Point(283, 182);
             this.BttnTemizle.Name = "BttnTemizle";
-            this.BttnTemizle.Size = new System.Drawing.Size(91, 38);
+            this.BttnTemizle.Size = new System.Drawing.Size(119, 38);
             this.BttnTemizle.TabIndex = 20;
             this.BttnTemizle.Text = "Temizle";
             this.BttnTemizle.UseVisualStyleBackColor = true;
             this.BttnTemizle.Click += new System.EventHandler(this.BttnTemizle_Click);
             // 
-            // BttnAnaSayfa
+            // BttnAnaEkran
             // 
-            this.BttnAnaSayfa.Font = new System.Drawing.Font("Consolas", 12F);
-            this.BttnAnaSayfa.Location = new System.Drawing.Point(283, 226);
-            this.BttnAnaSayfa.Name = "BttnAnaSayfa";
-            this.BttnAnaSayfa.Size = new System.Drawing.Size(91, 38);
-            this.BttnAnaSayfa.TabIndex = 21;
-            this.BttnAnaSayfa.Text = "Ana Sayfa";
-            this.BttnAnaSayfa.UseVisualStyleBackColor = true;
-            this.BttnAnaSayfa.Click += new System.EventHandler(this.BttnAnaSayfa_Click);
+            this.BttnAnaEkran.Font = new System.Drawing.Font("Consolas", 12F);
+            this.BttnAnaEkran.Location = new System.Drawing.Point(283, 226);
+            this.BttnAnaEkran.Name = "BttnAnaEkran";
+            this.BttnAnaEkran.Size = new System.Drawing.Size(119, 38);
+            this.BttnAnaEkran.TabIndex = 21;
+            this.BttnAnaEkran.Text = "Ana Ekran";
+            this.BttnAnaEkran.UseVisualStyleBackColor = true;
+            this.BttnAnaEkran.Click += new System.EventHandler(this.BttnAnaSayfa_Click);
             // 
             // MenuStrip
             // 
@@ -220,7 +220,7 @@
             this.TlStrpMenuItemYardım});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(384, 24);
+            this.MenuStrip.Size = new System.Drawing.Size(414, 24);
             this.MenuStrip.TabIndex = 22;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -302,7 +302,7 @@
             // PcTrBoxProfiliDuzenle
             // 
             this.PcTrBoxProfiliDuzenle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PcTrBoxProfiliDuzenle.Location = new System.Drawing.Point(283, 53);
+            this.PcTrBoxProfiliDuzenle.Location = new System.Drawing.Point(304, 53);
             this.PcTrBoxProfiliDuzenle.Name = "PcTrBoxProfiliDuzenle";
             this.PcTrBoxProfiliDuzenle.Size = new System.Drawing.Size(80, 80);
             this.PcTrBoxProfiliDuzenle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -325,11 +325,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 336);
+            this.ClientSize = new System.Drawing.Size(414, 336);
             this.Controls.Add(this.PcTrBoxEye);
             this.Controls.Add(this.PcTrBoxProfiliDuzenle);
             this.Controls.Add(this.MenuStrip);
-            this.Controls.Add(this.BttnAnaSayfa);
+            this.Controls.Add(this.BttnAnaEkran);
             this.Controls.Add(this.BttnTemizle);
             this.Controls.Add(this.BttnKaydet);
             this.Controls.Add(this.TxtEpostaniz);
@@ -347,8 +347,8 @@
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(400, 375);
-            this.MinimumSize = new System.Drawing.Size(400, 375);
+            this.MaximumSize = new System.Drawing.Size(430, 375);
+            this.MinimumSize = new System.Drawing.Size(430, 375);
             this.Name = "FrmProfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RabtBil Müşteri Kayit -> Profil";
@@ -379,7 +379,7 @@
         public System.Windows.Forms.TextBox TxtEpostaniz;
         private System.Windows.Forms.Button BttnKaydet;
         private System.Windows.Forms.Button BttnTemizle;
-        private System.Windows.Forms.Button BttnAnaSayfa;
+        private System.Windows.Forms.Button BttnAnaEkran;
         public System.Windows.Forms.MenuStrip MenuStrip;
         public System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclar;
         private System.Windows.Forms.ToolStripMenuItem TlStrpMenuItemAraclarGucluSifreOlustur;
