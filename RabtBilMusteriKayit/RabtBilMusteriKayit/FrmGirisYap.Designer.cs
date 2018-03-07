@@ -49,11 +49,9 @@ namespace RabtBilMusteriKayit
             this.TxtEposta = new System.Windows.Forms.TextBox();
             this.BttnYeniKullaniciOluştur = new System.Windows.Forms.Button();
             this.LblEposta = new System.Windows.Forms.Label();
-            this.PcTrBoxEyeOn = new System.Windows.Forms.PictureBox();
-            this.PcTrBoxEyeOff = new System.Windows.Forms.PictureBox();
+            this.PcTrBoxEye = new System.Windows.Forms.PictureBox();
             this.MenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxEyeOn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxEyeOff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxEye)).BeginInit();
             this.SuspendLayout();
             // 
             // BttnGirisYap
@@ -72,7 +70,7 @@ namespace RabtBilMusteriKayit
             this.lblKullaniciAdi.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.lblKullaniciAdi.Location = new System.Drawing.Point(20, 50);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
-            this.lblKullaniciAdi.Size = new System.Drawing.Size(105, 15);
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(135, 20);
             this.lblKullaniciAdi.TabIndex = 1;
             this.lblKullaniciAdi.Text = "Kullanıcı Adı:";
             // 
@@ -82,7 +80,7 @@ namespace RabtBilMusteriKayit
             this.TxtKullaniciAdi.Location = new System.Drawing.Point(23, 71);
             this.TxtKullaniciAdi.MaxLength = 30;
             this.TxtKullaniciAdi.Name = "TxtKullaniciAdi";
-            this.TxtKullaniciAdi.Size = new System.Drawing.Size(288, 26);
+            this.TxtKullaniciAdi.Size = new System.Drawing.Size(288, 31);
             this.TxtKullaniciAdi.TabIndex = 2;
             // 
             // MenuStrip
@@ -94,7 +92,7 @@ namespace RabtBilMusteriKayit
             this.TlStrpMenuItemYardım});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(349, 26);
+            this.MenuStrip.Size = new System.Drawing.Size(349, 30);
             this.MenuStrip.TabIndex = 17;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -104,7 +102,7 @@ namespace RabtBilMusteriKayit
             this.TlStrpMenuItemAyarlarDil,
             this.TlStrpMenuItemAyarlarTema});
             this.TlStrpMenuItemAyarlar.Name = "TlStrpMenuItemAyarlar";
-            this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(76, 22);
+            this.TlStrpMenuItemAyarlar.Size = new System.Drawing.Size(92, 26);
             this.TlStrpMenuItemAyarlar.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemAyarlar;
             // 
             // TlStrpMenuItemAyarlarDil
@@ -113,27 +111,27 @@ namespace RabtBilMusteriKayit
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
-            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(108, 22);
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(126, 26);
             this.TlStrpMenuItemAyarlarDil.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemAyarlarDil;
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(148, 22);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(176, 26);
             this.TlStrpMenuItemDilTurkce.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemDilTurkce;
             this.TlStrpMenuItemDilTurkce.Click += new System.EventHandler(this.TlStrpMenuItemDilTurkce_Click);
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(148, 22);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(176, 26);
             this.TlStrpMenuItemDilIngilizce.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemDilIngilizce;
             this.TlStrpMenuItemDilIngilizce.Click += new System.EventHandler(this.TlStrpMenuItemDilIngilizce_Click);
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
-            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(108, 22);
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(126, 26);
             this.TlStrpMenuItemAyarlarTema.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemAyarlarTema;
             // 
             // TlStrpMenuItemYardım
@@ -142,20 +140,20 @@ namespace RabtBilMusteriKayit
             this.TlStrpMenuItemYardimLisansAnahtari,
             this.TlStrpMenuItemYardimHakkinda});
             this.TlStrpMenuItemYardım.Name = "TlStrpMenuItemYardım";
-            this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(68, 22);
+            this.TlStrpMenuItemYardım.Size = new System.Drawing.Size(82, 26);
             this.TlStrpMenuItemYardım.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemYardim;
             // 
             // TlStrpMenuItemYardimLisansAnahtari
             // 
             this.TlStrpMenuItemYardimLisansAnahtari.Name = "TlStrpMenuItemYardimLisansAnahtari";
-            this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(196, 22);
+            this.TlStrpMenuItemYardimLisansAnahtari.Size = new System.Drawing.Size(236, 26);
             this.TlStrpMenuItemYardimLisansAnahtari.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemYardimLisansAnahtari;
             this.TlStrpMenuItemYardimLisansAnahtari.Click += new System.EventHandler(this.TlStrpMenuItemYardimLisansAnahtari_Click);
             // 
             // TlStrpMenuItemYardimHakkinda
             // 
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
-            this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(196, 22);
+            this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(236, 26);
             this.TlStrpMenuItemYardimHakkinda.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemYardimHakkinda;
             // 
             // TxtSifre
@@ -164,7 +162,7 @@ namespace RabtBilMusteriKayit
             this.TxtSifre.Location = new System.Drawing.Point(23, 130);
             this.TxtSifre.MaxLength = 20;
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(288, 26);
+            this.TxtSifre.Size = new System.Drawing.Size(288, 31);
             this.TxtSifre.TabIndex = 19;
             this.TxtSifre.UseSystemPasswordChar = true;
             // 
@@ -174,7 +172,7 @@ namespace RabtBilMusteriKayit
             this.LblSifre.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblSifre.Location = new System.Drawing.Point(20, 112);
             this.LblSifre.Name = "LblSifre";
-            this.LblSifre.Size = new System.Drawing.Size(49, 15);
+            this.LblSifre.Size = new System.Drawing.Size(63, 20);
             this.LblSifre.TabIndex = 18;
             this.LblSifre.Text = "Şifre:";
             // 
@@ -183,7 +181,7 @@ namespace RabtBilMusteriKayit
             this.LinkLblSifremiUnuttum.AutoSize = true;
             this.LinkLblSifremiUnuttum.Location = new System.Drawing.Point(164, 201);
             this.LinkLblSifremiUnuttum.Name = "LinkLblSifremiUnuttum";
-            this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(136, 18);
+            this.LinkLblSifremiUnuttum.Size = new System.Drawing.Size(170, 22);
             this.LinkLblSifremiUnuttum.TabIndex = 20;
             this.LinkLblSifremiUnuttum.TabStop = true;
             this.LinkLblSifremiUnuttum.Text = "Şifremi Unuttum?";
@@ -195,7 +193,7 @@ namespace RabtBilMusteriKayit
             this.TxtEposta.Location = new System.Drawing.Point(23, 252);
             this.TxtEposta.MaxLength = 30;
             this.TxtEposta.Name = "TxtEposta";
-            this.TxtEposta.Size = new System.Drawing.Size(288, 26);
+            this.TxtEposta.Size = new System.Drawing.Size(288, 31);
             this.TxtEposta.TabIndex = 22;
             // 
             // BttnYeniKullaniciOluştur
@@ -214,39 +212,27 @@ namespace RabtBilMusteriKayit
             this.LblEposta.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.LblEposta.Location = new System.Drawing.Point(20, 234);
             this.LblEposta.Name = "LblEposta";
-            this.LblEposta.Size = new System.Drawing.Size(63, 15);
+            this.LblEposta.Size = new System.Drawing.Size(81, 20);
             this.LblEposta.TabIndex = 24;
             this.LblEposta.Text = "E-posta:";
             // 
-            // PcTrBoxEyeOn
+            // PcTrBoxEye
             // 
-            this.PcTrBoxEyeOn.Image = global::RabtBilMusteriKayit.Properties.Resources.eye;
-            this.PcTrBoxEyeOn.Location = new System.Drawing.Point(287, 132);
-            this.PcTrBoxEyeOn.Name = "PcTrBoxEyeOn";
-            this.PcTrBoxEyeOn.Size = new System.Drawing.Size(22, 22);
-            this.PcTrBoxEyeOn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PcTrBoxEyeOn.TabIndex = 25;
-            this.PcTrBoxEyeOn.TabStop = false;
-            this.PcTrBoxEyeOn.Click += new System.EventHandler(this.PcTrBoxEyeOn_Click);
-            // 
-            // PcTrBoxEyeOff
-            // 
-            this.PcTrBoxEyeOff.Image = global::RabtBilMusteriKayit.Properties.Resources.eye_off;
-            this.PcTrBoxEyeOff.Location = new System.Drawing.Point(287, 132);
-            this.PcTrBoxEyeOff.Name = "PcTrBoxEyeOff";
-            this.PcTrBoxEyeOff.Size = new System.Drawing.Size(22, 22);
-            this.PcTrBoxEyeOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PcTrBoxEyeOff.TabIndex = 26;
-            this.PcTrBoxEyeOff.TabStop = false;
-            this.PcTrBoxEyeOff.Click += new System.EventHandler(this.PcTrBoxEyeOff_Click);
+            this.PcTrBoxEye.Image = global::RabtBilMusteriKayit.Properties.Resources.eye;
+            this.PcTrBoxEye.Location = new System.Drawing.Point(287, 132);
+            this.PcTrBoxEye.Name = "PcTrBoxEye";
+            this.PcTrBoxEye.Size = new System.Drawing.Size(22, 22);
+            this.PcTrBoxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PcTrBoxEye.TabIndex = 25;
+            this.PcTrBoxEye.TabStop = false;
+            this.PcTrBoxEye.Click += new System.EventHandler(this.PcTrBoxEyeOn_Click);
             // 
             // FrmGirisYap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 331);
-            this.Controls.Add(this.PcTrBoxEyeOff);
-            this.Controls.Add(this.PcTrBoxEyeOn);
+            this.Controls.Add(this.PcTrBoxEye);
             this.Controls.Add(this.LblEposta);
             this.Controls.Add(this.BttnYeniKullaniciOluştur);
             this.Controls.Add(this.TxtEposta);
@@ -265,8 +251,7 @@ namespace RabtBilMusteriKayit
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxEyeOn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxEyeOff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PcTrBoxEye)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,8 +277,7 @@ namespace RabtBilMusteriKayit
         private System.Windows.Forms.TextBox TxtEposta;
         private System.Windows.Forms.Button BttnYeniKullaniciOluştur;
         private System.Windows.Forms.Label LblEposta;
-        private System.Windows.Forms.PictureBox PcTrBoxEyeOn;
-        private System.Windows.Forms.PictureBox PcTrBoxEyeOff;
+        private System.Windows.Forms.PictureBox PcTrBoxEye;
     }
 }
 

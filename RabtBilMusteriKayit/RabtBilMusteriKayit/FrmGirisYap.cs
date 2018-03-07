@@ -2,7 +2,6 @@
 using RabtBilMusteriKayit.Properties;
 using System;
 using System.Data;
-using System.Drawing;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
@@ -15,6 +14,7 @@ namespace RabtBilMusteriKayit
         private readonly SMF SMF = new SMF();
 
         private bool _sifremiUnuttumTiklandiMi = true;
+        private bool _gozeTiklandiMi = true;
 
         public FrmGirisYap()
         {
@@ -23,7 +23,6 @@ namespace RabtBilMusteriKayit
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            PcTrBoxEyeOff.Hide();
             SMF.DilKontrolEt();
             DilYenile();
             KullaniciOlusturGizle();
@@ -293,17 +292,18 @@ namespace RabtBilMusteriKayit
 
         private void PcTrBoxEyeOn_Click(object sender, EventArgs e)
         {
-          //  PcTrBoxEyeOn.Image = Resources.eye_off;
-            PcTrBoxEyeOff.Show();
-            PcTrBoxEyeOn.Hide();
-            TxtSifre.UseSystemPasswordChar = false;
-        }
-
-        private void PcTrBoxEyeOff_Click(object sender, EventArgs e)
-        {
-            PcTrBoxEyeOff.Hide();
-            PcTrBoxEyeOn.Show();
-            TxtSifre.UseSystemPasswordChar = true;
+            if (_gozeTiklandiMi)
+            {
+                PcTrBoxEye.Image = Resources.eye_off;
+                TxtSifre.UseSystemPasswordChar = false;
+                _gozeTiklandiMi = false;
+            }
+            else
+            {
+                PcTrBoxEye.Image = Resources.eye;
+                TxtSifre.UseSystemPasswordChar = true;
+                _gozeTiklandiMi = true;
+            }
         }
     }
 }
