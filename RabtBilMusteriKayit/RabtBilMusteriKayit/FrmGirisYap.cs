@@ -2,6 +2,7 @@
 using RabtBilMusteriKayit.Properties;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
@@ -287,6 +288,11 @@ namespace RabtBilMusteriKayit
             LinkLblSifremiUnuttum.Text = Resources.LinkLblSifremiUnuttum;
             BttnYeniKullaniciOluştur.Text = Resources.BttnYeniKullaniciOluştur;
             LblEposta.Text = Resources.LblEposta;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Resources.eye_off;
         }
     }
 }

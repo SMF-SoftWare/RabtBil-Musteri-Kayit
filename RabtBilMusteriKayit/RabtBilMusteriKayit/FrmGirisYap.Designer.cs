@@ -49,7 +49,9 @@ namespace RabtBilMusteriKayit
             this.TxtEposta = new System.Windows.Forms.TextBox();
             this.BttnYeniKullaniciOluştur = new System.Windows.Forms.Button();
             this.LblEposta = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BttnGirisYap
@@ -109,27 +111,27 @@ namespace RabtBilMusteriKayit
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
-            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(126, 26);
             this.TlStrpMenuItemAyarlarDil.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemAyarlarDil;
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(176, 26);
             this.TlStrpMenuItemDilTurkce.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemDilTurkce;
             this.TlStrpMenuItemDilTurkce.Click += new System.EventHandler(this.TlStrpMenuItemDilTurkce_Click);
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(176, 26);
             this.TlStrpMenuItemDilIngilizce.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemDilIngilizce;
             this.TlStrpMenuItemDilIngilizce.Click += new System.EventHandler(this.TlStrpMenuItemDilIngilizce_Click);
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
-            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(126, 26);
             this.TlStrpMenuItemAyarlarTema.Text = global::RabtBilMusteriKayit.Properties.Resources.TlStrpMenuItemAyarlarTema;
             // 
             // TlStrpMenuItemYardım
@@ -214,11 +216,23 @@ namespace RabtBilMusteriKayit
             this.LblEposta.TabIndex = 24;
             this.LblEposta.Text = "E-posta:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RabtBilMusteriKayit.Properties.Resources.eye;
+            this.pictureBox1.Location = new System.Drawing.Point(280, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FrmGirisYap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 331);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblEposta);
             this.Controls.Add(this.BttnYeniKullaniciOluştur);
             this.Controls.Add(this.TxtEposta);
@@ -237,6 +251,7 @@ namespace RabtBilMusteriKayit
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,6 +277,7 @@ namespace RabtBilMusteriKayit
         private System.Windows.Forms.TextBox TxtEposta;
         private System.Windows.Forms.Button BttnYeniKullaniciOluştur;
         private System.Windows.Forms.Label LblEposta;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
