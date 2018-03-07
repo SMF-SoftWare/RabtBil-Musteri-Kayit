@@ -40,7 +40,7 @@
             this.LblEposta.AutoSize = true;
             this.LblEposta.Location = new System.Drawing.Point(46, 24);
             this.LblEposta.Name = "LblEposta";
-            this.LblEposta.Size = new System.Drawing.Size(90, 22);
+            this.LblEposta.Size = new System.Drawing.Size(72, 18);
             this.LblEposta.TabIndex = 0;
             this.LblEposta.Text = "E-posta:";
             // 
@@ -49,7 +49,7 @@
             this.TxtEposta.Location = new System.Drawing.Point(49, 45);
             this.TxtEposta.MaxLength = 50;
             this.TxtEposta.Name = "TxtEposta";
-            this.TxtEposta.Size = new System.Drawing.Size(252, 29);
+            this.TxtEposta.Size = new System.Drawing.Size(252, 25);
             this.TxtEposta.TabIndex = 1;
             // 
             // TxtLisansAnahtari
@@ -57,7 +57,7 @@
             this.TxtLisansAnahtari.Location = new System.Drawing.Point(49, 99);
             this.TxtLisansAnahtari.MaxLength = 50;
             this.TxtLisansAnahtari.Name = "TxtLisansAnahtari";
-            this.TxtLisansAnahtari.Size = new System.Drawing.Size(252, 29);
+            this.TxtLisansAnahtari.Size = new System.Drawing.Size(252, 25);
             this.TxtLisansAnahtari.TabIndex = 2;
             // 
             // LblLisansAnahtari
@@ -65,7 +65,7 @@
             this.LblLisansAnahtari.AutoSize = true;
             this.LblLisansAnahtari.Location = new System.Drawing.Point(46, 78);
             this.LblLisansAnahtari.Name = "LblLisansAnahtari";
-            this.LblLisansAnahtari.Size = new System.Drawing.Size(200, 22);
+            this.LblLisansAnahtari.Size = new System.Drawing.Size(160, 18);
             this.LblLisansAnahtari.TabIndex = 3;
             this.LblLisansAnahtari.Text = "Lisans Anahtarınız:";
             // 
@@ -81,7 +81,7 @@
             // 
             // FrmLisans
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 188);
             this.Controls.Add(this.BttnEtkinlestir);
@@ -91,6 +91,8 @@
             this.Controls.Add(this.LblEposta);
             this.Font = new System.Drawing.Font("Consolas", 11.25F);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLisans";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RabtBil Müşteri Kayit -> Lisans Anahtarı";

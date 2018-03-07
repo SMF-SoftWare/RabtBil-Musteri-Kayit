@@ -255,5 +255,10 @@ namespace RabtBilMusteriKayit
             FrmTeknikServisFormu.Show();
             Dispose();
         }
+
+        private void DtGridViewKayitlariGoster_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
