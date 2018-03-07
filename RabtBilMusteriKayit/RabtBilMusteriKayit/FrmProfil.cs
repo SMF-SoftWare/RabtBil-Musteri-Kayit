@@ -120,29 +120,31 @@ namespace RabtBilMusteriKayit
 
         private void PcTrBoxProfiliDuzenle_Click(object sender, EventArgs e)
         {
-            OpenFileDialog resimSec = new OpenFileDialog();
-            resimSec.Title = Resources.resimSecTitle;
-            resimSec.Filter = "Resim Dosyaları(*.bmp;*.png;*.jpg)|*.bmp;*.png;*.jpg|SMF Format(*.smf)|*.smf";
-            if (resimSec.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog resimSec = new OpenFileDialog())
             {
-                string kaynakResimYolu = resimSec.FileName;
-                if (!Directory.Exists(SMF.ProfilKlasoru))
+                resimSec.Title = Resources.resimSecTitle;
+                resimSec.Filter = Resources.resimSecFilter;
+                if (resimSec.ShowDialog() == DialogResult.OK)
                 {
-                    Directory.CreateDirectory(SMF.ProfilKlasoru);
+                    string kaynakResimYolu = resimSec.FileName;
+                    if (!Directory.Exists(SMF.ProfilKlasoru))
+                    {
+                        Directory.CreateDirectory(SMF.ProfilKlasoru);
+                    }
+                    PcTrBoxProfiliDuzenle.Image?.Dispose();
+                    FrmTeknikServisFormu frm = new FrmTeknikServisFormu();
+                    frm.PcTrBoxProfiliDuzenle.Image?.Dispose();
+                    try
+                    {
+                        PcTrBoxProfiliDuzenle.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
+                        File.Copy(kaynakResimYolu, SMF.ProfilResmiYolu, true);
+                    }
+                    catch (Exception)
+                    {
+                        PcTrBoxProfiliDuzenle.Image = Resources.varsayilanProfilResmi;
+                    }
+                    PcTrBoxProfiliDuzenle.Image = Image.FromFile(kaynakResimYolu);
                 }
-                PcTrBoxProfiliDuzenle.Image?.Dispose();
-                FrmTeknikServisFormu frm = new FrmTeknikServisFormu();
-                frm.PcTrBoxProfiliDuzenle.Image?.Dispose();
-                try
-                {
-                    PcTrBoxProfiliDuzenle.Image = File.Exists(SMF.ProfilResmiYolu) ? Image.FromFile(SMF.ProfilResmiYolu) : Resources.varsayilanProfilResmi;
-                    File.Copy(kaynakResimYolu, SMF.ProfilResmiYolu, true);
-                }
-                catch (Exception)
-                {
-                    PcTrBoxProfiliDuzenle.Image = Resources.varsayilanProfilResmi;
-                }
-                PcTrBoxProfiliDuzenle.Image = Image.FromFile(kaynakResimYolu);
             }
         }
 
@@ -154,12 +156,12 @@ namespace RabtBilMusteriKayit
 
         private void BttnTemizle_Click(object sender, EventArgs e)
         {
-            TxtKullaniciAdiniz.Text = "";
-            TxtSifreniz.Text = "";
-            TxtSifreniziOnaylayın.Text = "";
-            TxtAdiniz.Text = "";
-            TxtSoyadiniz.Text = "";
-            TxtEpostaniz.Text = "";
+            TxtKullaniciAdiniz.Clear();
+            TxtSifreniz.Clear();
+            TxtSifreniziOnaylayın.Clear();
+            TxtAdiniz.Clear();
+            TxtSoyadiniz.Clear();
+            TxtEpostaniz.Clear();
         }
 
         private void BttnAnaSayfa_Click(object sender, EventArgs e)

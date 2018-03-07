@@ -2,6 +2,7 @@
 using RabtBilMusteriKayit.Properties;
 using System;
 using System.Data;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace RabtBilMusteriKayit
@@ -185,7 +186,7 @@ namespace RabtBilMusteriKayit
 
         private void TimerTarihSaat_Tick(object sender, EventArgs e)
         {
-            TlStripTarihSaat.Text = DateTime.Now.ToString();
+            TlStripTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         }
 
         private void VarsayilanAciklama(object sender, EventArgs e)
@@ -254,11 +255,6 @@ namespace RabtBilMusteriKayit
         {
             FrmTeknikServisFormu.Show();
             Dispose();
-        }
-
-        private void DtGridViewKayitlariGoster_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

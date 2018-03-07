@@ -62,7 +62,7 @@ namespace RabtBilMusteriKayit
             const string buyukHarfler = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             const string sayilar = "1234567890";
             const string semboller = "@#$&*-+!?%^._:'\\/{}[]=()<>";
-            string sifre = "";
+
             if (ChckBoxKucukHarfler.Checked)
             {
                 sifre += kucukHarfler;
