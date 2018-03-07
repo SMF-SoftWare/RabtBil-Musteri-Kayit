@@ -10,6 +10,7 @@ namespace RabtBilMusteriKayit
     public partial class FrmProfil : Form
     {
         private SMF SMF = new SMF();
+        private bool _gozeTiklandiMi = true;
 
         public FrmProfil()
         {
@@ -218,6 +219,24 @@ namespace RabtBilMusteriKayit
             FrmTeknikServisFormu frm = new FrmTeknikServisFormu();
             frm.Show();
             Dispose();
+        }
+
+        private void PcTrBoxEye_Click(object sender, EventArgs e)
+        {
+            if (_gozeTiklandiMi)
+            {
+                PcTrBoxEye.Image = Resources.eye_off;
+                TxtSifreniz.UseSystemPasswordChar = false;
+                TxtSifreniziOnaylayın.UseSystemPasswordChar = false;
+                _gozeTiklandiMi = false;
+            }
+            else
+            {
+                PcTrBoxEye.Image = Resources.eye;
+                TxtSifreniz.UseSystemPasswordChar = true;
+                TxtSifreniziOnaylayın.UseSystemPasswordChar = true;
+                _gozeTiklandiMi = true;
+            }
         }
     }
 }
