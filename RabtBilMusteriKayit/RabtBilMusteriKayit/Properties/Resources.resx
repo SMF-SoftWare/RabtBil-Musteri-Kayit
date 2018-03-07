@@ -370,4 +370,7 @@
   <data name="resimSecTitle" xml:space="preserve">
     <value>Profil resminizi seçin</value>
   </data>
+  <data name="resimSecFilter" xml:space="preserve">
+    <value>Resim Dosyaları(*.bmp;*.png;*.jpg)|*.bmp;*.png;*.jpg|SMF Biçimi(*.smf)|*.smf</value>
+  </data>
 </root>

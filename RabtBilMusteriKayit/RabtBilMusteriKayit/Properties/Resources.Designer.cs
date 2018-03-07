@@ -646,6 +646,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resim Dosyaları(*.bmp;*.png;*.jpg)|*.bmp;*.png;*.jpg|SMF Biçimi(*.smf)|*.smf.
+        /// </summary>
+        internal static string resimSecFilter {
+            get {
+                return ResourceManager.GetString("resimSecFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Profil resminizi seçin.
         /// </summary>
         internal static string resimSecTitle {

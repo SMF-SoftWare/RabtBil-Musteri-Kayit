@@ -366,4 +366,7 @@
   <data name="resimSecTitle" xml:space="preserve">
     <value>Select your profile picture</value>
   </data>
+  <data name="resimSecFilter" xml:space="preserve">
+    <value>Image Files(*.bmp;*.png;*.jpg)|*.bmp;*.png;*.jpg|SMF Format(*.smf)|*.smf</value>
+  </data>
 </root>
