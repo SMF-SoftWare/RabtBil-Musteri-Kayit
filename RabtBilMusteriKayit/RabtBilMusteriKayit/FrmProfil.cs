@@ -167,9 +167,9 @@ namespace RabtBilMusteriKayit
 
         private void BttnAnaSayfa_Click(object sender, EventArgs e)
         {
+            Hide();
             FrmTeknikServisFormu frm = new FrmTeknikServisFormu();
             frm.Show();
-            Hide();
         }
 
         private void TlStrpMenuItemYardimLisansAnahtari_Click(object sender, EventArgs e)
@@ -201,7 +201,7 @@ namespace RabtBilMusteriKayit
             LblEpostaniz.Text = Resources.LblEpostaniz;
             BttnKaydet.Text = Resources.BttnKaydet;
             BttnTemizle.Text = Resources.BttnTemizle;
-            BttnAnaEkran.Text = Resources.BttnAnaSayfa;
+            BttnAnaEkran.Text = Resources.BttnAnaPencere;
             TlStrpMenuItemAraclar.Text = Resources.TlStrpMenuItemAraclar;
             TlStrpMenuItemAraclarGucluSifreOlustur.Text = Resources.TlStrpMenuItemAraclarGucluSifreOlustur;
             TlStrpMenuItemAyarlar.Text = Resources.TlStrpMenuItemAyarlar;

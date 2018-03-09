@@ -2,6 +2,7 @@
 using RabtBilMusteriKayit.Properties;
 using System;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -12,7 +13,7 @@ namespace RabtBilMusteriKayit
         private SMF SMF = new SMF();
 
         private readonly Random _rnd = new Random();
-        private int takipNo;
+        private int _takipNo;
 
         public FrmTeknikServisFormu()
         {
@@ -29,11 +30,11 @@ namespace RabtBilMusteriKayit
         private void FrmTeknikServisFormu_Load(object sender, EventArgs e)
         {
             SMF.DilKontrolEt();
-            //DilYenile();
+            DilYenile();
 
             TimerTarihSaat.Enabled = true;
-            takipNo = _rnd.Next(10000, 99999);
-            TxtUrunTakipNo.Text = takipNo.ToString();
+            _takipNo = _rnd.Next(10000, 99999);
+            TxtUrunTakipNo.Text = _takipNo.ToString();
 
             if (Settings.Default.LisansliMi)
             {
@@ -50,9 +51,49 @@ namespace RabtBilMusteriKayit
             }
         }
 
+        private void DilYenile()
+        {
+            Text = Resources.FrmTeknikServisFormu;
+            TlStrpMenuItemAraclar.Text = Resources.TlStrpMenuItemAraclar;
+            TlStrpMenuItemAraclarYeniKayit.Text = Resources.TlStrpMenuItemAraclarYeniKayit;
+            TlStrpMenuItemAraclarKaydet.Text = Resources.TlStrpMenuItemAraclarKaydet;
+            TlStrpMenuItemAraclarTemizle.Text = Resources.TlStrpMenuItemAraclarTemizle;
+            TlStrpMenuItemAraclarKayitlariGoster.Text = Resources.TlStrpMenuItemAraclarKayitlariGoster;
+            TlStrpMenuItemAraclarGuncelle.Text = Resources.TlStrpMenuItemAraclarGuncelle;
+            TlStrpMenuItemAraclarSil.Text = Resources.TlStrpMenuItemAraclarSil;
+            TlStrpMenuItemAyarlar.Text=Resources.TlStrpMenuItemAyarlar;
+            TlStrpMenuItemAyarlarDil.Text = Resources.TlStrpMenuItemAyarlarDil;
+            TlStrpMenuItemDilTurkce.Text = Resources.TlStrpMenuItemDilTurkce;
+            TlStrpMenuItemDilIngilizce.Text = Resources.TlStrpMenuItemDilIngilizce;
+            TlStrpMenuItemAyarlarTema.Text = Resources.TlStrpMenuItemAyarlarTema;
+            TlStrpMenuItemYardım.Text = Resources.TlStrpMenuItemYardim;
+            TlStrpMenuItemYardimLisansAnahtari.Text = Resources.TlStrpMenuItemYardimLisansAnahtari;
+            TlStrpMenuItemYardimHakkinda.Text = Resources.TlStrpMenuItemYardimHakkinda;
+            GrpBoxMusteriBilgileri.Text = Resources.GrpBoxMusteriBilgileri;
+            LblMusteriAdi.Text = Resources.LblMusteriAdi;
+            LblFormNo.Text = Resources.LblFormNo;
+            LblTelefon.Text = Resources.LblTelefon;
+            GrpBoxAksesuarlar.Text = Resources.GrpBoxAksesuarlar;
+            GrpBoxEkBilgiler.Text = Resources.GrpBoxEkBilgiler;
+            GrpBoxUrunBilgileri.Text = Resources.GrpBoxUrunBilgileri;
+            LblUrunModeli.Text = Resources.LblUrunModeli;
+            LblArizaTanimi.Text = Resources.LblArizaTanimi;
+            LblUrunDurumu.Text = Resources.LblUrunDurumu;
+            LblUrunTakipNo.Text = Resources.LblUrunTakipNo;
+            LblMusteriQrKodu.Text = Resources.LblMusteriQrKodu;
+            BttnQrKoduOlustur.Text = Resources.BttnQrKoduOlustur;
+            LblUcret.Text = Resources.LblUcret;
+            BttnYeniKayit.Text = Resources.TlStrpMenuItemAraclarYeniKayit;
+            BttnKaydet.Text = Resources.BttnKaydet;
+            BttnTemizle.Text = Resources.BttnTemizle;
+            BttnKayitlariGoster.Text = Resources.TlStrpMenuItemAraclarKayitlariGoster;
+            BttnGuncelle.Text = Resources.TlStrpMenuItemAraclarGuncelle;
+            TlStripAcıklama.Text = Resources.varsayilanAciklama;
+        }
+
         private void TimerTarihSaat_Tick(object sender, EventArgs e)
         {
-            TlStripTarihSaat.Text = DateTime.Now.ToString();
+            TlStripTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         }
 
         private void BttnQrKoduOlustur_Click(object sender, EventArgs e)
@@ -70,7 +111,7 @@ namespace RabtBilMusteriKayit
             {
                 if (String.IsNullOrWhiteSpace(TxtMusteriAdi.Text) || String.IsNullOrWhiteSpace(TxtFormNo.Text) || MsKdTxtTelefon.Text == "(   )    -" || String.IsNullOrWhiteSpace(TxtUrunModeli.Text) || String.IsNullOrWhiteSpace(CmbBoxUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtArizaTanimi.Text) || String.IsNullOrWhiteSpace(TxtUrunDurumu.Text) || String.IsNullOrWhiteSpace(TxtUcret.Text) || String.IsNullOrWhiteSpace(TxtAksesuarlar.Text) || String.IsNullOrWhiteSpace(TxtEkBilgiler.Text))
                 {
-                    MessageBox.Show("Metin Kutuları Boş!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(Resources.metinKutulariBos, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 MySqlCommand kaydet = new MySqlCommand("INSERT INTO musteribilgileri (MusteriAdi,FormNo,Telefon,UrunModeli,UrunSeriveImeiKodlari,UrunKodlari,ArizaTanimi,UrunDurumu,UrunTakipNo,Ucret,Aksesuarlar,EkBilgiler,Tarih) VALUES(@MusteriAdi,@FormNo,@Telefon,@UrunModeli,@UrunSeriveImeiKodlari,@UrunKodlari,@ArizaTanimi,@UrunDurumu,@UrunTakipNo,@Ucret,@Aksesuarlar,@EkBilgiler,@Tarih)", SMF.Baglanti);
@@ -86,22 +127,22 @@ namespace RabtBilMusteriKayit
                 kaydet.Parameters.AddWithValue("@Ucret", TxtUcret.Text);
                 kaydet.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
                 kaydet.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
-                kaydet.Parameters.AddWithValue("@Tarih", Convert.ToDateTime(DateTime.Now.ToString()));
+                kaydet.Parameters.AddWithValue("@Tarih", Convert.ToDateTime(DateTime.Now.ToString(CultureInfo.CurrentCulture)));
                 SMF.Baglanti.Open();
                 kaydet.ExecuteNonQuery();
-                MessageBox.Show("Oluşturduğunuz Kayıt Kaydedilmiştir.");
                 SMF.Baglanti.Close();
+                MessageBox.Show(Resources.kaydedildi, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Temizle();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, Resources.Hata);
             }
         }
 
         public void Temizle()
         {
-            takipNo = _rnd.Next(10000, 99999);
+            _takipNo = _rnd.Next(10000, 99999);
             TxtMusteriAdi.Clear();
             TxtFormNo.Clear();
             MsKdTxtTelefon.Clear();
@@ -110,7 +151,7 @@ namespace RabtBilMusteriKayit
             TxtUrunKodlari.Clear();
             TxtArizaTanimi.Clear();
             TxtUrunDurumu.Clear();
-            TxtUrunTakipNo.Text = takipNo.ToString();
+            TxtUrunTakipNo.Text = _takipNo.ToString();
             TxtUcret.Clear();
             TxtAksesuarlar.Clear();
             TxtEkBilgiler.Clear();
@@ -119,15 +160,15 @@ namespace RabtBilMusteriKayit
 
         private void CmbBoxUrunKodlari_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CmbBoxUrunKodlari.Text == "Seri No")
+            if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariSeriNo)
             {
                 TxtUrunKodlari.ReadOnly = false;
             }
-            else if (CmbBoxUrunKodlari.Text == "Imei No")
+            else if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariImeiNo)
             {
                 TxtUrunKodlari.ReadOnly = false;
             }
-            else if (CmbBoxUrunKodlari.Text == "Diğer")
+            else if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariDiger)
             {
                 TxtUrunKodlari.ReadOnly = false;
             }
@@ -143,33 +184,33 @@ namespace RabtBilMusteriKayit
             {
                 if (String.IsNullOrWhiteSpace(TxtMusteriAdi.Text) || String.IsNullOrWhiteSpace(TxtFormNo.Text) || MsKdTxtTelefon.Text == "(   )    -" || String.IsNullOrWhiteSpace(TxtUrunModeli.Text) || String.IsNullOrWhiteSpace(CmbBoxUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtUrunKodlari.Text) || String.IsNullOrWhiteSpace(TxtArizaTanimi.Text) || String.IsNullOrWhiteSpace(TxtUrunDurumu.Text) || String.IsNullOrWhiteSpace(TxtUcret.Text) || String.IsNullOrWhiteSpace(TxtAksesuarlar.Text) || String.IsNullOrWhiteSpace(TxtEkBilgiler.Text))
                 {
-                    MessageBox.Show("Metin Kutuları Boş!", SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(Resources.metinKutulariBos, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                MySqlCommand guncelle = new MySqlCommand("UPDATE musteribilgileri SET MusteriAdi=@MusteriAdi,FormNo=@FormNo,Telefon=@Telefon,UrunModeli=@UrunModeli,UrunSeriveImeiKodlari=@UrunSeriveImeiKodlari,UrunKodlari=@UrunKodlari,ArizaTanimi=@ArizaTanimi,UrunDurumu=@UrunDurumu,UrunTakipNo=@UrunTakipNo,Ucret=@Ucret,Aksesuarlar=@Aksesuarlar,EkBilgiler=@EkBilgiler,Tarih=@Tarih WHERE Id=@Id", SMF.Baglanti);
-                guncelle.Parameters.AddWithValue("@MusteriAdi", TxtMusteriAdi.Text);
-                guncelle.Parameters.AddWithValue("@FormNo", TxtFormNo.Text);
-                guncelle.Parameters.AddWithValue("@Telefon", MsKdTxtTelefon.Text);
-                guncelle.Parameters.AddWithValue("@UrunModeli", TxtUrunModeli.Text);
-                guncelle.Parameters.AddWithValue("@UrunSeriveImeiKodlari", CmbBoxUrunKodlari.Text);
-                guncelle.Parameters.AddWithValue("@UrunKodlari", TxtUrunKodlari.Text);
-                guncelle.Parameters.AddWithValue("@ArizaTanimi", TxtArizaTanimi.Text);
-                guncelle.Parameters.AddWithValue("@UrunDurumu", TxtUrunDurumu.Text);
-                guncelle.Parameters.AddWithValue("@UrunTakipNo", TxtUrunTakipNo.Text);
-                guncelle.Parameters.AddWithValue("@Ucret", TxtUcret.Text);
-                guncelle.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
-                guncelle.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
-                guncelle.Parameters.AddWithValue("@Tarih", Convert.ToDateTime(TlStripTarihSaat.Text));
-                guncelle.Parameters.AddWithValue("@Id", LblMusteriNo.Text);
+                MySqlCommand komutGuncelle = new MySqlCommand("UPDATE musteribilgileri SET MusteriAdi=@MusteriAdi,FormNo=@FormNo,Telefon=@Telefon,UrunModeli=@UrunModeli,UrunSeriveImeiKodlari=@UrunSeriveImeiKodlari,UrunKodlari=@UrunKodlari,ArizaTanimi=@ArizaTanimi,UrunDurumu=@UrunDurumu,UrunTakipNo=@UrunTakipNo,Ucret=@Ucret,Aksesuarlar=@Aksesuarlar,EkBilgiler=@EkBilgiler,Tarih=@Tarih WHERE Id=@Id", SMF.Baglanti);
+                komutGuncelle.Parameters.AddWithValue("@MusteriAdi", TxtMusteriAdi.Text);
+                komutGuncelle.Parameters.AddWithValue("@FormNo", TxtFormNo.Text);
+                komutGuncelle.Parameters.AddWithValue("@Telefon", MsKdTxtTelefon.Text);
+                komutGuncelle.Parameters.AddWithValue("@UrunModeli", TxtUrunModeli.Text);
+                komutGuncelle.Parameters.AddWithValue("@UrunSeriveImeiKodlari", CmbBoxUrunKodlari.Text);
+                komutGuncelle.Parameters.AddWithValue("@UrunKodlari", TxtUrunKodlari.Text);
+                komutGuncelle.Parameters.AddWithValue("@ArizaTanimi", TxtArizaTanimi.Text);
+                komutGuncelle.Parameters.AddWithValue("@UrunDurumu", TxtUrunDurumu.Text);
+                komutGuncelle.Parameters.AddWithValue("@UrunTakipNo", TxtUrunTakipNo.Text);
+                komutGuncelle.Parameters.AddWithValue("@Ucret", TxtUcret.Text);
+                komutGuncelle.Parameters.AddWithValue("@Aksesuarlar", TxtAksesuarlar.Text);
+                komutGuncelle.Parameters.AddWithValue("@EkBilgiler", TxtEkBilgiler.Text);
+                komutGuncelle.Parameters.AddWithValue("@Tarih", Convert.ToDateTime(TlStripTarihSaat.Text));
+                komutGuncelle.Parameters.AddWithValue("@Id", LblMusteriNo.Text);
                 SMF.Baglanti.Open();
-                guncelle.ExecuteNonQuery();
-                MessageBox.Show("Kaydınız Güncellenmiştir.");
+                komutGuncelle.ExecuteNonQuery();
                 SMF.Baglanti.Close();
+                MessageBox.Show(Resources.guncellendi, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Temizle();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, Resources.Hata);
             }
         }
 
@@ -180,62 +221,69 @@ namespace RabtBilMusteriKayit
 
         private void TlStrpMenuItemAraclarSil_Click(object sender, EventArgs e)
         {
-            FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
-            frmKayitlariGoster.Show();
+            FrmKayitlariGoster frm = new FrmKayitlariGoster();
+            frm.Show();
             Hide();
-            MessageBox.Show("Lütfen Müşteri Seçiniz");
+            MessageBox.Show(Resources.musteriSec, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void PcTrBoxProfiliDuzenle_Click(object sender, EventArgs e)
         {
-            FrmProfil frmProfil = new FrmProfil();
-            frmProfil.Show();
+            FrmProfil frm = new FrmProfil();
+            frm.Show();
             Hide();
         }
 
         private void FrmTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception)
+            {
+                Application.Exit();
+            }
         }
 
         private void BttnYeniKayit_MouseHover(object sender, EventArgs e)
         {
-            TlStripAcıklama.Text = "Yeni bir kayıt oluşturur.";
+            TlStripAcıklama.Text = Resources.aciklamaBttnYeniKayit;
         }
 
         private void BttnYeniKayit_MouseLeave(object sender, EventArgs e)
         {
-            TlStripAcıklama.Text = "Açıklama";
+            TlStripAcıklama.Text = Resources.varsayilanAciklama;
         }
 
         private void BttnKaydet_MouseHover(object sender, EventArgs e)
         {
-            TlStripAcıklama.Text = "Müşterileri veritabanımıza kaydeder.";
+            TlStripAcıklama.Text = Resources.aciklamaBttnKaydet;
         }
 
         private void BttnTemizle_MouseHover(object sender, EventArgs e)
         {
-            TlStripAcıklama.Text = "Metin kutularını temizler.";
+            TlStripAcıklama.Text = Resources.aciklamaBttnTemizle;
         }
 
         private void BttnKayitlariGoster_MouseHover(object sender, EventArgs e)
         {
-            TlStripAcıklama.Text = "Kayıtlı olan müşterileri gösterir";
+            TlStripAcıklama.Text = Resources.aciklamaBttnKayitlariGoster;
         }
 
         private void BttnGuncelle_MouseHover(object sender, EventArgs e)
         {
-            TlStripAcıklama.Text = "kayıt edilen müşterilerin bilgilerini düzenler.";
+            TlStripAcıklama.Text = Resources.aciklamaBttnGuncelle;
         }
 
         private void PcTrBoxProfiliDuzenle_MouseHover(object sender, EventArgs e)
         {
-            TlStripAcıklama.Text = "Profil Resminiz";
+            TlStripAcıklama.Text = Resources.aciklamaPcTrBoxProfiliDuzenle;
         }
 
         private void TlStrpMenuItemAraclarSil_MouseHover(object sender, EventArgs e)
         {
-            TlStripAcıklama.Text = "Seçili olan kayıdı siler.";
+            TlStripAcıklama.Text = Resources.aciklamaTlStrpMenuItemAraclarSil;
         }
 
         private void TlStrpMenuItemYardimLisansAnahtari_Click(object sender, EventArgs e)
@@ -247,13 +295,13 @@ namespace RabtBilMusteriKayit
         private void TlStrpMenuItemDilTurkce_Click(object sender, EventArgs e)
         {
             SMF.DilDegistir("tr");
-            //DilYenile();
+            DilYenile();
         }
 
         private void TlStrpMenuItemDilIngilizce_Click(object sender, EventArgs e)
         {
             SMF.DilDegistir("en");
-            //DilYenile();
+            DilYenile();
         }
     }
 }

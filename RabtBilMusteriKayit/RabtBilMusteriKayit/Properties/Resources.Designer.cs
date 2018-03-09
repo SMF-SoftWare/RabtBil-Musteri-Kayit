@@ -61,6 +61,51 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Müşteri kayıtlarını günceller..
+        /// </summary>
+        internal static string aciklamaBttnGuncelle {
+            get {
+                return ResourceManager.GetString("aciklamaBttnGuncelle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Girilen bilgileri veritabanına kaydeder..
+        /// </summary>
+        internal static string aciklamaBttnKaydet {
+            get {
+                return ResourceManager.GetString("aciklamaBttnKaydet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Müşteri kayıtlarını gösterir..
+        /// </summary>
+        internal static string aciklamaBttnKayitlariGoster {
+            get {
+                return ResourceManager.GetString("aciklamaBttnKayitlariGoster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Metin kutularını temizler..
+        /// </summary>
+        internal static string aciklamaBttnTemizle {
+            get {
+                return ResourceManager.GetString("aciklamaBttnTemizle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yeni bir kayıt oluşturur..
+        /// </summary>
+        internal static string aciklamaBttnYeniKayit {
+            get {
+                return ResourceManager.GetString("aciklamaBttnYeniKayit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Programın dilini değiştirir..
         /// </summary>
         internal static string aciklamaDil {
@@ -97,6 +142,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Profil resminiz..
+        /// </summary>
+        internal static string aciklamaPcTrBoxProfiliDuzenle {
+            get {
+                return ResourceManager.GetString("aciklamaPcTrBoxProfiliDuzenle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Seçilen kaydı siler..
         /// </summary>
         internal static string aciklamaSil {
@@ -111,6 +165,15 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string aciklamaTema {
             get {
                 return ResourceManager.GetString("aciklamaTema", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seçilen müşterinin kaydını siler..
+        /// </summary>
+        internal static string aciklamaTlStrpMenuItemAraclarSil {
+            get {
+                return ResourceManager.GetString("aciklamaTlStrpMenuItemAraclarSil", resourceCulture);
             }
         }
         
@@ -133,11 +196,11 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ana Ekran.
+        ///   Looks up a localized string similar to Ana Pencere.
         /// </summary>
-        internal static string BttnAnaSayfa {
+        internal static string BttnAnaPencere {
             get {
-                return ResourceManager.GetString("BttnAnaSayfa", resourceCulture);
+                return ResourceManager.GetString("BttnAnaPencere", resourceCulture);
             }
         }
         
@@ -174,6 +237,15 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string BttnKopyala {
             get {
                 return ResourceManager.GetString("BttnKopyala", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to QR Kodunu Oluştur.
+        /// </summary>
+        internal static string BttnQrKoduOlustur {
+            get {
+                return ResourceManager.GetString("BttnQrKoduOlustur", resourceCulture);
             }
         }
         
@@ -255,6 +327,33 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string ChckBoxSemboller {
             get {
                 return ResourceManager.GetString("ChckBoxSemboller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diğer.
+        /// </summary>
+        internal static string CmbBoxUrunKodlariDiger {
+            get {
+                return ResourceManager.GetString("CmbBoxUrunKodlariDiger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Imei No.
+        /// </summary>
+        internal static string CmbBoxUrunKodlariImeiNo {
+            get {
+                return ResourceManager.GetString("CmbBoxUrunKodlariImeiNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seri No.
+        /// </summary>
+        internal static string CmbBoxUrunKodlariSeriNo {
+            get {
+                return ResourceManager.GetString("CmbBoxUrunKodlariSeriNo", resourceCulture);
             }
         }
         
@@ -414,6 +513,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Teknik Servis Formu.
+        /// </summary>
+        internal static string FrmTeknikServisFormu {
+            get {
+                return ResourceManager.GetString("FrmTeknikServisFormu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Geçici kullanıcı adı ve şifreniz e-posta adresinize gönderilmiştir!.
         /// </summary>
         internal static string geciciKullaniciAdiSifreGonderildi {
@@ -432,6 +540,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aksesuarlar.
+        /// </summary>
+        internal static string GrpBoxAksesuarlar {
+            get {
+                return ResourceManager.GetString("GrpBoxAksesuarlar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Arama Yap.
         /// </summary>
         internal static string GrpBoxArama {
@@ -441,11 +558,56 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ek Bilgiler.
+        /// </summary>
+        internal static string GrpBoxEkBilgiler {
+            get {
+                return ResourceManager.GetString("GrpBoxEkBilgiler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Müşteri Bilgileri.
+        /// </summary>
+        internal static string GrpBoxMusteriBilgileri {
+            get {
+                return ResourceManager.GetString("GrpBoxMusteriBilgileri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ürün Bilgileri.
+        /// </summary>
+        internal static string GrpBoxUrunBilgileri {
+            get {
+                return ResourceManager.GetString("GrpBoxUrunBilgileri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Başarıyla güncellendi!.
+        /// </summary>
+        internal static string guncellendi {
+            get {
+                return ResourceManager.GetString("guncellendi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hata.
         /// </summary>
         internal static string Hata {
             get {
                 return ResourceManager.GetString("Hata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Başarıyla kaydedildi!.
+        /// </summary>
+        internal static string kaydedildi {
+            get {
+                return ResourceManager.GetString("kaydedildi", resourceCulture);
             }
         }
         
@@ -504,6 +666,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Arızanın Tanımı.
+        /// </summary>
+        internal static string LblArizaTanimi {
+            get {
+                return ResourceManager.GetString("LblArizaTanimi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-posta:.
         /// </summary>
         internal static string LblEposta {
@@ -518,6 +689,15 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string LblEpostaniz {
             get {
                 return ResourceManager.GetString("LblEpostaniz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Form No:.
+        /// </summary>
+        internal static string LblFormNo {
+            get {
+                return ResourceManager.GetString("LblFormNo", resourceCulture);
             }
         }
         
@@ -567,6 +747,24 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Müşteri Adı:.
+        /// </summary>
+        internal static string LblMusteriAdi {
+            get {
+                return ResourceManager.GetString("LblMusteriAdi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to QR Kodu.
+        /// </summary>
+        internal static string LblMusteriQrKodu {
+            get {
+                return ResourceManager.GetString("LblMusteriQrKodu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Şifre:.
         /// </summary>
         internal static string LblSifre {
@@ -612,6 +810,51 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Telefon.
+        /// </summary>
+        internal static string LblTelefon {
+            get {
+                return ResourceManager.GetString("LblTelefon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ücret.
+        /// </summary>
+        internal static string LblUcret {
+            get {
+                return ResourceManager.GetString("LblUcret", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ürün Durumu.
+        /// </summary>
+        internal static string LblUrunDurumu {
+            get {
+                return ResourceManager.GetString("LblUrunDurumu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ürün Modeli.
+        /// </summary>
+        internal static string LblUrunModeli {
+            get {
+                return ResourceManager.GetString("LblUrunModeli", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Takip Numarası.
+        /// </summary>
+        internal static string LblUrunTakipNo {
+            get {
+                return ResourceManager.GetString("LblUrunTakipNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Şifremi Unuttum?.
         /// </summary>
         internal static string LinkLblSifremiUnuttum {
@@ -635,6 +878,24 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string lisansTekrarDene {
             get {
                 return ResourceManager.GetString("lisansTekrarDene", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Metin kutuları boş olamaz!.
+        /// </summary>
+        internal static string metinKutulariBos {
+            get {
+                return ResourceManager.GetString("metinKutulariBos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lütfen bir müşteri seçin!.
+        /// </summary>
+        internal static string musteriSec {
+            get {
+                return ResourceManager.GetString("musteriSec", resourceCulture);
             }
         }
         
@@ -711,6 +972,15 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Başarıyla silindi!.
+        /// </summary>
+        internal static string silindi {
+            get {
+                return ResourceManager.GetString("silindi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Araçlar.
         /// </summary>
         internal static string TlStrpMenuItemAraclar {
@@ -738,11 +1008,38 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kaydet.
+        /// </summary>
+        internal static string TlStrpMenuItemAraclarKaydet {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemAraclarKaydet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kayıtları Göster.
+        /// </summary>
+        internal static string TlStrpMenuItemAraclarKayitlariGoster {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemAraclarKayitlariGoster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sil.
         /// </summary>
         internal static string TlStrpMenuItemAraclarSil {
             get {
                 return ResourceManager.GetString("TlStrpMenuItemAraclarSil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temizle.
+        /// </summary>
+        internal static string TlStrpMenuItemAraclarTemizle {
+            get {
+                return ResourceManager.GetString("TlStrpMenuItemAraclarTemizle", resourceCulture);
             }
         }
         
@@ -792,7 +1089,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tükçe.
+        ///   Looks up a localized string similar to Türkçe.
         /// </summary>
         internal static string TlStrpMenuItemDilTurkce {
             get {

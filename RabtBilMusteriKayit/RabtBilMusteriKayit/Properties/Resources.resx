@@ -167,7 +167,7 @@
     <value>Dil</value>
   </data>
   <data name="TlStrpMenuItemDilTurkce" xml:space="preserve">
-    <value>Tükçe</value>
+    <value>Türkçe</value>
   </data>
   <data name="TlStrpMenuItemDilIngilizce" xml:space="preserve">
     <value>İngilizce</value>
@@ -349,8 +349,8 @@
   <data name="BttnTemizle" xml:space="preserve">
     <value>Temizle</value>
   </data>
-  <data name="BttnAnaSayfa" xml:space="preserve">
-    <value>Ana Ekran</value>
+  <data name="BttnAnaPencere" xml:space="preserve">
+    <value>Ana Pencere</value>
   </data>
   <data name="TlStrpMenuItemAraclarGucluSifreOlustur" xml:space="preserve">
     <value>Güçlü Şifre Oluşturucu</value>
@@ -378,5 +378,104 @@
   </data>
   <data name="eye-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="metinKutulariBos" xml:space="preserve">
+    <value>Metin kutuları boş olamaz!</value>
+  </data>
+  <data name="kaydedildi" xml:space="preserve">
+    <value>Başarıyla kaydedildi!</value>
+  </data>
+  <data name="guncellendi" xml:space="preserve">
+    <value>Başarıyla güncellendi!</value>
+  </data>
+  <data name="silindi" xml:space="preserve">
+    <value>Başarıyla silindi!</value>
+  </data>
+  <data name="musteriSec" xml:space="preserve">
+    <value>Lütfen bir müşteri seçin!</value>
+  </data>
+  <data name="aciklamaBttnYeniKayit" xml:space="preserve">
+    <value>Yeni bir kayıt oluşturur.</value>
+  </data>
+  <data name="aciklamaBttnKaydet" xml:space="preserve">
+    <value>Girilen bilgileri veritabanına kaydeder.</value>
+  </data>
+  <data name="aciklamaBttnTemizle" xml:space="preserve">
+    <value>Metin kutularını temizler.</value>
+  </data>
+  <data name="aciklamaBttnKayitlariGoster" xml:space="preserve">
+    <value>Müşteri kayıtlarını gösterir.</value>
+  </data>
+  <data name="aciklamaBttnGuncelle" xml:space="preserve">
+    <value>Müşteri kayıtlarını günceller.</value>
+  </data>
+  <data name="aciklamaPcTrBoxProfiliDuzenle" xml:space="preserve">
+    <value>Profil resminiz.</value>
+  </data>
+  <data name="aciklamaTlStrpMenuItemAraclarSil" xml:space="preserve">
+    <value>Seçilen müşterinin kaydını siler.</value>
+  </data>
+  <data name="CmbBoxUrunKodlariSeriNo" xml:space="preserve">
+    <value>Seri No</value>
+  </data>
+  <data name="CmbBoxUrunKodlariImeiNo" xml:space="preserve">
+    <value>Imei No</value>
+  </data>
+  <data name="CmbBoxUrunKodlariDiger" xml:space="preserve">
+    <value>Diğer</value>
+  </data>
+  <data name="FrmTeknikServisFormu" xml:space="preserve">
+    <value>Teknik Servis Formu</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarKaydet" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarTemizle" xml:space="preserve">
+    <value>Temizle</value>
+  </data>
+  <data name="TlStrpMenuItemAraclarKayitlariGoster" xml:space="preserve">
+    <value>Kayıtları Göster</value>
+  </data>
+  <data name="GrpBoxMusteriBilgileri" xml:space="preserve">
+    <value>Müşteri Bilgileri</value>
+  </data>
+  <data name="LblMusteriAdi" xml:space="preserve">
+    <value>Müşteri Adı:</value>
+  </data>
+  <data name="LblFormNo" xml:space="preserve">
+    <value>Form No:</value>
+  </data>
+  <data name="LblTelefon" xml:space="preserve">
+    <value>Telefon:</value>
+  </data>
+  <data name="GrpBoxAksesuarlar" xml:space="preserve">
+    <value>Aksesuarlar</value>
+  </data>
+  <data name="GrpBoxEkBilgiler" xml:space="preserve">
+    <value>Ek Bilgiler</value>
+  </data>
+  <data name="GrpBoxUrunBilgileri" xml:space="preserve">
+    <value>Ürün Bilgileri</value>
+  </data>
+  <data name="LblUrunModeli" xml:space="preserve">
+    <value>Ürün Modeli:</value>
+  </data>
+  <data name="LblArizaTanimi" xml:space="preserve">
+    <value>Arızanın Tanımı:</value>
+  </data>
+  <data name="LblUrunDurumu" xml:space="preserve">
+    <value>Ürün Durumu:</value>
+  </data>
+  <data name="LblUrunTakipNo" xml:space="preserve">
+    <value>Takip Numarası:</value>
+  </data>
+  <data name="LblMusteriQrKodu" xml:space="preserve">
+    <value>QR Kodu:</value>
+  </data>
+  <data name="BttnQrKoduOlustur" xml:space="preserve">
+    <value>QR Kodunu Oluştur:</value>
+  </data>
+  <data name="LblUcret" xml:space="preserve">
+    <value>Ücret:</value>
   </data>
 </root>

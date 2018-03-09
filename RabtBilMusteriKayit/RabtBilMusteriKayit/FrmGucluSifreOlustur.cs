@@ -22,6 +22,9 @@ namespace RabtBilMusteriKayit
 
             ChckBoxKucukHarfler.Checked = true;
             ChckBoxBuyukHarfler.Checked = true;
+
+            sifre = GucluSifreOlustur(TrckBarSifreKarakter.Value);
+            TxtGucluSifreniz.Text = sifre;
             lblSifreUzunluguDeger.Text = TrckBarSifreKarakter.Value.ToString();
         }
 
