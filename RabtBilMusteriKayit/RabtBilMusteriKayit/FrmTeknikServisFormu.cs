@@ -25,12 +25,14 @@ namespace RabtBilMusteriKayit
             SMF.ConfigDosyasiVarMi();
             SMF.DilKontrolEt();
             DilYenile();
+            CmbBoxUrunKodlariDoldur();
 
             TimerTarihSaat.Enabled = true;
             _takipNo = _rnd.Next(10000, 99999);
             TxtUrunTakipNo.Text = _takipNo.ToString();
+            CmbBoxUrunKodlari.SelectedIndex = 2;
 
-            if (Settings.Default.LisansliMi)
+            if (Settings.Default.LisansliMi && SMF.KontrolEt(Settings.Default.Eposta, Settings.Default.Lisans))
             {
                 TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
             }
@@ -165,26 +167,6 @@ namespace RabtBilMusteriKayit
             frm.ShowDialog();
         }
 
-        private void CmbBoxUrunKodlari_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariSeriNo)
-            {
-                TxtUrunKodlari.ReadOnly = false;
-            }
-            else if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariImeiNo)
-            {
-                TxtUrunKodlari.ReadOnly = false;
-            }
-            else if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariDiger)
-            {
-                TxtUrunKodlari.ReadOnly = false;
-            }
-            else if (CmbBoxUrunKodlari.Text == "")
-            {
-                TxtUrunKodlari.ReadOnly = true;
-            }
-        }
-
         private void PcTrBoxProfiliDuzenle_Click(object sender, EventArgs e)
         {
             FrmProfil frm = new FrmProfil();
@@ -243,7 +225,7 @@ namespace RabtBilMusteriKayit
             TxtFormNo.Clear();
             MsKdTxtTelefon.Clear();
             TxtUrunModeli.Clear();
-            CmbBoxUrunKodlari.Text = "";
+            CmbBoxUrunKodlari.SelectedIndex = 2;
             TxtUrunKodlari.Clear();
             TxtArizaTanimi.Clear();
             TxtUrunDurumu.Clear();
@@ -291,6 +273,16 @@ namespace RabtBilMusteriKayit
             BttnKayitlariGoster.Text = Resources.TlStrpMenuItemAraclarKayitlariGoster;
             BttnGuncelle.Text = Resources.TlStrpMenuItemAraclarGuncelle;
             TlStripAcıklama.Text = Resources.varsayilanAciklama;
+            CmbBoxUrunKodlariDoldur();
+        }
+
+        public void CmbBoxUrunKodlariDoldur()
+        {
+            CmbBoxUrunKodlari.Items.Clear();
+            CmbBoxUrunKodlari.Items.Add(Resources.CmbBoxUrunKodlariSeriNo);
+            CmbBoxUrunKodlari.Items.Add(Resources.CmbBoxUrunKodlariImeiNo);
+            CmbBoxUrunKodlari.Items.Add(Resources.CmbBoxUrunKodlariDiger);
+            //CmbBoxUrunKodlari.SelectedIndex = 2;
         }
 
         private void FrmTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)

@@ -23,7 +23,7 @@ namespace RabtBilMusteriKayit
             SMF.DilKontrolEt();
             DilYenile();
 
-            if (Settings.Default.LisansliMi)
+            if (Settings.Default.LisansliMi && SMF.KontrolEt(Settings.Default.Eposta, Settings.Default.Lisans))
             {
                 TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
             }

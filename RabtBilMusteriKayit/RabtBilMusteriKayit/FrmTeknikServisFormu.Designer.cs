@@ -345,7 +345,6 @@
             this.CmbBoxUrunKodlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbBoxUrunKodlari.FormattingEnabled = true;
             this.CmbBoxUrunKodlari.Items.AddRange(new object[] {
-            "",
             "Seri No",
             "Imei No",
             "Diğer"});
@@ -353,7 +352,6 @@
             this.CmbBoxUrunKodlari.Name = "CmbBoxUrunKodlari";
             this.CmbBoxUrunKodlari.Size = new System.Drawing.Size(121, 30);
             this.CmbBoxUrunKodlari.TabIndex = 8;
-            this.CmbBoxUrunKodlari.SelectedIndexChanged += new System.EventHandler(this.CmbBoxUrunKodlari_SelectedIndexChanged);
             // 
             // TxtUrunKodlari
             // 
@@ -551,27 +549,27 @@
             this.TlStrpMenuItemDilTurkce,
             this.TlStrpMenuItemDilIngilizce});
             this.TlStrpMenuItemAyarlarDil.Name = "TlStrpMenuItemAyarlarDil";
-            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(282, 26);
+            this.TlStrpMenuItemAyarlarDil.Size = new System.Drawing.Size(120, 26);
             this.TlStrpMenuItemAyarlarDil.Text = "Dil";
             // 
             // TlStrpMenuItemDilTurkce
             // 
             this.TlStrpMenuItemDilTurkce.Name = "TlStrpMenuItemDilTurkce";
-            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemDilTurkce.Size = new System.Drawing.Size(165, 26);
             this.TlStrpMenuItemDilTurkce.Text = "Tükçe";
             this.TlStrpMenuItemDilTurkce.Click += new System.EventHandler(this.TlStrpMenuItemDilTurkce_Click);
             // 
             // TlStrpMenuItemDilIngilizce
             // 
             this.TlStrpMenuItemDilIngilizce.Name = "TlStrpMenuItemDilIngilizce";
-            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(181, 26);
+            this.TlStrpMenuItemDilIngilizce.Size = new System.Drawing.Size(165, 26);
             this.TlStrpMenuItemDilIngilizce.Text = "İngilizce";
             this.TlStrpMenuItemDilIngilizce.Click += new System.EventHandler(this.TlStrpMenuItemDilIngilizce_Click);
             // 
             // TlStrpMenuItemAyarlarTema
             // 
             this.TlStrpMenuItemAyarlarTema.Name = "TlStrpMenuItemAyarlarTema";
-            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(282, 26);
+            this.TlStrpMenuItemAyarlarTema.Size = new System.Drawing.Size(120, 26);
             this.TlStrpMenuItemAyarlarTema.Text = "Tema";
             // 
             // TlStrpMenuItemYardım
