@@ -37,7 +37,7 @@ namespace RabtBilMusteriKayit
             try
             {
                 MySqlCommand sil = new MySqlCommand("DELETE FROM musteribilgileri WHERE Id=@Id", SMF.Baglanti);
-                sil.Parameters.AddWithValue("@Id", Convert.ToInt32(DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString()));
+                sil.Parameters.AddWithValue("@Id", Convert.ToInt32(DtGridViewKayitlariGoster.CurrentRow?.Cells[0].Value.ToString()));
                 SMF.Baglanti.Open();
                 sil.ExecuteNonQuery();
                 MessageBox.Show(Resources.secilenKayitSilindi, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -212,19 +212,19 @@ namespace RabtBilMusteriKayit
             FrmTeknikServisFormu.TlStrpMenuItemAraclarKaydet.Enabled = false;
             FrmTeknikServisFormu.BttnGuncelle.Enabled = true;
             FrmTeknikServisFormu.TlStrpMenuItemAraclarGuncelle.Enabled = true;
-            FrmTeknikServisFormu.LblMusteriNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[0].Value.ToString();
-            FrmTeknikServisFormu.TxtMusteriAdi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[1].Value.ToString();
-            FrmTeknikServisFormu.TxtFormNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[2].Value.ToString();
-            FrmTeknikServisFormu.MsKdTxtTelefon.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[3].Value.ToString();
-            FrmTeknikServisFormu.TxtUrunModeli.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[4].Value.ToString();
-            FrmTeknikServisFormu.CmbBoxUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[5].Value.ToString();
-            FrmTeknikServisFormu.TxtUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[6].Value.ToString();
-            FrmTeknikServisFormu.TxtArizaTanimi.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[7].Value.ToString();
-            FrmTeknikServisFormu.TxtUrunDurumu.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[8].Value.ToString();
-            FrmTeknikServisFormu.TxtUrunTakipNo.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[9].Value.ToString();
-            FrmTeknikServisFormu.TxtUcret.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[10].Value.ToString();
-            FrmTeknikServisFormu.TxtAksesuarlar.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[11].Value.ToString();
-            FrmTeknikServisFormu.TxtEkBilgiler.Text = DtGridViewKayitlariGoster.CurrentRow.Cells[12].Value.ToString();
+            FrmTeknikServisFormu.LblMusteriNo.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[0].Value.ToString();
+            FrmTeknikServisFormu.TxtMusteriAdi.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[1].Value.ToString();
+            FrmTeknikServisFormu.TxtFormNo.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[2].Value.ToString();
+            FrmTeknikServisFormu.MsKdTxtTelefon.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[3].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunModeli.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[4].Value.ToString();
+            FrmTeknikServisFormu.CmbBoxUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[5].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[6].Value.ToString();
+            FrmTeknikServisFormu.TxtArizaTanimi.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[7].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunDurumu.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[8].Value.ToString();
+            FrmTeknikServisFormu.TxtUrunTakipNo.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[9].Value.ToString();
+            FrmTeknikServisFormu.TxtUcret.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[10].Value.ToString();
+            FrmTeknikServisFormu.TxtAksesuarlar.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[11].Value.ToString();
+            FrmTeknikServisFormu.TxtEkBilgiler.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[12].Value.ToString();
             FrmTeknikServisFormu.Show();
             Hide();
         }

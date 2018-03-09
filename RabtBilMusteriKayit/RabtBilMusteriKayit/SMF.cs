@@ -73,7 +73,14 @@ namespace RabtBilMusteriKayit
             }
             catch (Exception)
             {
-                Application.Exit();
+                try
+                {
+                    Application.Exit();
+                }
+                catch (Exception)
+                {
+                    Application.Exit();
+                }
             }
         }
 
@@ -85,7 +92,14 @@ namespace RabtBilMusteriKayit
             }
             catch (Exception)
             {
-                Application.Restart();
+                try
+                {
+                    Application.Restart();
+                }
+                catch (Exception)
+                {
+                    Application.Restart();
+                }
             }
         }
 
