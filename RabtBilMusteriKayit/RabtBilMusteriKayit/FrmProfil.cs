@@ -19,6 +19,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmProfil_Load(object sender, EventArgs e)
         {
+            SMF.ConfigDosyasiVarMi();
             SMF.DilKontrolEt();
             DilYenile();
 

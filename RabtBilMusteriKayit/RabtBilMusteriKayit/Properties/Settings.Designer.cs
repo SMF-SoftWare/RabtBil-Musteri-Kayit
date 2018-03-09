@@ -58,5 +58,17 @@ namespace RabtBilMusteriKayit.Properties {
                 this["Lisans"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Eposta {
+            get {
+                return ((string)(this["Eposta"]));
+            }
+            set {
+                this["Eposta"] = value;
+            }
+        }
     }
 }

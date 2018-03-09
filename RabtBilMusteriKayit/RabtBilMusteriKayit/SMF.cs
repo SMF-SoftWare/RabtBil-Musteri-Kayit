@@ -1,7 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using RabtBilMusteriKayit.Properties;
 using System;
+using System.Configuration;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -13,6 +15,7 @@ namespace RabtBilMusteriKayit
     public class SMF
     {
         public static MySqlConnection Baglanti = new MySqlConnection("Server=localhost;Port=3306;Uid=root;password=;Database=rabtbildb;CharSet=utf8;");
+
         public static string ProfilResmiYolu = Application.StartupPath + @"\profil\kullanici.smf";
         public static string ProfilKlasoru = Application.StartupPath + @"\profil";
         public static string UygulamaSurum = "v1.0";
@@ -44,7 +47,49 @@ namespace RabtBilMusteriKayit
             }
         }
 
-        private static string GetMd5Hash(MD5 MD5, string metin)
+        public void ConfigDosyasiVarMi()
+        {
+            try
+            {
+                ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal);
+            }
+            catch (ConfigurationErrorsException ex)
+            {
+                string filename = ex.Filename;
+
+                if (File.Exists(filename))
+                {
+                    File.Delete(filename);
+                    Settings.Default.Upgrade();
+                }
+            }
+        }
+
+        public void HerTurluKapat()
+        {
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception)
+            {
+                Application.Exit();
+            }
+        }
+
+        public void HerTurluYenidenBaslat()
+        {
+            try
+            {
+                Application.Restart();
+            }
+            catch (Exception)
+            {
+                Application.Restart();
+            }
+        }
+
+        public static string GetMd5Hash(MD5 MD5, string metin)
         {
             byte[] data = MD5.ComputeHash(Encoding.UTF8.GetBytes(metin));
             StringBuilder sb = new StringBuilder();
@@ -52,6 +97,7 @@ namespace RabtBilMusteriKayit
             {
                 sb.Append(i.ToString("x2"));
             }
+
             return sb.ToString();
         }
 
@@ -82,6 +128,7 @@ namespace RabtBilMusteriKayit
             {
                 return true;
             }
+
             return false;
         }
     }

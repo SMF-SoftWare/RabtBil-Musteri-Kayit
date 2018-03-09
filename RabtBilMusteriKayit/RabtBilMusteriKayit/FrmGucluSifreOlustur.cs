@@ -17,6 +17,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmGucluSifreOlustur_Load(object sender, EventArgs e)
         {
+            SMF.ConfigDosyasiVarMi();
             SMF.DilKontrolEt();
             DilYenile();
 

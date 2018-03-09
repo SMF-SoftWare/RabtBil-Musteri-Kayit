@@ -16,6 +16,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmLisans_Load(object sender, EventArgs e)
         {
+            SMF.ConfigDosyasiVarMi();
             SMF.DilKontrolEt();
             DilYenile();
         }
@@ -34,14 +35,16 @@ namespace RabtBilMusteriKayit
                 {
                     Default.LisansliMi = Convert.ToBoolean(1);
                     Default.Lisans = TxtLisansAnahtari.Text.ToUpper();
+                    Default.Eposta = TxtEposta.Text.ToUpper();
                     Default.Save();
                     MessageBox.Show(Resources.lisansBasarili, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Application.Restart();
+                    SMF.HerTurluYenidenBaslat();
                 }
                 else
                 {
                     Default.LisansliMi = Convert.ToBoolean(0);
                     Default.Lisans = null;
+                    Default.Eposta = null;
                     Default.Save();
                     MessageBox.Show(Resources.lisansTekrarDene, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

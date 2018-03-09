@@ -22,6 +22,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmTeknikServisFormu_Load(object sender, EventArgs e)
         {
+            SMF.ConfigDosyasiVarMi();
             SMF.DilKontrolEt();
             DilYenile();
 
@@ -294,14 +295,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try
-            {
-                Application.Exit();
-            }
-            catch (Exception)
-            {
-                Application.Exit();
-            }
+            SMF.HerTurluKapat();
         }
     }
 }

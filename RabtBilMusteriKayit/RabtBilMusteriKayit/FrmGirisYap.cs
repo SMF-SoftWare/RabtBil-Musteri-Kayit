@@ -23,11 +23,12 @@ namespace RabtBilMusteriKayit
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SMF.ConfigDosyasiVarMi();
             SMF.DilKontrolEt();
             DilYenile();
             KullaniciOlusturGizle();
 
-            if (Settings.Default.LisansliMi)
+            if (Settings.Default.LisansliMi && SMF.KontrolEt(Settings.Default.Eposta, Settings.Default.Lisans))
             {
                 TlStrpMenuItemYardimLisansAnahtari.Enabled = false;
             }
@@ -240,7 +241,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmGirisYap_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            SMF.HerTurluKapat();
         }
 
         public string SifreOlustur(int uzunluk)
