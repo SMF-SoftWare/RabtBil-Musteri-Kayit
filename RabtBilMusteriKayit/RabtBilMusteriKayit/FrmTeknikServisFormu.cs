@@ -20,13 +20,6 @@ namespace RabtBilMusteriKayit
             InitializeComponent();
         }
 
-        private void BttnKayitlariGoster_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
-            frmKayitlariGoster.ShowDialog();
-        }
-
         private void FrmTeknikServisFormu_Load(object sender, EventArgs e)
         {
             SMF.DilKontrolEt();
@@ -51,49 +44,11 @@ namespace RabtBilMusteriKayit
             }
         }
 
-        private void DilYenile()
+        private void BttnKayitlariGoster_Click(object sender, EventArgs e)
         {
-            Text = Resources.FrmTeknikServisFormu;
-            TlStrpMenuItemAraclar.Text = Resources.TlStrpMenuItemAraclar;
-            TlStrpMenuItemAraclarYeniKayit.Text = Resources.TlStrpMenuItemAraclarYeniKayit;
-            TlStrpMenuItemAraclarKaydet.Text = Resources.TlStrpMenuItemAraclarKaydet;
-            TlStrpMenuItemAraclarTemizle.Text = Resources.TlStrpMenuItemAraclarTemizle;
-            TlStrpMenuItemAraclarKayitlariGoster.Text = Resources.TlStrpMenuItemAraclarKayitlariGoster;
-            TlStrpMenuItemAraclarGuncelle.Text = Resources.TlStrpMenuItemAraclarGuncelle;
-            TlStrpMenuItemAraclarSil.Text = Resources.TlStrpMenuItemAraclarSil;
-            TlStrpMenuItemAyarlar.Text=Resources.TlStrpMenuItemAyarlar;
-            TlStrpMenuItemAyarlarDil.Text = Resources.TlStrpMenuItemAyarlarDil;
-            TlStrpMenuItemDilTurkce.Text = Resources.TlStrpMenuItemDilTurkce;
-            TlStrpMenuItemDilIngilizce.Text = Resources.TlStrpMenuItemDilIngilizce;
-            TlStrpMenuItemAyarlarTema.Text = Resources.TlStrpMenuItemAyarlarTema;
-            TlStrpMenuItemYardım.Text = Resources.TlStrpMenuItemYardim;
-            TlStrpMenuItemYardimLisansAnahtari.Text = Resources.TlStrpMenuItemYardimLisansAnahtari;
-            TlStrpMenuItemYardimHakkinda.Text = Resources.TlStrpMenuItemYardimHakkinda;
-            GrpBoxMusteriBilgileri.Text = Resources.GrpBoxMusteriBilgileri;
-            LblMusteriAdi.Text = Resources.LblMusteriAdi;
-            LblFormNo.Text = Resources.LblFormNo;
-            LblTelefon.Text = Resources.LblTelefon;
-            GrpBoxAksesuarlar.Text = Resources.GrpBoxAksesuarlar;
-            GrpBoxEkBilgiler.Text = Resources.GrpBoxEkBilgiler;
-            GrpBoxUrunBilgileri.Text = Resources.GrpBoxUrunBilgileri;
-            LblUrunModeli.Text = Resources.LblUrunModeli;
-            LblArizaTanimi.Text = Resources.LblArizaTanimi;
-            LblUrunDurumu.Text = Resources.LblUrunDurumu;
-            LblUrunTakipNo.Text = Resources.LblUrunTakipNo;
-            LblMusteriQrKodu.Text = Resources.LblMusteriQrKodu;
-            BttnQrKoduOlustur.Text = Resources.BttnQrKoduOlustur;
-            LblUcret.Text = Resources.LblUcret;
-            BttnYeniKayit.Text = Resources.TlStrpMenuItemAraclarYeniKayit;
-            BttnKaydet.Text = Resources.BttnKaydet;
-            BttnTemizle.Text = Resources.BttnTemizle;
-            BttnKayitlariGoster.Text = Resources.TlStrpMenuItemAraclarKayitlariGoster;
-            BttnGuncelle.Text = Resources.TlStrpMenuItemAraclarGuncelle;
-            TlStripAcıklama.Text = Resources.varsayilanAciklama;
-        }
-
-        private void TimerTarihSaat_Tick(object sender, EventArgs e)
-        {
-            TlStripTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
+            Hide();
+            FrmKayitlariGoster frmKayitlariGoster = new FrmKayitlariGoster();
+            frmKayitlariGoster.ShowDialog();
         }
 
         private void BttnQrKoduOlustur_Click(object sender, EventArgs e)
@@ -103,6 +58,8 @@ namespace RabtBilMusteriKayit
         private void BttnYeniKayit_Click(object sender, EventArgs e)
         {
             Temizle();
+            _takipNo = _rnd.Next(10000, 99999);
+            TxtUrunTakipNo.Text = _takipNo.ToString();
         }
 
         private void BttnKaydet_Click(object sender, EventArgs e)
@@ -137,44 +94,6 @@ namespace RabtBilMusteriKayit
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, Resources.Hata);
-            }
-        }
-
-        public void Temizle()
-        {
-            _takipNo = _rnd.Next(10000, 99999);
-            TxtMusteriAdi.Clear();
-            TxtFormNo.Clear();
-            MsKdTxtTelefon.Clear();
-            TxtUrunModeli.Clear();
-            CmbBoxUrunKodlari.Text = "";
-            TxtUrunKodlari.Clear();
-            TxtArizaTanimi.Clear();
-            TxtUrunDurumu.Clear();
-            TxtUrunTakipNo.Text = _takipNo.ToString();
-            TxtUcret.Clear();
-            TxtAksesuarlar.Clear();
-            TxtEkBilgiler.Clear();
-            LblMusteriNo.Text = "";
-        }
-
-        private void CmbBoxUrunKodlari_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariSeriNo)
-            {
-                TxtUrunKodlari.ReadOnly = false;
-            }
-            else if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariImeiNo)
-            {
-                TxtUrunKodlari.ReadOnly = false;
-            }
-            else if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariDiger)
-            {
-                TxtUrunKodlari.ReadOnly = false;
-            }
-            else if (CmbBoxUrunKodlari.Text == "")
-            {
-                TxtUrunKodlari.ReadOnly = true;
             }
         }
 
@@ -227,23 +146,49 @@ namespace RabtBilMusteriKayit
             MessageBox.Show(Resources.musteriSec, SMF.UygulamaAdi, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void TlStrpMenuItemDilTurkce_Click(object sender, EventArgs e)
+        {
+            SMF.DilDegistir("tr");
+            DilYenile();
+        }
+
+        private void TlStrpMenuItemDilIngilizce_Click(object sender, EventArgs e)
+        {
+            SMF.DilDegistir("en");
+            DilYenile();
+        }
+
+        private void TlStrpMenuItemYardimLisansAnahtari_Click(object sender, EventArgs e)
+        {
+            FrmLisans frm = new FrmLisans();
+            frm.ShowDialog();
+        }
+
+        private void CmbBoxUrunKodlari_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariSeriNo)
+            {
+                TxtUrunKodlari.ReadOnly = false;
+            }
+            else if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariImeiNo)
+            {
+                TxtUrunKodlari.ReadOnly = false;
+            }
+            else if (CmbBoxUrunKodlari.Text == Resources.CmbBoxUrunKodlariDiger)
+            {
+                TxtUrunKodlari.ReadOnly = false;
+            }
+            else if (CmbBoxUrunKodlari.Text == "")
+            {
+                TxtUrunKodlari.ReadOnly = true;
+            }
+        }
+
         private void PcTrBoxProfiliDuzenle_Click(object sender, EventArgs e)
         {
             FrmProfil frm = new FrmProfil();
             frm.Show();
             Hide();
-        }
-
-        private void FrmTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                Application.Exit();
-            }
-            catch (Exception)
-            {
-                Application.Exit();
-            }
         }
 
         private void BttnYeniKayit_MouseHover(object sender, EventArgs e)
@@ -286,22 +231,77 @@ namespace RabtBilMusteriKayit
             TlStripAcıklama.Text = Resources.aciklamaTlStrpMenuItemAraclarSil;
         }
 
-        private void TlStrpMenuItemYardimLisansAnahtari_Click(object sender, EventArgs e)
+        private void TimerTarihSaat_Tick(object sender, EventArgs e)
         {
-            FrmLisans frm = new FrmLisans();
-            frm.ShowDialog();
+            TlStripTarihSaat.Text = DateTime.Now.ToString(CultureInfo.CurrentCulture);
         }
 
-        private void TlStrpMenuItemDilTurkce_Click(object sender, EventArgs e)
+        public void Temizle()
         {
-            SMF.DilDegistir("tr");
-            DilYenile();
+            TxtMusteriAdi.Clear();
+            TxtFormNo.Clear();
+            MsKdTxtTelefon.Clear();
+            TxtUrunModeli.Clear();
+            CmbBoxUrunKodlari.Text = "";
+            TxtUrunKodlari.Clear();
+            TxtArizaTanimi.Clear();
+            TxtUrunDurumu.Clear();
+            TxtUcret.Clear();
+            TxtAksesuarlar.Clear();
+            TxtEkBilgiler.Clear();
+            LblMusteriNo.Text = "";
         }
 
-        private void TlStrpMenuItemDilIngilizce_Click(object sender, EventArgs e)
+        private void DilYenile()
         {
-            SMF.DilDegistir("en");
-            DilYenile();
+            Text = Resources.FrmTeknikServisFormu;
+            TlStrpMenuItemAraclar.Text = Resources.TlStrpMenuItemAraclar;
+            TlStrpMenuItemAraclarYeniKayit.Text = Resources.TlStrpMenuItemAraclarYeniKayit;
+            TlStrpMenuItemAraclarKaydet.Text = Resources.TlStrpMenuItemAraclarKaydet;
+            TlStrpMenuItemAraclarTemizle.Text = Resources.TlStrpMenuItemAraclarTemizle;
+            TlStrpMenuItemAraclarKayitlariGoster.Text = Resources.TlStrpMenuItemAraclarKayitlariGoster;
+            TlStrpMenuItemAraclarGuncelle.Text = Resources.TlStrpMenuItemAraclarGuncelle;
+            TlStrpMenuItemAraclarSil.Text = Resources.TlStrpMenuItemAraclarSil;
+            TlStrpMenuItemAyarlar.Text = Resources.TlStrpMenuItemAyarlar;
+            TlStrpMenuItemAyarlarDil.Text = Resources.TlStrpMenuItemAyarlarDil;
+            TlStrpMenuItemDilTurkce.Text = Resources.TlStrpMenuItemDilTurkce;
+            TlStrpMenuItemDilIngilizce.Text = Resources.TlStrpMenuItemDilIngilizce;
+            TlStrpMenuItemAyarlarTema.Text = Resources.TlStrpMenuItemAyarlarTema;
+            TlStrpMenuItemYardım.Text = Resources.TlStrpMenuItemYardim;
+            TlStrpMenuItemYardimLisansAnahtari.Text = Resources.TlStrpMenuItemYardimLisansAnahtari;
+            TlStrpMenuItemYardimHakkinda.Text = Resources.TlStrpMenuItemYardimHakkinda;
+            GrpBoxMusteriBilgileri.Text = Resources.GrpBoxMusteriBilgileri;
+            LblMusteriAdi.Text = Resources.LblMusteriAdi;
+            LblFormNo.Text = Resources.LblFormNo;
+            LblTelefon.Text = Resources.LblTelefon;
+            GrpBoxAksesuarlar.Text = Resources.GrpBoxAksesuarlar;
+            GrpBoxEkBilgiler.Text = Resources.GrpBoxEkBilgiler;
+            GrpBoxUrunBilgileri.Text = Resources.GrpBoxUrunBilgileri;
+            LblUrunModeli.Text = Resources.LblUrunModeli;
+            LblArizaTanimi.Text = Resources.LblArizaTanimi;
+            LblUrunDurumu.Text = Resources.LblUrunDurumu;
+            LblUrunTakipNo.Text = Resources.LblUrunTakipNo;
+            LblMusteriQrKodu.Text = Resources.LblMusteriQrKodu;
+            BttnQrKoduOlustur.Text = Resources.BttnQrKoduOlustur;
+            LblUcret.Text = Resources.LblUcret;
+            BttnYeniKayit.Text = Resources.TlStrpMenuItemAraclarYeniKayit;
+            BttnKaydet.Text = Resources.BttnKaydet;
+            BttnTemizle.Text = Resources.BttnTemizle;
+            BttnKayitlariGoster.Text = Resources.TlStrpMenuItemAraclarKayitlariGoster;
+            BttnGuncelle.Text = Resources.TlStrpMenuItemAraclarGuncelle;
+            TlStripAcıklama.Text = Resources.varsayilanAciklama;
+        }
+
+        private void FrmTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception)
+            {
+                Application.Exit();
+            }
         }
     }
 }
