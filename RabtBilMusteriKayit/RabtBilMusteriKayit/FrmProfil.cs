@@ -30,7 +30,7 @@ namespace RabtBilMusteriKayit
 
             try
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM kullanicilar where Id=1", SMF.Baglanti);
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM kullanicilar WHERE Id=1", SMF.Baglanti);
                 SMF.Baglanti.Open();
                 MySqlDataReader dataReader1 = cmd.ExecuteReader();
                 if (dataReader1.Read())
