@@ -43,6 +43,7 @@
             this.TlStrpMenuItemYardım = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardimLisansAnahtari = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrpMenuItemYardimHakkinda = new System.Windows.Forms.ToolStripMenuItem();
+            this.TlStrpMenuItemBaskiOnizleme = new System.Windows.Forms.ToolStripMenuItem();
             this.TlStrip = new System.Windows.Forms.ToolStrip();
             this.TlStripAcıklama = new System.Windows.Forms.ToolStripLabel();
             this.TlStripTarihSaat = new System.Windows.Forms.ToolStripLabel();
@@ -54,7 +55,6 @@
             this.TxtArama = new System.Windows.Forms.TextBox();
             this.RadioBttnMusteriIsmineGoreAra = new System.Windows.Forms.RadioButton();
             this.RadioBttnFormNoyaGoreAra = new System.Windows.Forms.RadioButton();
-            this.TlStrpMenuItemBaskiOnizleme = new System.Windows.Forms.ToolStripMenuItem();
             this.PrntBelge = new System.Drawing.Printing.PrintDocument();
             this.PrntBaskiOnizleme = new System.Windows.Forms.PrintPreviewDialog();
             this.MenuStrip.SuspendLayout();
@@ -180,8 +180,16 @@
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
             this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(179, 22);
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
+            this.TlStrpMenuItemYardimHakkinda.Click += new System.EventHandler(this.TlStrpMenuItemYardimHakkinda_Click);
             this.TlStrpMenuItemYardimHakkinda.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
             this.TlStrpMenuItemYardimHakkinda.MouseHover += new System.EventHandler(this.TlStrpMenuItemYardimHakkinda_MouseHover);
+            // 
+            // TlStrpMenuItemBaskiOnizleme
+            // 
+            this.TlStrpMenuItemBaskiOnizleme.Name = "TlStrpMenuItemBaskiOnizleme";
+            this.TlStrpMenuItemBaskiOnizleme.Size = new System.Drawing.Size(117, 20);
+            this.TlStrpMenuItemBaskiOnizleme.Text = "Baskı Önizleme";
+            this.TlStrpMenuItemBaskiOnizleme.Click += new System.EventHandler(this.TlStrpMenuItemBaskiOnizleme_Click);
             // 
             // TlStrip
             // 
@@ -302,13 +310,6 @@
             this.RadioBttnFormNoyaGoreAra.CheckedChanged += new System.EventHandler(this.RadioBttnFormNoyaGoreAra_CheckedChanged);
             this.RadioBttnFormNoyaGoreAra.MouseLeave += new System.EventHandler(this.VarsayilanAciklama);
             this.RadioBttnFormNoyaGoreAra.MouseHover += new System.EventHandler(this.RadioBttnFormNoyaGoreAra_MouseHover);
-            // 
-            // TlStrpMenuItemBaskiOnizleme
-            // 
-            this.TlStrpMenuItemBaskiOnizleme.Name = "TlStrpMenuItemBaskiOnizleme";
-            this.TlStrpMenuItemBaskiOnizleme.Size = new System.Drawing.Size(117, 20);
-            this.TlStrpMenuItemBaskiOnizleme.Text = "Baskı Önizleme";
-            this.TlStrpMenuItemBaskiOnizleme.Click += new System.EventHandler(this.TlStrpMenuItemBaskiOnizleme_Click);
             // 
             // PrntBelge
             // 

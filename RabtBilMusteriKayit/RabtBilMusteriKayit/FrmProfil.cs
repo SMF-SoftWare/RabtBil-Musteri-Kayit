@@ -11,7 +11,7 @@ namespace RabtBilMusteriKayit
     {
         private SMF SMF = new SMF();
         private bool _gozeTiklandiMi = true;
-
+        FrmHakkinda _frmHakkinda = new FrmHakkinda();
         public FrmProfil()
         {
             InitializeComponent();
@@ -238,6 +238,11 @@ namespace RabtBilMusteriKayit
                 TxtSifreniziOnaylayın.UseSystemPasswordChar = true;
                 _gozeTiklandiMi = true;
             }
+        }
+
+        private void TlStrpMenuItemYardimHakkinda_Click(object sender, EventArgs e)
+        {       
+            _frmHakkinda.ShowDialog();
         }
     }
 }

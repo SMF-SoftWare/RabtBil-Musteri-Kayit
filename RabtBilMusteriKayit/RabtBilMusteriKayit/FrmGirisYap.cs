@@ -12,6 +12,7 @@ namespace RabtBilMusteriKayit
     public partial class FrmGirisYap : Form
     {
         private readonly SMF SMF = new SMF();
+        FrmHakkinda _frmHakkinda = new FrmHakkinda();
 
         private bool _sifremiUnuttumTiklandiMi = true;
         private bool _gozeTiklandiMi = true;
@@ -305,6 +306,11 @@ namespace RabtBilMusteriKayit
                 TxtSifre.UseSystemPasswordChar = true;
                 _gozeTiklandiMi = true;
             }
+        }
+
+        private void TlStrpMenuItemYardimHakkinda_Click(object sender, EventArgs e)
+        {
+            _frmHakkinda.ShowDialog();
         }
     }
 }

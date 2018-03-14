@@ -59,6 +59,12 @@
     <Compile Include="FrmGucluSifreOlustur.Designer.cs">
       <DependentUpon>FrmGucluSifreOlustur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHakkinda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHakkinda.Designer.cs">
+      <DependentUpon>FrmHakkinda.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmKayitlariGoster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGucluSifreOlustur.resx">
       <DependentUpon>FrmGucluSifreOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHakkinda.resx">
+      <DependentUpon>FrmHakkinda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKayitlariGoster.resx">
       <DependentUpon>FrmKayitlariGoster.cs</DependentUpon>

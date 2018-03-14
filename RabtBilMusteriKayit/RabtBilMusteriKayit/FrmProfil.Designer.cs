@@ -298,6 +298,7 @@
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
             this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(179, 22);
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
+            this.TlStrpMenuItemYardimHakkinda.Click += new System.EventHandler(this.TlStrpMenuItemYardimHakkinda_Click);
             // 
             // PcTrBoxProfiliDuzenle
             // 

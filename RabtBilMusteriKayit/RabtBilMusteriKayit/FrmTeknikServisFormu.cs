@@ -11,7 +11,7 @@ namespace RabtBilMusteriKayit
     public partial class FrmTeknikServisFormu : Form
     {
         private SMF SMF = new SMF();
-
+        FrmHakkinda _frmHakkinda = new FrmHakkinda();
         private readonly Random _rnd = new Random();
         private int _takipNo;
 
@@ -289,6 +289,11 @@ namespace RabtBilMusteriKayit
         private void FrmTeknikServisFormu_FormClosing(object sender, FormClosingEventArgs e)
         {
             SMF.HerTurluKapat();
+        }
+
+        private void TlStrpMenuItemYardimHakkinda_Click(object sender, EventArgs e)
+        {
+            _frmHakkinda.ShowDialog();
         }
     }
 }

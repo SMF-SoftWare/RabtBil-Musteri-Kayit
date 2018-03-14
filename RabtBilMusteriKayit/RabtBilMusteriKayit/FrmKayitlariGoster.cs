@@ -286,5 +286,11 @@ namespace RabtBilMusteriKayit
         {
             PrntBelge.Print();
         }
+
+        private void TlStrpMenuItemYardimHakkinda_Click(object sender, EventArgs e)
+        {
+            FrmHakkinda _frmHakkinda = new FrmHakkinda();
+            _frmHakkinda.ShowDialog();
+        }
     }
 }

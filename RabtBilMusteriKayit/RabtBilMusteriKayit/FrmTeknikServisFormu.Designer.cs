@@ -51,12 +51,12 @@
             this.TxtUrunTakipNo = new System.Windows.Forms.TextBox();
             this.LblUrunDurumu = new System.Windows.Forms.Label();
             this.TxtUrunDurumu = new System.Windows.Forms.TextBox();
-            this.LblArizaTanimi = new System.Windows.Forms.Label();
             this.TxtArizaTanimi = new System.Windows.Forms.TextBox();
             this.CmbBoxUrunKodlari = new System.Windows.Forms.ComboBox();
             this.TxtUrunKodlari = new System.Windows.Forms.TextBox();
             this.LblUrunModeli = new System.Windows.Forms.Label();
             this.TxtUrunModeli = new System.Windows.Forms.TextBox();
+            this.LblArizaTanimi = new System.Windows.Forms.Label();
             this.BttnYeniKayit = new System.Windows.Forms.Button();
             this.BttnKaydet = new System.Windows.Forms.Button();
             this.BttnTemizle = new System.Windows.Forms.Button();
@@ -321,16 +321,6 @@
             this.TxtUrunDurumu.Size = new System.Drawing.Size(252, 25);
             this.TxtUrunDurumu.TabIndex = 14;
             // 
-            // LblArizaTanimi
-            // 
-            this.LblArizaTanimi.AutoSize = true;
-            this.LblArizaTanimi.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblArizaTanimi.Location = new System.Drawing.Point(9, 92);
-            this.LblArizaTanimi.Name = "LblArizaTanimi";
-            this.LblArizaTanimi.Size = new System.Drawing.Size(98, 15);
-            this.LblArizaTanimi.TabIndex = 9;
-            this.LblArizaTanimi.Text = "Arıza Tanımı:";
-            // 
             // TxtArizaTanimi
             // 
             this.TxtArizaTanimi.Location = new System.Drawing.Point(155, 89);
@@ -375,6 +365,16 @@
             this.TxtUrunModeli.Name = "TxtUrunModeli";
             this.TxtUrunModeli.Size = new System.Drawing.Size(252, 25);
             this.TxtUrunModeli.TabIndex = 6;
+            // 
+            // LblArizaTanimi
+            // 
+            this.LblArizaTanimi.AutoSize = true;
+            this.LblArizaTanimi.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblArizaTanimi.Location = new System.Drawing.Point(9, 92);
+            this.LblArizaTanimi.Name = "LblArizaTanimi";
+            this.LblArizaTanimi.Size = new System.Drawing.Size(98, 15);
+            this.LblArizaTanimi.TabIndex = 9;
+            this.LblArizaTanimi.Text = "Arıza Tanımı:";
             // 
             // BttnYeniKayit
             // 
@@ -589,6 +589,7 @@
             this.TlStrpMenuItemYardimHakkinda.Name = "TlStrpMenuItemYardimHakkinda";
             this.TlStrpMenuItemYardimHakkinda.Size = new System.Drawing.Size(179, 22);
             this.TlStrpMenuItemYardimHakkinda.Text = "Hakkında";
+            this.TlStrpMenuItemYardimHakkinda.Click += new System.EventHandler(this.TlStrpMenuItemYardimHakkinda_Click);
             // 
             // TlStrip
             // 
