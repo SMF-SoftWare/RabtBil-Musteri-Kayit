@@ -241,7 +241,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to QR Kodunu Oluştur.
+        ///   Looks up a localized string similar to QR Kodunu Oluştur:.
         /// </summary>
         internal static string BttnQrKoduOlustur {
             get {
@@ -666,7 +666,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Arızanın Tanımı.
+        ///   Looks up a localized string similar to Arızanın Tanımı:.
         /// </summary>
         internal static string LblArizaTanimi {
             get {
@@ -756,7 +756,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to QR Kodu.
+        ///   Looks up a localized string similar to QR Kodu:.
         /// </summary>
         internal static string LblMusteriQrKodu {
             get {
@@ -810,7 +810,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Telefon.
+        ///   Looks up a localized string similar to Telefon:.
         /// </summary>
         internal static string LblTelefon {
             get {
@@ -819,7 +819,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ücret.
+        ///   Looks up a localized string similar to Ücret:.
         /// </summary>
         internal static string LblUcret {
             get {
@@ -828,7 +828,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ürün Durumu.
+        ///   Looks up a localized string similar to Ürün Durumu:.
         /// </summary>
         internal static string LblUrunDurumu {
             get {
@@ -837,7 +837,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ürün Modeli.
+        ///   Looks up a localized string similar to Ürün Modeli:.
         /// </summary>
         internal static string LblUrunModeli {
             get {
@@ -846,7 +846,7 @@ namespace RabtBilMusteriKayit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Takip Numarası.
+        ///   Looks up a localized string similar to Takip Numarası:.
         /// </summary>
         internal static string LblUrunTakipNo {
             get {
@@ -905,6 +905,16 @@ namespace RabtBilMusteriKayit.Properties {
         internal static string profilBasariylaGuncellendi {
             get {
                 return ResourceManager.GetString("profilBasariylaGuncellendi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RabtBilYaziciSablonu {
+            get {
+                object obj = ResourceManager.GetObject("RabtBilYaziciSablonu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
