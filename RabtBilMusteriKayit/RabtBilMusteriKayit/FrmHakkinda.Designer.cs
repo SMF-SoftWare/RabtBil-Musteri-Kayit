@@ -36,10 +36,10 @@
             this.LblVersiyon = new System.Windows.Forms.Label();
             this.LblVersiyonNo = new System.Windows.Forms.Label();
             this.GrpBoxSMFSoftWare = new System.Windows.Forms.GroupBox();
-            this.LblCopyright = new System.Windows.Forms.Label();
-            this.Lbl16300031011 = new System.Windows.Forms.Label();
-            this.Lbl16300031031 = new System.Windows.Forms.Label();
             this.Lbl163000310 = new System.Windows.Forms.Label();
+            this.Lbl16300031031 = new System.Windows.Forms.Label();
+            this.Lbl16300031011 = new System.Windows.Forms.Label();
+            this.LblCopyright = new System.Windows.Forms.Label();
             this.LblLisansDurumu2 = new System.Windows.Forms.Label();
             this.PcTrBoxLogo = new System.Windows.Forms.PictureBox();
             this.GrpBoxSMFSoftWare.SuspendLayout();
@@ -133,24 +133,14 @@
             this.GrpBoxSMFSoftWare.TabStop = false;
             this.GrpBoxSMFSoftWare.Text = "SMF-SoftWare";
             // 
-            // LblCopyright
+            // Lbl163000310
             // 
-            this.LblCopyright.AutoSize = true;
-            this.LblCopyright.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblCopyright.Location = new System.Drawing.Point(337, 177);
-            this.LblCopyright.Name = "LblCopyright";
-            this.LblCopyright.Size = new System.Drawing.Size(357, 15);
-            this.LblCopyright.TabIndex = 9;
-            this.LblCopyright.Text = "Copyright © 2018 SMF-SoftWare Tüm Hakları Saklıdır";
-            // 
-            // Lbl16300031011
-            // 
-            this.Lbl16300031011.AutoSize = true;
-            this.Lbl16300031011.Location = new System.Drawing.Point(5, 65);
-            this.Lbl16300031011.Name = "Lbl16300031011";
-            this.Lbl16300031011.Size = new System.Drawing.Size(224, 15);
-            this.Lbl16300031011.TabIndex = 10;
-            this.Lbl16300031011.Text = "16300031011 - Selim Baki FINDIK";
+            this.Lbl163000310.AutoSize = true;
+            this.Lbl163000310.Location = new System.Drawing.Point(5, 42);
+            this.Lbl163000310.Name = "Lbl163000310";
+            this.Lbl163000310.Size = new System.Drawing.Size(196, 15);
+            this.Lbl163000310.TabIndex = 12;
+            this.Lbl163000310.Text = "163000310?? - Fırat GÖRGÜLÜ";
             // 
             // Lbl16300031031
             // 
@@ -161,14 +151,24 @@
             this.Lbl16300031031.TabIndex = 11;
             this.Lbl16300031031.Text = "16300031031 - Ali KÖMESÖĞÜTLÜ";
             // 
-            // Lbl163000310
+            // Lbl16300031011
             // 
-            this.Lbl163000310.AutoSize = true;
-            this.Lbl163000310.Location = new System.Drawing.Point(5, 42);
-            this.Lbl163000310.Name = "Lbl163000310";
-            this.Lbl163000310.Size = new System.Drawing.Size(196, 15);
-            this.Lbl163000310.TabIndex = 12;
-            this.Lbl163000310.Text = "163000310?? - Fırat GÖRGÜLÜ";
+            this.Lbl16300031011.AutoSize = true;
+            this.Lbl16300031011.Location = new System.Drawing.Point(5, 65);
+            this.Lbl16300031011.Name = "Lbl16300031011";
+            this.Lbl16300031011.Size = new System.Drawing.Size(224, 15);
+            this.Lbl16300031011.TabIndex = 10;
+            this.Lbl16300031011.Text = "16300031011 - Selim Baki FINDIK";
+            // 
+            // LblCopyright
+            // 
+            this.LblCopyright.AutoSize = true;
+            this.LblCopyright.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblCopyright.Location = new System.Drawing.Point(337, 177);
+            this.LblCopyright.Name = "LblCopyright";
+            this.LblCopyright.Size = new System.Drawing.Size(357, 15);
+            this.LblCopyright.TabIndex = 9;
+            this.LblCopyright.Text = "Copyright © 2018 SMF-SoftWare Tüm Hakları Saklıdır";
             // 
             // LblLisansDurumu2
             // 
