@@ -344,10 +344,6 @@
             // 
             this.CmbBoxUrunKodlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbBoxUrunKodlari.FormattingEnabled = true;
-            this.CmbBoxUrunKodlari.Items.AddRange(new object[] {
-            "Seri No",
-            "Imei No",
-            "Diğer"});
             this.CmbBoxUrunKodlari.Location = new System.Drawing.Point(12, 58);
             this.CmbBoxUrunKodlari.Name = "CmbBoxUrunKodlari";
             this.CmbBoxUrunKodlari.Size = new System.Drawing.Size(121, 26);

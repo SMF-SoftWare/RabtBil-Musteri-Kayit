@@ -218,7 +218,7 @@ namespace RabtBilMusteriKayit
             _frm.TxtFormNo.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[2].Value.ToString();
             _frm.MsKdTxtTelefon.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[3].Value.ToString();
             _frm.TxtUrunModeli.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[4].Value.ToString();
-            _frm.CmbBoxUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[5].Value.ToString();
+            _frm.CmbBoxUrunKodlari.SelectedText = DtGridViewKayitlariGoster.CurrentRow?.Cells[5].Value.ToString();
             _frm.TxtUrunKodlari.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[6].Value.ToString();
             _frm.TxtArizaTanimi.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[7].Value.ToString();
             _frm.TxtUrunDurumu.Text = DtGridViewKayitlariGoster.CurrentRow?.Cells[8].Value.ToString();

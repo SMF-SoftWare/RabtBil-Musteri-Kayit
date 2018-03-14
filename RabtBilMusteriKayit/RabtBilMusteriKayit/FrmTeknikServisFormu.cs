@@ -22,6 +22,7 @@ namespace RabtBilMusteriKayit
 
         private void FrmTeknikServisFormu_Load(object sender, EventArgs e)
         {
+            
             SMF.ConfigDosyasiVarMi();
             SMF.DilKontrolEt();
             DilYenile();
